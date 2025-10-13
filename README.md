@@ -2,7 +2,7 @@
 ## 1. For **“dangerous” permissions**
     - Location（ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION）
         - android.location.LocationManager.requestLocationUpdates(String provider, long minTime, float minDistance, LocationListener listener)
-        - com.google.android.gms.location.FusedLocationProviderClient.getLastLocation() 或 requestLocationUpdates(...)
+        - com.google.android.gms.location.FusedLocationProviderClient.getLastLocation() or requestLocationUpdates(...)
     - CAMERA
         - android.hardware.camera2.CameraManager.openCamera(...)
     - Mic（RECORD_AUDIO）
