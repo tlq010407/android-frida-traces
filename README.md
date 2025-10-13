@@ -1,18 +1,11 @@
 # android-frida-traces
 ## 1. For **“dangerous” permissions**
-    - Location（ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION）
-        - android.location.LocationManager.requestLocationUpdates(String provider, long minTime, float minDistance, LocationListener listener)
-        - com.google.android.gms.location.FusedLocationProviderClient.getLastLocation() or requestLocationUpdates(...)
-    - CAMERA
-        - android.hardware.camera2.CameraManager.openCamera(...)
-    - Mic（RECORD_AUDIO）
-        - android.media.MediaRecorder.start()
-        - android.media.AudioRecord.read(...)
-    - Contact（READ_CONTACTS / WRITE_CONTACTS）
-        - android.content.ContentResolver.query(ContactsContract.Contacts.CONTENT_URI, ...)
-    - Message（SEND_SMS / RECEIVE_SMS）
-        - android.telephony.SmsManager.sendTextMessage(...)
-    - Storage（READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE / MediaStore）
-        - java.io.FileInputStream, MediaStore
-    - Telephone（READ_PHONE_STATE）
-        - android.telephony.TelephonyManager.getDeviceId(), getLine1Number()
+According to Google’s dangerous permission groups, hook these Java APIs in the app that access those resources:
+- Location: android.location.LocationManager.requestLocationUpdates, FusedLocationProviderClient.requestLocationUpdates (Google Play Services)
+- Camera: android.hardware.Camera.open(), android.hardware.camera2.* APIs, android.media.MediaRecorder.start()
+- Microphone: android.media.MediaRecorder.start(), AudioRecord constructors/methods
+- Contacts: android.provider.ContactsContract.* queries via ContentResolver.query(...) targeting contacts URIs
+- SMS: android.telephony.SmsManager.sendTextMessage(...)
+- Phone state / device id: android.telephony.TelephonyManager.getDeviceId(), getImei(), getLine1Number()
+- Storage (read/write external): java.io.File / FileInputStream usage is noisy but you can hook open()/FileInputStream.<init> / ContentResolver.openInputStream()
+- Camera/Location permission checks: calls to ContextCompat.checkSelfPermission or ActivityCompat.requestPermissions.
