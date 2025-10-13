@@ -211,3 +211,56 @@ python3 tools/analyze_frida_csv.py logs/telegram_java_hook.csv > logs/telegram_s
 - **Can’t pull APK from a physical device:** physical devices are usually not rootable; use emulator or download APK from a trusted mirror instead.
 - **Missing symbols for native hooking:** many native functions are static (not exported) or stripped. Use strings to find Java_* JNI names, or intercept RegisterNatives to map Java->native addresses.
 - **Anti-Frida/anti-debugging:** some apps detect Frida and actively prevent instrumentation. Techniques: patch out checks (advanced), run on rooted emulator, embed gadget into a modified APK, or use a restored device image with debugging disabled.
+
+## 4. Native libraries (Telegram APK)
+
+Here in this part lists native libraries found in the Telegram APK unpacked, several concrete native functions (JNI and C++), commands you can re-run to find symbols, and immediate recommendations for auditing/hooking.
+
+Libraries identified
+- lib/arm64-v8a/libtmessages.49.so — main Telegram native binary. Contains networking, crypto, VoIP, media, and JNI glue.
+- lib/arm64-v8a/libucs-credential.so — credential/security helper (Huawei wise-security library in this APK).
+- lib/arm64-v8a/liblanguage_id_jni.so — language identification JNI glue (Google ML/Kit related).
+- lib/arm64-v8a/libTransform.so — small transform/codec helper for media processing.
+
+
+### A few concrete native functions found in libtmessages.49.so
+
+#### JNI bridge functions (Java → native)
+
+These JNI functions are excellent hook targets because Java code calls them directly:
+- Java_org_telegram_messenger_Utilities_aesIgeEncryption
+- Java_org_telegram_messenger_Utilities_aesIgeEncryptionByteArray
+- Java_org_telegram_messenger_Utilities_aesCtrDecryption
+- Java_org_telegram_messenger_Utilities_pbkdf2
+- Java_org_telegram_messenger_MediaController_startRecord
+- Java_org_telegram_messenger_MediaController_writeFrame
+- Java_org_telegram_messenger_MediaController_stopRecord
+- Java_org_telegram_messenger_MediaController_getWaveform
+- Java_org_telegram_messenger_NativeLoader_init
+- Java_org_telegram_messenger_voip_ConferenceCall_call_1create (and other voip_ConferenceCall_* JNI methods)
+
+Hooking these gives insight into crypto, media capture, and VoIP flows.
+
+#### C++ (mangled) / exported native functions (networking / connection)
+
+Mangled C++ names indicate important native paths (use demangling tools or symbol matching):
+	•	_ZN18ConnectionsManager11sendRequestEP8TLObjectNSt6__ndk18functionIFvS1_P8TL_errorilliEEENS3_IFvvEEES9_S9_jj14ConnectionTypebi
+	•	roughly corresponds to ConnectionsManager::sendRequest(...) — key native path for sending network requests.
+	•	_ZN16ConnectionSocket18onHostNameResolvedENSt6__ndk1...
+	•	DNS/connection callback handler.
+	•	ZN7WelsEnc* symbols — related to video encoder internals used by VoIP/video.
+	•	JNI_OnLoad / JNI_OnUnload — library initialization / cleanup entry points.
+- _ZN18ConnectionsManager11sendRequestEP8TLObjectNSt6__ndk18functionIFvS1_P8TL_errorilliEEENS3_IFvvEEES9_S9_jj14ConnectionTypebi - ConnectionsManager::sendRequest (native send path; network requests)
+- _ZN16ConnectionSocket18onHostNameResolvedENSt6__ndk112basic_stringIc... — DNS/connection callback
+- Many ZN7WelsEnc* symbols — video encoder internals (used for video/voip)
+- JNI_OnLoad / JNI_OnUnload — library init/uninit entrypoints
+If the binary is not stripped, these symbols might be visible via readelf/nm. If stripped, runtime interception of RegisterNatives is the recommended approach.
+
+#### Media / codec JNI wrappers (ExoPlayer extensions)
+
+These wrappers come from bundled media libraries (ExoPlayer native extensions):
+- Java_com_google_android_exoplayer2_ext_flac_FlacDecoderJni_flacInit and related FLAC functions
+- Java_com_google_android_exoplayer2_ext_opus_OpusDecoder_opusInit, opusDecode, etc.
+- ffmpeg related functions: Java_com_google_android_exoplayer2_ext_ffmpeg_FfmpegLibrary_ffmpegGetVersion, ffmpegDecode...
+
+These are useful for hooking media decode/encode pipelines.
