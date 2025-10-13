@@ -244,12 +244,6 @@ Hooking these gives insight into crypto, media capture, and VoIP flows.
 #### C++ (mangled) / exported native functions (networking / connection)
 
 Mangled C++ names indicate important native paths (use demangling tools or symbol matching):
-	•	_ZN18ConnectionsManager11sendRequestEP8TLObjectNSt6__ndk18functionIFvS1_P8TL_errorilliEEENS3_IFvvEEES9_S9_jj14ConnectionTypebi
-	•	roughly corresponds to ConnectionsManager::sendRequest(...) — key native path for sending network requests.
-	•	_ZN16ConnectionSocket18onHostNameResolvedENSt6__ndk1...
-	•	DNS/connection callback handler.
-	•	ZN7WelsEnc* symbols — related to video encoder internals used by VoIP/video.
-	•	JNI_OnLoad / JNI_OnUnload — library initialization / cleanup entry points.
 - _ZN18ConnectionsManager11sendRequestEP8TLObjectNSt6__ndk18functionIFvS1_P8TL_errorilliEEENS3_IFvvEEES9_S9_jj14ConnectionTypebi - ConnectionsManager::sendRequest (native send path; network requests)
 - _ZN16ConnectionSocket18onHostNameResolvedENSt6__ndk112basic_stringIc... — DNS/connection callback
 - Many ZN7WelsEnc* symbols — video encoder internals (used for video/voip)
