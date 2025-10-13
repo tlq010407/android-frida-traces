@@ -17,7 +17,7 @@ According to Google’s dangerous permission groups, hook these Java APIs in the
 - **apktool** — decode APK resources and produce smali.  
 - **unzip, strings, find** — usually built-in on macOS/Linux.  
 
-### 1) Recommended: Pull APK from an Android Emulator (easy & rootable)
+### Recommended: Pull APK from an Android Emulator (easy & rootable)
 
 Using an Android Studio emulator is the simplest approach because you can run `adb root` and access protected directories.
 
@@ -58,7 +58,7 @@ ls -lh ~/android-frida-traces/apk/telegram.apk
 unzip -l ~/android-frida-traces/apk/telegram.apk | head -n 40
 ```
 
-### 2) Inspect / Extract APK Contents
+### Inspect / Extract APK Contents
 
 Once telegram.apk is local, inspect and extract components:
 ```bash
@@ -76,14 +76,14 @@ unzip ~/android-frida-traces/apk/telegram.apk '*.dex' -d dex_files
 ls -lh dex_files
 ```
 
-### 3) Decode resources & smali (apktool)
+### Decode resources & smali (apktool)
 ```bash
 apktool d ~/android-frida-traces/apk/telegram.apk -o telegram_dec
 # decoded resources: telegram_dec/res
 # smali: telegram_dec/smali, smali_classes2, etc.
 ```
 
-### 4) Quick native-symbol inspection
+### Quick native-symbol inspection
 ```bash
 # quick text search for JNI / crypto / network related symbols
 strings telegram_libs/lib/arm64-v8a/libtmessages.49.so | egrep -i 'Java_|jni_|encrypt|send|socket|ssl|crypto|auth'
@@ -106,3 +106,108 @@ Problems may hit & how I resolved them
 - APK not found or package name mismatch
   - Cause: wrong package name or app not installed.
   - Fix: run adb shell pm list packages and confirm exact package name.
+
+
+## 3. Use Frida to hook APIs in the app 
+
+### Quick overview
+**Goal:** instrument the app (Java + native) to capture calls that touch “dangerous” Android resources (location, camera/mic, contacts/SMS, phone identifiers, storage, network, crypto) so you can produce a privacy/security timeline and CSV/JSON artifacts for analysis.
+
+Run frida-server on a rooted emulator, attach the target app, install lightweight Frida scripts that hook a compact list of Java APIs and a small set of native entry points (or RegisterNatives), collect structured logs, then convert and analyze them. Start small (4–6 APIs) to check stability, expand to cover the full set once stable.
+
+### Prepare emulator / device & start frida-server
+1. Confirm device/emulator and ABI:
+```bash
+adb devices -l
+adb shell getprop ro.product.cpu.abi
+```
+
+2. Push and run frida-server on the emulator (replace version/filenames as required):
+```bash
+# on host
+curl -L -o frida-server.xz "https://github.com/frida/frida/releases/download/17.3.2/frida-server-17.3.2-android-arm64.xz"
+xz -d frida-server.xz
+chmod +x frida-server-17.3.2-android-arm64
+adb root
+adb push frida-server-17.3.2-android-arm64 /data/local/tmp/frida-server
+adb shell "chmod 755 /data/local/tmp/frida-server; /data/local/tmp/frida-server > /data/local/tmp/frida-server.log 2>&1 &"
+adb shell ps | grep frida-server
+```
+
+3. From host, check Frida can see the device:
+```bash
+frida-ls-devices
+frida-ps -D emulator-5554      # list processes on that device
+```
+
+### Basic Frida usage patterns
+1. Attach to a running process by PID
+```bash
+# find pid
+adb shell pidof org.telegram.messenger
+# attach and log output to file
+frida -D emulator-5554 -p <PID> -l scripts/hook_java_generic.js -o logs/telegram_java_hook.log
+```
+2. Run Frida in background and collect logs
+```bash
+frida -D emulator-5554 -p <PID> -l scripts/hook_combined.js -o logs/telegram_combo.log &
+```
+
+### What to hook 
+
+For the assignment (dangerous permissions + investigation), useful classes and methods include:
+- Location / GPS: android.location.LocationManager.requestLocationUpdates, getLastKnownLocation
+- Telephony / Device IDs: android.telephony.TelephonyManager.getDeviceId, getImei, getSubscriberId
+- SMS / Contacts: android.telephony.SmsManager.sendTextMessage, android.content.ContentResolver.query(android.provider ContactsContract...)
+- Camera / Microphone: camera APIs and MediaRecorder, AudioRecord
+- Files & Storage: java.io.File, java.io.FileOutputStream, openFileOutput, Context.getFilesDir
+- Network APIs: java.net.Socket, HttpURLConnection, OkHttp okhttp3.OkHttpClient.newCall (hook library methods)
+- Sensitive app-specific JNI methods (crypto, network send): e.g. org.telegram.tgnet.ConnectionsManager.native_sendRequest, Utilities.aesIgeEncryption, etc.
+- SQLite: org.telegram.SQLite.SQLitePreparedStatement.prepare / step
+
+Hook both Java wrappers and the native implementations to get complete coverage.
+
+### Hooking strategy
+- Java-level hooks first: cheap, high signal — hook the specific Java classes/methods listed above and collect timestamp, thread, caller, readable args and return values. Java hooks run inside Java.perform and are resilient to most app designs if timed correctly.
+- Early-initialization: spawn the app paused when you need to catch Application.onCreate or early native library loads.
+- Native coverage: when an app uses JNI or stripped native libraries, intercept RegisterNatives (or exported native symbols) to map Java methods to native addresses and then hook those native functions. Only add native hooks once Java hooks are stable to avoid crashes.
+- Be selective: start with a small subset (location + telephony + network) and expand once stable.
+
+### Logging, post-processing & reporting
+- Log to files using Frida -o option: -o logs/telegram_combo.log.
+- Sanitize logs if they contain personal data.
+- Convert to CSV for analysis: include timestamp, thread, call name, args, return. You can use the tools/frida_log_to_csv.py and tools/analyze_frida_csv.py scripts in this repo (update their paths).
+- Produce a summary JSON and basic timeline charts (optional).
+
+### Workflow for a full instrument & test run
+1. Start frida-server and verify:
+``` bash
+adb root
+adb shell /data/local/tmp/frida-server &  
+frida-ls-devices
+frida-ps -D emulator-5554 | grep -i telegram
+```
+
+2. Launch or attach to Telegram:
+```bash
+adb shell monkey -p org.telegram.messenger -c android.intent.category.LAUNCHER 1
+sleep 2
+PID=$(adb shell pidof org.telegram.messenger)
+frida -D emulator-5554 -p $PID -l scripts/hook_java_generic.js -o logs/telegram_java_hook.log
+```
+
+3. Manual interactions in the emulator (send a message, open settings, enable location, make a call, etc.). The Java + native hooks will log API calls.
+
+4. After tests, stop frida (Ctrl-C) and collect logs:
+```bash
+python3 tools/frida_log_to_csv.py logs/telegram_java_hook.log > logs/telegram_java_hook.csv
+python3 tools/analyze_frida_csv.py logs/telegram_java_hook.csv > logs/telegram_summary.json
+```
+
+### Troubleshooting & gotchas
+- **Failed to attach: closed or unable to find process:** ensure the PID is correct, the process still runs, and frida-server is running on the device. Use frida-ps -D emulator-5554 to confirm.
+- **Frida versions mismatch:** frida-client (host) and frida-server (device) should be the same major/minor. If things act weird, re-download matching frida-server.
+- **App crashes after hook:** your script might have a bug or invalid memory access (native hooks). Disable suspect hooks and re-run. Use try/catch liberally in JS to avoid throwing exceptions that break the app.
+- **Can’t pull APK from a physical device:** physical devices are usually not rootable; use emulator or download APK from a trusted mirror instead.
+- **Missing symbols for native hooking:** many native functions are static (not exported) or stripped. Use strings to find Java_* JNI names, or intercept RegisterNatives to map Java->native addresses.
+- **Anti-Frida/anti-debugging:** some apps detect Frida and actively prevent instrumentation. Techniques: patch out checks (advanced), run on rooted emulator, embed gadget into a modified APK, or use a restored device image with debugging disabled.
