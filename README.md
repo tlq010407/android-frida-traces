@@ -92,7 +92,7 @@ strings telegram_libs/lib/arm64-v8a/libtmessages.49.so | egrep -i 'Java_|jni_|en
 readelf -s telegram_libs/lib/arm64-v8a/libtmessages.49.so | grep Java_
 ```
 
-## Troubleshooting & notes
+### Troubleshooting & notes
 Problems may hit & how I resolved them
 - adb pull permission denied
   - Cause: physical device not rooted.
