@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Abort">إلغاء</string>
+    <string name="AbortEmail">إلغاء إعداد بريد الاسترداد</string>
+    <string name="AbortPassword">إلغاء عملية إعداد التحقق بخطوتين</string>
+    <string name="AbortPasswordMenu">إلغاء الإعداد</string>
+    <string name="Accept">قبول</string>
+    <string name="Account">الحساب</string>
+    <string name="AccountAlreadyLoggedIn">تم تسجيل الدخول إلى هذا الحساب من هذا التطبيق.</string>
+    <string name="AccountSwitch">تبديل</string>
+    <string name="ActionAddUser">تمت إضافة un2 من قِبل un1</string>
+    <string name="ActionAddUserSelf">عاد un1 للمجموعة</string>
+    <string name="ActionAddUserSelfMega">انضم un1 للمجموعة</string>
+    <string name="ActionAddUserSelfYou">لقد عُدتَ للمجموعة</string>
+    <string name="ActionAddUserYou">un1 قام بإضافتك</string>
+    <string name="ActionBotAllowed">لقد سمحت لهذا البوت بمراسلتك عندما سجّلت دخولك إلى %1$s</string>
+    <string name="ActionBotAllowedApp">لقد سمحت أنت لهذا البوت بمراسلتك عند تسجيلك الدخول على تطبيق «%1$s».</string>
+    <string name="ActionBotAllowedWebapp">لقد سمحت لهذا البوت بمراسلتك في تطبيق الويب الخاص به.</string>
+    <string name="ActionBotDocumentAddress">العنوان</string>
+    <string name="ActionBotDocumentBankStatement">كشفُ حسابٍ مصرفي</string>
+    <string name="ActionBotDocumentDriverLicence">رخصة القيادة</string>
+    <string name="ActionBotDocumentEmail">عنوان البريد الإلكتروني</string>
+    <string name="ActionBotDocumentIdentity">التفاصيل الشخصية</string>
+    <string name="ActionBotDocumentIdentityCard">بطاقة الهوية</string>
+    <string name="ActionBotDocumentInternalPassport">جواز داخلي</string>
+    <string name="ActionBotDocumentPassport">جواز السفر</string>
+    <string name="ActionBotDocumentPassportRegistration">تسجيل الجواز</string>
+    <string name="ActionBotDocumentPhone">رقم الهاتف</string>
+    <string name="ActionBotDocumentRentalAgreement">عقد الإيجار</string>
+    <string name="ActionBotDocumentTemporaryRegistration">تسجيل مؤقت</string>
+    <string name="ActionBotDocumentUtilityBill">فاتورة خدمية</string>
+    <string name="ActionBotDocuments">استلم %1$s الوثائق التالية: %2$s</string>
+    <string name="ActionChangedPhoto">غيّرَ un1 صورة المجموعة</string>
+    <string name="ActionChangedTitle">غيّرَ un1 اسم المجموعة ليصبح un2</string>
+    <string name="ActionChangedVideo">غيّر un1 صورة المجموعة</string>
+    <string name="ActionChannelCallEnded">انتهى البث المباشر (%s)</string>
+    <string name="ActionChannelCallJustStarted">البث المباشر بدأ</string>
+    <string name="ActionChannelCallScheduled">تمت جدولة البث المباشر إلى %1$s</string>
+    <string name="ActionCreateGroup">انشأ un1 المجموعة</string>
+    <string name="ActionDeletedInviteLinkClickable">حذف un1 رابط الدعوة un2</string>
+    <string name="ActionEditedInviteLinkClickable">عدّل un1 رابط الدعوة un2 إلى un3</string>
+    <string name="ActionEditedInviteLinkToSameClickable">عدّل un1 رابط الدعوة un2</string>
+    <string name="ActionGroupCallEndedBy">أنهى un1 المحادثة المرئية (%s)</string>
+    <string name="ActionGroupCallEndedByYou">أنت أنهيت المحادثة المرئية (%s)</string>
+    <string name="ActionGroupCallInvited">قام un1 بدعوة un2 للمحادثة المرئية</string>
+    <string name="ActionGroupCallInvitedYou">دعاك un1 إلى المحادثة المرئية</string>
+    <string name="ActionGroupCallScheduled">تمت جدولة المحادثة المرئية إلى %1$s</string>
+    <string name="ActionGroupCallStarted">بدأ un1 محادثة مرئية</string>
+    <string name="ActionGroupCallStartedByYou">أنت بدأت محادثة مرئية</string>
+    <string name="ActionGroupCallYouInvited">قمت بدعوة un2 إلى المحادثة المرئية</string>
+    <string name="ActionInviteChannelUser">تم انضمام un1 إلى القناة عبر رابط دعوة</string>
+    <string name="ActionInviteChannelUserFolder">تم انضمام un1 إلى القناة عبر رابط الدعوة للمجلد</string>
+    <string name="ActionInviteUser">تم انضمام un1 للمجموعة عبر رابط دعوة</string>
+    <string name="ActionInviteUserFolder">انضم un1 إلى المجموعة عبر رابط الدعوة للمجلد</string>
+    <string name="ActionInviteYou">انضممت إلى المجموعة عبر رابط دعوة</string>
+    <string name="ActionKickUser">تمت إزالة un2 من قِبل un1</string>
+    <string name="ActionKickUserYou">un1 أزالك</string>
+    <string name="ActionLeftUser">غادر un1 المجموعة</string>
+    <string name="ActionRefunded">استرد un1 مبلغ %1$s</string>
+    <string name="ActionRemovedPhoto">أزال un1 صورة المجموعة</string>
+    <string name="ActionRevokedInviteLinkClickable">عطّل un1 رابط الدعوة un2</string>
+    <string name="ActionTTLChanged">عيّن un1 الحذف التلقائي للرسائل بعد %1$s</string>
+    <string name="ActionTTLChannelChanged">سيتم حذف الرسائل تلقائيًا في هذه القناة بعد %1$s</string>
+    <string name="ActionTTLChannelDisabled">لن يتم حذف الرسائل تلقائيًا في هذه القناة</string>
+    <string name="ActionTTLDisabled">عطّل un1 مؤقت الحذف التلقائي</string>
+    <string name="ActionTTLYouChanged">قمت بتعيين الحذف التلقائي للرسائل بعد %1$s</string>
+    <string name="ActionTTLYouDisabled">أنت عطّلت مؤقت الحذف التلقائي</string>
+    <string name="ActionTakeScreenshoot">صوّر un1 الشاشة!</string>
+    <string name="ActionTakeScreenshootYou">لقد قمت بتصوير الشاشة!</string>
+    <string name="ActionUserInvitedToChannel">دعاك un1 إلى هذه القناة</string>
+    <string name="ActionUserInvitedToGroup">دعاك un1 إلى هذه المجموعة</string>
+    <string name="ActionUserScored">أحرز un1 %1$s</string>
+    <string name="ActionUserScoredInGame">un1 أحرز %1$s في un2</string>
+    <string name="ActionUserWithinOtherRadius">الآن un1 على بعد %1$s منك un2</string>
+    <string name="ActionUserWithinRadius">un1 الآن على بعد %1$s منك</string>
+    <string name="ActionUserWithinYouRadius">أنت الآن على بعد %1$s من un1</string>
+    <string name="ActionVolumeChanged">غيّر un1 مستوى صوت un2إلى %1$d%%.</string>
+    <string name="ActionYouAddUser">لقد قمت بإضافة un2</string>
+    <string name="ActionYouChangedPhoto">لقد غيّرت صورة المجموعة</string>
+    <string name="ActionYouChangedTitle">أنت غيّرت اسم المجموعة إلى un2</string>
+    <string name="ActionYouChangedVideo">أنت غيّرت صورة المجموعة</string>
+    <string name="ActionYouCreateGroup">لقد أنشأت المجموعة</string>
+    <string name="ActionYouKickUser">لقد أزلت un2</string>
+    <string name="ActionYouLeftUser">لقد غادرت المجموعة</string>
+    <string name="ActionYouRemovedPhoto">أنت أزلت صورة المجموعة</string>
+    <string name="ActionYouScored">لقد أحرزت %1$s</string>
+    <string name="ActionYouScoredInGame">أحرزت %1$s في un2</string>
+    <string name="Add">إضافة</string>
+    <string name="AddAccount">إضافة حساب</string>
+    <string name="AddAdminErrorBlacklisted">عذرًا، لا يمكنك إضافة هذا المستخدم كمشرف لأنه في قائمة «مستخدمون تمت إزالتهم» وغير مسموح لك رفع الحظر عنهم.</string>
+    <string name="AddAdminErrorNotAMember">لا يمكنك إضافة هذا المستخدم كمشرف لأنه ليس عضوًا في هذه المجموعة وغير مسموح لك بإضافته.</string>
+    <string name="AddAnExplanation">إضافة شرح</string>
+    <string name="AddAnExplanationInfo">سيرى المستخدمون هذا النص بعد اختيار الإجابة الخاطئة وهذا جيد للأغراض التعليمية.</string>
+    <string name="AddAnotherAccount">إضافة حساب آخر</string>
+    <string name="AddAnotherAccountInfo">إضافة حساباتك الأخرى على تيليجرام والتبديل بينها بسهولة.</string>
+    <string name="AddBannedErrorAdmin">لا يمكنك حظر هذا المستخدم لأنه مشرف في هذه المجموعة وغير مسموح لك عزله من الإشراف.</string>
+    <string name="AddEmailSubtitle">سيكون استلامك لرموز تسجيل الدخول عبر البريد الإلكتروني وليس عبر الرسائل النصية SMS. يُرجى إدخال بريد إلكتروني يمكنك الوصول إليه.</string>
+    <string name="AddEmailTitle">اختيار البريد الإلكتروني لتسجيل الدخول</string>
+    <string name="AddManyMembersAlertNamesText_one">هل تريدون فعلًا إضافة عضو واحد إلى **%2$s**؟</string>
+    <string name="AddManyMembersAlertNamesText_other">هل تريدون فعلًا إضافة %1$d عضوٍ إلى **%2$s**؟</string>
+    <string name="AddManyMembersAlertTitle_one">إضافة عضو</string>
+    <string name="AddManyMembersAlertTitle_other">إضافة %1$d عضوٍ</string>
+    <string name="AddMembersAlertNamesText">هل ترغب حقًا بإضافة %1$s إلى **%2$s**؟</string>
+    <string name="AddMembersForwardMessages">عرض آخر 100 رسالة للأعضاء الجدد</string>
+    <string name="AddOneMemberForwardMessages">عرض آخر 100 رسالة لـ **%1$s**</string>
+    <string name="AddProxy">إضافة بروكسي</string>
+    <string name="AddToTheGroup">إضافة %1$s للمجموعة؟</string>
+    <string name="AddToTheGroupAlertText">هل ترغب في إضافة **%1$s** لمجموعة **%2$s**؟</string>
+    <string name="AddToTheGroupAlertTitle">إضافة البوت</string>
+    <string name="AddToTheGroupForwardCount">عدد الرسائل اﻷخيرة المراد تحويلها:</string>
+    <string name="AddUserErrorBlacklisted">عذرًا، لا يمكنك إضافة هذا المستخدم لأنه موجود في قائمة «مستخدمون تمت إزالتهم» ولا يمكنك إلغاء حظره.</string>
+    <string name="Added">مُضافة</string>
+    <string name="Agree">موافق</string>
+    <string name="Album">مُجلد</string>
+    <string name="Alert">عرض الإشعارات</string>
+    <string name="AllAccounts">كل الحسابات</string>
+    <string name="AllowFillNumber">يرجى السماح لتيليجرام بتلقي المكالمات لنتمكن من تفعيل رقم هاتفك تلقائيًا.</string>
+    <string name="AllowReadCall">يرجى السماح لتيليجرام باستلام المكالمات ليتمكن من إدخال الرمز لك تلقائيًا.</string>
+    <string name="AllowReadCallAndLog">يرجى السماح لتيليجرام بتلقي وقراءة سجل المكالمات لنتمكن من إدخال الرمز لك تلقائيًا.</string>
+    <string name="AllowReadCallLog">يرجى السماح لتيليجرام بقراءة سجل المكالمات لنتمكن من إدخال الرمز لك تلقائيًا.</string>
+    <string name="AlternativeOptions">خيارات بديلة</string>
+    <string name="AlwaysShowPopup">إظهارها دائمًا</string>
+    <string name="AppName">تيليجرام</string>
+    <string name="AppNameBeta">(Beta) تيليجرام</string>
+    <string name="AppUpdate">تحديث تيليجرام</string>
+    <string name="AppUpdateChangelogEmpty">"**ما الجديد؟**
+
+• إصلاح للمشاكل وتحسينات أخرى."</string>
+    <string name="AppUpdateDownloadNow">تنزيله الآن</string>
+    <string name="AppUpdateDownloading">يتم التنزيل… %1$d%%</string>
+    <string name="AppUpdateNow">تحديثه الآن</string>
+    <string name="AppUpdateRemindMeLater">تذكيري لاحقًا</string>
+    <string name="AppUpdateVersionAndSize">الإصدار %1$s • %2$s</string>
+    <string name="April">أبريل</string>
+    <string name="AreYouSure">هل أنت متأكد؟</string>
+    <string name="AreYouSureBlockContact2">هل أردت فعلا حظر **%1$s**؟</string>
+    <string name="AreYouSureClearDrafts">هل ترغب حقًا في حذف جميع المسودات السحابية؟</string>
+    <string name="AreYouSureClearDraftsTitle">حذف المسودات السحابية</string>
+    <string name="AreYouSureClearHistory">هل ترغب حقًا في حذف جميع الرسائل في هذه المحادثة؟</string>
+    <string name="AreYouSureClearHistoryCacheFewChats">حذف كافة الرسائل والوسائط المتعلقة بالمحادثات المحددة من الذاكرة المؤقتة؟</string>
+    <string name="AreYouSureClearHistoryChannel">حذف كافة الرسائل والوسائط المتعلقة بهذه القناة من الذاكرة المؤقتة؟</string>
+    <string name="AreYouSureClearHistoryFewChats">هل أردت فعلًا مسح السجل في هذه المحادثات؟</string>
+    <string name="AreYouSureClearHistoryGroup">حذف جميع الرسائل والوسائط المخزنة مؤقتًا من هذه المجموعة؟</string>
+    <string name="AreYouSureClearHistorySavedMessages">هل تريدون فعلًا مسح **الرسائل المحفوظة**؟ هذا الإجراء لا يمكن التراجع عنه.</string>
+    <string name="AreYouSureClearHistoryWithChannel">هل تريدون مسح سجل القناة في **%1$s**؟</string>
+    <string name="AreYouSureClearHistoryWithChat">هل تريدون فعلًا مسح سجل المحادثة في **%1$s**؟</string>
+    <string name="AreYouSureClearHistoryWithSecretUser">سيؤدي هذا إلى حذف كل الرسائل عندك وعند *%1$s**. هل تريدون فعلًا حذفها؟</string>
+    <string name="AreYouSureClearHistoryWithUser">هل تريدون فعلًا مسح سجل المحادثة مع **%1$s**؟</string>
+    <string name="AreYouSureDeleteAndExit">هل ترغب حقًا في حذف هذه المجموعة والخروج منها؟</string>
+    <string name="AreYouSureDeleteAndExitChannel">"هل ترغب حقًا في حذف ومغادرة القناة؟ "</string>
+    <string name="AreYouSureDeleteAndExitName">هل ترغب حقًا في حذف ومغادرة مجموعة **%1$s**؟</string>
+    <string name="AreYouSureDeleteContact">هل ترغب حقًا في حذف جهة الاتصال هذه؟</string>
+    <string name="AreYouSureDeleteFewChats">هل أردت فعلًا حذف هذه المحادثات؟</string>
+    <string name="AreYouSureDeleteFewMessages">هل ترغب حقًا في حذف هذه الرسائل؟</string>
+    <string name="AreYouSureDeleteFewMessagesMega">هل ترغب حقًا في حذف هذه الرسائل من عند الكل؟</string>
+    <string name="AreYouSureDeleteSingleMessage">هل ترغب حقًا في حذف هذه الرسالة؟</string>
+    <string name="AreYouSureDeleteSingleMessageMega">هل ترغب حقًا في حذف هذه الرسالة من عند الكل؟</string>
+    <string name="AreYouSureDeleteThisChat">هل تريدون حذف هذه المحادثة نهائيًا؟</string>
+    <string name="AreYouSureDeleteThisChatSavedMessages">هل ترغب حقًا في حذف **الرسائل المحفوظة**؟</string>
+    <string name="AreYouSureDeleteThisChatWithBot">هل ترغب حقًا في حذف المحادثة مع **%1$s** وحظره؟</string>
+    <string name="AreYouSureDeleteThisChatWithSecretUser">هل ترغب حقًا في حذف المحادثة السرية مع **%1$s**؟</string>
+    <string name="AreYouSureDeleteThisChatWithUser">حذف المحادثة نهائيًا مع **%1$s**؟</string>
+    <string name="AreYouSureLogout">"هل تريدون فعلًا تسجيل الخروج؟
+
+سيؤدي هذا إلى حذف كل محادثاتك السرية.
+
+يمكنك استخدام تيليجرام على كل أجهزتك في الوقت نفسه واستخدام عدة حسابات على نفس التطبيق."</string>
+    <string name="AreYouSureRegistration">هل ترغب حقًا في إلغاء التسجيل؟</string>
+    <string name="AreYouSureSecretChat">هل ترغب حقًا في إنشاء محادثة سرية؟</string>
+    <string name="AreYouSureSecretChatTitle">محادثة سرية</string>
+    <string name="AreYouSureShareMyContactInfo">هل أردت فعلًا مشاركة رقم هاتفك؟</string>
+    <string name="AreYouSureShareMyContactInfoBot">سيطلع البوت على رقم هاتفك. قد يكون هذا مفيدًا عند التعامل مع خدماتٍ أخرى.</string>
+    <string name="AreYouSureShareMyContactInfoBotUnblock">سيؤدي هذا أيضًا إلى إلغاء حظر البوت.</string>
+    <string name="AreYouSureShareMyContactInfoUser">هل ترغب حقًا في مشاركة رقم هاتفك %1$s مع **%2$s**؟</string>
+    <string name="AreYouSureShareMyContactInfoWebapp">سيعلم %s برقم هاتفك. قد يكون ذلك مفيدًا للتكامل مع الخدمات الأخرى.</string>
+    <string name="AreYouSureUnblockContact">هل ترغب حقًا في إزالة الحظر عن هذا المستخدم؟</string>
+    <string name="AreYouSureUnsaveFewMessages">هل أدرت فعلًا حذف هذه الرسائل؟</string>
+    <string name="AreYouSureUnsaveSingleMessage">هل أردت فعلًا إزالة هذه الرسالة من \"الرسائل المحفوظة\"؟</string>
+    <string name="AskAQuestion">اسأل سؤالًا</string>
+    <string name="AskAQuestionInfo">"الدعم الفني في تيليجرام يقوم به متطوعون يحاولون الرد سريعًا قدر الإمكان، لكن ذلك قد يستغرق بعض الوقت.
+
+يرجى الاطلاع على&lt;a href=\"https://telegram.org/faq/ar#a\"> الأسئلة الشائعة عن تيليجرام&lt;/a> فهي تحوي إجابات لمعظم الأسئلة &lt;a href=\"https://telegram.org/faq/ar#j\">وحلولًا للعديد من المشاكل.&lt;/a>"</string>
+    <string name="AskButton">اسأل متطوعًا</string>
+    <string name="AttachAudio">رسالة صوتية</string>
+    <string name="AttachContact">جهة اتصال</string>
+    <string name="AttachDestructingPhoto">صورة ذاتية التدمير</string>
+    <string name="AttachDestructingVideo">مقطع مرئي ذاتي التدمير</string>
+    <string name="AttachDocument">ملف</string>
+    <string name="AttachGame">لعبة</string>
+    <string name="AttachGif">صورة متحركة</string>
+    <string name="AttachLiveLocation">موقع حي</string>
+    <string name="AttachLocation">موقع</string>
+    <string name="AttachOnceAudio">رسالة صوتية لمرة واحدة</string>
+    <string name="AttachOnceRound">رسالة مرئية لمرة واحدة</string>
+    <string name="AttachPhoto">صورة</string>
+    <string name="AttachPhotoExpired">صورة منتهية الصلاحية</string>
+    <string name="AttachQuickReplies">الردود</string>
+    <string name="AttachRound">رسالة مرئية</string>
+    <string name="AttachRoundExpired">رسالة مرئية منتهية</string>
+    <string name="AttachSticker">ملصق</string>
+    <string name="AttachVideo">مقطع مرئي</string>
+    <string name="AttachVideoExpired">فيديو منتهي الصلاحية</string>
+    <string name="AttachVoiceExpired">انتهت صلاحية الصوتية</string>
+    <string name="August">أغسطس</string>
+    <string name="AuthAnotherClient">مسح رمز QR</string>
+    <string name="AuthAnotherClientDownloadClientUrl">https://desktop.telegram.org</string>
+    <string name="AuthAnotherClientInfo1">قم بتنزيل تيليجرام على حاسوبك من *desktop.telegram.org*.</string>
+    <string name="AuthAnotherClientInfo2">يرجى فتح تيليجرام على سطح المكتب للحصول على رمز QR.</string>
+    <string name="AuthAnotherClientInfo3">امسح رمز الـ QR لربط حسابك.</string>
+    <string name="AuthAnotherClientNotFound">لم يتم العثور على رمز مصادقة</string>
+    <string name="AuthAnotherClientOk">تمّت المصادقة بنجاح</string>
+    <string name="AuthAnotherClientScan">مسح رمز QR</string>
+    <string name="AuthAnotherClientUrl">"يمكن استخدام هذا الرمز للسماح لشخص ما بتسجيل الدخول إلى حسابك في تيليجرام.
+
+لتأكيد عملية تسجيل الدخول؛ يرجى الذهاب إلى الإعدادات > الأجهزة > مسح QR وامسح الرمز."</string>
+    <string name="AuthAnotherWebClientUrl">https://web.telegram.org/</string>
+    <string name="AutoDownloadAudioInfo">الرسائل الصوتية صغيرة للغاية، لذا يتم تنزيلها دائمًا.</string>
+    <string name="AutoDownloadChannels">القنوات</string>
+    <string name="AutoDownloadContacts">جهات الاتصال</string>
+    <string name="AutoDownloadCustom">مخصص</string>
+    <string name="AutoDownloadDataUsage">استهلاك البيانات</string>
+    <string name="AutoDownloadFiles">الملفات</string>
+    <string name="AutoDownloadFilesOn">الملفات</string>
+    <string name="AutoDownloadFilesTitle">تنزيل الملفات والمقاطع الصوتية تلقائيًا</string>
+    <string name="AutoDownloadGroups">المجموعات</string>
+    <string name="AutoDownloadHigh">عالٍ</string>
+    <string name="AutoDownloadLow">منخفض</string>
+    <string name="AutoDownloadMaxFileSize">الحجم الأقصى للملف</string>
+    <string name="AutoDownloadMaxVideoSize">الحجم الأقصى للفيديو</string>
+    <string name="AutoDownloadMedia">تنزيل الوسائط تلقائيًا</string>
+    <string name="AutoDownloadMedium">متوسط</string>
+    <string name="AutoDownloadOff">معطَّل</string>
+    <string name="AutoDownloadOnAllChats">مفعَّل في جميع المحادثات</string>
+    <string name="AutoDownloadOnFor">مفعَّل في %1$s</string>
+    <string name="AutoDownloadOnMobileData">على البيانات الخلوية</string>
+    <string name="AutoDownloadOnMobileDataInfo">تفعيل هذا الخيار في حال رغبتك بتحميل الوسائط تلقائيًا عبر بيانات الجوال.</string>
+    <string name="AutoDownloadOnRoamingData">عند التجوال</string>
+    <string name="AutoDownloadOnRoamingDataInfo">قم بالتفعيل إذا كنت ترغب في تحميل الوسائط تلقائيًا عند التجوال.</string>
+    <string name="AutoDownloadOnUpToFor">حتى %1$s في %2$s</string>
+    <string name="AutoDownloadOnWiFiData">على الواي فاي</string>
+    <string name="AutoDownloadOnWiFiDataInfo">يرجى تشغيل هذا الخيار في حال رغبتك بتحميل الوسائط تلقائيًا عبر الواي فاي.</string>
+    <string name="AutoDownloadPhotos">الصور</string>
+    <string name="AutoDownloadPhotosOn">الصور</string>
+    <string name="AutoDownloadPhotosTitle">تنزيل الصور تلقائيًا</string>
+    <string name="AutoDownloadPm">الرسائل الخاصة</string>
+    <string name="AutoDownloadPreloadMusic">تجهيز المقطع التالي</string>
+    <string name="AutoDownloadPreloadMusicInfo">البدءُ بتحميل المقطع التالي أثناء استماعك لمقطعٍ صوتي.</string>
+    <string name="AutoDownloadPreloadVideo">تجهيز المرئيات الكبيرة</string>
+    <string name="AutoDownloadPreloadVideoInfo">تحميل الثواني الأولى (1-2 م.ب) من المقاطع المرئية الأكبر من %1$s لمشاهدتها فور الضغط عليها.</string>
+    <string name="AutoDownloadTypes">أنواع الوسائط</string>
+    <string name="AutoDownloadUpToOnAllChats">حتى %1$s في جميع المحادثات</string>
+    <string name="AutoDownloadVideos">المقاطع المرئية</string>
+    <string name="AutoDownloadVideosOn">المقاطع المرئية</string>
+    <string name="AutoDownloadVideosTitle">تنزيل المقاطع المرئية والصور المتحركة تلقائيًا</string>
+    <string name="AutodownloadChannels">القنوات</string>
+    <string name="AutodownloadContacts">جهات الاتصال</string>
+    <string name="AutodownloadGroupChats">المجموعات</string>
+    <string name="AutodownloadPrivateChats">المحادثات الخاصة</string>
+    <string name="AutodownloadSizeLimit">تقييد بالحجم</string>
+    <string name="AutodownloadSizeLimitUpTo">حتى %1$s</string>
+    <string name="AutomaticDownloadSettings">" إعدادات التنزيل التلقائي"</string>
+    <string name="AutomaticDownloadSettingsInfoMobile">يمكنك تغيير إعدادات التنزيل التلقائي لتقليل استخدام بيانات الجوال.</string>
+    <string name="AutomaticDownloadSettingsInfoRoaming">يمكنك تغيير إعدادات التنزيل التلقائي لتقليل استخدام البيانات أثناء التجوال.</string>
+    <string name="AutomaticDownloadSettingsInfoWiFi">يمكنك تغيير إعدادات التنزيل التلقائي لتقليل استخدام البيانات عند الاتصال بشبكة واي فاي.</string>
+    <string name="AutomaticMediaDownload">تنزيل الوسائط تلقائيًا</string>
+    <string name="AutoplayGIF">الصور المتحركة</string>
+    <string name="AutoplayMedia">تشغيل الوسائط تلقائيًا</string>
+    <string name="AutoplayVideo">المقاطع المرئية</string>
+    <string name="AutoplayVideoInfo">اضغط على أزرار الصوت لتشغيله.</string>
+    <string name="Back">رجوع</string>
+    <string name="BackgroundAnimate">تحريك</string>
+    <string name="BackgroundAnimateInfo">ستتحرك الألوان عند إرسال الرسائل</string>
+    <string name="BackgroundBlurred">ضبابية</string>
+    <string name="BackgroundChoosePattern">اختيار النقش</string>
+    <string name="BackgroundColorSinglePreviewLine1">يمكنك الضغط على «تعيين» لتطبيق الخلفية.</string>
+    <string name="BackgroundColorSinglePreviewLine2">تبدو رائعة.</string>
+    <string name="BackgroundColors">ألوان</string>
+    <string name="BackgroundIntensity">الشدة</string>
+    <string name="BackgroundMotion">متحركة</string>
+    <string name="BackgroundPattern">نقش</string>
+    <string name="BackgroundPreview">معاينة الخلفية</string>
+    <string name="BackgroundPreviewLine1">ملحوظة: بعض صور الخلفيات تبدو أفضل مع التأثير الضبابي.</string>
+    <string name="BackgroundPreviewLine2">وااو! شكرًا لك</string>
+    <string name="BackgroundSearchColor">اللون:</string>
+    <string name="BadgeNumber">شارةُ عدّاد الرسائل</string>
+    <string name="BadgeNumberMutedChats">تضمين المحادثات المكتومة</string>
+    <string name="BadgeNumberShow">إظهار أيقونة الشارة</string>
+    <string name="BadgeNumberUnread">عدد الرسائل غير المقروءة</string>
+    <string name="Ban">حظر</string>
+    <string name="BannedPhoneNumber">"هذا الرقم محظور "</string>
+    <string name="Black">الأسود</string>
+    <string name="BlockUserChatsTitle">المحادثات</string>
+    <string name="BlockUserContactsTitle">جهات الاتصال</string>
+    <string name="BlockUserMultiTitle">حظر المستخدم</string>
+    <string name="BlockedUsers">المستخدمون المحظورون</string>
+    <string name="BlockedUsersInfo">لن يتمكن المستخدمون المحظورون من مراسلتك أو إضافتك إلى مجموعات. لن يروا صور ملفك الشخصي وقصصك وحالة اتصالك وآخر ظهور لك.</string>
+    <string name="Blue">الأزرق</string>
+    <string name="BotCantJoinGroups">لا يمكن أن يضافَ هذا البوت إلى المجموعات.</string>
+    <string name="Brown">البني</string>
+    <string name="Call">اتصال</string>
+    <string name="CallAvailableIn">يمكنك طلب مكالمة صوتية بعد %2$02d:%1$d</string>
+    <string name="CallText">سيتصل بك تيليجرام بعد %2$02d:%1$d</string>
+    <string name="Calling">يتم الاتصال بك...</string>
+    <string name="Cancel">إلغاء</string>
+    <string name="CancelAccountReset">إلغاء حذف الحساب</string>
+    <string name="CancelAccountResetInfo2">"شخص ما لديه حق الوصول إلى **%1$s** طلب حذف حسابك في تيليجرام وإعادة تعيين كلمة مرور التحقق بخطوتين.
+
+ إن لم يكن أنت؛ فيرجى إدخال الرمز الذي أرسلناه إليك للتو عبر الرسائل النصية SMS.
+يمكنك أيضًا إلغاء حذف الحساب عن طريق *تغيير رقم هاتفك*."</string>
+    <string name="CancelEmailQuestion">هل أردت فعلًا إلغاء إعداد بريد الاسترداد؟</string>
+    <string name="CancelEmailQuestionTitle">إلغاء الإعداد</string>
+    <string name="CancelForwardChat">ما الذي تود فعله بـ %1$s من %2$s؟</string>
+    <string name="CancelForwardPrivate">ما الذي تود فعله بـ %1$s من محادثتك مع %2$s؟</string>
+    <string name="CancelForwarding">إلغاء التحويل</string>
+    <string name="CancelLinkExpired">رابط غير صحيح أو منتهي الصلاحية.</string>
+    <string name="CancelLinkSuccess">"تم إلغاء عملية حذف حسابك %1$s.
+يمكنك الآن إغلاق هذه النافذة."</string>
+    <string name="CancelLinkSuccessTitle">تم!</string>
+    <string name="CancelPasswordQuestion">هل تريدون فعلًا إلغاء إعداد التحقق بخطوتين؟</string>
+    <string name="CancelPasswordReset">إلغاء عملية إعادة تعيين كلمة المرور؟ إذا طلبت لاحقًا إعادة تعيين جديد؛ فسوف يستغرق ٧ أيام أخرى.</string>
+    <string name="CancelPasswordResetNo">لا</string>
+    <string name="CancelPasswordResetYes">نعم</string>
+    <string name="CancelRegistration">إلغاء التسجيل</string>
+    <string name="CancelReset">إلغاء إعادة التعيين</string>
+    <string name="Change">تغيير</string>
+    <string name="ChangeChannelNameColor2">المظهر</string>
+    <string name="ChangeChatBackground">تغيير خلفية المحادثة</string>
+    <string name="ChangeEmail">تغيير البريد</string>
+    <string name="ChangeGroupAppearance">المظهر</string>
+    <string name="ChangeLanguageLater">يمكنك تغيير لغة التطبيق لاحقًا من الإعدادات.</string>
+    <string name="ChangePassword">تغيير كلمة المرور</string>
+    <string name="ChangePhoneHelp">سوف يستلم رقمك الجديد رمز التفعيل عبر مكالمة أو رسالة SMS نصيّة.</string>
+    <string name="ChangePhoneNewNumber">الرقم الجديد</string>
+    <string name="ChangePhoneNumber">تغيير رقم الهاتف</string>
+    <string name="ChangePhoneNumberInfo">نقلُ حسابك مع ما يحويه من محادثات ووسائطَ لرقمٍ آخر.</string>
+    <string name="ChangePhoneNumberOccupied">الرقم %1$s مرتبط بالفعل بحساب آخَر على تيليجرام. يرجى حذف ذلك الحساب قبل استخدام هذا الرقم.</string>
+    <string name="ChangePhoneNumberSuccessWithPhone">تم تغيير رقم هاتفك بنجاح إلى %1$s.</string>
+    <string name="ChangeRecoveryEmail">تغيير بريد الاسترداد</string>
+    <string name="ChangeUserNameColor">تغيير لون الاسم</string>
+    <string name="ChannelDescriptionChanged">تم تحديث وصف القناة.</string>
+    <string name="ChannelTitleChanged">تم تحديث اسم القناة.</string>
+    <string name="ChatBackground">خلفية المحادثة</string>
+    <string name="ChatListSwipeGesture">إجراءات السحْب لقائمة المحادثات</string>
+    <string name="ChatListSwipeGestureInfo">اختيار الإجراء المُراد تنفيذه عند تمريرك إلى اليسار في قائمة المحادثات.</string>
+    <string name="ChatSettings">إعدادات المحادثات</string>
+    <string name="CheckPassword">التحقق من كلمة المرور</string>
+    <string name="CheckPasswordBackToSettings">الرجوع للإعدادات</string>
+    <string name="CheckPasswordInfo">هل لازلت تتذكر كلمة المرور؟</string>
+    <string name="CheckPasswordPerfect">ممتاز!</string>
+    <string name="CheckPasswordPerfectInfo">لازلت تتذكر كلمة مرورك.</string>
+    <string name="CheckPasswordWrong">أدخلت كلمة مرور غير صحيحة.</string>
+    <string name="CheckPhoneNumber">هل لا يزال %1$s رقمك؟</string>
+    <string name="CheckPhoneNumberInfo">يرجى إبقاء رقم هاتفك محدّثًا؛ لضمان قدرتك على تسجيل الدخول إلى تيليجرام. **معرفة المزيد**</string>
+    <string name="CheckPhoneNumberLearnMoreUrl">https://telegram.org/faq/ar#g2</string>
+    <string name="CheckPhoneNumberNo">لا</string>
+    <string name="CheckPhoneNumberYes">نعم</string>
+    <string name="CheckYourEmail">يُرجى تفحص البريد</string>
+    <string name="CheckYourEmailSubtitle">يرجى إدخال الرمز الذي أرسلناه إلى بريدك الإلكتروني %1$s.</string>
+    <string name="CheckYourNewEmail">يرجى تفحص بريدك الإلكتروني الجديد</string>
+    <string name="CheckYourNewEmailSubtitle">يرجى إدخال الرمز الذي أرسلناه إلى بريدك الإلكتروني الجديد %1$s.</string>
+    <string name="ChooseCountry">اختيار الدولة</string>
+    <string name="ChooseLanguages">اختيار اللغات</string>
+    <string name="ChooseYourLanguage">اختيار اللغة</string>
+    <string name="ChooseYourLanguageOther">أخرى</string>
+    <string name="ClearCache">مسح الذاكرة المؤقتة</string>
+    <string name="ClearCacheFewChatsTitle">مسح الذاكرة المؤقتة لـ %1$s</string>
+    <string name="ClearCacheInfo">"تفريغ بعض المساحة من جهازك؛ ستبقى وسائطك في السحابة. "</string>
+    <string name="ClearFewChatsTitle">مسح %1$s</string>
+    <string name="ClearHistoryOptionAlso">مسح السجل عند %1$s أيضًا</string>
+    <string name="ClearSelectedCache">مسح المُحددة</string>
+    <string name="ClearingCache">يتم مسح التخزين المؤقت</string>
+    <string name="ClearingCacheDescription">يرجى إبقاء النافذة مفتوحة أثناء قيام تيليجرام بتنظيف تخزينك المؤقت.</string>
+    <string name="Close">إغلاق</string>
+    <string name="Code">الرمز</string>
+    <string name="CodeExpired">انتهت صلاحية الرمز، يرجى البدء من جديد.</string>
+    <string name="ColorBlue">أزرق</string>
+    <string name="ColorCyan">سماوي</string>
+    <string name="ColorGreen">أخضر</string>
+    <string name="ColorOrange">برتقالي</string>
+    <string name="ColorPink">زهري</string>
+    <string name="ColorRed">أحمر</string>
+    <string name="ColorViolet">بنفسجي</string>
+    <string name="ColorWhite">أبيض</string>
+    <string name="ColorYellow">أصفر</string>
+    <string name="ConfirmCorrectNumber">هل هذا هو الرقم الصحيح؟</string>
+    <string name="ConnectingToProxyEnable">تفعيل</string>
+    <string name="ContactJoined">انضمام جهة اتصال لتيليجرام</string>
+    <string name="ContactSupport">التواصل مع الدعم</string>
+    <string name="ContactSupportInfo">أخبرنا عن أي مشاكلَ تواجهك؛ تسجيل الخروج ليس حلا ناجحا في العادة.</string>
+    <string name="Continue">استمرار</string>
+    <string name="ContinueOnThisLanguage">الاستمرار باللغة العربية</string>
+    <string name="Copy">نسخ</string>
+    <string name="Country">الدولة</string>
+    <string name="CreateLink">إنشاء رابط</string>
+    <string name="Crop">قص</string>
+    <string name="CustomNotifications">الإشعارات المخصصة</string>
+    <string name="Deactivate">الحذف الآن</string>
+    <string name="December">ديسمبر</string>
+    <string name="Decline">رفض</string>
+    <string name="DeclineDeactivate">رفض وحذف الحساب</string>
+    <string name="Default">الافتراضي</string>
+    <string name="Delete">حذف</string>
+    <string name="DeleteAll">حذف الكل</string>
+    <string name="DeleteAllMessagesAlert">تحذير! سيؤدي هذا لحذف **جميع رسائل** هذه المحادثة من **كلا** الطرفين.</string>
+    <string name="DeleteAllMessagesChannelAlert">تحذير! سيؤدي هذا إلى **حذف كل الرسائل** في هذه القناة.</string>
+    <string name="DeleteAllMessagesSavedAlert">تحذير! سيؤدي هذا **لحذف جميع الرسائل** في هذه المحادثة.</string>
+    <string name="DeleteChatBackgroundsAlert">هل أردت فعلًا حذف الخلفيات المحددة؟</string>
+    <string name="DeleteFewChatsTitle">حذف %1$s</string>
+    <string name="DeleteLocalizationText">هل ترغب حقًا في حذف حزمة اللغة **%1$s**؟</string>
+    <string name="DeleteLocalizationTitle">حذف حزمة اللغة</string>
+    <string name="DeleteMessagesOption">التراجع عن إرسال رسائلي</string>
+    <string name="DeleteMessagesOptionAlso">حذف من عند %1$s أيضًا</string>
+    <string name="DeleteMessagesText">يمكنك أيضًا حذف %1$s التي أرسلتها من حساب **%2$s** عبر تحديد \"التراجع عن إرسال رسائلي\".</string>
+    <string name="DeleteMessagesTextGroup">يمكنك أيضًا حذف %1$s التي أرسلتها من حسابات أعضاء المجموعة الآخرين عبر تحديد \"التراجع عن إرسال رسائلي\".</string>
+    <string name="DeleteMessagesTextGroupPart">يمكنك أيضًا حذف %1$s التي أرسلتها من حسابات أعضاء المجموعة الآخرين عبر تحديد \"حذف من عند كافة الأعضاء\".</string>
+    <string name="DeleteMessagesTitle">حذف %1$s</string>
+    <string name="DeletePhoto">إزالة الصورة</string>
+    <string name="DeleteProxy">حذف البروكسي؟</string>
+    <string name="DeleteProxyConfirm">هل أردت فعلًا حذف هذا البروكسي؟</string>
+    <string name="DeleteProxyMultiConfirm">هل أردت فعلًا حذف هذه البروكسيات؟</string>
+    <string name="DeleteProxyTitle">حذف البروكسي</string>
+    <string name="DeleteSingleMessagesTitle">حذف الرسالة</string>
+    <string name="Devices">الأجهزة</string>
+    <string name="DidNotGetTheCode">ألم يصلك الرمز؟</string>
+    <string name="DidNotGetTheCodeEditNumberButton">تعديل الرقم</string>
+    <string name="DidNotGetTheCodeFragment">الحصول على الرمز عبر Fragment</string>
+    <string name="DidNotGetTheCodeHelpButton">مساعدة</string>
+    <string name="DidNotGetTheCodeInfo">"إذا لم يصلك الرمز برسالة نصية SMS أو اتصال فيرجى التحقق من **إعدادات البيانات الخلوية** ورقم الهاتف:
+
+**%1$s**
+
+خياراتك المتبقية هي إما تجربة رقم آخر أو التواصل مع دعم تيليجرام. يمكنك الضغط على **مساعدة** لإرسال التفاصيل الفنية إلينا لنتمكن من التعرف على المشكلة."</string>
+    <string name="DidNotGetTheCodeSms">إرسال الرمز برسالة نصية SMS</string>
+    <string name="DirectShare">مشاركة مباشرة</string>
+    <string name="DirectShareInfo">إظهار آخر المحادثات في قائمة المشاركة</string>
+    <string name="Disable">تعطيل</string>
+    <string name="DistanceUnits">وحدة القياس</string>
+    <string name="DistanceUnitsAutomatic">تلقائي</string>
+    <string name="DistanceUnitsKilometers">كيلومتر</string>
+    <string name="DistanceUnitsMiles">ميل</string>
+    <string name="DistanceUnitsTitle">وحدة القياس</string>
+    <string name="DoNotTranslate">عدم ترجمة</string>
+    <string name="Done">تم</string>
+    <string name="Edit">تعديل</string>
+    <string name="EditMessageError">المعذرة، لا يمكنك تعديل هذه الرسالة.</string>
+    <string name="EditName">تعديل الاسم</string>
+    <string name="EditNumber">تعديل الرقم</string>
+    <string name="EditPack">تحرير</string>
+    <string name="EditWidget">تحرير الأداة</string>
+    <string name="EditWidgetChatsInfo">"عرض أحدث رسالة من المحادثات المحددة.
+
+ إذا لم يتم تحديد محادثات معينة فسيتم عرض أحدث محادثاتك في هذه الأداة."</string>
+    <string name="EditWidgetContactsInfo">"عرض اختصارات للمحادثات من أجل الوصول السريع لها.
+
+ إذا لم يتم تحديد أشخاص فسيتم عرض جهات الاتصال المتكررة في هذه الأداة."</string>
+    <string name="EmailAddressInvalid">عنوان بريد غير صالح.</string>
+    <string name="EmailLogin">بريد تسجيل الدخول</string>
+    <string name="EmailLoginChangeMessage">سيتم استخدام عنوان البريد الإلكتروني هذا في كل مرة يتم فيها تسجيل الدخول إلى حسابك من جهاز جديد.</string>
+    <string name="EmailNotAllowed">نطاق البريد هذا غير مسموح به.</string>
+    <string name="EmailPasswordConfirmText2">لإتمام إعداد بريد الاسترداد؛ يرجى تفقد بريدك الإلكتروني (ويرجى كذلك تفقد مجلد البريد المزعج) وكتابة الرمز الذي أرسلناه للتو.</string>
+    <string name="EmailTokenInvalid">بريد إلكتروني غير صالح.</string>
+    <string name="Emoji">الرموز التعبيرية</string>
+    <string name="Enable">تفعيل</string>
+    <string name="EnableAllStreamingInfo">عندما يكون ذلك ممكنًا؛ سيبدأ تيليجرام بتشغيل المقاطع المرئية والصوتية على الفور، دون انتظار اكتمال تنزيل الملفات.</string>
+    <string name="EnableAnimations">تفعيل المؤثرات البصرية</string>
+    <string name="EnableStreaming">تشغيل الوسائط قبل تنزيلها</string>
+    <string name="EnabledPasswordText">"لقد قمت بتفعيل التحقق بخطوتين.
+لتسجيل الدخول إلى حسابك هذا من أجهزة جديدةٍ ستحتاج إلى كلمة المرور التي قمت بتعيينها."</string>
+    <string name="English">الإنجليزية</string>
+    <string name="EnterCode">أدخل الرمز</string>
+    <string name="EnterNewEmail">يرجى إدخال بريد جديد</string>
+    <string name="EnterPassword">يرجى إدخال كلمة المرور</string>
+    <string name="ErrorOccurred">حدث خطأ ما.</string>
+    <string name="ErrorSendRestrictedDocuments">قام مشرفو هذه المجموعة بتقييدك من إرسال المستندات.</string>
+    <string name="ErrorSendRestrictedDocumentsAll">عذرا، إرسال المستندات غير مسموح به في هذه المجموعة.</string>
+    <string name="ErrorSendRestrictedMedia">قام مشرفو هذه المجموعة بتقييدك من إرسال الوسائط.</string>
+    <string name="ErrorSendRestrictedMediaAll">عذرًا، إرسال الوسائط غير مسموح به في هذه المجموعة.</string>
+    <string name="ErrorSendRestrictedMusic">قام مشرفو هذه المجموعة بتقييدك من إرسال الملفات الصوتية.</string>
+    <string name="ErrorSendRestrictedMusicAll">عذرًا، إرسال الملفات الصوتية غير مسموح به في هذه المجموعة.</string>
+    <string name="ErrorSendRestrictedPhoto">قام مشرفو هذه المجموعة بتقييدك من إرسال الصور.</string>
+    <string name="ErrorSendRestrictedPhotoAll">عذرًا، إرسال الصور غير مسموح به في هذه المجموعة.</string>
+    <string name="ErrorSendRestrictedPolls">قام مشرفو هذه المجموعة بتقييدك من إرسال الاستفتاءات.</string>
+    <string name="ErrorSendRestrictedPollsAll">المعذرة، لا يُسمح بإرسال الاستفتاءات في هذه المجموعة.</string>
+    <string name="ErrorSendRestrictedPrivacyVideoMessages">عذرًا، لا يمكنك إرسال رسائل مرئية إلى هذا المستخدم بسبب إعدادات الخصوصية لديهم.</string>
+    <string name="ErrorSendRestrictedPrivacyVoiceMessages">عذرًا، لا يمكنك إرسال رسائل صوتية إلى هذا المستخدم بسبب إعدادات الخصوصية لديهم.</string>
+    <string name="ErrorSendRestrictedRound">قام مشرفو هذه المجموعة بتقييدك من إرسال الرسائل المرئية.</string>
+    <string name="ErrorSendRestrictedRoundAll">عذرًا، إرسال الرسائل المرئية غير مسموح به في هذه المجموعة.</string>
+    <string name="ErrorSendRestrictedStickers">قام مشرفو هذه المجموعة بتقييدك من إرسال الملصقات.</string>
+    <string name="ErrorSendRestrictedStickersAll">المعذرة، لا يُسمح بإرسال الملصقات في هذه المجموعة.</string>
+    <string name="ErrorSendRestrictedVideo">قام مشرفو هذه المجموعة بتقييدك من إرسال مقاطع الفيديو.</string>
+    <string name="ErrorSendRestrictedVideoAll">عذرًا، إرسال الفيديو غير مسموح به في هذه المجموعة.</string>
+    <string name="ErrorSendRestrictedVoice">قام مشرفو هذه المجموعة بتقييدك من إرسال رسائل صوتية.</string>
+    <string name="ErrorSendRestrictedVoiceAll">عذرًا، إرسال الرسائل الصوتية غير مسموح به في هذه المجموعة.</string>
+    <string name="Events">الأحداث</string>
+    <string name="February">فبراير</string>
+    <string name="FirstName">الاسم الأول (مطلوب)</string>
+    <string name="FirstNameSmall">الاسم الأول</string>
+    <string name="Flip">قلب</string>
+    <string name="FloodWait">محاولات كثيرة خاطئة، نرجو المحاولة لاحقًا.</string>
+    <string name="FloodWaitTime">محاولات كثيرة. ترجى إعادة المحاولة بعد %1$s</string>
+    <string name="FontSize">حجم الخط</string>
+    <string name="FontSizePreviewLine1">ماهو الوقت الآن؟</string>
+    <string name="FontSizePreviewLine2">الوقت صباح هنا في دبي 😎</string>
+    <string name="FontSizePreviewName">أيمن</string>
+    <string name="FontSizePreviewReply">صباح الخير! 👋</string>
+    <string name="FontType">نوع الخط</string>
+    <string name="ForgotPassword">هل نسيت كلمة المرور؟</string>
+    <string name="Forward">تحويل</string>
+    <string name="FreshChangePhoneForbidden">لأسباب أمنية؛ لا يمكنك تغيير رقم هاتفك من جهاز قمت بتوصيله للتو. يرجى استخدام اتصال سابق أو الانتظار لبضع ساعات.</string>
+    <string name="FreshChangePhoneForbiddenTitle">تعذر الإنهاء</string>
+    <string name="FromYou">أنت</string>
+    <string name="General">عام</string>
+    <string name="Gray">الرمادي</string>
+    <string name="Green">الأخضر</string>
+    <string name="HidAccount">تم إخفاء الحساب من قِبل المستخدم.</string>
+    <string name="HideSenderNames">إخفاء أسماء المرسِلين</string>
+    <string name="HideSendersName">إخفاء اسم المرسِل</string>
+    <string name="ImportContacts">استيراد جهات الاتصال</string>
+    <string name="InAppNotifications">إشعارات داخل التطبيق</string>
+    <string name="InAppPreview">معاينة داخل التطبيق</string>
+    <string name="InAppSounds">أصوات داخل التطبيق</string>
+    <string name="InAppVibrate">اهتزازات داخل التطبيق</string>
+    <string name="InChatSound">أصوات داخل المحادثات</string>
+    <string name="IncorrectLocalization">ملف الترجمة غير صالح</string>
+    <string name="InvalidCode">الرمز غير صالح، ترجى إعادة المحاولة.</string>
+    <string name="InvalidFirstName">الاسم الأول غير مسموح به، يرجى إدخال اسم آخر.</string>
+    <string name="InvalidLastName">المعذرة، لا يمكن استخدام اسم العائلة هذا.</string>
+    <string name="InvalidPhoneNumber">رقم هاتف غير صالح، يرجى التحقق من الرقم والمحاولة مرة أخرى.</string>
+    <string name="InviteUser">هذا المستخدم ليس لديه تيليجرام بعد، هل تريد دعوته؟</string>
+    <string name="January">يناير</string>
+    <string name="July">يوليو</string>
+    <string name="June">يونيو</string>
+    <string name="Language">اللغة</string>
+    <string name="LanguageAlert">"أنت على وشك تطبيق حزمة اللغة (**%1$s**) والمكتملة بنسبة %2$d%%.
+
+سيؤدي هذا إلى ترجمة الواجهة بالكامل، يمكنك اقتراح التصحيحات في [منصة الترجمة].
+
+يمكنك تغيير لغتك مرة أخرى في أي وقت من خلال الإعدادات."</string>
+    <string name="LanguageCode">ar</string>
+    <string name="LanguageCustom">مخصص</string>
+    <string name="LanguageCustomAlert">"أنت على وشك تطبيق حزمة اللغة المخصصة (**%1$s**) والمكتملة بنسبة %2$d%%.
+
+سيؤدي هذا إلى ترجمة الواجهة بالكامل، يمكنك اقتراح التصحيحات في [منصة الترجمة].
+
+يمكنك تغيير لغتك مرة أخرى في أي وقت من خلال الإعدادات."</string>
+    <string name="LanguageName">العربية</string>
+    <string name="LanguageNameInEnglish">Arabic</string>
+    <string name="LanguageSame">أنت تستخدم حزمة اللغة (**%1$s**) بالفعل، يمكنك تغيير لغتك في أي وقت عبر الإعدادات.</string>
+    <string name="LanguageTitle">تغييرُ اللغة؟</string>
+    <string name="LanguageUnknownCustomAlert">للأسف، لا تحتوي حزمة اللغة المخصصةُ هذه (**%1$s **) على بيانات لتيليجرام للأندرويد.</string>
+    <string name="LanguageUnknownTitle">البيانات غير كافية</string>
+    <string name="LanguageUnsupportedError">تعذر العثور على اللغة.</string>
+    <string name="Languages_one">لغة واحدة</string>
+    <string name="Languages_other">%1$d لغةٍ</string>
+    <string name="LargeEmoji">رموز تعبيرية كبيرة</string>
+    <string name="LastName">اسم العائلة (اختياري)</string>
+    <string name="LastNameSmall">اسم العائلة</string>
+    <string name="LedColor">لون الضوء</string>
+    <string name="LedDisabled">تعطيل</string>
+    <string name="LimitReachedPinnedTopics">عذرًا، لا يمكنك تثبيت أكثر من %d من الموضوعات في الأعلى.</string>
+    <string name="LinkHashExpired">لم يعد الرابط نشطًا</string>
+    <string name="Loading">يتم التحميل...</string>
+    <string name="LoadingFullImage">يتم تحميل الصورة...</string>
+    <string name="LogOut">تسجيل الخروج</string>
+    <string name="LogOutInfo">تسجيل الخروج سيلغي كل المحادثات السرية.</string>
+    <string name="LogOutTitle">تسجيل الخروج</string>
+    <string name="LoginAccessibilityCountryCode">مفتاح الدولة</string>
+    <string name="LoginOrSingInWithGoogle">أو</string>
+    <string name="LoginPassword">كلمة المرور</string>
+    <string name="LoginPasswordText">لقد قمت بتفعيل التحقق بخطوتين مسبقًا، لذلك حسابك محميّ بكلمة مرور إضافية.</string>
+    <string name="LoginPasswordTextShort">تم تفعيل التحقق بخطوتين. حسابك محمي بكلمة مرور إضافية.</string>
+    <string name="Long">طويل</string>
+    <string name="LowDiskSpaceButton">إدارة ذاكرة التخزين المؤقت</string>
+    <string name="LowDiskSpaceMessage">مساحة جهازك ممتلئة تقريبًا، لتحرير مساحة إضافية يمكنك جعل تيليجرام يقوم بالتخزين المؤقت للوسائط الحديثة فقط.</string>
+    <string name="LowDiskSpaceMessage2">مساحة القرص على جهازك على وشك النفاد. يمكنك استخدام إعدادات ذاكرة التخزين المؤقت لإزالة الوسائط غير الضرورية. يمكنك إعادة تنزيل الملفات إذا احتجت إليها مرة أخرى.</string>
+    <string name="LowDiskSpaceTitle">ملحوظة</string>
+    <string name="March">مارس</string>
+    <string name="May">مايو</string>
+    <string name="MessageLifetimeChanged">عيّن %1$s عداد التدمير الذاتي ليصبح %2$s</string>
+    <string name="MessageLifetimeChangedOutgoing">لقد قمت بتعيين عداد التدمير الذاتي لـ %1$s</string>
+    <string name="MessageLifetimeRemoved">%1$s عطّل عداد التدمير الذاتي</string>
+    <string name="MessageLifetimeYouRemoved">لقد عطلتَ عداد التدمير الذاتي</string>
+    <string name="MessagePreview">إظهار معاينة للرسالة</string>
+    <string name="MessagesSettings">الرسائل</string>
+    <string name="NewPassword">كلمة مرور جديدة</string>
+    <string name="Next">التالي</string>
+    <string name="NoBlocked">لا يوجد مستخدمون محظورون بعد</string>
+    <string name="NoExceptions">"يحوي هذا القسم على جميع المحادثات التي تملك إعدادات إشعارات مخصصة.
+
+يمكنك تخصيص إشعارات المحادثات عبر فتح صفحاتها واختيار 'الإشعارات'. "</string>
+    <string name="NoFolderFound">لم يعثر على مجلد محادثات.</string>
+    <string name="NoGIFs">ما من صور متحركة</string>
+    <string name="NoHandleAppInstalled">"لا تملك تطبيقًا يمكنه فتح صيغة الملفات '%1$s'، يرجى تنزيل تطبيق مناسب للاستمرار"</string>
+    <string name="NoMailInstalled">يرجى إرسال بريد إلكتروني على reports@stel.com لإخبارنا بمشكلتك.</string>
+    <string name="NoMedia">شارك الصور والمقاطع المرئية في هذه المحادثة للوصول إليها عبر أي جهاز من أجهزتك.</string>
+    <string name="NoMediaAutoDownload">معطّل</string>
+    <string name="NoMediaSecret">الصور والمقاطع المرئية من هذه المحادثة ستظهر هنا.</string>
+    <string name="NoPhoneFound">لا يوجد حساب تيليجرام برقم الهاتف هذا.</string>
+    <string name="NoPlayerInstalled">لا تملك أي مشغل للمقاطع المرئية على جهازك، يرجى تنزيل واحد للمتابعة</string>
+    <string name="NoPopup">بدون إشعارات منبثقة</string>
+    <string name="NoSharedAudio">يمكنك إرسال مقاطع صوتية إلى هذه المحادثة والوصول إليها عبر أجهزتك الأخرى.</string>
+    <string name="NoSharedAudioSecret">الصوتيات من هذه المحادثة سيتم عرضها هنا.</string>
+    <string name="NoSharedFiles">شارك الملفات والمستندات في هذه المحادثة لتتمكن من الوصول إليها عبر أي جهاز من أجهزتك.</string>
+    <string name="NoSharedFilesSecret">الملفات والمستندات من هذه المحادثة سيتم عرضها هنا.</string>
+    <string name="NoSharedGifSecret">سيتم عرض الصور المتحركة من هذه المحادثة هنا.</string>
+    <string name="NoSharedLinks">شارك الروابط في هذه المحادثة لتتمكن من الوصول إليها عبر أي جهاز من أجهزتك.</string>
+    <string name="NoSharedLinksSecret">سيتم عرض الروابط المتبادلة في هذه المحادثة هنا.</string>
+    <string name="NoSharedVoice">مشاركة الرسائل الصوتية في هذه المحادثة للوصول إليها عبر أي جهاز من أجهزتك.</string>
+    <string name="NoSharedVoiceSecret">الرسائل الصوتية من هذه المحادثة ستظهر هنا.</string>
+    <string name="NoSound">بلا صوت</string>
+    <string name="NoUsernameFound">لم يعثر على اسم المستخدم.</string>
+    <string name="None">لا يوجد</string>
+    <string name="NotificationActionPinnedContact2">ثبّتَ %1$s جهة اتصال %3$s في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedContactChannel2">ثبّتَت %1$s جهة اتصال %2$s</string>
+    <string name="NotificationActionPinnedContactUser">ثبّت %1$s جهة اتصال %2$s</string>
+    <string name="NotificationActionPinnedFile">ثبّتَ %1$s ملفًا في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedFileChannel">ثبت %1$s ملفًا</string>
+    <string name="NotificationActionPinnedFileUser">ثبّت %1$s ملفًا</string>
+    <string name="NotificationActionPinnedGame">ثبّتَ %1$s لعبةً في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedGameChannel">ثبّت %1$s لعبة</string>
+    <string name="NotificationActionPinnedGameScore">ثبّتَ %1$s نتيجة لعبة في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedGameScoreChannel">ثبّتَت %1$s نتيجة لعبة</string>
+    <string name="NotificationActionPinnedGameScoreUser">ثبّت %1$s نتيجة لعبة</string>
+    <string name="NotificationActionPinnedGameUser">ثبّت %1$s لعبة</string>
+    <string name="NotificationActionPinnedGeo">ثبّتَ %1$s خريطةً في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedGeoChannel">ثبت %1$s خريطة</string>
+    <string name="NotificationActionPinnedGeoLive">ثبّتَ %1$s موقعًا حيًا في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedGeoLiveChannel">ثبت %1$s موقعًا حيًا</string>
+    <string name="NotificationActionPinnedGeoLiveUser">ثبّت %1$s موقعًا مباشرًا</string>
+    <string name="NotificationActionPinnedGeoUser">ثبّت %1$s خريطة</string>
+    <string name="NotificationActionPinnedGif">ثبّتَ %1$s صورةً متحركة في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedGifChannel">ثبت %1$s صورةً متحركة</string>
+    <string name="NotificationActionPinnedGifUser">ثبّت %1$s صورة متحركة</string>
+    <string name="NotificationActionPinnedInvoice">ثبّتَ %1$s فاتورةً في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedInvoiceChannel">%1$s ثبت فاتورة</string>
+    <string name="NotificationActionPinnedInvoiceUser">ثبّت %1$s فاتورة</string>
+    <string name="NotificationActionPinnedMusic">ثبّتَ %1$s ملفًا صوتيًا في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedMusicChannel">ثبت %1$s ملفًا صوتيًا</string>
+    <string name="NotificationActionPinnedMusicUser">ثبّت %1$s ملفًا صوتيًا</string>
+    <string name="NotificationActionPinnedNoText">ثبّتَ %1$s رسالةً في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedNoTextChannel">ثبت %1$s رسالة</string>
+    <string name="NotificationActionPinnedNoTextUser">ثبّت %1$s رسالة</string>
+    <string name="NotificationActionPinnedPhoto">ثبّتَ %1$s صورةً في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedPhotoChannel">%1$s ثبت صورة</string>
+    <string name="NotificationActionPinnedPhotoUser">ثبّت %1$s صورة</string>
+    <string name="NotificationActionPinnedPoll2">ثبّتَ %1$s استفتاء %3$s في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedPollChannel2">ثبّتَت %1$s استفتاء %2$s</string>
+    <string name="NotificationActionPinnedPollUser">ثبّت %1$s استفتاء %2$s</string>
+    <string name="NotificationActionPinnedQuiz2">أرسل %1$s الاختبار «%3$s» لمجموعة %2$s</string>
+    <string name="NotificationActionPinnedQuizChannel2">ثبت %1$s الاختبار «%2$s»</string>
+    <string name="NotificationActionPinnedQuizUser">ثبّت %1$s اختبار %2$s</string>
+    <string name="NotificationActionPinnedRound">ثبّتَ %1$s رسالةً مرئيةً في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedRoundChannel">ثبت %1$s رسالةً مرئية</string>
+    <string name="NotificationActionPinnedRoundUser">ثبّت %1$s رسالة مرئية</string>
+    <string name="NotificationActionPinnedSticker">ثبّتَ %1$s ملصقًا في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedStickerChannel">%1$s ثبت ملصق</string>
+    <string name="NotificationActionPinnedStickerEmoji">ثبّتَ %1$s ملصق %3$s في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedStickerEmojiChannel">ثبت %1$s ملصق %2$s</string>
+    <string name="NotificationActionPinnedStickerEmojiUser">ثبّت %1$s ملصق %2$s</string>
+    <string name="NotificationActionPinnedStickerUser">ثبّت %1$s ملصقًا</string>
+    <string name="NotificationActionPinnedText">ثبّتَ %1$s «%2$s» في مجموعة %3$s</string>
+    <string name="NotificationActionPinnedTextChannel">ثبت %1$s «%2$s»</string>
+    <string name="NotificationActionPinnedTextUser">ثبّت %1$s \"%2$s\"</string>
+    <string name="NotificationActionPinnedVideo">ثبّتَ %1$s مقطعًا مرئيًا في مجموعة %2$s</string>
+    <string name="NotificationActionPinnedVideoChannel">ثبت %1$s مقطعًا مرئيًا</string>
+    <string name="NotificationActionPinnedVideoUser">ثبّت %1$s مقطعًا مرئيًا</string>
+    <string name="NotificationActionPinnedVoice">ثبّتَ %1$s رسالة صوتية في %2$s</string>
+    <string name="NotificationActionPinnedVoiceChannel">ثبت %1$s رسالةً صوتية</string>
+    <string name="NotificationActionPinnedVoiceUser">ثبّت %1$s رسالة صوتيّة</string>
+    <string name="NotificationChannelMessagePaidMedia_one">نشر %2$s منشوراً مدفوع الأجر مقابل نجمة واحدة</string>
+    <string name="NotificationChannelMessagePaidMedia_other">نشر %2$s منشوراً مدفوع الأجر مقابل %1$d نجمة</string>
+    <string name="NotificationChatMessagePaidMedia_one">نشر %2$s منشورًا مدفوع الأجر في مجموعة %3$s مقابل نجمة واحدة</string>
+    <string name="NotificationChatMessagePaidMedia_other">نشر %2$s منشورًل مدفوع الأجر في مجموعة %3$s مقابل %1$d نجمة</string>
+    <string name="NotificationChatReactGiveaway">تفاعل %1$s مع %3$s في المجموعة %2$s على السحب الخاص بك</string>
+    <string name="NotificationContactJoined">انضم %1$s لتيليجرام!</string>
+    <string name="NotificationContactNewPhoto">حدّثَ %1$s صورته الشخصية</string>
+    <string name="NotificationEditedGroupName">انضم %1$s للمجموعة %2$s</string>
+    <string name="NotificationEditedGroupPhoto">غيّرَ %1$s صورة مجموعة %2$s</string>
+    <string name="NotificationEditedGroupVideo">غيّر %1$s صورة المجموعة %2$s</string>
+    <string name="NotificationGroupAddMember">%1$s أضاف %3$s للمجموعة %2$s</string>
+    <string name="NotificationGroupAddSelf">عاد %1$s لمجموعة %2$s</string>
+    <string name="NotificationGroupAddSelfMega">انضم %1$s لمجموعة %2$s</string>
+    <string name="NotificationGroupAlbum">أرسل %1$s حُزمة وسائط لمجموعة %2$s</string>
+    <string name="NotificationGroupCreatedCall">بدأ %1$s محادثة مرئية في %2$s</string>
+    <string name="NotificationGroupEndedCall">أنهى %1$s المحادثة المرئية في %2$s</string>
+    <string name="NotificationGroupFew">أرسل %1$s %3$s لمجموعة %2$s</string>
+    <string name="NotificationGroupForwardedFew">أعاد %1$s تحويل %3$s لمجموعة %2$s</string>
+    <string name="NotificationGroupInvitedToCall">%1$s دعا %3$s إلى محادثة مرئية في %2$s</string>
+    <string name="NotificationGroupInvitedYouToCall">دعاك %1$s إلى محادثة مرئية في %2$s</string>
+    <string name="NotificationGroupKickMember">%1$s أزال %3$s من المجموعة %2$s</string>
+    <string name="NotificationGroupKickYou">أزالك %1$s من مجموعة %2$s</string>
+    <string name="NotificationGroupLeftMember">غادر %1$s مجموعة %2$s</string>
+    <string name="NotificationHiddenChatName">تيليجرام</string>
+    <string name="NotificationHiddenChatUserName">مستخدم</string>
+    <string name="NotificationHiddenMessage">رسالة جديدة</string>
+    <string name="NotificationHiddenName">تيليجرام</string>
+    <string name="NotificationInvitedToGroup">أضافك %1$s لمجموعة %2$s</string>
+    <string name="NotificationInvitedToGroupByLink">%1$s انضم للمجموعة %2$s عبر رابط دعوة</string>
+    <string name="NotificationMessageAlbum">أرسل لك %1$s حُزمة وسائط</string>
+    <string name="NotificationMessageAudio">أرسل لك %1$s رسالةً صوتية</string>
+    <string name="NotificationMessageChannelGiveaway">نشرت قناة %1$s سحب %2$s من الاشتراك المُميّز بمدة %3$s أشهر.</string>
+    <string name="NotificationMessageChatGiveaway">أرسل %1$s رسالة حول سحب %3$sx المميز لمدة %4$s أشهر. للمجموعة %2$s</string>
+    <string name="NotificationMessageContact2">أرسل لك %1$s جهة اتصال %2$s</string>
+    <string name="NotificationMessageDocument">" أرسل لك %1$s ملفًا"</string>
+    <string name="NotificationMessageFew">%2$s من %1$s</string>
+    <string name="NotificationMessageForwardFew">حوَّل %1$s %2$s إليك</string>
+    <string name="NotificationMessageGame">دعاك %1$s للعب %2$s</string>
+    <string name="NotificationMessageGameScored">أحرز %1$s %3$s في لعبة %2$s</string>
+    <string name="NotificationMessageGif">أرسل لك %1$s صورةً متحركة</string>
+    <string name="NotificationMessageGiftCode">أرسل لك %1$s رمز هدية للاشتراك لمدة %2$s في تيليجرام المميز</string>
+    <string name="NotificationMessageGiveaway">أرسل لك %1$s رسالة بخصوص السحب على %2$s x المميز لمدة %3$s أشهر.</string>
+    <string name="NotificationMessageGroupAudio">أرسل %1$s رسالة صوتية إلى %2$s</string>
+    <string name="NotificationMessageGroupContact2">أرسل %1$s جهة اتصال %3$s لمجموعة %2$s</string>
+    <string name="NotificationMessageGroupDocument">أرسل %1$s ملفًا لمجموعة %2$s</string>
+    <string name="NotificationMessageGroupGame">دعا %1$s مجموعة %2$s للعب %3$s</string>
+    <string name="NotificationMessageGroupGameScored">أحرز %1$s %4$s في لعبة %3$s في مجموعة %2$s</string>
+    <string name="NotificationMessageGroupGif">أرسل %1$s صورةً متحركة لمجموعة %2$s</string>
+    <string name="NotificationMessageGroupInvoice">أرسل %1$s فاتورةً لمجموعة %2$s لقاء %3$s</string>
+    <string name="NotificationMessageGroupLiveLocation">شارك %1$s موقعه الحي مع مجموعة %2$s</string>
+    <string name="NotificationMessageGroupMap">أرسل %1$s موقعًا حيًا لمجموعة %2$s</string>
+    <string name="NotificationMessageGroupMusic">أرسل %1$s ملفًا صوتيًا لمجموعة %2$s</string>
+    <string name="NotificationMessageGroupNoText">أرسل %1$s رسالةً لمجموعة %2$s</string>
+    <string name="NotificationMessageGroupPhoto">أرسل %1$s صورةً لمجموعة %2$s</string>
+    <string name="NotificationMessageGroupPoll2">أرسل %1$s استفتاء %3$s في مجموعة %2$s</string>
+    <string name="NotificationMessageGroupQuiz2">أرسل %1$s الاستفتاء «%3$s» لمجموعة %2$s</string>
+    <string name="NotificationMessageGroupRound">أرسل %1$s رسالةً مرئيةً لمجموعة %2$s</string>
+    <string name="NotificationMessageGroupSticker">أرسل %1$s ملصقًا لمجموعة %2$s</string>
+    <string name="NotificationMessageGroupStickerEmoji">أرسل %1$s ملصق %3$s لمجموعة %2$s</string>
+    <string name="NotificationMessageGroupText">%1$s @ %2$s: %3$s</string>
+    <string name="NotificationMessageGroupVideo">أرسل %1$s مقطعًا مرئيًا لمجموعة %2$s</string>
+    <string name="NotificationMessageInvoice">أرسل لك %1$s فاتورة %2$s</string>
+    <string name="NotificationMessageLiveLocation">أرسل لك %1$s موقعًا حيًا</string>
+    <string name="NotificationMessageMap">أرسل لك %1$s موقعًا</string>
+    <string name="NotificationMessageMusic">أرسل لك %1$s ملفًا صوتيًا</string>
+    <string name="NotificationMessageNoText">أرسل لك %1$s رسالةً</string>
+    <string name="NotificationMessagePaidMedia_one">تم إرسال منشور من قبل %2$s بقيمة نجمة</string>
+    <string name="NotificationMessagePaidMedia_other">تم إرسال منشور من قبل %2$s بقيمة %1$d نجمة</string>
+    <string name="NotificationMessagePhoto">%1$s صورة</string>
+    <string name="NotificationMessagePoll2">أرسل لك %1$s استفتاء %2$s</string>
+    <string name="NotificationMessageQuiz2">أرسل لك %1$s الاستفتاء «%2$s»</string>
+    <string name="NotificationMessageRecurringPay">%1$s|تم سحب المبلغ: %2$s</string>
+    <string name="NotificationMessageRound">أرسل لك %1$s رسالةً مرئية</string>
+    <string name="NotificationMessageSDPhoto">أرسل لك %1$s صورةً ذاتية التدمير</string>
+    <string name="NotificationMessageSDVideo">أرسل لك %1$s مقطعًا مرئيًا ذاتي التدمير</string>
+    <string name="NotificationMessageScheduled">📅 أنت: %1$s</string>
+    <string name="NotificationMessageScheduledName">📅 أنت</string>
+    <string name="NotificationMessageSticker">أرسل لك %1$s ملصقًا</string>
+    <string name="NotificationMessageStickerEmoji">أرسل لك %1$s ملصق %2$s</string>
+    <string name="NotificationMessageText">%1$s: %2$s</string>
+    <string name="NotificationMessageVideo">مقطع مرئي من %1$s</string>
+    <string name="NotificationMessagesPeopleDisplayOrder">%1$s %2$s</string>
+    <string name="NotificationPaidMedia_one">%1$d ⭐ للوسائط</string>
+    <string name="NotificationPaidMedia_other">%1$d ⭐ للوسائط</string>
+    <string name="NotificationPinnedGiveaway">سحب مثبت من %1$s</string>
+    <string name="NotificationPinnedPaidMedia_one">%2$s تم ثبيت منشور مدفوع مقابل نجمة</string>
+    <string name="NotificationPinnedPaidMedia_other">%2$s تم ثبيت منشور مدفوع مقابل %1$d نجمة</string>
+    <string name="NotificationReactGiveaway">تفاعل %1$s بالرمز %2$s على السحب الخاص بك</string>
+    <string name="NotificationShowSenderNames">إظهار اسم المرسل</string>
+    <string name="NotificationUnrecognizedDevice">"%1$s،
+لاحظنا تسجيل دخول إلى حسابك من جهاز جديد في: %2$s
+
+الجهاز: %3$s
+الموقع: %4$s
+
+إن لم يكن أنت من قام بتسجيل الدخول؛ فيمكنك الذهاب إلى الإعدادات > الأجهزة وإنهاء تلك الجلسة.
+
+إن كنت تعتقد أن شخصًا ما قام بتسجيل الدخول دون إذنك؛ فيمكنك تفعيل التحقق بخطوتين في إعدادات الخصوصية والأمان.
+
+تحياتنا،
+فريق تيليجرام"</string>
+    <string name="NotificationsAddAnException">إضافة استثناء</string>
+    <string name="NotificationsAndSounds">الإشعارات والأصوات</string>
+    <string name="NotificationsChannels">القنوات</string>
+    <string name="NotificationsChatInApp">%1$s داخل التطبيق</string>
+    <string name="NotificationsCustom">مخصص</string>
+    <string name="NotificationsCustomize">تخصيص</string>
+    <string name="NotificationsDefault">الافتراضية</string>
+    <string name="NotificationsDeleteAllException">حذف جميع الاستثناءات</string>
+    <string name="NotificationsDeleteAllExceptionAlert">هل ترغب حقًا بحذف جميع الاستثناءات؟</string>
+    <string name="NotificationsDeleteAllExceptionTitle">حذف جميع الاستثناءات</string>
+    <string name="NotificationsExceptions">الاستثناءات</string>
+    <string name="NotificationsExceptionsAlert">يرجى ملاحظة أن **%1$s** مدرجة كاستثناءات ولن تتأثر بهذا التغيير.</string>
+    <string name="NotificationsExceptionsSingleAlert">يرجى ملاحظة أن **%1$s** مدرجة كاستثناءات ولن تتأثر بهذا التغيير.</string>
+    <string name="NotificationsForChats">إشعارات المحادثات</string>
+    <string name="NotificationsGroups">المجموعات</string>
+    <string name="NotificationsImportance">الأهمية</string>
+    <string name="NotificationsInAppDefault">الافتراضية داخل التطبيق</string>
+    <string name="NotificationsLed">الضوء</string>
+    <string name="NotificationsLedColor">اللون</string>
+    <string name="NotificationsLedInfo">إضاءة صغيرة على بعض الأجهزة تومض للتنبيه بالرسائل الجديدة.</string>
+    <string name="NotificationsMuted">مكتومة</string>
+    <string name="NotificationsNewException">استثناء جديد</string>
+    <string name="NotificationsOff">معطَّلة</string>
+    <string name="NotificationsOffUntil">معطَّلة حتى %1$s</string>
+    <string name="NotificationsOn">مفعَّلة</string>
+    <string name="NotificationsOther">غير ذلك</string>
+    <string name="NotificationsPriorityHigh">مرتفعة</string>
+    <string name="NotificationsPriorityLow">منخفضة</string>
+    <string name="NotificationsPriorityMedium">عادية</string>
+    <string name="NotificationsPrioritySettings">كما في الإعدادات</string>
+    <string name="NotificationsPriorityUrgent">مهمة جدًا</string>
+    <string name="NotificationsPrivateChats">المحادثات الخاصة</string>
+    <string name="NotificationsReactions">التفاعلات</string>
+    <string name="NotificationsService">التشغيل المستمر في الخلفية</string>
+    <string name="NotificationsServiceConnection">الاتصال في الخلفية</string>
+    <string name="NotificationsServiceConnectionInfo">البقاء على اتصال طفيف مع تيليجرام في الخلفية لضمان ظهور الإشعارات.</string>
+    <string name="NotificationsServiceInfo">إعادة تشغيل التطبيق عند إيقافه. قم بالتفعيل لضمان ظهور الإشعارات.</string>
+    <string name="NotificationsSilent">صامتة</string>
+    <string name="NotificationsStories">القصص</string>
+    <string name="NotificationsTurnOff">إيقاف</string>
+    <string name="NotificationsTurnOn">تشغيل</string>
+    <string name="NotificationsUnmuted">مُلغى كتمها</string>
+    <string name="November">نوفمبر</string>
+    <string name="OK">حسنًا</string>
+    <string name="October">أكتوبر</string>
+    <string name="OnlyIfSilent">فقط في وضع الصامت</string>
+    <string name="OnlyWhenScreenOff">في حال إغلاق الشاشة فقط</string>
+    <string name="OnlyWhenScreenOn">في حال تشغيل الشاشة فقط</string>
+    <string name="Open">فتح</string>
+    <string name="OpenFragment">فتح Fragment</string>
+    <string name="Orange">البرتقالي</string>
+    <string name="OtherLoginCode">"رمز الدخول هو **%1$s**. قم بإدخاله في تطبيق تيليجرام الذي تحاول تسجيل الدخول منه.
+
+لا تعطِ هذا الرمز لأي شخص كان."</string>
+    <string name="Page1Message">"تطبيق المراسلة **الأسرعُ** عالميًّا.
+إنه **مجانيٌّ** و**آمنٌ** كذلك."</string>
+    <string name="Page1Title">تيليجرام</string>
+    <string name="Page2Message">"**تيليجرام** يوصل الرسائل
+أسرع من أي تطبيق آخر."</string>
+    <string name="Page2Title">سريع</string>
+    <string name="Page3Message">"**تيليجرام** يقدم تخزينًا سحابيًا مجانيًا
+غير محدود للمحادثات والوسائط."</string>
+    <string name="Page3Title">مجاني</string>
+    <string name="Page4Message">"يحمي **تيليجرام** رسائلك
+من هجمات المخترقين."</string>
+    <string name="Page4Title">آمن</string>
+    <string name="Page5Message">"لا يفرض **تيليجرام** قيودًا على
+حجم وسائطك ومحادثاتك."</string>
+    <string name="Page5Title">قوي</string>
+    <string name="Page6Message">"**تيليجرام** يتيح لك الوصول
+لرسائلك من أجهزة متعددة."</string>
+    <string name="Page6Title">تخزين سحابي</string>
+    <string name="PasswordAsHintError">يجب أن يكون التلميح مختلفًا عن كلمة مرورك</string>
+    <string name="PasswordCode">الرمز</string>
+    <string name="PasswordDoNotMatch">كلمتا المرور غير متطابقتين</string>
+    <string name="PasswordEmailInvalid">بريد إلكتروني غير صالح. تُرجى إعادة المحاولة.</string>
+    <string name="PasswordHint">تلميح كلمة المرور</string>
+    <string name="PasswordHintDescription">يمكنك إنشاء تلميح اختياري لكلمة مرورك.</string>
+    <string name="PasswordHintPlaceholder">التلميح</string>
+    <string name="PasswordHintText">يُرجى إنشاء تلميحٍ لكلمة مرورك</string>
+    <string name="PasswordHintTextLogin">إنشاء تلميح لكلمة المرور.</string>
+    <string name="PasswordOff">معطّلة</string>
+    <string name="PasswordOn">مفعّل</string>
+    <string name="PasswordRecovery">استرداد كلمة المرور</string>
+    <string name="PasswordReset">تم تعطيل كلمة المرور</string>
+    <string name="Paste">لصق</string>
+    <string name="PasteFromClipboard">لصق من الحافظة</string>
+    <string name="Permanent">الرابط الأساسي</string>
+    <string name="PermissionBackgroundLocation">"لمشاركة موقعك المباشر في هذه المحادثة؛ يحتاج تيليجرام الوصول إلى موقعك باستمرار، بما في ذلك أثناء عمل التطبيق في الخلفية.
+
+ سنستخدم موقعك للمدة التي تختارها أنت فقط ويمكنك التوقف عن مشاركته في أي وقت. لن نستخدم موقعك لأي غرض بخلاف مشاركته في هذه المحادثة. "</string>
+    <string name="PermissionDrawAboveOtherApps">يحتاج تيليجرام إلى صلاحية الظهور فوق التطبيقات لتشغيل المقاطع المرئية في وضع (صورة في الصورة).</string>
+    <string name="PermissionDrawAboveOtherAppsGroupCall">"يتيح لك الوضع العائم استخدام المايكروفون ومعرفة من الذي يتحدث عندما تكون خارج تيليجرام. "</string>
+    <string name="PermissionDrawAboveOtherAppsGroupCallTitle">المحادثة المرئية العائمة</string>
+    <string name="PermissionDrawAboveOtherAppsTitle">صورة داخل صورة</string>
+    <string name="PermissionNoAudioStorageStory">يحتاج **تيليجرام** الوصول إلى الملفات الصوتية لإضافتها إلى قصتك. يرجى الذهاب إلى الإعدادات > الأذونات وتشغيل **الموسيقى والصوت**.</string>
+    <string name="PermissionNoAudioVideoWithHint">يحتاج تيليجرام الوصول إلى المايكروفون لتتمكنوا من إرسال الرسائل الصوتية. يرجى تمكين **المايكروفون** في إعدادات الهاتف > الأذونات.</string>
+    <string name="PermissionNoAudioWithHint">يحتاج تيليجرام الوصول إلى المايكروفون لتتمكنوا من إرسال الرسائل الصوتية. يرجى تمكين **المايكروفون** في إعدادات الهاتف > الأذونات.</string>
+    <string name="PermissionNoCameraMicVideo">يحتاج تيليجرام الوصول إلى المايكروفون لتتمكنوا من إرسال الرسائل المرئية. يرجى تمكين **المايكروفون** في إعدادات الهاتف > الأذونات.</string>
+    <string name="PermissionNoCameraWithHint">يحتاج تيليجرام الوصول إلى الكاميرا لتتمكنوا من التقاط الصور والمقاطع المرئية. يرجى تمكين **الكاميرا** في إعدادات الهاتف > الأذونات.</string>
+    <string name="PermissionNoContactsSharing">يحتاج **تيليجرام** الوصول إلى جهات الاتصال كي تتمكنوا من مشاركتها مع أصدقائكم. يرجى تمكين **جهات الاتصال** في إعدادات الهاتف > الأذونات.</string>
+    <string name="PermissionNoLocation">يحتاج تيليجرام إلى السماح له بتحديد موقعك لتتمكن من مشاركته مع أصدقائك.</string>
+    <string name="PermissionNoLocationFriends">يحتاج **تيليجرام** الوصول إلى الموقع لتتمكنوا من مشاركته مع أصدقائكم. يرجى تمكين **الموقع** في إعدادات الهاتف > الأذونات.</string>
+    <string name="PermissionNoLocationNavigation">يحتاج **تيليجرام** الوصول إلى الموقع لتتمكنوا من معرفة الاتجاهات. يرجى تمكين **الموقع** في إعدادات الهاتف > الأذونات.</string>
+    <string name="PermissionNoLocationStory">يحتاج تيليجرام الوصول إلى موقعك الجغرافي للتمكن من إضافة أداة الطقس إلى قصصك.</string>
+    <string name="PermissionNoStorageAvatar">يحتاج تيليجرام الوصول إلى التخزين لتمكينك من رفع صور للملف الشخصي. يرجى تمكين **الملفات والوسائط** في إعدادات الهاتف > الأذونات.</string>
+    <string name="PermissionOpenSettings">الإعدادات</string>
+    <string name="PermissionStorageWithHint">يحتاج تيليجرام الوصول إلى التخزين للتمكّن من إرسال وحفظ: الصور، الفيديو، الوسائط والمستندات. يرجى تمكين **الملفات والوسائط** في إعدادات الهاتف > الأذونات.</string>
+    <string name="PermissionXiaomiLockscreen">يرجى السماح لتيليجرام بالظهور على شاشة القفل للتمكن من إجراء المكالمات دون مشاكل.</string>
+    <string name="PhoneNumber">رقم الهاتف</string>
+    <string name="PhoneNumberAlert">سيحصل المستخدمون على رقمك الجديد في حال وجوده في جهات اتصالهم أو في حال كانت إعدادات خصوصيتك تسمح لهم برؤيته. يمكنك تغيير ذلك في الإعدادات > الخصوصية والأمان > رقم الهاتف.</string>
+    <string name="PhoneNumberChange2">تغيير الرقم</string>
+    <string name="PhoneNumberChangeTitle">تغيير الرقم</string>
+    <string name="PhoneNumberFlood">عذرًا، لقد قمت بحذف حسابك وإعادة إنشائه عدة مرات مؤخرًا، يرجى الانتظار لعدة أيام قبل محاولة إنشاء حساب من جديد.</string>
+    <string name="PhoneNumberHelp">يمكنك تغيير رقم تيليجرام الخاص بك هنا. سيتم نقل حسابك وجميع بياناتك التي في سحابة تيليجرام -بما فيها الرسائل، الوسائط، جهات الاتصال وغيرها- إلى الرقم الجديد.</string>
+    <string name="PhoneNumberKeepButton">إبقاء %1$s</string>
+    <string name="Pink">الزهري</string>
+    <string name="PinnedMessages">الرسائل المثبتة</string>
+    <string name="PleaseEnterCurrentPassword">يرجى إدخال كلمة مرورك</string>
+    <string name="PleaseEnterCurrentPasswordTransfer">يرجى إدخال كلمة مرور التحقق بخطوتين لإتمام النقل.</string>
+    <string name="PleaseEnterCurrentPasswordWithdraw">يرجى إدخال كلمة مرورك لسحب المال.</string>
+    <string name="PleaseEnterNewFirstPassword">يرجى إدخال كلمة مرور جديدة</string>
+    <string name="PleaseEnterNewFirstPasswordHint">إدخال كلمة مرور جديدة</string>
+    <string name="PleaseEnterNewFirstPasswordLogin">"يمكنك الآن تعيين كلمة مرور جديدة لاستخدامها عند تسجيل الدخول إلى حسابك. "</string>
+    <string name="PleaseEnterNewSecondPasswordHint">إعادة إدخال كلمة المرور الجديدة</string>
+    <string name="PleaseLoginPassport">يرجى تسجيل الدخول إلى حسابك في تيليجرام لتتمكن من استخدام جواز تيليجرام.</string>
+    <string name="PleaseReEnterPassword">الرجاء إعادة إدخال كلمة مرورك</string>
+    <string name="PopupDisabled">معطَّلة</string>
+    <string name="PopupEnabled">مفعَّلة</string>
+    <string name="PopupNotification">الإشعارات المنبثقة</string>
+    <string name="PriorityInfo">ستعمل الإشعارات الأكثر أهمية حتى في حال تفعيل وضعية عدم الإزعاج.</string>
+    <string name="PrivacyPolicy">سياسة الخصوصية</string>
+    <string name="PrivacyPolicyAndTerms">سياسة الخصوصية وشروط الخدمة</string>
+    <string name="PrivacyPolicyUrl">https://telegram.org/faq/ar#a10</string>
+    <string name="ProfileColorEdit">تغيير لون الملف الشخصي</string>
+    <string name="ProfilePopupNotification">الإشعارات المنبثقة</string>
+    <string name="ProfilePopupNotificationInfo">ستظهر الرسائل الجديدة من هذا المستخدم على الشاشة حتى لو كنت خارج تطبيق تيليجرام.</string>
+    <string name="Proxy">بروكسي</string>
+    <string name="ProxyAddedSuccess">تمت إضافة البروكسي.</string>
+    <string name="ProxyConnections">الاتصالات</string>
+    <string name="ProxyDetails">تفاصيل البروكسي</string>
+    <string name="ProxySettings">إعدادات البروكسي</string>
+    <string name="Purple">القرمزي</string>
+    <string name="QRCodePermissionNoCameraWithHint">يحتاج **تيليجرام** الوصول للكاميرا ليتمكن من مسح رموز QR. يرجى الذهاب إلى الإعدادات > الأذونات > تشغيل **الكاميرا**.</string>
+    <string name="RaiseToListen">الرفع للاستماع</string>
+    <string name="RaiseToListenInfo">نقل الصوت إلى سماعة الأذن عن طريق رفع الهاتف إلى أذنك</string>
+    <string name="RaiseToSpeak">الرفع للتحدث</string>
+    <string name="RaiseToSpeakInfo">تسجيل الرسائل الصوتية برفع الهاتف إلى أذنك</string>
+    <string name="ReEnterPassword">أعد كتابة كلمة المرور</string>
+    <string name="RecoveryEmail">بريد الاسترداد</string>
+    <string name="RecoveryEmailSubtitle">يمكنك تعيين بريد استرداد للتمكن من إعادة تعيين كلمة مرورك واستعادة الوصول إلى حسابك في تيليجرام.</string>
+    <string name="RecoveryEmailTitle">بريد الاسترداد</string>
+    <string name="Red">الأحمر</string>
+    <string name="Reduce">تقليل</string>
+    <string name="RegisterText2">يُرجى إدخال اسمك وإضافة صورة لملفك الشخصي.</string>
+    <string name="RegistrationProfileInfo">معلومات ملفك الشخصي</string>
+    <string name="RemindDayAt">"'ذكّرني بتاريخ' d MMM 'عند' HH:mm"</string>
+    <string name="RemindDayYearAt">"'ذكّرني بتاريخ' d MMM yyyy 'عند' HH:mm"</string>
+    <string name="RemindTodayAt">"'ذكّرني اليوم عند' HH:mm"</string>
+    <string name="Rename">إعادة تسمية</string>
+    <string name="RepeatDisabled">إيقاف</string>
+    <string name="RepeatNotifications">إعادة الإشعارات</string>
+    <string name="RepeatNotificationsNever">مطلقًا</string>
+    <string name="Reply">رد</string>
+    <string name="ReplyToGroup">رد</string>
+    <string name="ReplyToUser">رد</string>
+    <string name="ReportFalsePositive">الإبلاغ عن تصفية خاطئة</string>
+    <string name="RequestCallButton">اتصل بي لإملاء الرمز</string>
+    <string name="RequestMissedCall">الحصول على الرمز بمكالمة هاتفية</string>
+    <string name="RequestSmsButton">الحصول على الرمز برسالة نصية SMS</string>
+    <string name="ResendCode">إعادة إرسال الرمز</string>
+    <string name="ResendCodeInfo">تم إرسال رمز التحقق إلى بريدك الإلكتروني.</string>
+    <string name="ResendSmsAvailableIn">يمكنك طلب رسالة نصية جديدة بعد %1$d:%2$02d</string>
+    <string name="Reset">إعادة تعيين</string>
+    <string name="ResetAccount">حذف الحساب</string>
+    <string name="ResetAccountCancelledAlert">محاولاتك الأخيرة لحذف هذا الحساب قد أُلغيت من قبل مُستخدمه النشط. ترجى إعادة المحاولة بعد 7 أيام.</string>
+    <string name="ResetAccountInfo">"بما أن الحساب %1$s نشط ومحمي بكلمة مرور، سيتم حذفه بعد أسبوع واحد. هذا التأخير ضروري لأغراض أمنية.
+
+يمكنك إلغاء هذه العملية في أي وقت."</string>
+    <string name="ResetAccountStatus">ستتمكن من حذف حسابك بعد:</string>
+    <string name="ResetAllNotifications">إعادة تعيين كل الإشعارات</string>
+    <string name="ResetAutomaticMediaDownload">"إعادة تعيين إعدادات التنزيل التلقائي "</string>
+    <string name="ResetAutomaticMediaDownloadAlert">"هل ترغب حقًا في إعادة تعيين إعدادات التنزيل التلقائي؟ "</string>
+    <string name="ResetAutomaticMediaDownloadAlertTitle">إعادة تعيين الإعدادات</string>
+    <string name="ResetChatBackgrounds">إعادة تعيين الخلفيات</string>
+    <string name="ResetChatBackgroundsAlert">هل أردت فعلًا إعادة تعيين كل خلفيات المحادثة؟</string>
+    <string name="ResetChatBackgroundsAlertTitle">إعادة تعيين الخلفيات</string>
+    <string name="ResetChatBackgroundsInfo">إزالة كل الخلفيات المرفوعة واستعادة الخلفيات الافتراضية.</string>
+    <string name="ResetCustomNotifications">استعادة الإعدادات الافتراضية</string>
+    <string name="ResetCustomNotificationsAlert">هل تريدون فعلًا إعادة تعيين إعدادات الإشعارات إلى الافتراضية؟</string>
+    <string name="ResetCustomNotificationsAlertTitle">إعادة تعيين الإشعارات</string>
+    <string name="ResetMyAccount">حذف حسابي</string>
+    <string name="ResetMyAccountWarning">تحذير</string>
+    <string name="ResetMyAccountWarningReset">حذف الحساب</string>
+    <string name="ResetMyAccountWarningText">لا يمكن التراجع عن هذا الإجراء. ستفقد جميع محادثات تيليجرام والرسائل والوسائط والملفات إذا تابعت حذف حسابك.</string>
+    <string name="ResetNotificationsAlert">هل ترغب حقًا في إعادة تعيين جميع إعدادات الإشعارات إلى الوضع الافتراضي؟</string>
+    <string name="ResetNotificationsAlertTitle">إعادة تعيين كل الإشعارات</string>
+    <string name="ResetNotificationsText">تم تعيين كل الإشعارات إلى الوضع الافتراضي</string>
+    <string name="ResetPassword">إعادة تعيين كلمة المرور</string>
+    <string name="ResetPasswordWait">لقد طلبت مؤخرًا إعادة تعيين كلمة المرور ولكن تم إلغاء الطلب. يرجى الانتظار %1$s قبل تقديم طلب جديد.</string>
+    <string name="RestoreEmailNoAccess">هل فقدت الوصول إلى %1$s؟</string>
+    <string name="RestoreEmailSent">"لقد أرسلنا رمز الاسترداد إلى بريدك الإلكتروني المُضاف:
+
+%1$s"</string>
+    <string name="RestoreEmailSentInfo">لتعطيل كلمة مرورك السحابية؛ يرجى تفقّد بريدك وإدخال الرمز الذي أرسلناه والمكوّن من 6 أرقام.</string>
+    <string name="RestoreEmailSentTitle">رمز الاسترداد</string>
+    <string name="RestoreEmailTrouble">غير قادر على فتح %1$s؟</string>
+    <string name="RestoreEmailTroubleNoEmail">هل واجهت مشكلة في الوصول للبريد الإلكتروني؟</string>
+    <string name="RestoreEmailTroubleText">إذا لم تتمكن من الوصول إلى بريدك الإلكتروني فإن خياراتك المتبقية هي إما تذكر كلمة مرورك، أو حذف حسابك.</string>
+    <string name="RestoreEmailTroubleText2">إذا لم تعد لديك صلاحية الوصول إلى بريدك للاسترداد؛ فستكون خياراتك المتبقية إما تذكر كلمة مرورك أو انتظار 7 أيام حتى تتم إعادة تعيين كلمة المرور.</string>
+    <string name="RestorePasswordNoEmailText">بما أنك لم تقم بإضافة بريد إلكتروني لاسترداد حسابك عند تعيين كلمة مرورك؛ فإن خياراتك المتبقية هي إما تذكّر كلمة مرورك أو حذف حسابك.</string>
+    <string name="RestorePasswordNoEmailText2">بما أنك لم تقدم بريد استرداد عند تعيينك لكلمة مرورك؛ فإن خياراتك المتبقية هي إما تذكر كلمة مرورك، أو انتظار ٧ أيام حتى تتمكن من إعادة تعيين كلمة المرور.</string>
+    <string name="RestorePasswordNoEmailTitle">عذرًا</string>
+    <string name="RestorePasswordResetAccount">حذف الحساب</string>
+    <string name="RestorePasswordResetIn">يمكنك إعادة تعيين كلمة مرورك بعد %1$s</string>
+    <string name="RestorePasswordResetPassword">إعادة تعيين كلمة المرور</string>
+    <string name="RestorePasswordResetPasswordOk">تمت إعادة تعيين كلمة مرور التحقق بخطوتين.</string>
+    <string name="RestorePasswordResetPasswordText">"هل تريد حقًا إعادة تعيين كلمة مرور التحقق بخطوتين؟ "</string>
+    <string name="Restrict">تقييد</string>
+    <string name="Retry">إعادة المحاولة</string>
+    <string name="Save">حفظ</string>
+    <string name="SaveToGallerySettings">حفظ في المعرض</string>
+    <string name="SearchBackgrounds">البحث عن صور</string>
+    <string name="SearchByColor">بحث بواسطة اللون</string>
+    <string name="SearchForChats">البحث عن محادثات...</string>
+    <string name="SearchInSettings">بحث الإعدادات والأسئلة الشائعة</string>
+    <string name="SecretChat">المحادثات السرية</string>
+    <string name="SecretChatContextBotAlert">يرجى ملاحظة أن بوتات المحتوى الاستعلامي يتم تطويرها من مطورين مستقلين. لكي تعمل هذه البوتات، ما تكتبه بعد اسم مستخدم البوت يذهب لمطور البوت.</string>
+    <string name="SecretChatName">تيليجرام</string>
+    <string name="SecretLinkPreviewAlert">هل ترغبون في تفعيل معاينة الروابط المطولة في المحادثات السرية؟ مع العلم أن معاينة الروابط يتم توليدها على خوادم تيليجرام.</string>
+    <string name="SecretWebPage">معاينة الروابط</string>
+    <string name="SecretWebPageInfo">يتم توليد معاينات الروابط على خوادم تيليجرام. لا نقوم بتخزين أي بيانات عن الروابط التي ترسلونها.</string>
+    <string name="SegmentationCutObject">قص عنصر</string>
+    <string name="SegmentationCutOut">قص الخلفية</string>
+    <string name="SegmentationErase">مسح</string>
+    <string name="SegmentationOutline">إضافة حدود</string>
+    <string name="SegmentationRestore">استعادة</string>
+    <string name="SegmentationTabToCrop">النقر على عنصر لاقتصاصه</string>
+    <string name="SegmentationUndo">تراجع</string>
+    <string name="SegmentationUndoCutOut">التراجع عن القص</string>
+    <string name="SelectAccount">اختيار حساب</string>
+    <string name="SelectColorTitle">تحديد لون</string>
+    <string name="Send">إرسال</string>
+    <string name="SendByEnter">إرسال بمفتاح الإدخال</string>
+    <string name="SendContactToGroupText">هل ترغب في إرسال جهة الاتصال هذه إلى **%1$s**؟</string>
+    <string name="SendContactToText">هل ترغب في إرسال جهة الاتصال هذه إلى **%1$s**؟</string>
+    <string name="SendDayAt">"'إرسالها في' d MMM 'عند' HH:mm"</string>
+    <string name="SendDayYearAt">"'إرسالها في' d MMM yyyy 'عند' HH:mm"</string>
+    <string name="SendGameToGroupText">هل ترغب في مشاركة هذه اللعبة مع **%1$s**؟</string>
+    <string name="SendGameToText">هل ترغب في إرسال هذه اللعبة إلى **%1$s**؟</string>
+    <string name="SendMessageTitle">إرسال الرسالة</string>
+    <string name="SendMessagesToGroupText">هل ترغب في إرسال هذه الرسالة إلى **%1$s**؟</string>
+    <string name="SendMessagesToText">هل ترغب في إرسال هذه الرسالة إلى **%1$s**؟</string>
+    <string name="SendTodayAt">"'إرسالها اليوم عند' HH:mm"</string>
+    <string name="SendingGif">يتم إرسال الصورة المتحركة...</string>
+    <string name="SendingSms">يتم إرسال رسالة SMS قصيرة...</string>
+    <string name="SendingVideo">يتم إرسال المقطع المرئي...</string>
+    <string name="SentAppCode">أرسلنا الرمز إلى تطبيق **تيليجرام** على جهازك الآخر.</string>
+    <string name="SentAppCodeTitle">يرجى تفقُّد رسائل تيليجرام</string>
+    <string name="SentAppCodeWithPhone">لقد أرسلنا الرمز إلى **تطبيق تيليجرام** للرقم %1$s على جهازك الآخر.</string>
+    <string name="SentCallCode">"يتم الاتصال على رقمك **%1$s**.
+
+لا حاجة للرد، سيقوم تليجرام بعملية التفعيل تلقائيًا."</string>
+    <string name="SentCallOnly">يتم الاتصال برقمك **%1$s** لإملاء رمز التفعيل.</string>
+    <string name="SentFragmentCode">يمكنك الحصول على الرمز لـ %1$s في قسم Anonymous Numbers على Fragment.</string>
+    <string name="SentSmsCode">قمنا بإرسال رسالة SMS نصية تحتوي على رمز التفعيل لرقمك **%1$s**.</string>
+    <string name="SentSmsCodeTitle">أدخل الرمز</string>
+    <string name="September">سبتمبر</string>
+    <string name="Set">تعيين</string>
+    <string name="SetAdditionalPassword">تعيين كلمة مرور إضافية</string>
+    <string name="SetAdditionalPasswordInfo">يمكنك تعيين كلمة مرور يتم طلبها عند تسجيل الدخول في جهاز جديد، بالإضافة إلى الرمز الذي نرسله برسالة نصية SMS.</string>
+    <string name="SetColor">تعيين لون</string>
+    <string name="SetPasscode">تعيين رمز القفل</string>
+    <string name="SetPasscodeInfo">تأمين التطبيق برمز مرور لحمايته من المتطفلين.</string>
+    <string name="SetProfilePhoto">"تعيين صورة للملف الشخصي "</string>
+    <string name="SetRecoveryEmail">تعيين بريد استرداد</string>
+    <string name="SettingsDebug">المعالجة</string>
+    <string name="SettingsFaqSearchTitle">الأسئلة الشائعة</string>
+    <string name="SettingsHelp">مساعدة</string>
+    <string name="SettingsNoRecent">ما من عمليات بحث تمت مؤخرًا</string>
+    <string name="SettingsNoResults">لم يتم العثور على نتائج</string>
+    <string name="SettingsRecent">عمليات البحث الأخيرة</string>
+    <string name="SettingsSearchFaq">الأسئلة الشائعة</string>
+    <string name="ShareYouLocationInfo">بهذه العملية سترسل موقعك الحالي للبوت.</string>
+    <string name="ShareYouLocationInline">يرغب هذا البوت بمعرفة موقعك عند كل مرة ترسل له طلبًا، يمكن استخدام هذا لتوفير نتائجَ مخصصةٍ لموقعك.</string>
+    <string name="ShareYouLocationTitle">مشاركة موقعك؟</string>
+    <string name="ShareYouLocationUnable">التطبيق غير قادر على تحديد موقعك الحالي</string>
+    <string name="ShareYouLocationUnableManually">الاختيار يدويًا</string>
+    <string name="ShareYouPhoneNumberTitle">مشاركة رقم هاتفك؟</string>
+    <string name="SharedContentTitle">الوسائط المتبادلة</string>
+    <string name="SharedFilesTab2">الملفات</string>
+    <string name="SharedGIFsTab2">صور متحركة</string>
+    <string name="SharedGroupsTab2">المجموعات</string>
+    <string name="SharedLinksTab2">روابط</string>
+    <string name="SharedMediaTab2">وسائط</string>
+    <string name="SharedMediaTabFull2">الوسائط المتبادلة</string>
+    <string name="SharedMusicTab2">صوتيات</string>
+    <string name="SharedVoiceTab2">الرسائل الصوتية</string>
+    <string name="Short">قصير</string>
+    <string name="ShortNumberInfo">"الرقم الذي أدخلته قصير جدًا لـ **%1$s**:
+
+**%2$s**
+
+يرجى إدخال الرقم الصحيح مسبوقًا بمفتاح الدولة."</string>
+    <string name="ShowNotificationsFor">إظهار الإشعارات من</string>
+    <string name="ShowNotificationsForInfo">عطّل هذا الخيار إذا كنت تريد استلام الإشعارات فقط من الحساب الذي تستخدمه حاليًا.</string>
+    <string name="ShowSenderNames">إظهار أسماء المرسِلين</string>
+    <string name="ShowSendersName">إظهار اسم المرسِل</string>
+    <string name="ShowTranslateButton">إظهار زر الترجمة</string>
+    <string name="ShowTranslateChatButton">ترجمة المحادثات بأكملها</string>
+    <string name="SignInWithGoogle">التسجيل بحساب Google</string>
+    <string name="SignUp">تسجيل</string>
+    <string name="SimilarChannelsTab">قنوات مشابهة</string>
+    <string name="SmartNotifications">إشعارات ذكية</string>
+    <string name="SmartNotificationsDisabled">تعطيل</string>
+    <string name="SmartNotificationsInfo">%1$d / %2$s</string>
+    <string name="SmsAvailableIn">يمكنك طلب رسالة نصية SMS بعد %1$d:%2$02d</string>
+    <string name="SmsText">سنرسل لك رسالة نصيّة SMS بعد %1$d:%2$02d</string>
+    <string name="SortBy">ترتيب حسب</string>
+    <string name="SortFirstName">الاسم الأول</string>
+    <string name="SortLastName">اسم العائلة</string>
+    <string name="Sound">الصوت</string>
+    <string name="SoundDefault">افتراضي</string>
+    <string name="SoundMuted">تم كتم الصوت</string>
+    <string name="Start">بدء</string>
+    <string name="StartDayAt">"'البدء في' d MMM 'عند' HH:mm"</string>
+    <string name="StartDayYearAt">"'البدء في' yyyy MMM d 'عند' HH:mm"</string>
+    <string name="StartMessaging">بدء المراسلة</string>
+    <string name="StartShortDayAt">"d MMM'،' HH:mm"</string>
+    <string name="StartShortDayYearAt">"d MMM yyyy'،' HH:mm"</string>
+    <string name="StartShortTodayAt">"'اليوم،' HH:mm"</string>
+    <string name="StartText">"يرجى تأكيد مفتاح بلدك
+وإدخال رقم هاتفك."</string>
+    <string name="StartTodayAt">"'اليوم عند' HH:mm"</string>
+    <string name="StartsDayAt">"'تبدأ في' MMM d 'عند' HH:mm"</string>
+    <string name="StartsDayYearAt">"'تبدأ في' yyyy MMM d 'عند' HH:mm"</string>
+    <string name="StartsTodayAt">"'تبدأ اليوم عند' HH:mm"</string>
+    <string name="Stop">إيقاف</string>
+    <string name="StopLoading">هل تريدون إلغاء التحميل؟</string>
+    <string name="StopLoadingTitle">إيقاف التحميل؟</string>
+    <string name="StopVerification">هل تريدون إيقاف عملية التحقق؟</string>
+    <string name="StoryAutoExceptions">الاستثناءات التلقائية</string>
+    <string name="StoryAutoExceptionsInfo">التمكين التلقائي لإشعارات القصة لأكثر ٥ مستخدمين تواصلت معهم.</string>
+    <string name="StoryHidAccount">تم إخفاء هذا الحساب من قبل المستخدم</string>
+    <string name="Streaming">البث</string>
+    <string name="Support">الدعم</string>
+    <string name="SwipeDeleteChat">حذف</string>
+    <string name="SwipeMarkAsRead">مقروءة</string>
+    <string name="SwipeMarkAsUnread">غير مقروءة</string>
+    <string name="SwipeMute">كتم</string>
+    <string name="SwipePin">تثبيت</string>
+    <string name="SwipeSettingsArchive">أرشفة</string>
+    <string name="SwipeSettingsDelete">حذف</string>
+    <string name="SwipeSettingsFolders">تغيير المجلّد</string>
+    <string name="SwipeSettingsMute">كتم</string>
+    <string name="SwipeSettingsPin">تثبيت</string>
+    <string name="SwipeSettingsRead">مقروءة</string>
+    <string name="SwipeUnmute">إلغاء الكتم</string>
+    <string name="SwipeUnpin">إزالة التثبيت</string>
+    <string name="SyncContacts">مزامنة جهات الاتصال</string>
+    <string name="SyncContactsAdded">تمت إضافة جهات اتصال جهازك إلى حسابك.</string>
+    <string name="SyncContactsInfoOff">قم بالتفعيل لمزامنة جهات اتصال هذا الجهاز مع حسابك باستمرار.</string>
+    <string name="SyncContactsInfoOn">ستتم إضافة جهات اتصال جهازك هذا إلى حسابك.</string>
+    <string name="SyncContactsOff">لن يتم إضافة جهات اتصال هذا الجهاز إلى هذا الحساب.</string>
+    <string name="SyncContactsOn">ستتم إضافة جهات اتصال هذا الجهاز إلى هذا الحساب.</string>
+    <string name="TapToChange">انقر للتغيير</string>
+    <string name="TapToChangePhone">انقر لتغيير رقم الهاتف</string>
+    <string name="TapToEditWidget">اضغط لتحرير الأداة</string>
+    <string name="TapToEditWidgetShort">اضغط للتعديل</string>
+    <string name="Teal">الأخضر الفاتح</string>
+    <string name="TelegramFAQ">الأسئلة الشائعة</string>
+    <string name="TelegramFaq">الأسئلة الشائعة</string>
+    <string name="TelegramFaqUrl">https://telegram.org/faq/ar</string>
+    <string name="TelegramFeatures">ميزات تيليجرام</string>
+    <string name="TelegramFeaturesUrl">https://t.me/TelegramTipsAR/128</string>
+    <string name="TelegramVersion">تيليجرام للأندرويد %1$s</string>
+    <string name="TermsOfService">شروط الخدمة</string>
+    <string name="TermsOfServiceLogin">"تسجيلك يعني موافقتك
+على *شروط الخدمة*."</string>
+    <string name="TermsOfServiceUrl">https://telegram.org/tos</string>
+    <string name="TextSizeHeader">حجم خط الرسائل</string>
+    <string name="TosAgeText">يرجى الضغط على (موافق) لتأكيد أن عمرك %1$s أو أكبر.</string>
+    <string name="TosAgeTitle">التحقق من العمر</string>
+    <string name="TosDecline">"للأسف، هذا يعني أنه لا يمكنك التسجيل في تيليجرام.
+
+على عكس التطبيقات الأخرى؛ لا يستخدم تيليجرام بياناتك لاستهدافك بالإعلانات أو لأغراض تجارية أخرى. يخزن تيليجرام فقط المعلومات التي يحتاجها ليعمل كخدمة سحابية غنية بالميزات. يمكنك ضبط كيفية استخدام بياناتك (مثل حذف جهات الاتصال المزامَنة) في إعدادات الخصوصية والأمان.
+
+إن كنتم غير مرتاحين مع احتياجات تيليجرام المتواضعة؛ لن يكون بإمكاننا تقديم هذه الخدمة."</string>
+    <string name="TosDeclineDeleteAccount">"تحذير، سيؤدي هذا إلى حذف حسابك في تيليجرام بشكل نهائي بالإضافة لجميع البيانات التي تخزنها في سحابة تيليجرام.
+
+هام: يمكنك الإلغاء الآن وتصدير بياناتك قبل حذف حسابك عوضًا عن خسارتها كلها. (للقيام بذلك، افتح النسخة الأخيرة من تيليجرام لسطح المكتب وتوجه إلى الإعدادات > إعدادات متقدمة > تصدير بيانات تيليجرام)."</string>
+    <string name="TosUpdateDecline">"للأسف، لا توجد خيارات أخرى. على عكس التطبيقات الأخرى؛ لا تستخدم تيليجرام بيانات المستخدمين لاستهدافهم بالإعلانات أو لأغراض تجارية أخرى. يخزن تيليجرام فقط المعلومات التي يحتاجها للعمل كخدمة سحابية غنية بالميزات. يمكنك ضبط كيفية استخدام بياناتك في إعدادات الخصوصية والأمان.
+
+إذا لم تكن مرتاحًا لاحتياجات تيليجرام المتواضعة؛ لن نتمكن من تزويدك بهذه الخدمة."</string>
+    <string name="TranslateMessages">ترجمة الرسائل</string>
+    <string name="TranslateMessagesInfo1">سيظهر زر «الترجمة» عند الضغط مرة واحدة على رسالة نصيّة.</string>
+    <string name="TranslateMessagesInfo2">قد تتمكن Google من الوصول إلى نص الرسائل التي ترجمتها.</string>
+    <string name="TurnPasswordOff">تعطيل كلمة المرور</string>
+    <string name="TurnPasswordOffPassport">سيتم فقدان كل البيانات المحفوظة في جواز تيليجرام.</string>
+    <string name="TurnPasswordOffQuestion">هل ترغب حقًا في تعطيل كلمة مرورك؟</string>
+    <string name="TurnPasswordOffQuestionTitle">تعطيل كلمة المرور</string>
+    <string name="TwoStepVerification">التحقق بخطوتين</string>
+    <string name="TwoStepVerificationPasswordReturnPassport">العودة إلى جواز السفر</string>
+    <string name="TwoStepVerificationPasswordReturnSettings">العودة للإعدادات</string>
+    <string name="TwoStepVerificationPasswordSet">تم تعيين كلمة المرور!</string>
+    <string name="TwoStepVerificationPasswordSetInfo">سيتم طلب كلمة المرور هذه عند تسجيلك الدخول في جهاز جديد بالإضافة إلى الرمز الذي نرسله برسالة نصية SMS.</string>
+    <string name="TwoStepVerificationSetPassword">تعيين كلمة المرور</string>
+    <string name="TwoStepVerificationShowPassword">إظهار كلمة المرور</string>
+    <string name="TwoStepVerificationTitle">التحقق بخطوتين</string>
+    <string name="UnableForward">غير قادر على التحويل</string>
+    <string name="Unblock">إلغاء حظر المستخدم</string>
+    <string name="UndoAllCustom">التراجع عن كل إعدادات الإشعارات المخصَّصة لجهات اتصالك وللمجموعات والقنوات</string>
+    <string name="UnsaveMessagesTitle">إلغاء حفظ %1$s</string>
+    <string name="UnsaveSingleMessagesTitle">إلغاء حفظ الرسالة</string>
+    <string name="UnsupportedMedia2">نسختك الحالية من تيليجرام لا تدعم هذه الرسالة. يرجى تحديث التطبيق إلى أحدث نسخة.</string>
+    <string name="Update">تحديث</string>
+    <string name="UpdateApp">تحديث التطبيق</string>
+    <string name="UpdateAppAlert">عذرًا، تطبيق تيليجرام الذي تملكه قديم ولا يمكنه التعامل مع هذا الطلب، يرجى القيام بتحديثه.</string>
+    <string name="UpdateTelegram">تحديث تيليجرام</string>
+    <string name="UseProxyAddress">الخادم</string>
+    <string name="UseProxyForCalls">استخدام البروكسي للمكالمات</string>
+    <string name="UseProxyForCallsInfo">قد تقلل خوادم البروكسي من جودة مكالماتك.</string>
+    <string name="UseProxyInfo">إعدادات بروكسي SOCKS5</string>
+    <string name="UseProxyPassword">كلمة المرور</string>
+    <string name="UseProxyPort">المنفذ</string>
+    <string name="UseProxySecret">السر</string>
+    <string name="UseProxySettings">استخدام بروكسي</string>
+    <string name="UseProxySocks5">بروكسي SOCKS5</string>
+    <string name="UseProxySponsor">راعي البروكسي</string>
+    <string name="UseProxySponsorInfo">تُعرض هذه القناة من قبل البروكسي. يمكنك إزالة هذه القناة من قائمة محادثاتك بتعطيل اتصال البروكسي من إعدادات تيليجرام> البيانات والتخزين.</string>
+    <string name="UseProxyTelegram">بروكسي MTProto</string>
+    <string name="UseProxyTelegramError">لم يتم إعداد البروكسي الذي تستخدمه بشكل صحيح وسيتم تعطيله. يرجى العثور على واحد آخر.</string>
+    <string name="UseProxyTelegramInfo">إعدادات بروكسي MTProto.</string>
+    <string name="UseProxyTelegramInfo2">"قد يعرض هذا البروكسي قناة إعلانية في قائمة محادثاتك.
+لن يكشف هذا عن نشاطك في تيليجرام."</string>
+    <string name="UseProxyUsername">اسم المستخدم</string>
+    <string name="UserRestricted">المعذرة، ليس مسموحًا لك القيام بهذا.</string>
+    <string name="Username">اسم المستخدم</string>
+    <string name="UsernameAlso">أيضًا %1$s</string>
+    <string name="UsernameAvailable">%1$s متاح.</string>
+    <string name="UsernameChecking">يتم التحقق من اسم المستخدم...</string>
+    <string name="UsernameEmpty">لا شيء</string>
+    <string name="UsernameHelp">"يمكنك اختيار اسم مستخدم في **تيليجرام**.
+إذا قمت بذلك سيتمكن الآخرون من العثور عليك باسم المستخدم والتواصل معك دون الحاجة لرقم هاتفك.
+
+يمكنك استخدام **الحروف والأرقام الإنجليزية** وكذلك الشَّرطة السفلية. الطول الأدنى هو **5 خانات**."</string>
+    <string name="UsernameHelpLink">"يفتح هذا الرابط محادثة معك:
+%1$s"</string>
+    <string name="UsernameInUse">اسم المستخدم هذا مأخوذ مسبقًا.</string>
+    <string name="UsernameInUsePurchase">"هذا الرابط مأخوذ مسبقًا.
+بالرغم من ذلك، هو متاح حاليًا للشراء. **معرفة المزيد…**"</string>
+    <string name="UsernameInvalid">عذرًا، اسم المستخدم غير صالح.</string>
+    <string name="UsernameInvalidLong">يجب ألا يزيد اسم المستخدم عن 32 خانة.</string>
+    <string name="UsernameInvalidShort">يجب ألا يقل اسم المستخدم عن 5 أحرف.</string>
+    <string name="UsernameInvalidShortPurchase">"يجب أن يحتوي اسم المستخدم الأساسي على 5 أحرف على الأقل.
+مع ذلك، فإن أسماء المستخدم القصيرة القابلة للتحصيل بما في ذلك هذا الاسم متاحة للشراء. **معرفة المزيد…**"</string>
+    <string name="UsernameInvalidStartNumber">لا يمكن لاسم المستخدم أن يبدأ برقم.</string>
+    <string name="UsernameLinkPlaceholder">اسم المستخدم</string>
+    <string name="VerificationCode">رمز التحقق</string>
+    <string name="VerificationCodeSubtitle">يرجى تفحص بريدك الإلكتروني %1$s (حتى مجلد الرسائل المزعجة) وإدخال الرمز الذي أرسلناه إليك للتو.</string>
+    <string name="Vibrate">الاهتزاز</string>
+    <string name="VibrationDefault">افتراضي</string>
+    <string name="VibrationDisabled">تعطيل</string>
+    <string name="VideoCall">مكالمة مرئية</string>
+    <string name="ViewExceptions">عرض الاستثناءات</string>
+    <string name="WaitMore">الانتظار أكثر</string>
+    <string name="WebAppDisclaimerUrl">https://telegram.org/tos/mini-apps</string>
+    <string name="WhenConnectedOnWiFi">عند الاتصال بالواي فاي</string>
+    <string name="WhenRoaming">عند التجوال</string>
+    <string name="WhenUsingMobileData">عند استخدام بيانات الجوال</string>
+    <string name="White">الأبيض</string>
+    <string name="WidgetChats">المحادثات</string>
+    <string name="WidgetLoggedOff">تم الخروج من الحساب.</string>
+    <string name="WidgetPasscode2">"تحذير: ستعرض التطبيقات المصغرة كل الرسائل الحديثة، لكن ستطلب منك رمز المرور الخاص بك لفتح التطبيق والرد. "</string>
+    <string name="WidgetPreview">معاينة الأداة</string>
+    <string name="WidgetShortcuts">الاختصارات</string>
+    <string name="WrongCode">الرمز غير صحيح، ترجى إعادة المحاولة.</string>
+    <string name="WrongCodeTitle">رمز خاطئ</string>
+    <string name="WrongCountry">رمز الدولة غير صالح</string>
+    <string name="WrongNumber">الرقم غير صحيح؟</string>
+    <string name="WrongNumberFormat">صيغة غير صحيحة</string>
+    <string name="Yellow">الأصفر</string>
+    <string name="YouBlockedUser">المعذرة، لا يمكنك إضافة هذا المستخدم أو البوت للمجموعات بسبب أنك قمت بحظره. فضلًا قم بإزالة الحظر للاستمرار.</string>
+    <string name="YouHaveNewMessage">لديك رسالة جديدة</string>
+    <string name="YourBioChanged">تم تحديث النبذة.</string>
+    <string name="YourCode">التحقق من الرقم</string>
+    <string name="YourEmail">بريدك الإلكتروني</string>
+    <string name="YourEmailAlmostThere">انتهينا تقريبًا!</string>
+    <string name="YourEmailAlmostThereText">يرجى تفقُّد بريدك الإلكتروني والضغطُ على رابط التأكيد لإتمام تفعيل التحقق بخطوتين. قم بتفقُّد مجلدِ الرسائل غير المرغوب بها أيضًا.</string>
+    <string name="YourEmailInfo">فضلًا قم بإضافة بريد إلكتروني صالح، هذه هي الطريقة الوحيدة لاستعادة كلمة المرور المنسية.</string>
+    <string name="YourEmailSkip">تخطي</string>
+    <string name="YourEmailSkipWarning">تحذير</string>
+    <string name="YourEmailSkipWarningText">"المخاطرة حقيقية!
+
+إن نسيت كلمة مرورك؛ ستفقد الوصول إلى حسابك في تيليجرام. لن تكون هناك أي طريقة لاستعادته."</string>
+    <string name="YourEmailSuccessChangedText">تم تغيير بريدك الإلكتروني لاستراد كلمة مرور التحقق بخطوتين.</string>
+    <string name="YourEmailSuccessText">تم تفعيل بريد الاسترداد الإلكتروني لعملية التحقق بخطوتين.</string>
+    <string name="YourLoginEmailChangedSuccess">تم تغيير بريدك الإلكتروني.</string>
+    <string name="YourName">اسمك</string>
+    <string name="YourNameChanged">تم تحديث الاسم.</string>
+    <string name="YourNewEmail">بريدك الجديد</string>
+    <string name="YourNumber">رقم هاتفك</string>
+    <string name="YourPassword">كلمة مرورك</string>
+    <string name="YourPasswordChangedSuccessText">تم تغيير كلمة مرور التحقق بخطوتين.</string>
+    <string name="YourPasswordHeader">كلمة مرورك</string>
+    <string name="YourPasswordRemember">"حسابك محمي بالتحقق بخطوتين.
+هل لازلت تتذكر كلمة مرورك؟"</string>
+    <string name="YourPasswordRememberNo">أشك في ذلك</string>
+    <string name="YourPasswordRememberYes">نعم، بالتأكيد</string>
+    <string name="YourPasswordSuccess">نجح الأمر!</string>
+    <string name="YourPhone">رقمك</string>
+    <string name="YourVersionIsLatest">نسختك محدثة.</string>
+    <string name="abc_action_bar_home_description">التوجه إلى المنزل</string>
+    <string name="abc_action_bar_up_description">التنقل إلى أعلى</string>
+    <string name="abc_action_menu_overflow_description">خيارات أكثر</string>
+    <string name="abc_action_mode_done">تم</string>
+    <string name="abc_activity_chooser_view_see_all">عرض الكل</string>
+    <string name="abc_activitychooserview_choose_application">اختيار تطبيق</string>
+    <string name="abc_capital_off">إيقاف</string>
+    <string name="abc_capital_on">مفعّلة</string>
+    <string name="abc_menu_alt_shortcut_label">Alt+</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+    <string name="abc_menu_delete_shortcut_label">حذف</string>
+    <string name="abc_menu_enter_shortcut_label">enter</string>
+    <string name="abc_menu_function_shortcut_label">Function+</string>
+    <string name="abc_menu_meta_shortcut_label">Meta+</string>
+    <string name="abc_menu_shift_shortcut_label">Shift+</string>
+    <string name="abc_menu_space_shortcut_label">فضاء</string>
+    <string name="abc_menu_sym_shortcut_label">Sym+</string>
+    <string name="abc_prepend_shortcut_label">القائمة+</string>
+    <string name="abc_search_hint">بحث…</string>
+    <string name="abc_searchview_description_clear">محو طلب البحث</string>
+    <string name="abc_searchview_description_query">طلب بحث</string>
+    <string name="abc_searchview_description_search">البحث</string>
+    <string name="abc_searchview_description_submit">إرسال طلب البحث</string>
+    <string name="abc_searchview_description_voice">بحث صوتي</string>
+    <string name="abc_shareactionprovider_share_with">مشاركة مع</string>
+    <string name="abc_shareactionprovider_share_with_application">مشاركة مع %s</string>
+    <string name="abc_toolbar_collapse_description">تصغير</string>
+    <string name="call_notification_answer_action">ردّ</string>
+    <string name="call_notification_answer_video_action">فيديو</string>
+    <string name="call_notification_decline_action">رفض</string>
+    <string name="call_notification_hang_up_action">قطع الاتصال</string>
+    <string name="call_notification_incoming_text">مكالمة واردة</string>
+    <string name="call_notification_ongoing_text">مكالمة جارية</string>
+    <string name="call_notification_screening_text">يتم فحص المكالمة الواردة</string>
+    <string name="cast_ad_label">إعلان</string>
+    <string name="cast_casting_to_device">جارٍ الإرسال إلى %1$s</string>
+    <string name="cast_closed_captions">الترجمة والشرح</string>
+    <string name="cast_closed_captions_unavailable">الترجمة والشرح غير متاحة</string>
+    <string name="cast_connecting_to_device">جارٍ الاتصال بـ %1$s</string>
+    <string name="cast_disconnect">إلغاء الربط</string>
+    <string name="cast_dynamic_group_name_format">%1$s + %2$d</string>
+    <string name="cast_expanded_controller_ad_image_description">‏الصورة المعروضة أثناء تشغيل مستقبل cast لأحد الإعلانات</string>
+    <string name="cast_expanded_controller_ad_in_progress">الإعلان قيد التقدم...</string>
+    <string name="cast_expanded_controller_background_image">صورة الألبوم</string>
+    <string name="cast_expanded_controller_live_head_description">الموضع الحالي في مقدمة البث المباشر</string>
+    <string name="cast_expanded_controller_live_stream_indicator">بث مباشر</string>
+    <string name="cast_expanded_controller_loading">جارٍ التحميل…</string>
+    <string name="cast_expanded_controller_skip_ad_label">تخطّي الإعلان</string>
+    <string name="cast_expanded_controller_skip_ad_text">يمكنك تخطي الإعلان بعد %1$d…</string>
+    <string name="cast_forward">إلى الأمام</string>
+    <string name="cast_forward_10">إلى الأمام عشر ثوانٍ</string>
+    <string name="cast_forward_30">إلى الأمام ثلاثين ثانية</string>
+    <string name="cast_intro_overlay_button_text">@android:string/ok</string>
+    <string name="cast_live_label">بث مباشر</string>
+    <string name="cast_mute">كتم الصوت</string>
+    <string name="cast_notification_connected_message">تم الاتصال بـ %1$s</string>
+    <string name="cast_notification_connecting_message">جارٍ الاتصال بـ %1$s</string>
+    <string name="cast_notification_default_channel_name">Cast</string>
+    <string name="cast_notification_disconnect">إلغاء الربط</string>
+    <string name="cast_pause">إيقاف مؤقت</string>
+    <string name="cast_play">تشغيل</string>
+    <string name="cast_rewind">ترجيع</string>
+    <string name="cast_rewind_10">ترجيع عشر ثوانٍ</string>
+    <string name="cast_rewind_30">ترجيع ثلاثين ثانية</string>
+    <string name="cast_seek_bar">تشغيل شريط التحكم</string>
+    <string name="cast_skip_next">التخطي إلى العنصر التالي</string>
+    <string name="cast_skip_prev">التخطي إلى العنصر السابق</string>
+    <string name="cast_stop">إيقاف</string>
+    <string name="cast_stop_live_stream">إيقاف البث المباشر</string>
+    <string name="cast_tracks_chooser_dialog_audio">الصوت</string>
+    <string name="cast_tracks_chooser_dialog_cancel">إلغاء</string>
+    <string name="cast_tracks_chooser_dialog_closed_captions">الترجمة والشرح</string>
+    <string name="cast_tracks_chooser_dialog_default_track_name">المقطع الصوتي %1$d</string>
+    <string name="cast_tracks_chooser_dialog_none">لا شيء</string>
+    <string name="cast_tracks_chooser_dialog_ok">حسنًا</string>
+    <string name="cast_tracks_chooser_dialog_subtitles">الترجمات المصاحبة</string>
+    <string name="cast_unmute">إعادة الصوت</string>
+    <string name="chatDate">d MMMM</string>
+    <string name="chatFullDate">d MMMM yyyy</string>
+    <string name="common_google_play_services_enable_button">تفعيل</string>
+    <string name="common_google_play_services_enable_text">‏لن يعمل %1$s ما لم يتم تفعيل خدمات Google Play.</string>
+    <string name="common_google_play_services_enable_title">‏تفعيل خدمات Google Play</string>
+    <string name="common_google_play_services_install_button">تثبيت</string>
+    <string name="common_google_play_services_install_text">‏لن يتم تشغيل %1$s بدون خدمات Google Play، والتي لا تتوفر على جهازك.</string>
+    <string name="common_google_play_services_install_title">‏الحصول على خدمات Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">‏مدى توفّر خدمات Google Play</string>
+    <string name="common_google_play_services_notification_ticker">‏خطأ في خدمات Google Play</string>
+    <string name="common_google_play_services_unknown_issue">‏لدى %1$s مشكلة في خدمات Google Play. يُرجى إعادة المحاولة.</string>
+    <string name="common_google_play_services_unsupported_text">‏لن يتم تشغيل %1$s بدون خدمات Google Play التي لا يوفرها جهازك.</string>
+    <string name="common_google_play_services_update_button">تحديث</string>
+    <string name="common_google_play_services_update_text">‏لن يتم تشغيل %1$s ما لم يتم تحديث خدمات Google Play.</string>
+    <string name="common_google_play_services_update_title">‏تحديث خدمات Google Play</string>
+    <string name="common_google_play_services_updating_text">‏لن يتم تشغيل %1$s بدون خدمات Google Play، والتي يتم تحديثها حاليًا.</string>
+    <string name="common_google_play_services_wear_update_text">‏يجب توفر إصدار جديد من خدمات Google Play. سيتم تحديثها تلقائيًا قريبًا.</string>
+    <string name="common_open_on_phone">فتح على الهاتف</string>
+    <string name="common_signin_button_text">تسجل الدخول</string>
+    <string name="common_signin_button_text_long">‏تسجيل الدخول عبر Google</string>
+    <string name="confirm_device_credential_password">استخدام كلمة المرور</string>
+    <string name="default_error_msg">خطأ غير معروف</string>
+    <string name="fcm_fallback_notification_channel_label">متنوعة</string>
+    <string name="fingerprint_dialog_touch_sensor">المس زر استشعار بصمة الإصبع</string>
+    <string name="fingerprint_error_hw_not_available">جهاز بصمة الإصبع غير متاح.</string>
+    <string name="fingerprint_error_hw_not_present">لا يحتوي هذا الجهاز على جهاز استشعار بصمات الأصابع.</string>
+    <string name="fingerprint_error_lockout">تم إجراء محاولات كثيرة جدًا. يُرجى المحاولة مرة أخرى لاحقًا.</string>
+    <string name="fingerprint_error_no_fingerprints">ليست هناك بصمات إصبع مسجَّلة.</string>
+    <string name="fingerprint_error_user_canceled">تم إلغاء تشغيل بصمة الإصبع بواسطة المستخدم.</string>
+    <string name="fingerprint_not_recognized">لم يتم التعرف عليها.</string>
+    <string name="formatDateAtTime">%1$s الساعة %2$s</string>
+    <string name="formatDateSchedule">d MMM</string>
+    <string name="formatDateScheduleYear">yyyy MMM d</string>
+    <string name="formatterBannedUntil12H">MMM dd yyyy, h:mm a</string>
+    <string name="formatterBannedUntil24H">MMM dd yyyy, HH:mm</string>
+    <string name="formatterBannedUntilThisYear12H">dd MMM, h:mm a</string>
+    <string name="formatterBannedUntilThisYear24H">dd MMM, HH:mm</string>
+    <string name="formatterBoostExpired">MMM dd, yyyy</string>
+    <string name="formatterDay12H">h:mm a</string>
+    <string name="formatterDay24H">HH:mm</string>
+    <string name="formatterGiveawayCard">dd MMM yyyy</string>
+    <string name="formatterGiveawayMonthDay">dd MMMM</string>
+    <string name="formatterGiveawayMonthDayYear">dd MMMM, yyyy</string>
+    <string name="formatterMonth">dd MMM</string>
+    <string name="formatterMonthYear">yyyy MMMM</string>
+    <string name="formatterStats12H">MMM dd yyyy, h:mm a</string>
+    <string name="formatterStats24H">MMM dd yyyy, HH:mm</string>
+    <string name="formatterWeek">EE</string>
+    <string name="formatterWeekLong">EEEE</string>
+    <string name="formatterYear">yy.MM.dd</string>
+    <string name="formatterYearMax">yyyy.MM.dd</string>
+    <string name="generic_error_no_device_credential">لم يتم ضبط رقم تعريف شخصي أو نقش أو كلمة مرور.</string>
+    <string name="generic_error_no_keyguard">هذا الجهاز لا يتيح استخدام رقم تعريف شخصي أو نقش أو كلمة مرور.</string>
+    <string name="generic_error_user_canceled">ألغى المستخدم المصادقة.</string>
+    <string name="google_assistant_verification_channel_name">‏أداة التحقق في خدمة \"مساعد Google\"</string>
+    <string name="google_assistant_verification_notification_title">‏\"مساعد Google\" يرسل رسالة</string>
+    <string name="hms_apk_not_installed_hints">قد لا تعمل بعض الميزات في تطبيق %1$s على النحو المنشود بدون خدمات HMS Core، والتي لم يتم تثبيتها على جهازك.</string>
+    <string name="hms_bindfaildlg_message">\"%1$s\" غير قادر على استخدام خدمات HMS Core. يُرجى تشغيل مدير الهاتف أو الانتقال إلى الإعدادات، وتشغيل جميع أذونات %2$s (بما في ذلك التشغيل التلقائي، والتشغيل الثانوي)، وإعادة المحاولة.</string>
+    <string name="hms_confirm">حسنًا</string>
+    <string name="hms_is_spoof">يبدو أنك ثبّت إصدارًا غير رسمي من HMS Core (%1$s)‎ على جهازك. يُرجى إزالة تثبيت إصدار HMS Core من الإعدادات والعودة إلى هذا التطبيق لتثبيت الإصدار الرسمي.</string>
+    <string name="hms_push_channel">الافتراضي</string>
+    <string name="hms_spoof_hints">تنويه</string>
+    <string name="ic_media_route_learn_more_accessibility">التعرُّف على كيفية البثّ</string>
+    <string name="media_notification_channel_name">Cast</string>
+    <string name="mr_button_content_description">البث</string>
+    <string name="mr_cast_button_connected">إرسال متصل</string>
+    <string name="mr_cast_button_connecting">إرسال جارٍ الاتصال</string>
+    <string name="mr_cast_button_disconnected">إرسال غير متصل</string>
+    <string name="mr_cast_dialog_title_view_placeholder">لا تتوفر أي معلومات</string>
+    <string name="mr_chooser_looking_for_devices">جارٍ البحث عن أجهزة…</string>
+    <string name="mr_chooser_searching">جارٍ البحث عن أجهزة</string>
+    <string name="mr_chooser_title">البث إلى</string>
+    <string name="mr_chooser_wifi_learn_more"><a href="https://support.google.com/chromecast/?p=trouble-finding-devices">مزيد من المعلومات</a></string>
+    <string name="mr_chooser_wifi_warning_description_car">‏تأكَّد من أنّ الجهاز الآخر وهذه السيارة متّصلان بشبكة Wi-Fi نفسها.</string>
+    <string name="mr_chooser_wifi_warning_description_phone">‏تأكَّد من أنّ الجهاز الآخر وهذا الهاتف متّصلان بشبكة Wi-Fi نفسها.</string>
+    <string name="mr_chooser_wifi_warning_description_tablet">‏تأكَّد من أنّ الجهاز الآخر وهذا الجهاز اللوحي متّصلان بشبكة Wi-Fi نفسها.</string>
+    <string name="mr_chooser_wifi_warning_description_tv">‏تأكَّد من أنّ الجهاز الآخر وهذا التلفزيون متّصلان بشبكة Wi-Fi نفسها.</string>
+    <string name="mr_chooser_wifi_warning_description_unknown">‏تأكَّد من أنّ الجهاز الآخر وهذا الجهاز متّصلان بشبكة Wi-Fi نفسها.</string>
+    <string name="mr_chooser_wifi_warning_description_watch">‏تأكَّد من أنّ الجهاز الآخر وهذه الساعة متّصلان بشبكة Wi-Fi نفسها.</string>
+    <string name="mr_chooser_zero_routes_found_title">لا تتوفّر أي أجهزة</string>
+    <string name="mr_controller_album_art">صورة الألبوم</string>
+    <string name="mr_controller_casting_screen">جارٍ إرسال الشاشة</string>
+    <string name="mr_controller_close_description">إغلاق</string>
+    <string name="mr_controller_collapse_group">تصغير</string>
+    <string name="mr_controller_disconnect">قطع اتصال</string>
+    <string name="mr_controller_expand_group">توسيع</string>
+    <string name="mr_controller_no_info_available">لا تتوفر أي معلومات</string>
+    <string name="mr_controller_no_media_selected">لم يتم اختيار أي وسائط</string>
+    <string name="mr_controller_pause">إيقاف مؤقت</string>
+    <string name="mr_controller_play">تشغيل</string>
+    <string name="mr_controller_stop">إيقاف</string>
+    <string name="mr_controller_stop_casting">إيقاف البث</string>
+    <string name="mr_controller_volume_slider">شريط تمرير مستوى الصوت</string>
+    <string name="mr_dialog_default_group_name">تجميع</string>
+    <string name="mr_dialog_groupable_header">إضافة جهاز</string>
+    <string name="mr_dialog_transferable_header">تشغيل على مجموعة من الأجهزة</string>
+    <string name="mr_system_route_name">النظام</string>
+    <string name="mr_user_route_category_name">الأجهزة</string>
+    <string name="search_menu_title">البحث</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="wallet_buy_button_place_holder">الشراء عبر Google</string>
+</resources>
