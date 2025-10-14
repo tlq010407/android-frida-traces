@@ -213,6 +213,7 @@ python3 tools/analyze_frida_csv.py logs/telegram_java_hook.csv > logs/telegram_s
 - **Anti-Frida/anti-debugging:** some apps detect Frida and actively prevent instrumentation. Techniques: patch out checks (advanced), run on rooted emulator, embed gadget into a modified APK, or use a restored device image with debugging disabled.
 
 ## 4. Native libraries (Telegram APK)
+<img width="526" height="254" alt="image" src="https://github.com/user-attachments/assets/431d17a8-266a-4e57-b744-5e69fc01d4ee" />
 
 Here in this part lists native libraries found in the Telegram APK unpacked, several concrete native functions (JNI and C++), commands you can re-run to find symbols, and immediate recommendations for auditing/hooking.
 
