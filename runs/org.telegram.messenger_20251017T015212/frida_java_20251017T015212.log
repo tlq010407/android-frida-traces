@@ -1,0 +1,1072 @@
+[*] Java.perform start @2025-10-16T17:52:13.170Z
+[*] Hook org.telegram.tgnet.ConnectionsManager.native_sendRequest overloads = 1
+    └─ native_sendRequest(int, long, int, int, int, boolean, int)
+[*] Hook org.telegram.tgnet.ConnectionsManager.native_checkProxy overloads = 1
+    └─ native_checkProxy(int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, org.telegram.tgnet.RequestTimeDelegate)
+[*] Hook org.telegram.tgnet.ConnectionsManager.native_getConnectionState overloads = 1
+    └─ native_getConnectionState(int)
+[*] Hook org.telegram.tgnet.ConnectionsManager.native_setProxySettings overloads = 1
+    └─ native_setProxySettings(int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)
+[*] Hook org.telegram.tgnet.ConnectionsManager.native_init overloads = 1
+    └─ native_init(int, int, int, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, long, boolean, boolean, boolean, int, int)
+[*] Hook org.telegram.messenger.Utilities.aesIgeEncryption overloads = 2
+    └─ aesIgeEncryption(java.nio.ByteBuffer, [B, [B, boolean, int, int)
+    └─ aesIgeEncryption(java.nio.ByteBuffer, [B, [B, boolean, boolean, int, int)
+[*] Hook org.telegram.messenger.Utilities.aesIgeEncryptionByteArray overloads = 2
+    └─ aesIgeEncryptionByteArray([B, [B, [B, boolean, int, int)
+    └─ aesIgeEncryptionByteArray([B, [B, [B, boolean, boolean, int, int)
+[*] Hook org.telegram.messenger.Utilities.aesCtrDecryption overloads = 1
+    └─ aesCtrDecryption(java.nio.ByteBuffer, [B, [B, int, int)
+[*] Hook org.telegram.messenger.Utilities.pbkdf2 overloads = 1
+    └─ pbkdf2([B, [B, [B, int)
+[*] Hook org.telegram.messenger.MediaController.startRecord overloads = 1
+    └─ startRecord(java.lang.String, int)
+[*] Hook org.telegram.messenger.MediaController.writeFrame overloads = 1
+    └─ writeFrame(java.nio.ByteBuffer, int)
+[*] Hook org.telegram.messenger.MediaController.stopRecord overloads = 1
+    └─ stopRecord()
+[*] Hook org.telegram.messenger.MediaController.getWaveform overloads = 1
+    └─ getWaveform(java.lang.String)
+[*] Hook org.telegram.SQLite.SQLiteDatabase.opendb overloads = 1
+    └─ opendb(java.lang.String, java.lang.String)
+[*] Hook org.telegram.SQLite.SQLitePreparedStatement.prepare overloads = 1
+    └─ prepare(long, java.lang.String)
+[*] Hook org.telegram.SQLite.SQLitePreparedStatement.step overloads = 2
+    └─ step()
+    └─ step(long)
+[*] Hook org.telegram.SQLite.SQLiteDatabase.beginTransaction overloads = 2
+    └─ beginTransaction()
+    └─ beginTransaction(long)
+[*] Hook org.telegram.SQLite.SQLiteDatabase.commitTransaction overloads = 2
+    └─ commitTransaction()
+    └─ commitTransaction(long)
+[*] Hook android.location.LocationManager.getLastKnownLocation overloads = 2
+    └─ getLastKnownLocation(java.lang.String)
+    └─ getLastKnownLocation(java.lang.String, android.location.LastLocationRequest)
+[*] Hook android.location.LocationManager.requestLocationUpdates overloads = 12
+    └─ requestLocationUpdates(long, float, android.location.Criteria, android.app.PendingIntent)
+    └─ requestLocationUpdates(long, float, android.location.Criteria, android.location.LocationListener, android.os.Looper)
+    └─ requestLocationUpdates(long, float, android.location.Criteria, java.util.concurrent.Executor, android.location.LocationListener)
+    └─ requestLocationUpdates(android.location.LocationRequest, android.app.PendingIntent)
+    └─ requestLocationUpdates(android.location.LocationRequest, android.location.LocationListener, android.os.Looper)
+    └─ requestLocationUpdates(android.location.LocationRequest, java.util.concurrent.Executor, android.location.LocationListener)
+    └─ requestLocationUpdates(java.lang.String, long, float, android.app.PendingIntent)
+    └─ requestLocationUpdates(java.lang.String, long, float, android.location.LocationListener)
+    └─ requestLocationUpdates(java.lang.String, long, float, android.location.LocationListener, android.os.Looper)
+    └─ requestLocationUpdates(java.lang.String, long, float, java.util.concurrent.Executor, android.location.LocationListener)
+    └─ requestLocationUpdates(java.lang.String, android.location.LocationRequest, android.app.PendingIntent)
+    └─ requestLocationUpdates(java.lang.String, android.location.LocationRequest, java.util.concurrent.Executor, android.location.LocationListener)
+[*] Hook android.location.LocationManager.requestSingleUpdate overloads = 4
+    └─ requestSingleUpdate(android.location.Criteria, android.app.PendingIntent)
+    └─ requestSingleUpdate(android.location.Criteria, android.location.LocationListener, android.os.Looper)
+    └─ requestSingleUpdate(java.lang.String, android.app.PendingIntent)
+    └─ requestSingleUpdate(java.lang.String, android.location.LocationListener, android.os.Looper)
+[*] Hook android.telephony.TelephonyManager.getDeviceId overloads = 2
+    └─ getDeviceId()
+    └─ getDeviceId(int)
+[*] Hook android.telephony.TelephonyManager.getImei overloads = 2
+    └─ getImei()
+    └─ getImei(int)
+[*] Hook android.telephony.TelephonyManager.getSubscriberId overloads = 2
+    └─ getSubscriberId()
+    └─ getSubscriberId(int)
+[*] Hook android.telephony.TelephonyManager.getLine1Number overloads = 2
+    └─ getLine1Number()
+    └─ getLine1Number(int)
+[*] Hook android.telephony.SmsManager.sendTextMessage overloads = 3
+    └─ sendTextMessage(java.lang.String, java.lang.String, java.lang.String, android.app.PendingIntent, android.app.PendingIntent)
+    └─ sendTextMessage(java.lang.String, java.lang.String, java.lang.String, android.app.PendingIntent, android.app.PendingIntent, int, boolean, int)
+    └─ sendTextMessage(java.lang.String, java.lang.String, java.lang.String, android.app.PendingIntent, android.app.PendingIntent, long)
+[*] Hook android.hardware.Camera.open overloads = 2
+    └─ open()
+    └─ open(int)
+[*] Hook android.media.MediaRecorder.start overloads = 1
+    └─ start()
+[*] Hook android.media.MediaRecorder.stop overloads = 1
+    └─ stop()
+[*] Hook android.media.AudioRecord.read overloads = 7
+    └─ read(java.nio.ByteBuffer, int)
+    └─ read(java.nio.ByteBuffer, int, int)
+    └─ read([B, int, int)
+    └─ read([B, int, int, int)
+    └─ read([F, int, int, int)
+    └─ read([S, int, int)
+    └─ read([S, int, int, int)
+[*] Hook org.telegram.SQLite.SQLitePreparedStatement.prepare overloads = 1
+    └─ prepare(long, java.lang.String)
+[*] Hook org.telegram.SQLite.SQLitePreparedStatement.step overloads = 2
+    └─ step()
+    └─ step(long)
+[*] Hook android.hardware.SensorManager.registerListener overloads = 6
+    └─ registerListener(android.hardware.SensorEventListener, android.hardware.Sensor, int)
+    └─ registerListener(android.hardware.SensorEventListener, android.hardware.Sensor, int, int)
+    └─ registerListener(android.hardware.SensorEventListener, android.hardware.Sensor, int, int, android.os.Handler)
+    └─ registerListener(android.hardware.SensorEventListener, android.hardware.Sensor, int, android.os.Handler)
+    └─ registerListener(android.hardware.SensorListener, int)
+    └─ registerListener(android.hardware.SensorListener, int, int)
+[*] Hook android.bluetooth.BluetoothAdapter.startDiscovery overloads = 1
+    └─ startDiscovery()
+[*] Java.perform end @2025-10-16T17:52:13.269Z
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT data FROM app_config"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [0,"-5476376660541430640",0,2147483647,1,true,18]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [0,"-5476376660540999856",0,2147483647,1,true,19]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","DELETE FROM app_config"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files => /storage/emulated/0/Android/data/org.telegram.messenger/files
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files => /storage/emulated/0/Android/data/org.telegram.messenger/files
+[+] File.getAbsolutePath path= /storage/emulated/0 => /storage/emulated/0
+[+] File.getAbsolutePath path= /storage/emulated/0 => /storage/emulated/0
+[+] File.getAbsolutePath path= /storage/emulated/0 => /storage/emulated/0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","INSERT INTO app_config VALUES(?)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [0,"-5476376660541621040",0,2147483647,1,true,20]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: []
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml => /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml
+[+] File.exists path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml => true
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml => /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml
+[+] File.exists path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml => true
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml.bak => /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml.bak
+[+] File.exists path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml.bak => false
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml => /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml
+[+] File.renameTo path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml => true
+[+] FileOutputStream.<init> args: ["<java.io.File>"] java.lang.Exception: stack
+	at java.io.FileOutputStream.<init>(Native Method)
+	at android.app.SharedPreferencesImpl.createFileOutputStream(SharedPreferencesImpl.java:702)
+	at android.app.SharedPreferencesImpl.writeToFile(SharedPreferencesImpl.java:793)
+	at android.app.SharedPreferencesImpl.-$$Nest$mwriteToFile(Unknown Source:0)
+	at android.app.SharedPreferencesImpl$2.run(SharedPreferencesImpl.java:672)
+	at android.app.QueuedWork.processPendingWork(QueuedWork.java:265)
+	at android.app.QueuedWork.-$$Nest$smprocessPendingWork(Unknown Source:0)
+	at android.app.QueuedWork$QueuedWorkHandler.handleMessage(QueuedWork.java:285)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loopOnce(Looper.java:201)
+	at android.os.Looper.loop(Looper.java:288)
+	at android.os.HandlerThread.run(HandlerThread.java:67)
+
+[+] FileOutputStream.<init> args: ["<java.io.File>",false] java.lang.Exception: stack
+	at java.io.FileOutputStream.<init>(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:186)
+	at java.io.FileOutputStream.<init>(Native Method)
+	at android.app.SharedPreferencesImpl.createFileOutputStream(SharedPreferencesImpl.java:702)
+	at android.app.SharedPreferencesImpl.writeToFile(SharedPreferencesImpl.java:793)
+	at android.app.SharedPreferencesImpl.-$$Nest$mwriteToFile(Unknown Source:0)
+	at android.app.SharedPreferencesImpl$2.run(SharedPreferencesImpl.java:672)
+	at android.app.QueuedWork.processPendingWork(QueuedWork.java:265)
+	at android.app.QueuedWork.-$$Nest$smprocessPendingWork(Unknown Source:0)
+	at android.app.QueuedWork$QueuedWorkHandler.handleMessage(QueuedWork.java:285)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loopOnce(Looper.java:201)
+	at android.os.Looper.loop(Looper.java:288)
+	at android.os.HandlerThread.run(HandlerThread.java:67)
+
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml.bak => /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml.bak
+[+] File.delete path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml.bak => true
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml => /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml
+[+] File.exists path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320661064","SELECT data FROM app_config"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756874664
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756874664"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [1,"-5476376660540999856",0,2147483647,1,true,3]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320627464","SELECT data FROM app_config"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756940216
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756940216"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [2,"-5476376660541430640",0,2147483647,1,true,3]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320620264","SELECT data FROM app_config"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756743560
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756743560"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [3,"-5476376660541032752",0,2147483647,1,true,3]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT topic_id, name, order_value, count FROM business_replies ORDER BY order_value ASC"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT info FROM bot_keyboard WHERE uid = 6599878128"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT info, pinned FROM user_settings WHERE uid = 6599878128"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT mid FROM chat_pinned_v2 WHERE uid = 6599878128 ORDER BY mid DESC"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT count, end FROM chat_pinned_count WHERE uid = 6599878128"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT inbox_max, unread_count, date, unread_count_i FROM dialogs WHERE did = 6599878128"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT start FROM messages_holes WHERE uid = 6599878128 AND start IN (0, 1)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT max(mid) FROM messages_v2 WHERE uid = 6599878128 AND mid > 0"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT start FROM messages_holes WHERE uid = 6599878128 AND start < 231 AND end > 231"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT start FROM messages_holes WHERE uid = 6599878128 AND start >= 231 ORDER BY start ASC LIMIT 1"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT end FROM messages_holes WHERE uid = 6599878128 AND end <= 231 ORDER BY end DESC LIMIT 1"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757027368
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757027368"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT * FROM (SELECT m.read_state, m.data, m.send_state, m.mid, m.date, r.random_id, m.replydata, m.media, m.ttl, m.mention, m.imp, m.forwards, m.replies_data, m.custom_params, m.reply_to_story_id FROM messages_v2 as m LEFT JOIN randoms_v2 as r ON r.mid = m.mid AND r.uid = m.uid WHERE m.uid = 6599878128 AND m.mid <= 231 ORDER BY m.date DESC, m.mid DESC LIMIT 7) UNION SELECT * FROM (SELECT m.read_state, m.data, m.send_state, m.mid, m.date, r.random_id, m.replydata, m.media, m.ttl, m.mention, m.imp, m.forwards, m.replies_data, m.custom_params, m.reply_to_story_id FROM messages_v2 as m LEFT JOIN randoms_v2 as r ON r.mid = m.mid AND r.uid = m.uid WHERE m.uid = 6599878128 AND m.mid > 231 ORDER BY m.date ASC, m.mid ASC LIMIT 7)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376658123830856
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123830856"]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [0,"-5476376660541522352",0,2147483647,1,true,21]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123830856"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123830856"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123830856"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123830856"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123830856"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123830856"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123830856"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123830856"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT data, status FROM users WHERE uid IN(7897815852)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757014168
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT m.data, m.send_state, m.mid, m.date, r.random_id, m.replydata, m.ttl FROM scheduled_messages_v2 as m LEFT JOIN randoms_v2 as r ON r.mid = m.mid AND r.uid = m.uid WHERE m.uid = 6599878128 ORDER BY m.date DESC"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757017768
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757017768"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT did, date, last_mid, pinned, flags, folder_id, last_mid_group, count, unread_count, max_read_id, read_outbox FROM saved_dialogs WHERE forumChatId = ? ORDER BY pinned ASC, date DESC"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757014168
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT data FROM messages_topics WHERE uid = ? AND mid = ? AND topic_id = ?"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757022568
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757022568"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT data, status FROM users WHERE uid IN(6599878128,7897815852)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757012968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757012968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757012968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757012968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT type, count, old FROM media_counts_v2 WHERE uid = 6599878128"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757014168
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/files => /data/user/0/org.telegram.messenger/files
+[+] File.exists path= /data/user/0/org.telegram.messenger/files => true
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/files => /data/user/0/org.telegram.messenger/files
+[+] Context.getFilesDir => /data/user/0/org.telegram.messenger/files
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/files/file_to_path.db => /data/user/0/org.telegram.messenger/files/file_to_path.db
+[+] File.exists path= /data/user/0/org.telegram.messenger/files/file_to_path.db => true
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/files => /data/user/0/org.telegram.messenger/files
+[+] File.exists path= /data/user/0/org.telegram.messenger/files => true
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/files => /data/user/0/org.telegram.messenger/files
+[+] Context.getFilesDir => /data/user/0/org.telegram.messenger/files
+[+] org.telegram.SQLite.SQLiteDatabase.opendb called with: ["/data/user/0/org.telegram.messenger/files/file_to_path.db","/data/user/0/org.telegram.messenger/files"]
+[+] org.telegram.SQLite.SQLiteDatabase.opendb => -5476376657319889864
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","PRAGMA secure_delete = ON"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","PRAGMA temp_store = MEMORY"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","PRAGMA user_version"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT document FROM web_recent_v3 WHERE type = 2 ORDER BY date DESC"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757014168
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/files => /data/user/0/org.telegram.messenger/files
+[+] File.exists path= /data/user/0/org.telegram.messenger/files => true
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/files => /data/user/0/org.telegram.messenger/files
+[+] Context.getFilesDir => /data/user/0/org.telegram.messenger/files
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/files/file_to_path_backup.db => /data/user/0/org.telegram.messenger/files/file_to_path_backup.db
+[+] File.exists path= /data/user/0/org.telegram.messenger/files/file_to_path_backup.db => true
+[+] FileInputStream.<init> args: ["<java.io.File>"] java.lang.Exception: stack
+	at java.io.FileInputStream.<init>(Native Method)
+	at org.telegram.messenger.AndroidUtilities.copyFile(SourceFile:0)
+	at org.telegram.messenger.FilePathDatabase.createBackup(Unknown Source:50)
+	at org.telegram.messenger.FilePathDatabase.createDatabase(Unknown Source:219)
+	at org.telegram.messenger.FilePathDatabase.ensureDatabaseCreated(Unknown Source:33)
+	at org.telegram.messenger.FilePathDatabase.lambda$checkMediaExistance$2(Unknown Source:4)
+	at org.telegram.messenger.FilePathDatabase.$r8$lambda$lRIs10uRarqSoPqVxpL53d2P3BA(SourceFile:0)
+	at org.telegram.messenger.FilePathDatabase$$ExternalSyntheticLambda8.run(SourceFile:0)
+	at android.os.Handler.handleCallback(Handler.java:942)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loopOnce(Looper.java:201)
+	at android.os.Looper.loop(Looper.java:288)
+	at org.telegram.messenger.DispatchQueue.run(Unknown Source:33)
+
+[+] FileOutputStream.<init> args: ["<java.io.File>"] java.lang.Exception: stack
+	at java.io.FileOutputStream.<init>(Native Method)
+	at org.telegram.messenger.AndroidUtilities.copyFile(SourceFile:0)
+	at org.telegram.messenger.FilePathDatabase.createBackup(Unknown Source:50)
+	at org.telegram.messenger.FilePathDatabase.createDatabase(Unknown Source:219)
+	at org.telegram.messenger.FilePathDatabase.ensureDatabaseCreated(Unknown Source:33)
+	at org.telegram.messenger.FilePathDatabase.lambda$checkMediaExistance$2(Unknown Source:4)
+	at org.telegram.messenger.FilePathDatabase.$r8$lambda$lRIs10uRarqSoPqVxpL53d2P3BA(SourceFile:0)
+	at org.telegram.messenger.FilePathDatabase$$ExternalSyntheticLambda8.run(SourceFile:0)
+	at android.os.Handler.handleCallback(Handler.java:942)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loopOnce(Looper.java:201)
+	at android.os.Looper.loop(Looper.java:288)
+	at org.telegram.messenger.DispatchQueue.run(Unknown Source:33)
+
+[+] FileOutputStream.<init> args: ["<java.io.File>",false] java.lang.Exception: stack
+	at java.io.FileOutputStream.<init>(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:186)
+	at java.io.FileOutputStream.<init>(Native Method)
+	at org.telegram.messenger.AndroidUtilities.copyFile(SourceFile:0)
+	at org.telegram.messenger.FilePathDatabase.createBackup(Unknown Source:50)
+	at org.telegram.messenger.FilePathDatabase.createDatabase(Unknown Source:219)
+	at org.telegram.messenger.FilePathDatabase.ensureDatabaseCreated(Unknown Source:33)
+	at org.telegram.messenger.FilePathDatabase.lambda$checkMediaExistance$2(Unknown Source:4)
+	at org.telegram.messenger.FilePathDatabase.$r8$lambda$lRIs10uRarqSoPqVxpL53d2P3BA(SourceFile:0)
+	at org.telegram.messenger.FilePathDatabase$$ExternalSyntheticLambda8.run(SourceFile:0)
+	at android.os.Handler.handleCallback(Handler.java:942)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loopOnce(Looper.java:201)
+	at android.os.Looper.loop(Looper.java:288)
+	at org.telegram.messenger.DispatchQueue.run(Unknown Source:33)
+
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs => /data/user/0/org.telegram.messenger/shared_prefs
+[+] File.exists path= /data/user/0/org.telegram.messenger/shared_prefs => true
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/hashtag_search_history0.xml.bak => /data/user/0/org.telegram.messenger/shared_prefs/hashtag_search_history0.xml.bak
+[+] File.exists path= /data/user/0/org.telegram.messenger/shared_prefs/hashtag_search_history0.xml.bak => false
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/hashtag_search_history0.xml => /data/user/0/org.telegram.messenger/shared_prefs/hashtag_search_history0.xml
+[+] File.exists path= /data/user/0/org.telegram.messenger/shared_prefs/hashtag_search_history0.xml => false
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/files/file_to_path_backup.db => /data/user/0/org.telegram.messenger/files/file_to_path_backup.db
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 6300926746485071087 AND dc_id = 5 AND type = 1"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6300926746485071087.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6300926746485071087.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6300926746485071087.ogg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT data, date FROM stickers_dice WHERE emoji = ?"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757014168
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] File.getAbsolutePath path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 6296355303554291841 AND dc_id = 5 AND type = 3"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210027.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210027.mp4
+[+] android.hardware.SensorManager.registerListener called with: ["<org.telegram.messenger.MediaController>","<android.hardware.Sensor>",30000]
+[+] android.hardware.SensorManager.registerListener called with: ["<org.telegram.messenger.MediaController>","<android.hardware.Sensor>",30000,null]
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210027.mp4 => false
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 6300926746485071083 AND dc_id = 5 AND type = 2"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] android.hardware.SensorManager.registerListener => true
+[+] android.hardware.SensorManager.registerListener => true
+[+] android.hardware.SensorManager.registerListener called with: ["<org.telegram.messenger.MediaController>","<android.hardware.Sensor>",30000]
+[+] android.hardware.SensorManager.registerListener called with: ["<org.telegram.messenger.MediaController>","<android.hardware.Sensor>",30000,null]
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6300926746485071083.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6300926746485071083.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6300926746485071083.mp4 => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = -6296405825714588564 AND dc_id = 7143424 AND type = 0"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] android.hardware.SensorManager.registerListener => true
+[+] android.hardware.SensorManager.registerListener => true
+[+] android.hardware.SensorManager.registerListener called with: ["<org.telegram.messenger.MediaController>","<android.hardware.Sensor>",3]
+[+] android.hardware.SensorManager.registerListener called with: ["<org.telegram.messenger.MediaController>","<android.hardware.Sensor>",3,null]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => true
+[+] android.hardware.SensorManager.registerListener => true
+[+] android.hardware.SensorManager.registerListener => true
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/userconfing.xml => /data/user/0/org.telegram.messenger/shared_prefs/userconfing.xml
+[+] File.exists path= /data/user/0/org.telegram.messenger/shared_prefs/userconfing.xml => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/sharing/tenor_gif8252588427680757767 (1).gif => /storage/emulated/0/Android/data/org.telegram.messenger/cache/sharing/tenor_gif8252588427680757767 (1).gif
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/sharing/tenor_gif8252588427680757767 (1).gif => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 6300926746485071081 AND dc_id = 5 AND type = 3"]
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml => /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml
+[+] File.exists path= /data/user/0/org.telegram.messenger/shared_prefs/mainconfig.xml => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/5_6300926746485071081.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/5_6300926746485071081.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/5_6300926746485071081.mp4 => true
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [0,"-5476376660541621040",0,2147483647,1,true,22]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/2_794326550395748886.tgs => /storage/emulated/0/Android/data/org.telegram.messenger/cache/2_794326550395748886.tgs
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/2_794326550395748886.tgs => true
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [0,"-5476376660541621360",0,2147483647,1,true,23]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [0,"-5476376660541622192",0,2147483647,1,true,24]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [0,"-5476376660541619952",0,2147483647,1,true,25]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [0,"-5476376660541620336",0,2147483647,1,true,26]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/e16a6aa3bda2ec61c18bfc7ef9cbe8f6.png => /storage/emulated/0/Android/data/org.telegram.messenger/cache/e16a6aa3bda2ec61c18bfc7ef9cbe8f6.png
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/e16a6aa3bda2ec61c18bfc7ef9cbe8f6.png => true
+[+] FileInputStream.<init> args: ["<java.io.File>"] java.lang.Exception: stack
+	at java.io.FileInputStream.<init>(Native Method)
+	at org.telegram.messenger.ImageLoader$CacheOutTask.run(Unknown Source:2947)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at java.lang.Thread.run(Thread.java:1012)
+
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","REPLACE INTO media_counts_v2 VALUES(?, ?, ?, ?)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757014168
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: []
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-6296355303554291841_1109.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/cache/-6296355303554291841_1109.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-6296355303554291841_1109.jpg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-6300926746485071083_1109.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/cache/-6300926746485071083_1109.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-6300926746485071083_1109.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => true
+[+] FileInputStream.<init> args: ["<java.io.File>"] java.lang.Exception: stack
+	at java.io.FileInputStream.<init>(Native Method)
+	at org.telegram.messenger.ImageLoader$CacheOutTask.run(Unknown Source:1819)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at java.lang.Thread.run(Thread.java:1012)
+
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [0,"-5476376660541522352",0,2147483647,1,true,27]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] FileInputStream.<init> args: ["<java.io.File>"] java.lang.Exception: stack
+	at java.io.FileInputStream.<init>(Native Method)
+	at org.telegram.messenger.ImageLoader$CacheOutTask.run(Unknown Source:2947)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at java.lang.Thread.run(Thread.java:1012)
+
+[+] FileInputStream.<init> args: ["<java.io.File>"] java.lang.Exception: stack
+	at java.io.FileInputStream.<init>(Native Method)
+	at org.telegram.messenger.ImageLoader$CacheOutTask.run(Unknown Source:1819)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at java.lang.Thread.run(Thread.java:1012)
+
+[+] FileInputStream.<init> args: ["<java.io.File>"] java.lang.Exception: stack
+	at java.io.FileInputStream.<init>(Native Method)
+	at org.telegram.messenger.ImageLoader$CacheOutTask.run(Unknown Source:2947)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at java.lang.Thread.run(Thread.java:1012)
+
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT alias, version, date FROM emoji_keywords_info_v2 WHERE lang = ?"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757014168
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT start FROM messages_holes WHERE uid = 6599878128 AND start IN (0, 1)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757014168
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT end FROM messages_holes WHERE uid = 6599878128 AND end <= 225 ORDER BY end DESC LIMIT 1"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757014168
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757014168"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT m.read_state, m.data, m.send_state, m.mid, m.date, r.random_id, m.replydata, m.media, m.ttl, m.mention, m.imp, m.forwards, m.replies_data, m.custom_params, m.reply_to_story_id FROM messages_v2 as m LEFT JOIN randoms_v2 as r ON r.mid = m.mid AND r.uid = m.uid WHERE m.uid = 6599878128 AND m.date <= 1760433328 AND m.mid < 225 AND (m.mid >= 1 OR m.mid < 0) ORDER BY m.date DESC, m.mid DESC LIMIT 50"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376658123836136
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] FileInputStream.<init> args: ["<java.io.File>"] java.lang.Exception: stack
+	at java.io.FileInputStream.<init>(Native Method)
+	at org.telegram.messenger.ImageLoader$CacheOutTask.run(Unknown Source:1819)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at java.lang.Thread.run(Thread.java:1012)
+
+[+] FileInputStream.<init> args: ["<java.io.File>"] java.lang.Exception: stack
+	at java.io.FileInputStream.<init>(Native Method)
+	at org.telegram.messenger.ImageLoader$CacheOutTask.run(Unknown Source:2947)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+	at java.lang.Thread.run(Thread.java:1012)
+
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376658123836136"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT data, status FROM users WHERE uid IN(7897815852)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757029768
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757029768"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757029768"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","DELETE FROM scheduled_messages_v2 WHERE uid = 6599878128 AND mid > 0"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757029768
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757029768"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","REPLACE INTO scheduled_messages_v2 VALUES(?, ?, ?, ?, ?, ?, NULL, 0)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","REPLACE INTO users VALUES(?, ?, ?, ?)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: []
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLiteDatabase.commitTransaction called with: []
+[+] org.telegram.SQLite.SQLiteDatabase.commitTransaction => void
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT COUNT(mid) FROM scheduled_messages_v2 WHERE uid = 6599878128"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLiteDatabase.commitTransaction called with: []
+[+] org.telegram.SQLite.SQLiteDatabase.commitTransaction => void
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 5181429940096074399 AND dc_id = 1 AND type = 3"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/1_5181429940096074399.tgs => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/1_5181429940096074399.tgs
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/1_5181429940096074399.tgs => false
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760432919824_-2147483648_-210023.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760432919824_-2147483648_-210023.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760432919824_-2147483648_-210023.ogg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 6300926746485071062 AND dc_id = 5 AND type = 1"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6300926746485071062.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6300926746485071062.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6300926746485071062.ogg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760344110161_-2147483648_-210022.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760344110161_-2147483648_-210022.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760344110161_-2147483648_-210022.ogg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 6296355303554291943 AND dc_id = 5 AND type = 1"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6296355303554291943.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6296355303554291943.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6296355303554291943.ogg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210021.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210021.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210021.mp4 => false
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 6296355303554291942 AND dc_id = 5 AND type = 2"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291942.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291942.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291942.mp4 => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 6296405825254594162 AND dc_id = 5 AND type = 3"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/5_6296405825254594162.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/5_6296405825254594162.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/5_6296405825254594162.mp4 => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 750766425144033598 AND dc_id = 2 AND type = 3"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/2_750766425144033598.tgs => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/2_750766425144033598.tgs
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/2_750766425144033598.tgs => false
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210018.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210018.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210018.mp4 => false
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 6296355303554291930 AND dc_id = 5 AND type = 2"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291930.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291930.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291930.mp4 => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = -6296405825714588563 AND dc_id = 7929856 AND type = 0"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760342008181_-2147483648_-210015.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760342008181_-2147483648_-210015.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760342008181_-2147483648_-210015.ogg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 6296355303554291927 AND dc_id = 5 AND type = 1"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6296355303554291927.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6296355303554291927.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6296355303554291927.ogg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = -6296355304014285841 AND dc_id = 7929856 AND type = 0"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285841_121.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285841_121.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285841_121.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210012.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210012.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210012.mp4 => false
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 6296355303554291926 AND dc_id = 5 AND type = 2"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291926.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291926.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291926.mp4 => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/1_5181429940096074399.tgs => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/1_5181429940096074399.tgs
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","DELETE FROM business_replies"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/1_5181429940096074399.tgs => false
+[+] File.getAbsolutePath path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = -6296355304014285805 AND dc_id = 7929856 AND type = 0"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285805_121.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285805_121.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285805_121.jpg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 6296355303554291843 AND dc_id = 5 AND type = 2"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","REPLACE INTO business_replies VALUES(?, ?, ?, ?)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291843.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291843.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291843.mp4 => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = -6296355304014285800 AND dc_id = 7929856 AND type = 0"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285800_121.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285800_121.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285800_121.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 5183922747704607397 AND dc_id = 1 AND type = 3"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/1_5183922747704607397.tgs => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/1_5183922747704607397.tgs
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/1_5183922747704607397.tgs => false
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657319889864","SELECT path FROM paths WHERE document_id = 1137162165791228015 AND dc_id = 2 AND type = 3"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652756018888
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652756018888"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/2_1137162165791228015.tgs => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/2_1137162165791228015.tgs
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/2_1137162165791228015.tgs => false
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","REPLACE INTO user_settings VALUES(?, ?, ?)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: []
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","REPLACE INTO users VALUES(?, ?, ?, ?)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: []
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLiteDatabase.commitTransaction called with: []
+[+] org.telegram.SQLite.SQLiteDatabase.commitTransaction => void
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT flags FROM dialog_settings WHERE did = 6599878128"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/chatthemeconfig_emoji.xml => /data/user/0/org.telegram.messenger/shared_prefs/chatthemeconfig_emoji.xml
+[+] File.exists path= /data/user/0/org.telegram.messenger/shared_prefs/chatthemeconfig_emoji.xml => true
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/Notifications.xml => /data/user/0/org.telegram.messenger/shared_prefs/Notifications.xml
+[+] File.exists path= /data/user/0/org.telegram.messenger/shared_prefs/Notifications.xml => true
+[+] File.getAbsolutePath path= /data/user/0/org.telegram.messenger/shared_prefs/Notifications.xml => /data/user/0/org.telegram.messenger/shared_prefs/Notifications.xml
+[+] File.exists path= /data/user/0/org.telegram.messenger/shared_prefs/Notifications.xml => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT start FROM media_holes_v2 WHERE uid = 6599878128 AND type = 0 AND start IN (0, 1)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT max(end) FROM media_holes_v2 WHERE uid = 6599878128 AND type = 0"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT m.data, m.mid FROM media_v4 m  WHERE  m.uid = 6599878128 AND m.mid > 0 AND m.type = 0 ORDER BY m.date DESC, m.mid DESC LIMIT 31"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest called with: [0,"-5476376660541619952",0,2147483647,1,true,28]
+[+] org.telegram.tgnet.ConnectionsManager.native_sendRequest => void
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT data, status FROM users WHERE uid IN(7897815852)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT start FROM media_holes_v2 WHERE uid = 6599878128 AND type = 1 AND start IN (0, 1)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210027.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210027.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210027.mp4 => false
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6300926746485071083.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6300926746485071083.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6300926746485071083.mp4 => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588564_109.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210021.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210021.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210021.mp4 => false
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291942.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291942.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291942.mp4 => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT max(end) FROM media_holes_v2 WHERE uid = 6599878128 AND type = 1"]
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210018.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210018.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210018.mp4 => false
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291930.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291930.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291930.mp4 => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT m.data, m.mid FROM media_v4 m  WHERE  m.uid = 6599878128 AND m.mid > 0 AND m.type = 1 ORDER BY m.date DESC, m.mid DESC LIMIT 31"]
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285841_121.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285841_121.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285841_121.jpg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT data, status FROM users WHERE uid IN(7897815852)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT start FROM media_holes_v2 WHERE uid = 6599878128 AND type = 2 AND start IN (0, 1)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT max(end) FROM media_holes_v2 WHERE uid = 6599878128 AND type = 2"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT m.data, m.mid FROM media_v4 m  WHERE  m.uid = 6599878128 AND m.mid > 0 AND m.type = 2 ORDER BY m.date DESC, m.mid DESC LIMIT 31"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210012.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210012.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/-2147483648_-210012.mp4 => false
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291926.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291926.mp4
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT data, status FROM users WHERE uid IN(7897815852)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291926.mp4 => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285805_121.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285805_121.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285805_121.jpg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT start FROM media_holes_v2 WHERE uid = 6599878128 AND type = 5 AND start IN (0, 1)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT max(end) FROM media_holes_v2 WHERE uid = 6599878128 AND type = 5"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT m.data, m.mid FROM media_v4 m  WHERE  m.uid = 6599878128 AND m.mid > 0 AND m.type = 5 ORDER BY m.date DESC, m.mid DESC LIMIT 31"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291843.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291843.mp4
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Video/5_6296355303554291843.mp4 => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT data, status FROM users WHERE uid IN(7897815852)"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285800_121.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285800_121.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296355304014285800_121.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Images/-6296405825714588563_121.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Download/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Files/mario-azzi-Pbk8TQmjujc-unsplash.jpg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6300926746485071087.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6300926746485071087.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6300926746485071087.ogg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760432919824_-2147483648_-210023.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760432919824_-2147483648_-210023.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760432919824_-2147483648_-210023.ogg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6300926746485071062.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6300926746485071062.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6300926746485071062.ogg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760344110161_-2147483648_-210022.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760344110161_-2147483648_-210022.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760344110161_-2147483648_-210022.ogg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6296355303554291943.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6296355303554291943.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6296355303554291943.ogg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760342008181_-2147483648_-210015.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760342008181_-2147483648_-210015.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/1760342008181_-2147483648_-210015.ogg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6296355303554291927.ogg => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6296355303554291927.ogg
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Audio/5_6296355303554291927.ogg => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/sharing/tenor_gif8252588427680757767 (1).gif => /storage/emulated/0/Android/data/org.telegram.messenger/cache/sharing/tenor_gif8252588427680757767 (1).gif
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/cache/sharing/tenor_gif8252588427680757767 (1).gif => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/5_6300926746485071081.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/5_6300926746485071081.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/5_6300926746485071081.mp4 => true
+[+] File.getAbsolutePath path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/5_6296405825254594162.mp4 => /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/5_6296405825254594162.mp4
+[+] File.exists path= /storage/emulated/0/Android/data/org.telegram.messenger/files/Telegram/Telegram Documents/5_6296405825254594162.mp4 => true
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT data, date, hash FROM stickers_v2 WHERE id = 6"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT alias FROM emoji_keywords_info_v2 WHERE lang = ?"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 0
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare called with: ["-5476376657320603464","SELECT emoji, keyword FROM emoji_keywords_v2 WHERE keyword = ?"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.prepare => -5476376652757036968
+[+] org.telegram.SQLite.SQLitePreparedStatement.step called with: ["-5476376652757036968"]
+[+] org.telegram.SQLite.SQLitePreparedStatement.step => 1
+[+] FileOutputStream.<init> args: ["<java.io.FileDescriptor>"] java.lang.Exception: stack
+	at java.io.FileOutputStream.<init>(Native Method)
+	at android.app.ActivityThread$ApplicationThread.dumpMemInfo(ActivityThread.java:1382)
+	at android.app.IApplicationThread$Stub.onTransact(IApplicationThread.java:874)
+	at android.os.Binder.execTransactInternal(Binder.java:1285)
+	at android.os.Binder.execTransact(Binder.java:1244)
+
+[+] FileOutputStream.<init> args: ["<java.io.FileDescriptor>",false] java.lang.Exception: stack
+	at java.io.FileOutputStream.<init>(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:278)
+	at java.io.FileOutputStream.<init>(Native Method)
+	at android.app.ActivityThread$ApplicationThread.dumpMemInfo(ActivityThread.java:1382)
+	at android.app.IApplicationThread$Stub.onTransact(IApplicationThread.java:874)
+	at android.os.Binder.execTransactInternal(Binder.java:1285)
+	at android.os.Binder.execTransact(Binder.java:1244)
+

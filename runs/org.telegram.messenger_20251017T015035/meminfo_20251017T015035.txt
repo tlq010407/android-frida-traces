@@ -1,0 +1,54 @@
+Applications Memory Usage (in Kilobytes):
+Uptime: 32534840 Realtime: 32534840
+
+** MEMINFO in pid 1755 [org.telegram.messenger] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap    79021    78924       28       42    80100   101204    80552     8782
+  Dalvik Heap    25921    25488      260      188    27132    43335    21668    21667
+ Dalvik Other     5682     4852        0       47     7036                           
+        Stack     1980     1980        0        0     1988                           
+       Ashmem       19        0        0        0      388                           
+    Other dev       27        8       12        0      316                           
+     .so mmap    39921    10628    23056       13    73076                           
+    .jar mmap     6106        0     1924        0    33376                           
+    .apk mmap     6007        0     5260        0     7648                           
+    .ttf mmap      950        0      368        0     1732                           
+    .dex mmap    31834       12    31744        0    32440                           
+    .oat mmap     1214       80      132        0    13688                           
+    .art mmap     2416     1456      324      180    12956                           
+   Other mmap     3948       32     3608        0     5256                           
+      Unknown    24948    24936        4        0    25292                           
+        TOTAL   230464   148396    66720      470   322424   144539   102220    30449
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:    27268                          40088
+         Native Heap:    78924                          80100
+                Code:    73224                         163648
+               Stack:     1980                           1988
+            Graphics:        0                              0
+       Private Other:    33720
+              System:    15348
+             Unknown:                                   36600
+ 
+           TOTAL PSS:   230464            TOTAL RSS:   322424       TOTAL SWAP PSS:      470
+ 
+ Objects
+               Views:     1440         ViewRootImpl:        4
+         AppContexts:        6           Activities:        1
+              Assets:       16        AssetManagers:        0
+       Local Binders:       72        Proxy Binders:       79
+       Parcel memory:       25         Parcel count:      100
+    Death Recipients:        2      OpenSSL Sockets:        0
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:       80
+  PAGECACHE_OVERFLOW:       16          MALLOC_SIZE:       46
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       56             32         1/21/2  /data/user/0/org.telegram.messenger/databases/com.google.android.datatransport.events

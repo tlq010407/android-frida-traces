@@ -1,0 +1,410 @@
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+  * Task{39b35a3 #58 type=standard A=10177:org.telegram.messenger U=0 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}
+    mLastNonFullscreenBounds=Rect(268, 665 - 813, 1745)
+    isSleeping=false
+    topResumedActivity=ActivityRecord{3ef2459 u0 org.telegram.messenger/.DefaultIcon} t58}
+    * Hist  #0: ActivityRecord{3ef2459 u0 org.telegram.messenger/.DefaultIcon} t58}
+      packageName=org.telegram.messenger processName=org.telegram.messenger
+      launchedFromUid=0 launchedFromPackage=null launchedFromFeature=null userId=0
+      app=ProcessRecord{fbbc81e 2218:org.telegram.messenger/u0a177}
+      Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=org.telegram.messenger/.DefaultIcon }
+      rootOfTask=true task=Task{39b35a3 #58 type=standard A=10177:org.telegram.messenger}
+      taskAffinity=10177:org.telegram.messenger
+      mActivityComponent=org.telegram.messenger/org.telegram.ui.LaunchActivity
+      baseDir=/data/app/~~8AjFyUAfKIO6dahERB9kdg==/org.telegram.messenger-nB3jldRh9C2J7LIolRsA5A==/base.apk
+      dataDir=/data/user/0/org.telegram.messenger
+      stateNotNeeded=false componentSpecified=false mActivityType=standard
+      compat={440dpi} labelRes=0x7f0f024d icon=0x7f0d0001 theme=0x7f100148
+      mLastReportedConfigurations:
+        mGlobalConfig={1.0 310mcc260mnc [en_US] ldltr sw393dp w393dp h777dp 440dpi nrml long port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2340) mAppBounds=Rect(0, 136 - 1080, 2274) mMaxBounds=Rect(0, 0 - 1080, 2340) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.59 fontWeightAdjustment=0}
+        mOverrideConfig={1.0 310mcc260mnc [en_US] ldltr sw393dp w393dp h777dp 440dpi nrml long port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2340) mAppBounds=Rect(0, 136 - 1080, 2274) mMaxBounds=Rect(0, 0 - 1080, 2340) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.1 fontWeightAdjustment=0}
+      CurrentConfiguration={1.0 310mcc260mnc [en_US] ldltr sw393dp w393dp h777dp 440dpi nrml long port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2340) mAppBounds=Rect(0, 136 - 1080, 2274) mMaxBounds=Rect(0, 0 - 1080, 2340) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.1 fontWeightAdjustment=0}
+      taskDescription: label="null" icon=null iconResource=/0 iconFilename=null primaryColor=ff527da3
+        backgroundColor=ffffffff statusBarColor=0 navigationBarColor=fff0f0f0
+       backgroundColorFloating=ffffffff
+      launchFailed=false launchCount=1 lastLaunchTime=-25s712ms
+      mHaveState=false mIcicle=null
+      state=RESUMED stopped=false delayedResume=false finishing=false
+      keysPaused=false inHistory=true idle=true
+      occludesParent=true noDisplay=false immersive=false launchMode=2
+      frozenBeforeDestroy=false forceNewConfig=false
+      mActivityType=standard
+      mImeInsetsFrozenUntilStartInput=false
+      windows=[Window{66bfdbb u0 org.telegram.messenger/org.telegram.messenger.DefaultIcon}]
+      windowType=2
+      mOccludesParent=true
+      overrideOrientation=SCREEN_ORIENTATION_UNSPECIFIED
+      requestedOrientation=SCREEN_ORIENTATION_UNSPECIFIED
+      mVisibleRequested=true mVisible=true mClientVisible=true reportedDrawn=true reportedVisible=true
+      mNumInterestingWindows=2 mNumDrawnWindows=2 allDrawn=true lastAllDrawn=true)
+      startingData=null firstWindowDrawn=true mIsExiting=false
+      nowVisible=true lastVisibleTime=-25s321ms
+      resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+      mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+      supportsPictureInPicture=true
+      supportsEnterPipOnTaskSwitch: false
+      supportsSizeChanges=SIZE_CHANGES_UNSUPPORTED_METADATA
+      configChanges=0xfb3
+      neverSandboxDisplayApis=false
+      alwaysSandboxDisplayApis=false
+      areBoundsLetterboxed=false
+      mCameraCompatControlState=hidden
+      mCameraCompatControlEnabled=false
+
+  * Task{1986004 #1 type=home U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=1}
+    * Task{209dac6 #6 type=home I=com.google.android.apps.nexuslauncher/.NexusLauncherActivity U=0 rootTaskId=1 visible=false visibleRequested=false mode=fullscreen translucent=true sz=1}
+      mLastPausedActivity: ActivityRecord{7533ddd u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity} t6}
+      mLastNonFullscreenBounds=Rect(268, 665 - 813, 1745)
+      isSleeping=false
+      * Hist  #0: ActivityRecord{7533ddd u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity} t6}
+        packageName=com.google.android.apps.nexuslauncher processName=com.google.android.apps.nexuslauncher
+        launchedFromUid=0 launchedFromPackage=null launchedFromFeature=null userId=0
+        app=ProcessRecord{95ccc9e 1064:com.google.android.apps.nexuslauncher/u0a150}
+        Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity (has extras) }
+        rootOfTask=true task=Task{209dac6 #6 type=home I=com.google.android.apps.nexuslauncher/.NexusLauncherActivity}
+        taskAffinity=null
+        mActivityComponent=com.google.android.apps.nexuslauncher/.NexusLauncherActivity
+        baseDir=/system_ext/priv-app/NexusLauncherRelease/NexusLauncherRelease.apk
+        dataDir=/data/user/0/com.google.android.apps.nexuslauncher
+        stateNotNeeded=true componentSpecified=false mActivityType=home
+        compat={440dpi} labelRes=0x7f130065 icon=0x7f080286 theme=0x7f140014
+        mLastReportedConfigurations:
+          mGlobalConfig={1.0 310mcc260mnc [en_US] ldltr sw393dp w393dp h777dp 440dpi nrml long port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2340) mAppBounds=Rect(0, 136 - 1080, 2274) mMaxBounds=Rect(0, 0 - 1080, 2340) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.115 fontWeightAdjustment=0}
+          mOverrideConfig={1.0 310mcc260mnc [en_US] ldltr sw393dp w393dp h777dp 440dpi nrml long port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2340) mAppBounds=Rect(0, 136 - 1080, 2274) mMaxBounds=Rect(0, 0 - 1080, 2340) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=home mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.4 fontWeightAdjustment=0}
+        CurrentConfiguration={1.0 310mcc260mnc [en_US] ldltr sw393dp w393dp h777dp 440dpi nrml long port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2340) mAppBounds=Rect(0, 136 - 1080, 2274) mMaxBounds=Rect(0, 0 - 1080, 2340) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=home mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.4 fontWeightAdjustment=0}
+        RequestedOverrideConfiguration={0.0 ?mcc?mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=undefined mDisplayWindowingMode=undefined mActivityType=home mAlwaysOnTop=undefined mRotation=undefined} as.3 ?fontWeightAdjustment}
+        taskDescription: label="null" icon=null iconResource=/0 iconFilename=null primaryColor=fff0f0f3
+          backgroundColor=fff0f0f3 statusBarColor=0 navigationBarColor=0
+         backgroundColorFloating=fff0f0f3
+        launchFailed=false launchCount=0 lastLaunchTime=-9h2m32s948ms
+        mHaveState=true mIcicle=Bundle[mParcelledData.dataSize=8732]
+        state=STOPPED stopped=true delayedResume=false finishing=false
+        keysPaused=false inHistory=true idle=true
+        occludesParent=true noDisplay=false immersive=false launchMode=2
+        frozenBeforeDestroy=false forceNewConfig=false
+        mActivityType=home
+        mImeInsetsFrozenUntilStartInput=true
+        windows=[Window{fd3556a u0 com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity}, Window{5b96b8a u0 Acetone}]
+        windowType=2
+        mOccludesParent=true
+        overrideOrientation=SCREEN_ORIENTATION_NOSENSOR
+        requestedOrientation=SCREEN_ORIENTATION_NOSENSOR
+        mVisibleRequested=false mVisible=false mClientVisible=false reportedDrawn=false reportedVisible=false
+        mAppStopped=true
+        mNumInterestingWindows=2 mNumDrawnWindows=2 allDrawn=true lastAllDrawn=true)
+        nowVisible=false lastVisibleTime=-28s256ms
+        connections={ConnectionRecord{84cd066 u0 com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService:@3c980c1}}
+        resizeMode=RESIZE_MODE_RESIZEABLE
+        mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+        supportsSizeChanges=SIZE_CHANGES_UNSUPPORTED_METADATA
+        configChanges=0xdf3
+        neverSandboxDisplayApis=false
+        alwaysSandboxDisplayApis=false
+        areBoundsLetterboxed=false
+        mCameraCompatControlState=hidden
+        mCameraCompatControlEnabled=false
+
+  * Task{a82014b #3 type=undefined U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=2}
+    mCreatedByOrganizer=true
+    * Task{729ba72 #5 type=undefined U=0 rootTaskId=3 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+      mBounds=Rect(0, 2340 - 1080, 3510)
+      mCreatedByOrganizer=true
+      isSleeping=false
+    * Task{82cfdd4 #4 type=undefined U=0 rootTaskId=3 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+      mCreatedByOrganizer=true
+      isSleeping=false
+
+  Resumed activities in task display areas (from top to bottom):
+    Resumed: ActivityRecord{3ef2459 u0 org.telegram.messenger/.DefaultIcon} t58}
+
+  ResumedActivity: ActivityRecord{3ef2459 u0 org.telegram.messenger/.DefaultIcon} t58}
+
+ActivityTaskSupervisor state:
+  topDisplayFocusedRootTask=Task{39b35a3 #58 type=standard A=10177:org.telegram.messenger}
+  Display: mDisplayId=0 (organized)
+    init=1080x2340 440dpi mMinSizeOfResizeableTaskDp=220 cur=1080x2340 app=1080x2138 rng=1080x948-2204x2138
+    deferred=false mLayoutNeeded=false mTouchExcludeRegion=SkRegion((0,0,1080,2340))
+
+  mLastOrientationSource=WindowedMagnification:0:31@108536753
+  deepestLastOrientationSource=ActivityRecord{3ef2459 u0 org.telegram.messenger/.DefaultIcon} t58}
+  overrideConfig={1.0 310mcc260mnc [en_US] ldltr sw393dp w393dp h777dp 440dpi nrml long port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2340) mAppBounds=Rect(0, 136 - 1080, 2274) mMaxBounds=Rect(0, 0 - 1080, 2340) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.3 s.59 fontWeightAdjustment=0}
+  mLayoutSeq=5154
+  mCurrentFocus=Window{6e42ba1 u0 Select input method}
+  mFocusedApp=ActivityRecord{3ef2459 u0 org.telegram.messenger/.DefaultIcon} t58}
+
+  mHoldScreenWindow=null
+  mObscuringWindow=null
+  mLastWakeLockHoldingWindow=null
+  mLastWakeLockObscuringWindow=null
+
+  displayId=0
+  mWallpaperTarget=null
+  mLastWallpaperX=0.33333334 mLastWallpaperY=0.5
+
+  mSystemGestureExclusion=SkRegion()
+
+  keepClearAreas={Rect(0, 0 - 1080, 2340)}
+
+  Display areas in top down Z order:
+    * Leaf:36:36
+    * HideDisplayCutout:32:35
+      * OneHanded:34:35
+        * FullscreenMagnification:34:35
+          * Leaf:34:35
+      * FullscreenMagnification:33:33
+        * Leaf:33:33
+      * OneHanded:32:32
+        * Leaf:32:32
+    * WindowedMagnification:0:31
+      * HideDisplayCutout:26:31
+        * OneHanded:26:31
+          * FullscreenMagnification:29:31
+            * Leaf:29:31
+          * Leaf:28:28
+          * FullscreenMagnification:26:27
+            * Leaf:26:27
+      * Leaf:24:25
+      * HideDisplayCutout:18:23
+        * OneHanded:18:23
+          * FullscreenMagnification:18:23
+            * Leaf:18:23
+      * OneHanded:17:17
+        * FullscreenMagnification:17:17
+          * Leaf:17:17
+      * HideDisplayCutout:16:16
+        * OneHanded:16:16
+          * FullscreenMagnification:16:16
+            * Leaf:16:16
+      * OneHanded:15:15
+        * FullscreenMagnification:15:15
+          * Leaf:15:15
+      * HideDisplayCutout:0:14
+        * OneHanded:0:14
+          * ImePlaceholder:13:14
+            * ImeContainer
+          * FullscreenMagnification:0:12
+            * Leaf:3:12
+            * DefaultTaskDisplayArea (organized)
+            * Leaf:0:1
+
+  Task display areas in top down Z order:
+    TaskDisplayArea DefaultTaskDisplayArea
+      overrideConfig={0.0 ?mcc?mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined} ?fontWeightAdjustment}
+      mPreferredTopFocusableRootTask=Task{39b35a3 #58 type=standard A=10177:org.telegram.messenger}
+      mLastFocusedRootTask=Task{39b35a3 #58 type=standard A=10177:org.telegram.messenger}
+      Application tokens in top down Z order:
+      * Task{39b35a3 #58 type=standard A=10177:org.telegram.messenger U=0 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}
+        bounds=[0,0][1080,2340]
+        * ActivityRecord{3ef2459 u0 org.telegram.messenger/.DefaultIcon} t58}
+      * Task{1986004 #1 type=home U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=1}
+        bounds=[0,0][1080,2340]
+        * Task{209dac6 #6 type=home I=com.google.android.apps.nexuslauncher/.NexusLauncherActivity U=0 rootTaskId=1 visible=false visibleRequested=false mode=fullscreen translucent=true sz=1}
+          bounds=[0,0][1080,2340]
+          * ActivityRecord{7533ddd u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity} t6}
+      * Task{a82014b #3 type=undefined U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=2}
+        bounds=[0,0][1080,2340]
+        * Task{729ba72 #5 type=undefined U=0 rootTaskId=3 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+          bounds=[0,2340][1080,3510]
+        * Task{82cfdd4 #4 type=undefined U=0 rootTaskId=3 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+          bounds=[0,0][1080,2340]
+
+  no ScreenRotationAnimation 
+
+  rootHomeTask=Task=1
+
+  PinnedTaskController
+    mIsImeShowing=false
+    mImeHeight=0
+    mMinAspectRatio=0.41841003
+    mMaxAspectRatio=2.39
+
+  DisplayFrames w=1080 h=2340 r=0
+
+  DisplayPolicy
+    mCarDockEnablesAccelerometer=true mDeskDockEnablesAccelerometer=true
+ mDeskDockRespectsNoSensorAndLockedWithoutAccelerometer=false
+    mDockMode=EXTRA_DOCK_STATE_UNDOCKED mLidState=LID_OPEN
+    mAwake=true mScreenOnEarly=true mScreenOnFully=true
+    mKeyguardDrawComplete=true mWindowManagerDrawComplete=true
+    mHdmiPlugged=false
+    mLastAppearance=LIGHT_STATUS_BARS
+    mLastBehavior=DEFAULT
+    mShowingDream=false mDreamingLockscreen=false
+    mStatusBar=Window{cddf0e5 u0 StatusBar}
+    mExpandedPanel=Window{d74abf3 u0 NotificationShade}
+    isKeyguardShowing=false
+    mNavigationBar=Window{bde0ae1 u0 NavigationBar0}
+    mNavBarOpacityMode=2
+    mNavigationBarCanMove=false
+    mNavigationBarPosition=4
+    mFocusedWindow=Window{6e42ba1 u0 Select input method}
+    mTopFullscreenOpaqueWindowState=Window{66bfdbb u0 org.telegram.messenger/org.telegram.messenger.DefaultIcon}
+    mNavBarColorWindowCandidate=Window{6e42ba1 u0 Select input method}
+    mNavBarBackgroundWindow=Window{66bfdbb u0 org.telegram.messenger/org.telegram.messenger.DefaultIcon}
+    mLastStatusBarAppearanceRegions=
+      AppearanceRegion{ bounds=[0,0][1080,2340]}
+    mLastLetterboxDetails=
+    mStatusBarBackgroundWindows=
+      Window{66bfdbb u0 org.telegram.messenger/org.telegram.messenger.DefaultIcon}
+    mTopIsFullscreen=false
+    mForceShowNavigationBarEnabled=false mAllowLockscreenWhenOn=false
+    mRemoteInsetsControllerControlsSystemBars=false
+    mDecorInsetsInfo:
+      ROTATION_0={nonDecorInsets=Rect(0, 136 - 0, 66), configInsets=Rect(0, 136 - 0, 66), nonDecorFrame=Rect(0, 136 - 1080, 2274), configFrame=Rect(0, 136 - 1080, 2274)}
+      ROTATION_90={nonDecorInsets=Rect(136, 0 - 0, 66), configInsets=Rect(136, 66 - 0, 66), nonDecorFrame=Rect(136, 0 - 2340, 1014), configFrame=Rect(136, 66 - 2340, 1014)}
+      ROTATION_180={nonDecorInsets=Rect(0, 0 - 0, 202), configInsets=Rect(0, 66 - 0, 202), nonDecorFrame=Rect(0, 0 - 1080, 2138), configFrame=Rect(0, 66 - 1080, 2138)}
+      ROTATION_270={nonDecorInsets=Rect(0, 0 - 136, 66), configInsets=Rect(0, 66 - 136, 66), nonDecorFrame=Rect(0, 0 - 2204, 1014), configFrame=Rect(0, 66 - 2204, 1014)}
+    SystemGestures:
+      mDisplayCutoutTouchableRegionSize=33
+      mSwipeStartThreshold=Rect(66, 169 - 66, 66)
+      mSwipeDistanceThreshold=66
+    Looper state:
+      Looper (android.ui, tid 21) {3dd3357}
+        (Total messages: 0, polling=true, quitting=false)
+
+  DisplayRotation
+    mCurrentAppOrientation=SCREEN_ORIENTATION_UNSPECIFIED
+    mLastOrientation=-1
+    mRotation=0 mDeferredRotationPauseCount=0
+    mLandscapeRotation=ROTATION_90 mSeascapeRotation=ROTATION_270
+    mPortraitRotation=ROTATION_0 mUpsideDownRotation=ROTATION_180
+    mSupportAutoRotation=true
+    WindowOrientationListener
+      mEnabled=true
+      mCurrentRotation=ROTATION_0
+      mSensorType=null
+      mSensor={Sensor name="Goldfish 3-axis Accelerometer", vendor="The Android Open Source Project", version=1, type=1, maxRange=39.300102, resolution=2.480159E-4, power=3.0, minDelay=10000}
+      mRate=2
+      AccelSensorJudge
+        mProposedRotation=0
+        mPredictedRotation=0
+        mLastFilteredX=0.0
+        mLastFilteredY=9.776321
+        mLastFilteredZ=0.812345
+        mLastFilteredTimestampNanos=32563423426705 (6.56986ms ago)
+        mTiltHistory={last: 5.0}
+        mFlat=false
+        mSwinging=false
+        mAccelerating=false
+        mOverhead=false
+        mTouched=true
+        mTiltToleranceConfig=[[-25, 70], [-25, 65], [-25, 60], [-25, 65]]
+
+    mCarDockRotation=-1 mDeskDockRotation=-1
+    mUserRotationMode=USER_ROTATION_FREE mUserRotation=ROTATION_0 mCameraRotationMode=0 mAllowAllRotations=false
+    mDemoHdmiRotation=ROTATION_90 mDemoHdmiRotationLock=false mUndockedHdmiRotation=-1
+    mLidOpenRotation=-1
+    mFixedToUserRotation=false
+
+  InputConsumers:
+    name=recents_animation_input_consumer pid=1064 user=UserHandle{0}
+
+  WindowInsetsStateController
+    InsetsState
+      mDisplayFrame=Rect(0, 0 - 1080, 2340)
+      mDisplayCutout=DisplayCutout{insets=Rect(0, 136 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(0, 0 - 136, 136), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2340 physicalDisplayWidth=1080 physicalDisplayHeight=2340 density={2.75} cutoutSpec={M 41,77 a 40,40 0 1 0 80,0 40,40 0 1 0 -80,0 Z @left} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}}}
+      mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=0, center=Point(0, 0)}, RoundedCorner{position=TopRight, radius=0, center=Point(0, 0)}, RoundedCorner{position=BottomRight, radius=0, center=Point(0, 0)}, RoundedCorner{position=BottomLeft, radius=0, center=Point(0, 0)}]}
+      mRoundedCornerFrame=Rect(0, 0 - 0, 0)
+      mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(816, 0 - 1042, 136) rotation=0}
+        InsetsSource type=ITYPE_STATUS_BAR frame=[0,0][1080,136] visible=true insetsRoundedCornerFrame=false
+        InsetsSource type=ITYPE_NAVIGATION_BAR frame=[0,2274][1080,2340] visible=true insetsRoundedCornerFrame=false
+        InsetsSource type=ITYPE_LEFT_GESTURES frame=[0,0][82,2340] visible=true insetsRoundedCornerFrame=false
+        InsetsSource type=ITYPE_RIGHT_GESTURES frame=[998,0][1080,2340] visible=true insetsRoundedCornerFrame=false
+        InsetsSource type=ITYPE_TOP_MANDATORY_GESTURES frame=[0,0][1080,169] visible=true insetsRoundedCornerFrame=false
+        InsetsSource type=ITYPE_BOTTOM_MANDATORY_GESTURES frame=[0,2252][1080,2340] visible=true insetsRoundedCornerFrame=false
+        InsetsSource type=ITYPE_TOP_DISPLAY_CUTOUT frame=[0,0][1080,136] visible=true insetsRoundedCornerFrame=false
+        InsetsSource type=ITYPE_TOP_TAPPABLE_ELEMENT frame=[0,0][1080,136] visible=true insetsRoundedCornerFrame=false
+        InsetsSource type=ITYPE_BOTTOM_TAPPABLE_ELEMENT frame=[0,0][0,0] visible=true insetsRoundedCornerFrame=false
+        InsetsSource type=ITYPE_IME frame=[0,0][0,0] visibleFrame=[0,2208][1080,2340] visible=false insetsRoundedCornerFrame=false
+    Control map:
+      ITYPE_IME -> Window{66bfdbb u0 org.telegram.messenger/org.telegram.messenger.DefaultIcon}
+      ITYPE_NAVIGATION_BAR -> Window{6e42ba1 u0 Select input method}
+      ITYPE_STATUS_BAR -> Window{6e42ba1 u0 Select input method}
+    InsetsSourceProviders:
+      ImeInsetsSourceProvider
+        mSource=InsetsSource type=ITYPE_IME frame=[0,0][0,0] visibleFrame=[0,2208][1080,2340] visible=false insetsRoundedCornerFrame=false
+        mSourceFrame=Rect(0, 2208 - 1080, 2340)
+        mControl=InsetsSourceControl type=ITYPE_IME mLeash=Surface(name=Surface(name=e42a0ec InputMethod)/@0x7693da2 - animation-leash of insets_animation)/@0xf5f3861 mInitiallyVisible=false mSurfacePosition=Point(0, 136) mInsetsHint=Insets{left=0, top=0, right=0, bottom=833} mSkipAnimationOnce=false
+        mIsLeashReadyForDispatching=true
+        mWindowContainer=Window{e42a0ec u0 InputMethod}
+        mAdapter=ControlAdapter mCapturedLeash=Surface(name=Surface(name=e42a0ec InputMethod)/@0x7693da2 - animation-leash of insets_animation)/@0xf5f3861
+        mControlTarget=Window{66bfdbb u0 org.telegram.messenger/org.telegram.messenger.DefaultIcon}
+        mImeShowing=true
+      WindowContainerInsetsSourceProvider
+        mSource=InsetsSource type=ITYPE_BOTTOM_TAPPABLE_ELEMENT frame=[0,0][0,0] visible=true insetsRoundedCornerFrame=false
+        mSourceFrame=Rect(0, 0 - 0, 0)
+        mIsLeashReadyForDispatching=true
+        mWindowContainer=Window{bde0ae1 u0 NavigationBar0}
+      WindowContainerInsetsSourceProvider
+        mSource=InsetsSource type=ITYPE_TOP_TAPPABLE_ELEMENT frame=[0,0][1080,136] visible=true insetsRoundedCornerFrame=false
+        mSourceFrame=Rect(0, 0 - 1080, 136)
+        mIsLeashReadyForDispatching=true
+        mWindowContainer=Window{cddf0e5 u0 StatusBar}
+      WindowContainerInsetsSourceProvider
+        mSource=InsetsSource type=ITYPE_BOTTOM_MANDATORY_GESTURES frame=[0,2252][1080,2340] visible=true insetsRoundedCornerFrame=false
+        mSourceFrame=Rect(0, 2252 - 1080, 2340)
+        mIsLeashReadyForDispatching=true
+        mWindowContainer=Window{bde0ae1 u0 NavigationBar0}
+      WindowContainerInsetsSourceProvider
+        mSource=InsetsSource type=ITYPE_TOP_MANDATORY_GESTURES frame=[0,0][1080,169] visible=true insetsRoundedCornerFrame=false
+        mSourceFrame=Rect(0, 0 - 1080, 169)
+        mIsLeashReadyForDispatching=true
+        mWindowContainer=Window{cddf0e5 u0 StatusBar}
+      WindowContainerInsetsSourceProvider
+        mSource=InsetsSource type=ITYPE_RIGHT_GESTURES frame=[998,0][1080,2340] visible=true insetsRoundedCornerFrame=false
+        mSourceFrame=Rect(998, 0 - 1080, 2340)
+        mIsLeashReadyForDispatching=true
+        mWindowContainer=Window{bde0ae1 u0 NavigationBar0}
+      WindowContainerInsetsSourceProvider
+        mSource=InsetsSource type=ITYPE_LEFT_GESTURES frame=[0,0][82,2340] visible=true insetsRoundedCornerFrame=false
+        mSourceFrame=Rect(0, 0 - 82, 2340)
+        mIsLeashReadyForDispatching=true
+        mWindowContainer=Window{bde0ae1 u0 NavigationBar0}
+      WindowContainerInsetsSourceProvider
+        mSource=InsetsSource type=ITYPE_NAVIGATION_BAR frame=[0,2274][1080,2340] visible=true insetsRoundedCornerFrame=false
+        mSourceFrame=Rect(0, 2274 - 1080, 2340)
+        mOverrideFrames={2011=Rect(0, 2208 - 1080, 2340)}
+        mControl=InsetsSourceControl type=ITYPE_NAVIGATION_BAR mLeash=Surface(name=Surface(name=bde0ae1 NavigationBar0)/@0x22a1725 - animation-leash of insets_animation)/@0xabebf86 mInitiallyVisible=true mSurfacePosition=Point(0, 2208) mInsetsHint=Insets{left=0, top=0, right=0, bottom=66} mSkipAnimationOnce=false
+        mIsLeashReadyForDispatching=true
+        mWindowContainer=Window{bde0ae1 u0 NavigationBar0}
+        mAdapter=ControlAdapter mCapturedLeash=Surface(name=Surface(name=bde0ae1 NavigationBar0)/@0x22a1725 - animation-leash of insets_animation)/@0xabebf86
+        mControlTarget=Window{6e42ba1 u0 Select input method}
+      WindowContainerInsetsSourceProvider
+        mSource=InsetsSource type=ITYPE_STATUS_BAR frame=[0,0][1080,136] visible=true insetsRoundedCornerFrame=false
+        mSourceFrame=Rect(0, 0 - 1080, 136)
+        mControl=InsetsSourceControl type=ITYPE_STATUS_BAR mLeash=Surface(name=Surface(name=cddf0e5 StatusBar)/@0xca8a5c8 - animation-leash of insets_animation)/@0x9369047 mInitiallyVisible=true mSurfacePosition=Point(0, 0) mInsetsHint=Insets{left=0, top=136, right=0, bottom=0} mSkipAnimationOnce=false
+        mIsLeashReadyForDispatching=true
+        mWindowContainer=Window{cddf0e5 u0 StatusBar}
+        mAdapter=ControlAdapter mCapturedLeash=Surface(name=Surface(name=cddf0e5 StatusBar)/@0xca8a5c8 - animation-leash of insets_animation)/@0x9369047
+        mControlTarget=Window{6e42ba1 u0 Select input method}
+
+  KeyguardController:
+    mKeyguardShowing=false
+    mAodShowing=false
+    mKeyguardGoingAway=false
+   KeyguardShowing=false AodShowing=false KeyguardGoingAway=false DismissalRequested=false  Occluded=false DismissingKeyguardActivity=null TurnScreenOnActivity=null at display=0
+    mDismissalRequested=false
+
+  LockTaskController:
+    mLockTaskModeState=NONE
+    mLockTaskModeTasks=
+    mLockTaskPackages (userId:packages)=
+      u0:[]
+
+  mCurTaskIdForUser={0=58}
+  mUserRootTaskInFront={}
+  mVisibilityTransactionDepth=0
+  isHomeRecentsComponent=true
+  mNoHistoryActivities=[]
+
+  TaskOrganizerController:
+      android.window.ITaskOrganizer$Stub$Proxy@a97adf3 uid=10157:
+        (fullscreen) Task{1986004 #1 type=home}
+        (fullscreen) Task{a82014b #3 type=undefined}
+        (multi-window) Task{82cfdd4 #4 type=undefined}
+        (multi-window) Task{729ba72 #5 type=undefined}
+        (fullscreen) Task{39b35a3 #58 type=standard A=10177:org.telegram.messenger}
+
+  VisibleActivityProcess:[ ProcessRecord{fbbc81e 2218:org.telegram.messenger/u0a177}]
+  NumNonAppVisibleWindowUidMap:[ 10157:2 1000:1]

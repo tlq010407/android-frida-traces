@@ -1,0 +1,1235 @@
+[2025-10-16T17:51:05.158Z] Starting module scan...
+[2025-10-16T17:51:05.159Z] Scanning module: android.hardware.graphics.mapper@3.0-impl-ranchu.so path: /vendor/lib64/hw/android.hardware.graphics.mapper@3.0-impl-ranchu.so base: 0x70dec9c000 size: 32768
+[2025-10-16T17:51:05.160Z]   exports: 47  functions: 47
+[2025-10-16T17:51:05.160Z] Scanning module: libOpenglSystemCommon.so path: /vendor/lib64/libOpenglSystemCommon.so base: 0x70d91cb000 size: 106496
+[2025-10-16T17:51:05.161Z]   exports: 239  functions: 230
+[2025-10-16T17:51:05.163Z] Scanning module: libOpenglCodecCommon.so path: /vendor/lib64/libOpenglCodecCommon.so base: 0x70dc040000 size: 208896
+[2025-10-16T17:51:05.164Z]   exports: 453  functions: 443
+[2025-10-16T17:51:05.166Z] Scanning module: libandroidemu.so path: /vendor/lib64/libandroidemu.so base: 0x70ded1a000 size: 73728
+[2025-10-16T17:51:05.166Z]   exports: 155  functions: 143
+[2025-10-16T17:51:05.167Z] Scanning module: libdrm.so path: /vendor/lib64/libdrm.so base: 0x70ded8f000 size: 94208
+[2025-10-16T17:51:05.168Z]   exports: 203  functions: 203
+[2025-10-16T17:51:05.169Z] Scanning module: libvulkan_enc.so path: /vendor/lib64/libvulkan_enc.so base: 0x70d8e65000 size: 3067904
+[2025-10-16T17:51:05.182Z]   exports: 6490  functions: 6479
+[2025-10-16T17:51:05.199Z] Scanning module: lib_renderControl_enc.so path: /vendor/lib64/lib_renderControl_enc.so base: 0x70decc1000 size: 69632
+[2025-10-16T17:51:05.199Z]   exports: 73  functions: 72
+[2025-10-16T17:51:05.201Z] Scanning module: libGLESv2_enc.so path: /vendor/lib64/libGLESv2_enc.so base: 0x70dee66000 size: 536576
+[2025-10-16T17:51:05.202Z]   exports: 840  functions: 831
+[2025-10-16T17:51:05.204Z] Scanning module: libGLESv1_enc.so path: /vendor/lib64/libGLESv1_enc.so base: 0x70d8e08000 size: 217088
+[2025-10-16T17:51:05.204Z]   exports: 360  functions: 358
+[2025-10-16T17:51:05.205Z] Scanning module: base.odex path: /data/app/~~8AjFyUAfKIO6dahERB9kdg==/org.telegram.messenger-nB3jldRh9C2J7LIolRsA5A==/oat/arm64/base.odex base: 0x70830a8000 size: 36872192
+[2025-10-16T17:51:05.205Z]   exports: 4  functions: 0
+[2025-10-16T17:51:05.205Z] Scanning module: libtmessages.49.so path: /data/app/~~8AjFyUAfKIO6dahERB9kdg==/org.telegram.messenger-nB3jldRh9C2J7LIolRsA5A==/lib/arm64/libtmessages.49.so base: 0x7077862000 size: 28413952
+[2025-10-16T17:51:05.235Z]   exports: 39396  functions: 32477
+[2025-10-16T17:51:05.258Z] Failed to attach to Java_org_webrtc_Metrics_nativeEnable @ 0x7077fcfdcc -> Error: unable to intercept function at 0x7077fcfdcc; please file a bug
+[2025-10-16T17:51:05.268Z] Failed to attach to Java_org_telegram_messenger_NativeLoader_init @ 0x7077e6dac4 -> Error: unable to intercept function at 0x7077e6dac4; please file a bug
+[2025-10-16T17:51:05.301Z] Scanning module: libEGL_emulation.so path: /vendor/lib64/egl/libEGL_emulation.so base: 0x70e7097000 size: 94208
+[2025-10-16T17:51:05.303Z]   exports: 125  functions: 121
+[2025-10-16T17:51:05.307Z] Scanning module: libGoldfishProfiler.so path: /vendor/lib64/libGoldfishProfiler.so base: 0x7073044000 size: 2260992
+[2025-10-16T17:51:05.310Z]   exports: 4975  functions: 4626
+[2025-10-16T17:51:05.313Z] Scanning module: libGLESv1_CM_emulation.so path: /vendor/lib64/egl/libGLESv1_CM_emulation.so base: 0x70e704e000 size: 73728
+[2025-10-16T17:51:05.314Z]   exports: 301  functions: 301
+[2025-10-16T17:51:05.315Z] Scanning module: libGLESv2_emulation.so path: /vendor/lib64/egl/libGLESv2_emulation.so base: 0x7089296000 size: 106496
+[2025-10-16T17:51:05.315Z]   exports: 435  functions: 435
+[2025-10-16T17:51:05.315Z] === SCAN COMPLETE ===
+[2025-10-16T17:51:05.315Z] modules scanned: 314
+[2025-10-16T17:51:05.315Z] modules selected: 15 android.hardware.graphics.mapper@3.0-impl-ranchu.so,libOpenglSystemCommon.so,libOpenglCodecCommon.so,libandroidemu.so,libdrm.so,libvulkan_enc.so,lib_renderControl_enc.so,libGLESv2_enc.so,libGLESv1_enc.so,base.odex,libtmessages.49.so,libEGL_emulation.so,libGoldfishProfiler.so,libGLESv1_CM_emulation.so,libGLESv2_emulation.so
+[2025-10-16T17:51:05.315Z] exports enumerated: 54096
+[2025-10-16T17:51:05.315Z] functions found: 46766
+[2025-10-16T17:51:05.315Z] hook attempts: 46766
+[2025-10-16T17:51:05.315Z] hooks installed: 364
+[2025-10-16T17:51:05.315Z] hook failures: 2
+[2025-10-16T17:51:05.315Z] skippedByPrefix: 46395 skippedByRegex: 5
+[2025-10-16T17:51:05.315Z] totalLogs so far: 0
+[2025-10-16T17:51:05.315Z] To detach all hooks later: Interceptor.detachAll();
+[2025-10-16T17:51:06.080Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.080Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d7978 0xb4000071fc29cf18 0x70665d7984
+[2025-10-16T17:51:06.080Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2bb5c8
+[2025-10-16T17:51:06.080Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.080Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bb5c8 0x1
+[2025-10-16T17:51:06.080Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.080Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.080Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bb5c8 0x2
+[2025-10-16T17:51:06.080Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.081Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.081Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3aa8 0xb40000730c2bb5c8 0x0
+[2025-10-16T17:51:06.083Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x1
+[2025-10-16T17:51:06.083Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.083Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db2f8 0xb40000730c2bb5c8 0x703b59a390
+[2025-10-16T17:51:06.083Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.083Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.083Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d7978 0xb4000071fc29cf18 0x70665d7984
+[2025-10-16T17:51:06.083Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2bb5c8
+[2025-10-16T17:51:06.083Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.083Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db2c8 0xb40000730c2bb5c8 0x10
+[2025-10-16T17:51:06.083Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.083Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.083Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d7a88 0xb40000730c2bb5c8 0x703b579894
+[2025-10-16T17:51:06.083Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x1
+[2025-10-16T17:51:06.083Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.083Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db238 0xb40000730c2bb5c8 0x2
+[2025-10-16T17:51:06.083Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.083Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.083Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d7948 0xb4000071fc29cf18 0x70665d7954
+[2025-10-16T17:51:06.083Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2bb5c8
+[2025-10-16T17:51:06.083Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.083Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db298 0xb40000730c2bb5c8 0x10
+[2025-10-16T17:51:06.083Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.084Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.084Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d7a58 0xb40000730c2bb5c8 0x703b579894
+[2025-10-16T17:51:06.084Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x1
+[2025-10-16T17:51:06.084Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.084Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db208 0xb40000730c2bb5c8 0x2
+[2025-10-16T17:51:06.084Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.084Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.084Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d76b8 0xb4000071fc29cf18 0x70665d76c4
+[2025-10-16T17:51:06.084Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2ba7b8
+[2025-10-16T17:51:06.084Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.084Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db008 0xb40000730c2ba7b8 0x10
+[2025-10-16T17:51:06.084Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.084Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.084Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2ba7b8 0x703b579894
+[2025-10-16T17:51:06.084Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.085Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.085Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2ba7b8 0x0
+[2025-10-16T17:51:06.085Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c2d3950
+[2025-10-16T17:51:06.085Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.085Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2ba7b8 0x1
+[2025-10-16T17:51:06.085Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x0
+[2025-10-16T17:51:06.085Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.085Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2ba7b8 0x2
+[2025-10-16T17:51:06.085Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x1
+[2025-10-16T17:51:06.085Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:06.085Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2ba7b8 0x3
+[2025-10-16T17:51:06.085Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x40d91638
+[2025-10-16T17:51:06.085Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.085Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2ba7b8 0x4
+[2025-10-16T17:51:06.085Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x0
+[2025-10-16T17:51:06.085Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.085Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daf78 0xb40000730c2ba7b8 0x70d8d03930
+[2025-10-16T17:51:06.085Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.085Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.085Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d76b8 0xb4000071fc29cf18 0x70665d76c4
+[2025-10-16T17:51:06.085Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b99a8
+[2025-10-16T17:51:06.085Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.085Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db008 0xb40000730c2b99a8 0x10
+[2025-10-16T17:51:06.085Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.085Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.085Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x703b579894
+[2025-10-16T17:51:06.085Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.085Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.085Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x0
+[2025-10-16T17:51:06.085Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c2d3e50
+[2025-10-16T17:51:06.085Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.085Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.086Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c3357d0
+[2025-10-16T17:51:06.086Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.086Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x1
+[2025-10-16T17:51:06.086Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68f0e415
+[2025-10-16T17:51:06.086Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.086Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x3
+[2025-10-16T17:51:06.086Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68f13076
+[2025-10-16T17:51:06.086Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.086Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.086Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.086Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.086Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x0
+[2025-10-16T17:51:06.086Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c3490d0
+[2025-10-16T17:51:06.086Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.086Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.086Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c36c150
+[2025-10-16T17:51:06.086Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.086Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x1
+[2025-10-16T17:51:06.086Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0xffffff9a
+[2025-10-16T17:51:06.086Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.086Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x3
+[2025-10-16T17:51:06.086Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68f13075
+[2025-10-16T17:51:06.087Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.087Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.087Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.087Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.087Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x0
+[2025-10-16T17:51:06.087Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c2d3b90
+[2025-10-16T17:51:06.087Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.087Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.087Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.087Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.087Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.087Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c2ee5d0
+[2025-10-16T17:51:06.087Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.087Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x1
+[2025-10-16T17:51:06.087Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68af3ab8
+[2025-10-16T17:51:06.087Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.087Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x3
+[2025-10-16T17:51:06.087Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68f13074
+[2025-10-16T17:51:06.087Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.087Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.087Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.088Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.088Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x0
+[2025-10-16T17:51:06.088Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c370e90
+[2025-10-16T17:51:06.088Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.088Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.088Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c370ed0
+[2025-10-16T17:51:06.088Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.088Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x1
+[2025-10-16T17:51:06.088Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68e001e2
+[2025-10-16T17:51:06.088Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.088Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x3
+[2025-10-16T17:51:06.088Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68f13073
+[2025-10-16T17:51:06.089Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.089Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.089Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.089Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.089Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x0
+[2025-10-16T17:51:06.089Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c39c550
+[2025-10-16T17:51:06.089Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.089Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.089Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c2d3950
+[2025-10-16T17:51:06.089Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.089Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x1
+[2025-10-16T17:51:06.089Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x67904506
+[2025-10-16T17:51:06.089Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.089Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x3
+[2025-10-16T17:51:06.089Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68f13072
+[2025-10-16T17:51:06.089Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.089Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.089Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.089Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.089Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x0
+[2025-10-16T17:51:06.089Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c2d3e50
+[2025-10-16T17:51:06.090Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.090Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.090Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c3357d0
+[2025-10-16T17:51:06.090Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.090Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x1
+[2025-10-16T17:51:06.090Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0xffffff9c
+[2025-10-16T17:51:06.090Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.090Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x3
+[2025-10-16T17:51:06.090Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68f13071
+[2025-10-16T17:51:06.090Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.090Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.090Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.090Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.090Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x0
+[2025-10-16T17:51:06.090Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c3490d0
+[2025-10-16T17:51:06.090Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.090Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c36c150
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x1
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0xffffff9b
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x3
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68f13070
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x0
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c2d3b90
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c2ee5d0
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x1
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68ecb458
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x3
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68f1306f
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x0
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c370e90
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c370ed0
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue @ 0x7077e64338 thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b99a8 0x1
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIntValue retval= 0x68ee322b
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue @ 0x7077e644fc thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db118 0xb40000730c2b99a8 0x0
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnByteBufferValue retval= 0xb40000713c39c550
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.091Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.091Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.091Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.092Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.092Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.092Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:06.092Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc17302f8 0x2
+[2025-10-16T17:51:06.092Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:06.092Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.092Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:06.092Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc17302f8 0x2
+[2025-10-16T17:51:06.092Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:06.092Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:06.092Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc17302f8 0x2
+[2025-10-16T17:51:06.092Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:06.093Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.093Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x703e41af80
+[2025-10-16T17:51:06.093Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.093Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.093Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.093Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.093Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.093Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.093Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.093Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.093Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.093Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.093Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.093Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.093Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.094Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step @ 0x7077e63bcc thread= 2300 count= 1
+[2025-10-16T17:51:06.094Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77c8 0xb40000730c2b99a8 0x70343863b0
+[2025-10-16T17:51:06.094Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_step retval= 0x0
+[2025-10-16T17:51:06.094Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.094Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.094Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.096Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.096Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc172fe08 0x7fc172fe0c
+[2025-10-16T17:51:06.097Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c53aff0
+[2025-10-16T17:51:06.097Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2346 count= 1
+[2025-10-16T17:51:06.097Z]     ARGS: 0xb4000071cc3114b0 0x73a41b6310 0xb40000718c53aff0 0x0
+[2025-10-16T17:51:06.097Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.098Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.098Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc172fdf8 0x7fc172fdfc
+[2025-10-16T17:51:06.099Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c2bd4c0
+[2025-10-16T17:51:06.099Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2346 count= 1
+[2025-10-16T17:51:06.099Z]     ARGS: 0xb4000071cc3114b0 0x73a41b6310 0xb40000718c2bd4c0 0x0
+[2025-10-16T17:51:06.099Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.099Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc172fbf8 0x7fc172fbfc
+[2025-10-16T17:51:06.099Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.099Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c2bce90
+[2025-10-16T17:51:06.099Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2346 count= 1
+[2025-10-16T17:51:06.099Z]     ARGS: 0xb4000071cc3114b0 0x73a41b6310 0xb40000718c2bce90 0x0
+[2025-10-16T17:51:06.099Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.099Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.099Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.099Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.100Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.100Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.100Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.100Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.100Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.100Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.100Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.100Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.100Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.101Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.101Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.101Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.101Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.101Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.101Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.102Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.102Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.102Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.102Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.102Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.102Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.102Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.102Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.102Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.103Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.103Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.103Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.103Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.103Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.103Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.103Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.103Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc172f5a8 0x7fc172f5ac
+[2025-10-16T17:51:06.103Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap @ 0x7077e4ee84 thread= 2300 count= 1
+[2025-10-16T17:51:06.103Z]     ARGS: 0xb4000071cc2cd7d0 0x73a42850a0 0x70665daca8 0x3
+[2025-10-16T17:51:06.103Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_blurBitmap retval= 0x0
+[2025-10-16T17:51:06.103Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c2bbec0
+[2025-10-16T17:51:06.103Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2346 count= 1
+[2025-10-16T17:51:06.103Z]     ARGS: 0xb4000071cc3114b0 0x73a41b6310 0xb40000718c2bbec0 0x0
+[2025-10-16T17:51:06.104Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.104Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.104Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc172fee8 0x7fc172feec
+[2025-10-16T17:51:06.104Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c2ba3f0
+[2025-10-16T17:51:06.104Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2344 count= 1
+[2025-10-16T17:51:06.104Z]     ARGS: 0xb4000071cc2efb10 0x73a41b6310 0xb40000718c2ba3f0 0x0
+[2025-10-16T17:51:06.105Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.105Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.105Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc172fde8 0x7fc172fdec
+[2025-10-16T17:51:06.105Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c2b8500
+[2025-10-16T17:51:06.105Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2346 count= 1
+[2025-10-16T17:51:06.105Z]     ARGS: 0xb4000071cc3114b0 0x73a41b6310 0xb40000718c2b8500 0x0
+[2025-10-16T17:51:06.106Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.106Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.106Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc172ff38 0x7fc172ff3c
+[2025-10-16T17:51:06.107Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c2b8be0
+[2025-10-16T17:51:06.107Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2335 count= 1
+[2025-10-16T17:51:06.107Z]     ARGS: 0xb4000071cc2bcfd0 0x73a41b6310 0xb40000718c2b8be0 0x0
+[2025-10-16T17:51:06.108Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.108Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.108Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc172ff38 0x7fc172ff3c
+[2025-10-16T17:51:06.108Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c2b8870
+[2025-10-16T17:51:06.108Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2344 count= 1
+[2025-10-16T17:51:06.108Z]     ARGS: 0xb4000071cc2efb10 0x73a41b6310 0xb40000718c2b8870 0x0
+[2025-10-16T17:51:06.108Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.130Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.130Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daf78 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.130Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.130Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.130Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d74a8 0xb4000071fc29cf18 0x70665d74b4
+[2025-10-16T17:51:06.130Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b99a8
+[2025-10-16T17:51:06.131Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.131Z]     ARGS: 0xb4000071cc2cd7d0 0x70665dadf8 0xb40000730c2b99a8 0x10
+[2025-10-16T17:51:06.131Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.131Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.131Z]     ARGS: 0xb4000071cc2cd7d0 0x70665dad68 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.131Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.131Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.131Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d76b8 0xb4000071fc29cf18 0x70665d76c4
+[2025-10-16T17:51:06.131Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b99a8
+[2025-10-16T17:51:06.131Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.131Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db008 0xb40000730c2b99a8 0x10
+[2025-10-16T17:51:06.131Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.131Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.131Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daf78 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.131Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.131Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.131Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d76b8 0xb4000071fc29cf18 0x70665d76c4
+[2025-10-16T17:51:06.131Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b99a8
+[2025-10-16T17:51:06.131Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.131Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db008 0xb40000730c2b99a8 0x10
+[2025-10-16T17:51:06.131Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.132Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.132Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daf78 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.132Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.132Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.132Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d72e8 0xb4000071fc29cf18 0x70665d72f4
+[2025-10-16T17:51:06.132Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b99a8
+[2025-10-16T17:51:06.132Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.132Z]     ARGS: 0xb4000071cc2cd7d0 0x70665dac38 0xb40000730c2b99a8 0x10
+[2025-10-16T17:51:06.132Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.132Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.132Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daba8 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.132Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.134Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.134Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d72e8 0xb4000071fc29cf18 0x70665d72f4
+[2025-10-16T17:51:06.134Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b99a8
+[2025-10-16T17:51:06.134Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.134Z]     ARGS: 0xb4000071cc2cd7d0 0x70665dac38 0xb40000730c2b99a8 0x10
+[2025-10-16T17:51:06.134Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.134Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.135Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daba8 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.135Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.135Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.135Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d72e8 0xb4000071fc29cf18 0x70665d72f4
+[2025-10-16T17:51:06.135Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b99a8
+[2025-10-16T17:51:06.135Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.135Z]     ARGS: 0xb4000071cc2cd7d0 0x70665dac38 0xb40000730c2b99a8 0x10
+[2025-10-16T17:51:06.135Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.135Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.135Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daba8 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.135Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.135Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.135Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d72e8 0xb4000071fc29cf18 0x70665d72f4
+[2025-10-16T17:51:06.135Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b99a8
+[2025-10-16T17:51:06.135Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.135Z]     ARGS: 0xb4000071cc2cd7d0 0x70665dac38 0xb40000730c2b99a8 0x10
+[2025-10-16T17:51:06.135Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.135Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.135Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daba8 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.135Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.136Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.136Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d72e8 0xb4000071fc29cf18 0x70665d72f4
+[2025-10-16T17:51:06.136Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b99a8
+[2025-10-16T17:51:06.136Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.136Z]     ARGS: 0xb4000071cc2cd7d0 0x70665dac38 0xb40000730c2b99a8 0x10
+[2025-10-16T17:51:06.136Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.136Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.136Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daba8 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.136Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.136Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.136Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d72e8 0xb4000071fc29cf18 0x70665d72f4
+[2025-10-16T17:51:06.137Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b99a8
+[2025-10-16T17:51:06.137Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.137Z]     ARGS: 0xb4000071cc2cd7d0 0x70665dac38 0xb40000730c2b99a8 0x10
+[2025-10-16T17:51:06.137Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.137Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.137Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daba8 0xb40000730c2b99a8 0x2
+[2025-10-16T17:51:06.137Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.137Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.137Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d72e8 0xb4000071fc29cf18 0x70665d72f4
+[2025-10-16T17:51:06.137Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b9048
+[2025-10-16T17:51:06.137Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.137Z]     ARGS: 0xb4000071cc2cd7d0 0x70665dac38 0xb40000730c2b9048 0x10
+[2025-10-16T17:51:06.137Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.138Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:06.138Z]     ARGS: 0xb4000071cc2cd7d0 0x70665dad58 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:06.138Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x1
+[2025-10-16T17:51:06.139Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.139Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daba8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.139Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.139Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.139Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d70b8 0xb4000071fc29cf18 0x70665d70c4
+[2025-10-16T17:51:06.139Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b9048
+[2025-10-16T17:51:06.139Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.139Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daa08 0xb40000730c2b9048 0x10
+[2025-10-16T17:51:06.139Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.139Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.140Z]     ARGS: 0xb4000071cc2cd7d0 0x70665da978 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.140Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.141Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.141Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d72e8 0xb4000071fc29cf18 0x70665d72f4
+[2025-10-16T17:51:06.141Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2bfc18
+[2025-10-16T17:51:06.141Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.141Z]     ARGS: 0xb4000071cc2cd7d0 0x70665dac38 0xb40000730c2bfc18 0x10
+[2025-10-16T17:51:06.141Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.142Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2300 count= 1
+[2025-10-16T17:51:06.142Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daba8 0xb40000730c2bfc18 0x2
+[2025-10-16T17:51:06.142Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.142Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2300 count= 1
+[2025-10-16T17:51:06.142Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d77f8 0xb4000071fc29cf18 0x70665d7804
+[2025-10-16T17:51:06.142Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c2b9048
+[2025-10-16T17:51:06.142Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.142Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db148 0xb40000730c2b9048 0x10
+[2025-10-16T17:51:06.142Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.142Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.142Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db148 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.142Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.145Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_opendb @ 0x7077e641c0 thread= 2418 count= 1
+[2025-10-16T17:51:06.145Z]     ARGS: 0xb4000071cc4966b0 0x702ee48838 0x702ee4883c 0x702ee48840
+[2025-10-16T17:51:06.145Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_opendb retval= 0xb4000071fc2adbd8
+[2025-10-16T17:51:06.145Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2418 count= 1
+[2025-10-16T17:51:06.145Z]     ARGS: 0xb4000071cc4966b0 0x702ee48758 0xb4000071fc2adbd8 0x702ee48764
+[2025-10-16T17:51:06.145Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c3e1958
+[2025-10-16T17:51:06.145Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2418 count= 1
+[2025-10-16T17:51:06.145Z]     ARGS: 0xb4000071cc4966b0 0x702ee4c0d8 0xb40000730c3e1958 0x1
+[2025-10-16T17:51:06.145Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.145Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare @ 0x7077e63c70 thread= 2418 count= 1
+[2025-10-16T17:51:06.145Z]     ARGS: 0xb4000071cc4966b0 0x702ee48758 0xb4000071fc2adbd8 0x702ee48764
+[2025-10-16T17:51:06.145Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_prepare retval= 0xb40000730c3e1958
+[2025-10-16T17:51:06.145Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2418 count= 1
+[2025-10-16T17:51:06.145Z]     ARGS: 0xb4000071cc4966b0 0x702ee4c0d8 0xb40000730c3e1958 0x1
+[2025-10-16T17:51:06.145Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:06.146Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db268 0xb40000730c2b9048 0x0
+[2025-10-16T17:51:06.146Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.146Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x1896225f0
+[2025-10-16T17:51:06.146Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:06.146Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db268 0xb40000730c2b9048 0x8
+[2025-10-16T17:51:06.146Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x0
+[2025-10-16T17:51:06.146Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:06.146Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db268 0xb40000730c2b9048 0x9
+[2025-10-16T17:51:06.146Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x0
+[2025-10-16T17:51:06.146Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:06.146Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db268 0xb40000730c2b9048 0xa
+[2025-10-16T17:51:06.146Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x0
+[2025-10-16T17:51:06.146Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.146Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db148 0xb40000730c2c00c8 0x10
+[2025-10-16T17:51:06.146Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.146Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.146Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db148 0xb40000730c2c00c8 0x1
+[2025-10-16T17:51:06.147Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.147Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.147Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db148 0xb40000730c2c00c8 0x2
+[2025-10-16T17:51:06.147Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.147Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.147Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db148 0xb40000730c2c00c8 0x3
+[2025-10-16T17:51:06.147Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.147Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2418 count= 1
+[2025-10-16T17:51:06.147Z]     ARGS: 0xb4000071cc4966b0 0x702ee4bfb8 0xb40000730c3e1958 0x10
+[2025-10-16T17:51:06.147Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.147Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize @ 0x7077e63da8 thread= 2418 count= 1
+[2025-10-16T17:51:06.147Z]     ARGS: 0xb4000071cc4966b0 0x702ee4bf28 0xb40000730c3e1958 0x2
+[2025-10-16T17:51:06.147Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_finalize retval= 0x0
+[2025-10-16T17:51:06.150Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset @ 0x7077e63d34 thread= 2300 count= 1
+[2025-10-16T17:51:06.151Z]     ARGS: 0xb4000071cc2cd7d0 0x70665daf38 0xb40000730c2bf768 0x10
+[2025-10-16T17:51:06.151Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_reset retval= 0x0
+[2025-10-16T17:51:06.155Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.155Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc1732b18 0x7fc1732b1c
+[2025-10-16T17:51:06.156Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c2b7cc0
+[2025-10-16T17:51:06.158Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2345 count= 1
+[2025-10-16T17:51:06.158Z]     ARGS: 0xb4000071cc312d70 0x73a41b6310 0xb40000718c2b7cc0 0x0
+[2025-10-16T17:51:06.158Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.165Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.165Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db288 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.167Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.171Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.171Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3c8 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.171Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.171Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.171Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.171Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.173Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:06.173Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3a88 0xb4000071fc29cf18 0xb40000727c303410
+[2025-10-16T17:51:06.173Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:06.173Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:06.173Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3a88 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:06.173Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:06.173Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.173Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3c8 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.173Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.173Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.173Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.173Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.197Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.197Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db338 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.197Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.197Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.197Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db358 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.197Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.197Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.197Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db358 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:06.197Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.197Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.197Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db358 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.197Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.212Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:06.212Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0xffffffe8
+[2025-10-16T17:51:06.212Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:06.213Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.213Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2bdb48 0x1
+[2025-10-16T17:51:06.213Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.213Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.213Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2bdb48 0x2
+[2025-10-16T17:51:06.213Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.213Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.213Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2bdb48 0x3
+[2025-10-16T17:51:06.213Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.214Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:06.214Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x7035848cc0
+[2025-10-16T17:51:06.216Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:06.216Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:06.216Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bdb48 0x1
+[2025-10-16T17:51:06.216Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x40d91638
+[2025-10-16T17:51:06.216Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.216Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db378 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.216Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.216Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.216Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db378 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.216Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.216Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.216Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db398 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:06.216Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.216Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.216Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db398 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.216Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.216Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.216Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db378 0xb40000730c2b9048 0x5
+[2025-10-16T17:51:06.216Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.216Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.216Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db398 0xb40000730c2b9048 0x6
+[2025-10-16T17:51:06.216Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.216Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.216Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db398 0xb40000730c2b9048 0x7
+[2025-10-16T17:51:06.216Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.217Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.217Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db398 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.217Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.217Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.217Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db378 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.217Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.346Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.346Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc17326a8 0x7fc17326ac
+[2025-10-16T17:51:06.347Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c531120
+[2025-10-16T17:51:06.347Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2346 count= 1
+[2025-10-16T17:51:06.347Z]     ARGS: 0xb4000071cc3114b0 0x73a41b6310 0xb40000718c531120 0x0
+[2025-10-16T17:51:06.347Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.393Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:06.393Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70665d24c0
+[2025-10-16T17:51:06.393Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:06.394Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.394Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.394Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.394Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.394Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.394Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.394Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.395Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:06.395Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.395Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.395Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.395Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.395Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.395Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.395Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.395Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.395Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.395Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.395Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.395Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:06.395Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.395Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.396Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.396Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.396Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.396Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.396Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.396Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.396Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.396Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.396Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.396Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:06.396Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.396Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.396Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.396Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.397Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.397Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.397Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.397Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.397Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.397Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.397Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.397Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:06.397Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.397Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.397Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.397Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.398Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.399Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.399Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.399Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.399Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.399Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.399Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.399Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:06.399Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.399Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.399Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.399Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.399Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.399Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.399Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.399Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.399Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.399Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.399Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.400Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:06.400Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.400Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.400Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.400Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.400Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.400Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.400Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.400Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.400Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.400Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.400Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.400Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:06.401Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.401Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.401Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.401Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.401Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.401Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.401Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.402Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.402Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.402Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.402Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.402Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:06.402Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.402Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.402Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.402Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.402Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong @ 0x7077e63fac thread= 2300 count= 1
+[2025-10-16T17:51:06.402Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x1
+[2025-10-16T17:51:06.402Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindLong retval= 0x0
+[2025-10-16T17:51:06.402Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.402Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.402Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.402Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt @ 0x7077e63f30 thread= 2300 count= 1
+[2025-10-16T17:51:06.402Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:06.402Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindInt retval= 0x0
+[2025-10-16T17:51:06.402Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.402Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.403Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.403Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.403Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.403Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.403Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.403Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.403Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.403Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.403Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.403Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.403Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.404Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.404Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.404Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.404Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.404Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.404Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.404Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.405Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.406Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.406Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.406Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.406Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.406Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.406Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.406Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.406Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.406Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.406Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.406Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.406Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.407Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.407Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.407Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.407Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.407Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.407Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.407Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.407Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.407Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.407Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.407Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.407Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.408Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.408Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.408Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.408Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer @ 0x7077e63db0 thread= 2300 count= 1
+[2025-10-16T17:51:06.408Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1a8 0xb40000730c2b9048 0x4
+[2025-10-16T17:51:06.408Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindByteBuffer retval= 0x0
+[2025-10-16T17:51:06.409Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString @ 0x7077e63e58 thread= 2300 count= 1
+[2025-10-16T17:51:06.409Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1c8 0xb40000730c2b9048 0x2
+[2025-10-16T17:51:06.409Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindString retval= 0x1
+[2025-10-16T17:51:06.413Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:06.413Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x7034a18f50
+[2025-10-16T17:51:06.415Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:06.417Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:06.417Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3a58 0xb4000071fc29cf18 0x70353cb284
+[2025-10-16T17:51:06.417Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:06.421Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:06.421Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3a58 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:06.424Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:06.425Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:06.425Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2bc888 0x3
+[2025-10-16T17:51:06.425Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x40d91638
+[2025-10-16T17:51:06.431Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.431Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc1732b18 0x7fc1732b1c
+[2025-10-16T17:51:06.431Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c52de40
+[2025-10-16T17:51:06.431Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2335 count= 1
+[2025-10-16T17:51:06.431Z]     ARGS: 0xb4000071cc2bcfd0 0x73a41b6310 0xb40000718c52de40 0x0
+[2025-10-16T17:51:06.431Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.838Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.838Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc1730cb8 0x7fc1730cbc
+[2025-10-16T17:51:06.839Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c52cfd0
+[2025-10-16T17:51:06.840Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2344 count= 1
+[2025-10-16T17:51:06.840Z]     ARGS: 0xb4000071cc2efb10 0x73a41b6310 0xb40000718c52cfd0 0x0
+[2025-10-16T17:51:06.840Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.848Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.848Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc1730a68 0x7fc1730a6c
+[2025-10-16T17:51:06.849Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c4e7a30
+[2025-10-16T17:51:06.850Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2344 count= 1
+[2025-10-16T17:51:06.850Z]     ARGS: 0xb4000071cc2efb10 0x73a41b6310 0xb40000718c4e7a30 0x0
+[2025-10-16T17:51:06.853Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.854Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:06.854Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1730b98 0x2
+[2025-10-16T17:51:06.854Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:06.854Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:06.854Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1730b98 0x2
+[2025-10-16T17:51:06.854Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:06.855Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:06.855Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1730b98 0x2
+[2025-10-16T17:51:06.855Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:06.868Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.868Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc17307f8 0x7fc17307fc
+[2025-10-16T17:51:06.869Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c5298d0
+[2025-10-16T17:51:06.870Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2344 count= 1
+[2025-10-16T17:51:06.870Z]     ARGS: 0xb4000071cc2efb10 0x73a41b6310 0xb40000718c5298d0 0x0
+[2025-10-16T17:51:06.873Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.912Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:06.912Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:06.912Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:06.913Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:06.913Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x7035669350
+[2025-10-16T17:51:06.914Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:06.914Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:06.914Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bdb48 0x1
+[2025-10-16T17:51:06.914Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x40d91638
+[2025-10-16T17:51:06.944Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.944Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc17320d8 0x7fc17320dc
+[2025-10-16T17:51:06.944Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c5268b0
+[2025-10-16T17:51:06.945Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2345 count= 1
+[2025-10-16T17:51:06.945Z]     ARGS: 0xb4000071cc312d70 0x73a41b6310 0xb40000718c5268b0 0x0
+[2025-10-16T17:51:06.945Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.950Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:06.950Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc1733008 0x7fc173300c
+[2025-10-16T17:51:06.951Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c2b6da0
+[2025-10-16T17:51:06.951Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2345 count= 1
+[2025-10-16T17:51:06.951Z]     ARGS: 0xb4000071cc312d70 0x73a41b6310 0xb40000718c2b6da0 0x0
+[2025-10-16T17:51:06.953Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:06.957Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:06.958Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70665d24c0
+[2025-10-16T17:51:06.958Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:07.040Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:07.040Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x703452c530
+[2025-10-16T17:51:07.045Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:07.047Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:07.047Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3a58 0xb4000071fc29cf18 0x70353cb284
+[2025-10-16T17:51:07.047Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:07.068Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:07.068Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3a58 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:07.072Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:07.079Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:07.079Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db128 0xb40000730c2b9048 0x3
+[2025-10-16T17:51:07.079Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x40d91638
+[2025-10-16T17:51:07.126Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:07.126Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc1732b18 0x7fc1732b1c
+[2025-10-16T17:51:07.127Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c509d70
+[2025-10-16T17:51:07.127Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2346 count= 1
+[2025-10-16T17:51:07.127Z]     ARGS: 0xb4000071cc3114b0 0x73a41b6310 0xb40000718c509d70 0x0
+[2025-10-16T17:51:07.127Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:07.176Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:07.176Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc1732778 0x7fc173277c
+[2025-10-16T17:51:07.177Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c4ffdf0
+[2025-10-16T17:51:07.177Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2335 count= 1
+[2025-10-16T17:51:07.177Z]     ARGS: 0xb4000071cc2bcfd0 0x73a41b6310 0xb40000718c4ffdf0 0x0
+[2025-10-16T17:51:07.178Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:07.180Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:07.180Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc1732528 0x7fc173252c
+[2025-10-16T17:51:07.181Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c4fe690
+[2025-10-16T17:51:07.181Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2335 count= 1
+[2025-10-16T17:51:07.181Z]     ARGS: 0xb4000071cc2bcfd0 0x73a41b6310 0xb40000718c4fe690 0x0
+[2025-10-16T17:51:07.183Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:07.183Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1732658 0x2
+[2025-10-16T17:51:07.183Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:07.183Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:07.183Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1732658 0x2
+[2025-10-16T17:51:07.183Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:07.183Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:07.183Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1732658 0x2
+[2025-10-16T17:51:07.183Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:07.184Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:07.186Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:07.186Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bb5c8 0x1
+[2025-10-16T17:51:07.186Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0xffffffffbf4c36dd
+[2025-10-16T17:51:07.186Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:07.186Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bb5c8 0x2
+[2025-10-16T17:51:07.186Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x199ee253859
+[2025-10-16T17:51:07.186Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:07.186Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bb5c8 0x1
+[2025-10-16T17:51:07.186Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0xffffffffbf4c36dd
+[2025-10-16T17:51:07.186Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:07.186Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bb5c8 0x2
+[2025-10-16T17:51:07.186Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x199ee253859
+[2025-10-16T17:51:07.186Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:07.186Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bb5c8 0x1
+[2025-10-16T17:51:07.186Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0xffffffffbf4c36dd
+[2025-10-16T17:51:07.186Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:07.186Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bb5c8 0x2
+[2025-10-16T17:51:07.186Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x199ee253859
+[2025-10-16T17:51:07.186Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:07.187Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bb5c8 0x1
+[2025-10-16T17:51:07.187Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0xffffffffbf4c36dd
+[2025-10-16T17:51:07.187Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:07.187Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bb5c8 0x2
+[2025-10-16T17:51:07.187Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x199ee253859
+[2025-10-16T17:51:07.187Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:07.187Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bb5c8 0x1
+[2025-10-16T17:51:07.187Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0xffffffffbf4c36dd
+[2025-10-16T17:51:07.187Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue @ 0x7077e64384 thread= 2300 count= 1
+[2025-10-16T17:51:07.187Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3a8 0xb40000730c2bb5c8 0x2
+[2025-10-16T17:51:07.187Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnLongValue retval= 0x199ee253859
+[2025-10-16T17:51:07.189Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson @ 0x7077e68934 thread= 2218 count= 1
+[2025-10-16T17:51:07.189Z]     ARGS: 0xb4000071cc299d70 0x73a41b62b0 0x7fc1732588 0x7fc173258c
+[2025-10-16T17:51:07.190Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_createWithJson retval= 0xb40000718c4feab0
+[2025-10-16T17:51:07.190Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame @ 0x7077e692bc thread= 2335 count= 1
+[2025-10-16T17:51:07.190Z]     ARGS: 0xb4000071cc2bcfd0 0x73a41b6310 0xb40000718c4feab0 0x0
+[2025-10-16T17:51:07.193Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_getFrame retval= 0x0
+[2025-10-16T17:51:07.258Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:07.258Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3888 0xb4000071fc29cf18 0x70665d2630
+[2025-10-16T17:51:07.258Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:07.259Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:07.259Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3888 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:07.259Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:07.264Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:07.264Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x3bd2
+[2025-10-16T17:51:07.264Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:07.264Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:07.264Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:07.264Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:07.791Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.791Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1733538 0x1
+[2025-10-16T17:51:07.791Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.791Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.791Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732eb8 0x1
+[2025-10-16T17:51:07.791Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.792Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.792Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732ee8 0x1
+[2025-10-16T17:51:07.792Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.844Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.844Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1731338 0x1
+[2025-10-16T17:51:07.844Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.875Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.875Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc17313f8 0x1
+[2025-10-16T17:51:07.875Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.890Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.890Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732a28 0x1
+[2025-10-16T17:51:07.890Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.893Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.893Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1733738 0x1
+[2025-10-16T17:51:07.893Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.893Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.893Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc17336b8 0x1
+[2025-10-16T17:51:07.894Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.906Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.906Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732968 0x1
+[2025-10-16T17:51:07.906Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.906Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.906Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732a28 0x1
+[2025-10-16T17:51:07.906Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.923Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.923Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732968 0x1
+[2025-10-16T17:51:07.923Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.923Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.923Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732a28 0x1
+[2025-10-16T17:51:07.923Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.939Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.939Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732968 0x1
+[2025-10-16T17:51:07.939Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.940Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.940Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732a28 0x1
+[2025-10-16T17:51:07.940Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.958Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.958Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732968 0x1
+[2025-10-16T17:51:07.958Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.958Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.958Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732a28 0x1
+[2025-10-16T17:51:07.959Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.974Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.975Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732968 0x1
+[2025-10-16T17:51:07.975Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.975Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.975Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732a28 0x1
+[2025-10-16T17:51:07.975Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.976Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:07.976Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c4dd5e0 0x10
+[2025-10-16T17:51:07.976Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:07.976Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:07.976Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c4feab0 0x70343863b0
+[2025-10-16T17:51:07.976Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:07.976Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:07.976Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c5298d0 0x7034434070
+[2025-10-16T17:51:07.977Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:07.977Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:07.977Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c52de40 0x70343863b0
+[2025-10-16T17:51:07.977Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:07.978Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:07.978Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c531120 0x70343863b0
+[2025-10-16T17:51:07.978Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:07.978Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:07.978Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c2b7cc0 0x70343863b0
+[2025-10-16T17:51:07.978Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:07.978Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:07.978Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c2b8870 0x70343863b0
+[2025-10-16T17:51:07.978Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:07.989Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.989Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732968 0x1
+[2025-10-16T17:51:07.990Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:07.990Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient @ 0x7077e52bd4 thread= 2218 count= 1
+[2025-10-16T17:51:07.990Z]     ARGS: 0xb4000071cc299d70 0x73a4285440 0x7fc1732a28 0x1
+[2025-10-16T17:51:07.990Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_generateGradient retval= 0x1
+[2025-10-16T17:51:09.194Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:09.194Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1731878 0x2
+[2025-10-16T17:51:09.194Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:09.194Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:09.194Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1731878 0x2
+[2025-10-16T17:51:09.194Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:09.194Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:09.194Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1731878 0x2
+[2025-10-16T17:51:09.194Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:09.306Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:09.306Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x219e860efb2d89bf
+[2025-10-16T17:51:09.306Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:09.308Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:09.308Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:09.308Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:09.418Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:09.418Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1732e38 0x2
+[2025-10-16T17:51:09.418Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:09.418Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:09.418Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1732e38 0x2
+[2025-10-16T17:51:09.418Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:09.419Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:09.419Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1732e38 0x2
+[2025-10-16T17:51:09.419Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:09.425Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIsNull @ 0x7077e64314 thread= 2300 count= 1
+[2025-10-16T17:51:09.425Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3d8 0xb40000730c2bbf28 0x0
+[2025-10-16T17:51:09.425Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIsNull retval= 0x0
+[2025-10-16T17:51:09.426Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIsNull @ 0x7077e64314 thread= 2300 count= 1
+[2025-10-16T17:51:09.426Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db3d8 0xb40000730c2bbf28 0x0
+[2025-10-16T17:51:09.426Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteCursor_columnIsNull retval= 0x0
+[2025-10-16T17:51:09.491Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:09.492Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3968 0xb4000071fc29cf18 0x70665d3940
+[2025-10-16T17:51:09.492Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:09.493Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:09.493Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3968 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:09.493Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:09.517Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_create @ 0x7077e67618 thread= 2365 count= 1
+[2025-10-16T17:51:09.517Z]     ARGS: 0xb4000071cc495a50 0x73a41b6270 0x7043324238 0x0
+[2025-10-16T17:51:09.522Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_create retval= 0xb40000718c5379a0
+[2025-10-16T17:51:10.103Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2365 count= 1
+[2025-10-16T17:51:10.103Z]     ARGS: 0xb4000071cc495a50 0x73a41b62d0 0xb40000718c5379a0 0x7043322ae0
+[2025-10-16T17:51:10.103Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:10.346Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:10.346Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1730b98 0x2
+[2025-10-16T17:51:10.346Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:10.346Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:10.346Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1730b98 0x2
+[2025-10-16T17:51:10.347Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:10.347Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:10.347Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1730b98 0x2
+[2025-10-16T17:51:10.347Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:10.398Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:10.398Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x800000005
+[2025-10-16T17:51:10.398Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:10.398Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:10.398Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70358d2150
+[2025-10-16T17:51:10.398Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:10.645Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_drawDitheredGradient @ 0x7077e5220c thread= 2285 count= 1
+[2025-10-16T17:51:10.645Z]     ARGS: 0xb4000071cc2d0c10 0x73a4285420 0x70733fb318 0x70733fb31c
+[2025-10-16T17:51:10.679Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_drawDitheredGradient retval= 0x0
+[2025-10-16T17:51:12.430Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:12.430Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1732df8 0x2
+[2025-10-16T17:51:12.430Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:12.430Z] CALL libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap @ 0x7077e51654 thread= 2218 count= 1
+[2025-10-16T17:51:12.430Z]     ARGS: 0xb4000071cc299d70 0x73a4285780 0x7fc1732df8 0x2
+[2025-10-16T17:51:12.430Z] RET libtmessages.49.so Java_org_telegram_messenger_Utilities_stackBlurBitmap retval= 0x0
+[2025-10-16T17:51:12.662Z] CALL libtmessages.49.so Java_org_telegram_messenger_voip_NativeInstance_getAllVersions @ 0x7077ff57e8 thread= 2283 count= 1
+[2025-10-16T17:51:12.662Z]     ARGS: 0xb4000071cc2ce2d0 0x70ec0ef8f0 0x70893eada0 0x7104ba71a0
+[2025-10-16T17:51:12.662Z] RET libtmessages.49.so Java_org_telegram_messenger_voip_NativeInstance_getAllVersions retval= 0x59
+[2025-10-16T17:51:13.038Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:13.038Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0xffffffe8
+[2025-10-16T17:51:13.038Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:13.040Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:13.040Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:13.044Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:14.262Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:14.262Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:14.262Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:14.298Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:14.298Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70353ee750
+[2025-10-16T17:51:14.301Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:14.303Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:14.303Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3a58 0xb4000071fc29cf18 0x70353cb284
+[2025-10-16T17:51:14.303Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:14.332Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:14.332Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3a58 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:14.334Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:14.335Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:14.335Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:14.335Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:14.335Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:14.335Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:14.336Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:14.451Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:14.451Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c4fe690 0x10
+[2025-10-16T17:51:14.451Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:14.451Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:14.451Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c493340 0x70343863b0
+[2025-10-16T17:51:14.451Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:14.451Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:14.451Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c4f98e0 0x70343863b0
+[2025-10-16T17:51:14.451Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:14.452Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:14.452Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c4fc380 0x70343863b0
+[2025-10-16T17:51:14.452Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:14.452Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:14.452Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c50dc00 0x70343863b0
+[2025-10-16T17:51:14.452Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:14.452Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:14.452Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c50d470 0x70343863b0
+[2025-10-16T17:51:14.452Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:14.452Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:14.452Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c50bfd0 0x70343863b0
+[2025-10-16T17:51:14.452Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:14.452Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:14.453Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c50d9f0 0x70343863b0
+[2025-10-16T17:51:14.453Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:14.453Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:14.453Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c518520 0x70343863b0
+[2025-10-16T17:51:14.453Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:14.453Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:14.453Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c5342a0 0x70343863b0
+[2025-10-16T17:51:14.453Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:14.453Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:14.453Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c539520 0x70343863b0
+[2025-10-16T17:51:14.453Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:14.453Z] CALL libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy @ 0x7077e68ef8 thread= 2285 count= 1
+[2025-10-16T17:51:14.453Z]     ARGS: 0xb4000071cc2d0c10 0x73a41b62d0 0xb40000718c4ffbe0 0x70343863b0
+[2025-10-16T17:51:14.453Z] RET libtmessages.49.so Java_org_telegram_ui_Components_RLottieDrawable_destroy retval= 0x1
+[2025-10-16T17:51:14.522Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:14.522Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x47a2
+[2025-10-16T17:51:14.522Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:14.523Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:14.523Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:14.523Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:14.696Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:14.696Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x2
+[2025-10-16T17:51:14.698Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:14.728Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:14.728Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70d8e4f630
+[2025-10-16T17:51:14.732Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:14.736Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:14.736Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3a58 0xb4000071fc29cf18 0x70353cb284
+[2025-10-16T17:51:14.736Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:14.767Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:14.767Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d3a58 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:14.770Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:17.387Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction @ 0x7077e64188 thread= 2300 count= 1
+[2025-10-16T17:51:17.387Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:17.387Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_beginTransaction retval= 0x0
+[2025-10-16T17:51:17.389Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction @ 0x7077e641a4 thread= 2300 count= 1
+[2025-10-16T17:51:17.389Z]     ARGS: 0xb4000071cc2cd7d0 0x70665d39d8 0xb4000071fc29cf18 0x70343863b0
+[2025-10-16T17:51:17.393Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLiteDatabase_commitTransaction retval= 0x0
+[2025-10-16T17:51:17.449Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull @ 0x7077e640a0 thread= 2300 count= 1
+[2025-10-16T17:51:17.449Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db038 0xb40000730c2bc888 0xa
+[2025-10-16T17:51:17.449Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull retval= 0x0
+[2025-10-16T17:51:17.449Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull @ 0x7077e640a0 thread= 2300 count= 1
+[2025-10-16T17:51:17.449Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db038 0xb40000730c2bc888 0xe
+[2025-10-16T17:51:17.449Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull retval= 0x0
+[2025-10-16T17:51:17.449Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull @ 0x7077e640a0 thread= 2300 count= 1
+[2025-10-16T17:51:17.449Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db038 0xb40000730c2bc888 0x11
+[2025-10-16T17:51:17.449Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull retval= 0x0
+[2025-10-16T17:51:17.449Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull @ 0x7077e640a0 thread= 2300 count= 1
+[2025-10-16T17:51:17.449Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db038 0xb40000730c2bc888 0x12
+[2025-10-16T17:51:17.449Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull retval= 0x0
+[2025-10-16T17:51:17.450Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull @ 0x7077e640a0 thread= 2300 count= 1
+[2025-10-16T17:51:17.450Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db038 0xb40000730c2c0a28 0xe
+[2025-10-16T17:51:17.450Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull retval= 0x0
+[2025-10-16T17:51:17.450Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull @ 0x7077e640a0 thread= 2300 count= 1
+[2025-10-16T17:51:17.450Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db038 0xb40000730c2c0a28 0x10
+[2025-10-16T17:51:17.451Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull retval= 0x0
+[2025-10-16T17:51:17.481Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindDouble @ 0x7077e64028 thread= 2300 count= 1
+[2025-10-16T17:51:17.481Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db368 0xb40000730c2b9e58 0x3
+[2025-10-16T17:51:17.481Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindDouble retval= 0x0
+[2025-10-16T17:51:17.522Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull @ 0x7077e640a0 thread= 2300 count= 1
+[2025-10-16T17:51:17.522Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1f8 0xb40000730c2c0ed8 0xd
+[2025-10-16T17:51:17.522Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull retval= 0x0
+[2025-10-16T17:51:17.532Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull @ 0x7077e640a0 thread= 2300 count= 1
+[2025-10-16T17:51:17.532Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1f8 0xb40000730c2c0ed8 0x10
+[2025-10-16T17:51:17.532Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull retval= 0x0
+[2025-10-16T17:51:17.535Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull @ 0x7077e640a0 thread= 2300 count= 1
+[2025-10-16T17:51:17.535Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1f8 0xb40000730c2bdb48 0xe
+[2025-10-16T17:51:17.535Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull retval= 0x0
+[2025-10-16T17:51:17.535Z] CALL libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull @ 0x7077e640a0 thread= 2300 count= 1
+[2025-10-16T17:51:17.535Z]     ARGS: 0xb4000071cc2cd7d0 0x70665db1f8 0xb40000730c2bdb48 0x10
+[2025-10-16T17:51:17.535Z] RET libtmessages.49.so Java_org_telegram_SQLite_SQLitePreparedStatement_bindNull retval= 0x0
