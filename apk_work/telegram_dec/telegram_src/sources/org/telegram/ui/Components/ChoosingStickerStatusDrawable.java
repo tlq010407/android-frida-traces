@@ -1,0 +1,142 @@
+package org.telegram.ui.Components;
+
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.Paint;
+import android.graphics.RectF;
+import com.huawei.hms.maps.model.BitmapDescriptorFactory;
+import org.telegram.messenger.AndroidUtilities;
+import org.telegram.ui.ActionBar.Theme;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes5.dex */
+public class ChoosingStickerStatusDrawable extends StatusDrawable {
+    int color;
+    Paint fillPaint;
+    float progress;
+    Paint strokePaint;
+    private boolean isChat = false;
+    private long lastUpdateTime = 0;
+    private boolean started = false;
+    boolean increment = true;
+
+    public ChoosingStickerStatusDrawable(boolean z) {
+        if (z) {
+            this.strokePaint = new Paint(1);
+            this.fillPaint = new Paint(1);
+            this.strokePaint.setStyle(Paint.Style.STROKE);
+            this.strokePaint.setStrokeWidth(AndroidUtilities.dpf2(1.2f));
+        }
+    }
+
+    private void update() {
+        long jCurrentTimeMillis = System.currentTimeMillis();
+        long j = jCurrentTimeMillis - this.lastUpdateTime;
+        this.lastUpdateTime = jCurrentTimeMillis;
+        if (j > 16) {
+            j = 16;
+        }
+        float f = this.progress + (j / 500.0f);
+        this.progress = f;
+        if (f >= 2.0f) {
+            this.progress = BitmapDescriptorFactory.HUE_RED;
+            this.increment = !this.increment;
+        }
+        invalidateSelf();
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void draw(Canvas canvas) {
+        float fDp;
+        float fDpf2;
+        float fMin = Math.min(this.progress, 1.0f);
+        float interpolation = CubicBezierInterpolator.EASE_IN.getInterpolation(fMin < 0.3f ? fMin / 0.3f : 1.0f);
+        CubicBezierInterpolator cubicBezierInterpolator = CubicBezierInterpolator.EASE_OUT;
+        float interpolation2 = cubicBezierInterpolator.getInterpolation(fMin < 0.3f ? BitmapDescriptorFactory.HUE_RED : (fMin - 0.3f) / 0.7f);
+        float f = 2.0f;
+        if (this.increment) {
+            fDp = (AndroidUtilities.dp(2.1f) * interpolation) + ((AndroidUtilities.dp(7.0f) - AndroidUtilities.dp(2.1f)) * (1.0f - interpolation));
+            fDpf2 = AndroidUtilities.dpf2(1.5f) * (1.0f - cubicBezierInterpolator.getInterpolation(this.progress / 2.0f));
+        } else {
+            fDp = (AndroidUtilities.dp(2.1f) * (1.0f - interpolation)) + ((AndroidUtilities.dp(7.0f) - AndroidUtilities.dp(2.1f)) * interpolation);
+            fDpf2 = AndroidUtilities.dpf2(1.5f) * CubicBezierInterpolator.EASE_OUT_QUINT.getInterpolation(this.progress / 2.0f);
+        }
+        float fDp2 = AndroidUtilities.dp(11.0f) / 2.0f;
+        float fDpf22 = AndroidUtilities.dpf2(2.0f);
+        float fDpf23 = (AndroidUtilities.dpf2(0.5f) * interpolation) - (AndroidUtilities.dpf2(0.5f) * interpolation2);
+        Paint paint = this.strokePaint;
+        if (paint == null) {
+            paint = Theme.chat_statusRecordPaint;
+        }
+        Paint paint2 = this.fillPaint;
+        if (paint2 == null) {
+            paint2 = Theme.chat_statusPaint;
+        }
+        if (paint.getStrokeWidth() != AndroidUtilities.dp(0.8f)) {
+            paint.setStrokeWidth(AndroidUtilities.dp(0.8f));
+        }
+        int i = 0;
+        while (i < 2) {
+            canvas.save();
+            canvas.translate((paint.getStrokeWidth() / f) + fDpf2 + (AndroidUtilities.dp(9.0f) * i) + getBounds().left + AndroidUtilities.dpf2(0.2f), (paint.getStrokeWidth() / f) + AndroidUtilities.dpf2(f) + getBounds().top);
+            RectF rectF = AndroidUtilities.rectTmp;
+            rectF.set(BitmapDescriptorFactory.HUE_RED, fDpf23, AndroidUtilities.dp(7.0f), AndroidUtilities.dp(11.0f) - fDpf23);
+            canvas.drawOval(rectF, paint);
+            canvas.drawCircle(fDp, fDp2, fDpf22, paint2);
+            canvas.restore();
+            i++;
+            f = 2.0f;
+        }
+        if (this.started) {
+            update();
+        }
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getIntrinsicHeight() {
+        return AndroidUtilities.dp(18.0f);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getIntrinsicWidth() {
+        return AndroidUtilities.dp(20.0f);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getOpacity() {
+        return 0;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void setAlpha(int i) {
+    }
+
+    @Override // org.telegram.ui.Components.StatusDrawable
+    public void setColor(int i) {
+        if (this.color != i) {
+            this.fillPaint.setColor(i);
+            this.strokePaint.setColor(i);
+        }
+        this.color = i;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void setColorFilter(ColorFilter colorFilter) {
+    }
+
+    @Override // org.telegram.ui.Components.StatusDrawable
+    public void setIsChat(boolean z) {
+        this.isChat = z;
+    }
+
+    @Override // org.telegram.ui.Components.StatusDrawable
+    public void start() {
+        this.lastUpdateTime = System.currentTimeMillis();
+        this.started = true;
+        invalidateSelf();
+    }
+
+    @Override // org.telegram.ui.Components.StatusDrawable
+    public void stop() {
+        this.started = false;
+    }
+}

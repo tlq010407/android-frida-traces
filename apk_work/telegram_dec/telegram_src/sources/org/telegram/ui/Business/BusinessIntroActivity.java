@@ -1,0 +1,728 @@
+package org.telegram.ui.Business;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.Rect;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.text.TextUtils;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewPropertyAnimator;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import androidx.recyclerview.widget.RecyclerView;
+import com.huawei.hms.maps.model.BitmapDescriptorFactory;
+import java.util.ArrayList;
+import org.telegram.messenger.AndroidUtilities;
+import org.telegram.messenger.LocaleController;
+import org.telegram.messenger.MediaDataController;
+import org.telegram.messenger.NotificationCenter;
+import org.telegram.messenger.R;
+import org.telegram.messenger.Utilities;
+import org.telegram.tgnet.RequestDelegate;
+import org.telegram.tgnet.TLObject;
+import org.telegram.tgnet.TLRPC;
+import org.telegram.tgnet.tl.TL_account$TL_businessIntro;
+import org.telegram.tgnet.tl.TL_account$TL_inputBusinessIntro;
+import org.telegram.tgnet.tl.TL_account$updateBusinessIntro;
+import org.telegram.ui.ActionBar.ActionBar;
+import org.telegram.ui.ActionBar.ActionBarMenuItem;
+import org.telegram.ui.ActionBar.AlertDialog;
+import org.telegram.ui.ActionBar.BaseFragment;
+import org.telegram.ui.ActionBar.Theme;
+import org.telegram.ui.Cells.EditTextCell;
+import org.telegram.ui.Cells.TextCell;
+import org.telegram.ui.Components.AnimatedFloat;
+import org.telegram.ui.Components.BulletinFactory;
+import org.telegram.ui.Components.ChatAttachAlert;
+import org.telegram.ui.Components.ChatGreetingsView;
+import org.telegram.ui.Components.CircularProgressDrawable;
+import org.telegram.ui.Components.CrossfadeDrawable;
+import org.telegram.ui.Components.CubicBezierInterpolator;
+import org.telegram.ui.Components.LayoutHelper;
+import org.telegram.ui.Components.UItem;
+import org.telegram.ui.Components.UniversalAdapter;
+import org.telegram.ui.Components.UniversalFragment;
+import org.telegram.ui.Components.UniversalRecyclerView;
+import org.telegram.ui.ContentPreviewViewer;
+import org.telegram.ui.Stories.recorder.EmojiBottomSheet;
+import org.telegram.ui.Stories.recorder.KeyboardNotifier;
+import org.telegram.ui.Stories.recorder.PreviewView;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes4.dex */
+public class BusinessIntroActivity extends UniversalFragment implements NotificationCenter.NotificationCenterDelegate {
+    private ChatAttachAlert chatAttachAlert;
+    private String currentMessage;
+    private long currentSticker;
+    private String currentTitle;
+    private ActionBarMenuItem doneButton;
+    private CrossfadeDrawable doneButtonDrawable;
+    private ChatGreetingsView greetingsView;
+    private Drawable greetingsViewBackground;
+    private TLRPC.InputDocument inputSticker;
+    private String inputStickerPath;
+    private boolean keyboardVisible;
+    private EditTextCell messageEdit;
+    private FrameLayout previewContainer;
+    private EditTextCell titleEdit;
+    private boolean valueSet;
+    private final Runnable updateRandomStickerRunnable = new Runnable() { // from class: org.telegram.ui.Business.BusinessIntroActivity$$ExternalSyntheticLambda5
+        @Override // java.lang.Runnable
+        public final void run() {
+            this.f$0.updateRandomSticker();
+        }
+    };
+    private boolean stickerRandom = true;
+    private TLRPC.Document sticker = getMediaDataController().getGreetingsSticker();
+    private boolean clearVisible = isEmpty();
+    private int shiftDp = -4;
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void checkDone(boolean z, boolean z2) {
+        if (this.doneButton == null) {
+            return;
+        }
+        boolean zHasChanges = hasChanges();
+        this.doneButton.setEnabled(zHasChanges);
+        float f = BitmapDescriptorFactory.HUE_RED;
+        if (z) {
+            ViewPropertyAnimator viewPropertyAnimatorScaleX = this.doneButton.animate().alpha(zHasChanges ? 1.0f : BitmapDescriptorFactory.HUE_RED).scaleX(zHasChanges ? 1.0f : BitmapDescriptorFactory.HUE_RED);
+            if (zHasChanges) {
+                f = 1.0f;
+            }
+            viewPropertyAnimatorScaleX.scaleY(f).setDuration(180L).start();
+        } else {
+            this.doneButton.setAlpha(zHasChanges ? 1.0f : BitmapDescriptorFactory.HUE_RED);
+            this.doneButton.setScaleX(zHasChanges ? 1.0f : BitmapDescriptorFactory.HUE_RED);
+            ActionBarMenuItem actionBarMenuItem = this.doneButton;
+            if (zHasChanges) {
+                f = 1.0f;
+            }
+            actionBarMenuItem.setScaleY(f);
+        }
+        UniversalRecyclerView universalRecyclerView = this.listView;
+        if (universalRecyclerView == null || universalRecyclerView.adapter == null || this.clearVisible == (!isEmpty())) {
+            return;
+        }
+        saveScrollPosition();
+        this.listView.adapter.update(true);
+        applyScrolledPosition();
+    }
+
+    private void createChatAttachView() {
+        if (getParentActivity() == null || getContext() == null || this.chatAttachAlert != null) {
+            return;
+        }
+        boolean z = false;
+        ChatAttachAlert chatAttachAlert = new ChatAttachAlert(getParentActivity(), this, z, false, true, this.resourceProvider) { // from class: org.telegram.ui.Business.BusinessIntroActivity.9
+            @Override // org.telegram.ui.Components.ChatAttachAlert, org.telegram.ui.ActionBar.BottomSheet
+            public void dismissInternal() {
+                if (BusinessIntroActivity.this.chatAttachAlert != null && BusinessIntroActivity.this.chatAttachAlert.isShowing()) {
+                    AndroidUtilities.requestAdjustResize(BusinessIntroActivity.this.getParentActivity(), ((BaseFragment) BusinessIntroActivity.this).classGuid);
+                }
+                super.dismissInternal();
+            }
+
+            @Override // org.telegram.ui.ActionBar.BottomSheet
+            public void onDismissAnimationStart() {
+                if (BusinessIntroActivity.this.chatAttachAlert != null) {
+                    BusinessIntroActivity.this.chatAttachAlert.setFocusable(false);
+                }
+                if (BusinessIntroActivity.this.chatAttachAlert == null || !BusinessIntroActivity.this.chatAttachAlert.isShowing()) {
+                    return;
+                }
+                AndroidUtilities.requestAdjustResize(BusinessIntroActivity.this.getParentActivity(), ((BaseFragment) BusinessIntroActivity.this).classGuid);
+            }
+        };
+        this.chatAttachAlert = chatAttachAlert;
+        chatAttachAlert.setDelegate(new ChatAttachAlert.ChatAttachViewDelegate() { // from class: org.telegram.ui.Business.BusinessIntroActivity.10
+            @Override // org.telegram.ui.Components.ChatAttachAlert.ChatAttachViewDelegate
+            public void didPressedButton(int i, boolean z2, boolean z3, int i2, long j, boolean z4, boolean z5, long j2) {
+            }
+
+            @Override // org.telegram.ui.Components.ChatAttachAlert.ChatAttachViewDelegate
+            public /* synthetic */ void didSelectBot(TLRPC.User user) {
+                ChatAttachAlert.ChatAttachViewDelegate.CC.$default$didSelectBot(this, user);
+            }
+
+            @Override // org.telegram.ui.Components.ChatAttachAlert.ChatAttachViewDelegate
+            public void doOnIdle(Runnable runnable) {
+                NotificationCenter.getInstance(((BaseFragment) BusinessIntroActivity.this).currentAccount).doOnIdle(runnable);
+            }
+
+            @Override // org.telegram.ui.Components.ChatAttachAlert.ChatAttachViewDelegate
+            public /* synthetic */ boolean needEnterComment() {
+                return ChatAttachAlert.ChatAttachViewDelegate.CC.$default$needEnterComment(this);
+            }
+
+            @Override // org.telegram.ui.Components.ChatAttachAlert.ChatAttachViewDelegate
+            public /* synthetic */ void onCameraOpened() {
+                ChatAttachAlert.ChatAttachViewDelegate.CC.$default$onCameraOpened(this);
+            }
+
+            @Override // org.telegram.ui.Components.ChatAttachAlert.ChatAttachViewDelegate
+            public /* synthetic */ void onWallpaperSelected(Object obj) {
+                ChatAttachAlert.ChatAttachViewDelegate.CC.$default$onWallpaperSelected(this, obj);
+            }
+
+            @Override // org.telegram.ui.Components.ChatAttachAlert.ChatAttachViewDelegate
+            public /* synthetic */ void openAvatarsSearch() {
+                ChatAttachAlert.ChatAttachViewDelegate.CC.$default$openAvatarsSearch(this);
+            }
+
+            @Override // org.telegram.ui.Components.ChatAttachAlert.ChatAttachViewDelegate
+            public /* synthetic */ boolean selectItemOnClicking() {
+                return ChatAttachAlert.ChatAttachViewDelegate.CC.$default$selectItemOnClicking(this);
+            }
+
+            @Override // org.telegram.ui.Components.ChatAttachAlert.ChatAttachViewDelegate
+            public /* synthetic */ void sendAudio(ArrayList arrayList, CharSequence charSequence, boolean z2, int i, long j, boolean z3, long j2) {
+                ChatAttachAlert.ChatAttachViewDelegate.CC.$default$sendAudio(this, arrayList, charSequence, z2, i, j, z3, j2);
+            }
+        });
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$createView$1(Integer num) {
+        boolean z = num.intValue() > AndroidUtilities.dp(20.0f);
+        if (this.keyboardVisible == z) {
+            return;
+        }
+        this.keyboardVisible = z;
+        if (z) {
+            return;
+        }
+        this.listView.smoothScrollToPosition(0);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$onBackPressed$5(AlertDialog alertDialog, int i) {
+        processDone();
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$onBackPressed$6(AlertDialog alertDialog, int i) {
+        lambda$onBackPressed$354();
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ Boolean lambda$onClick$2(View view, Object obj, TLRPC.Document document, Boolean bool) {
+        this.stickerRandom = false;
+        AndroidUtilities.cancelRunOnUIThread(this.updateRandomStickerRunnable);
+        ChatGreetingsView chatGreetingsView = this.greetingsView;
+        this.sticker = document;
+        chatGreetingsView.setSticker(document);
+        ((TextCell) view).setValueSticker(document);
+        checkDone(true, false);
+        return Boolean.TRUE;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$processDone$3(TLRPC.TL_error tL_error, TLObject tLObject) {
+        if (tL_error != null) {
+            this.doneButtonDrawable.animateToProgress(BitmapDescriptorFactory.HUE_RED);
+            BulletinFactory.showError(tL_error);
+        } else if (tLObject instanceof TLRPC.TL_boolFalse) {
+            this.doneButtonDrawable.animateToProgress(BitmapDescriptorFactory.HUE_RED);
+            BulletinFactory.of(this).createErrorBulletin(LocaleController.getString(R.string.UnknownError)).show();
+        } else {
+            if (this.inputSticker != null) {
+                getMessagesController().loadFullUser(getUserConfig().getCurrentUser(), 0, true);
+            }
+            lambda$onBackPressed$354();
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$processDone$4(final TLObject tLObject, final TLRPC.TL_error tL_error) {
+        AndroidUtilities.runOnUIThread(new Runnable() { // from class: org.telegram.ui.Business.BusinessIntroActivity$$ExternalSyntheticLambda9
+            @Override // java.lang.Runnable
+            public final void run() {
+                this.f$0.lambda$processDone$3(tL_error, tLObject);
+            }
+        });
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$updateRandomSticker$0() {
+        AndroidUtilities.cancelRunOnUIThread(this.updateRandomStickerRunnable);
+        AndroidUtilities.runOnUIThread(this.updateRandomStickerRunnable, 5000L);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void openCustomStickerEditor() {
+        ContentPreviewViewer.getInstance().setStickerSetForCustomSticker(null);
+        if (getParentActivity() == null) {
+            return;
+        }
+        createChatAttachView();
+        this.chatAttachAlert.getPhotoLayout().loadGalleryPhotos();
+        this.chatAttachAlert.setMaxSelectedPhotos(1, false);
+        this.chatAttachAlert.setOpenWithFrontFaceCamera(true);
+        this.chatAttachAlert.enableStickerMode(new Utilities.Callback2() { // from class: org.telegram.ui.Business.BusinessIntroActivity$$ExternalSyntheticLambda7
+            @Override // org.telegram.messenger.Utilities.Callback2
+            public final void run(Object obj, Object obj2) {
+                this.f$0.setCustomSticker((String) obj, (TLRPC.InputDocument) obj2);
+            }
+        });
+        this.chatAttachAlert.init();
+        ChatAttachAlert chatAttachAlert = this.chatAttachAlert;
+        chatAttachAlert.parentThemeDelegate = null;
+        if (this.visibleDialog != null) {
+            chatAttachAlert.show();
+        } else {
+            showDialog(chatAttachAlert);
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void processDone() {
+        TLRPC.Document document;
+        if (this.doneButtonDrawable.getProgress() > BitmapDescriptorFactory.HUE_RED) {
+            return;
+        }
+        this.doneButtonDrawable.animateToProgress(1.0f);
+        TLRPC.UserFull userFull = getMessagesController().getUserFull(getUserConfig().getClientUserId());
+        TL_account$updateBusinessIntro tL_account$updateBusinessIntro = new TL_account$updateBusinessIntro();
+        if (!isEmpty()) {
+            tL_account$updateBusinessIntro.flags |= 1;
+            TL_account$TL_inputBusinessIntro tL_account$TL_inputBusinessIntro = new TL_account$TL_inputBusinessIntro();
+            tL_account$updateBusinessIntro.intro = tL_account$TL_inputBusinessIntro;
+            tL_account$TL_inputBusinessIntro.title = this.titleEdit.getText().toString();
+            tL_account$updateBusinessIntro.intro.description = this.messageEdit.getText().toString();
+            if (!this.stickerRandom && (this.sticker != null || this.inputSticker != null)) {
+                TL_account$TL_inputBusinessIntro tL_account$TL_inputBusinessIntro2 = tL_account$updateBusinessIntro.intro;
+                tL_account$TL_inputBusinessIntro2.flags |= 1;
+                TLRPC.InputDocument inputDocument = this.inputSticker;
+                if (inputDocument == null) {
+                    inputDocument = getMessagesController().getInputDocument(this.sticker);
+                }
+                tL_account$TL_inputBusinessIntro2.sticker = inputDocument;
+            }
+            if (userFull != null) {
+                userFull.flags2 |= 16;
+                TL_account$TL_businessIntro tL_account$TL_businessIntro = new TL_account$TL_businessIntro();
+                userFull.business_intro = tL_account$TL_businessIntro;
+                TL_account$TL_inputBusinessIntro tL_account$TL_inputBusinessIntro3 = tL_account$updateBusinessIntro.intro;
+                tL_account$TL_businessIntro.title = tL_account$TL_inputBusinessIntro3.title;
+                tL_account$TL_businessIntro.description = tL_account$TL_inputBusinessIntro3.description;
+                if (!this.stickerRandom && (document = this.sticker) != null) {
+                    tL_account$TL_businessIntro.flags |= 1;
+                    tL_account$TL_businessIntro.sticker = document;
+                }
+            }
+        } else if (userFull != null) {
+            userFull.flags2 &= -17;
+            userFull.business_intro = null;
+        }
+        getConnectionsManager().sendRequest(tL_account$updateBusinessIntro, new RequestDelegate() { // from class: org.telegram.ui.Business.BusinessIntroActivity$$ExternalSyntheticLambda6
+            @Override // org.telegram.tgnet.RequestDelegate
+            public final void run(TLObject tLObject, TLRPC.TL_error tL_error) {
+                this.f$0.lambda$processDone$4(tLObject, tL_error);
+            }
+        });
+        getMessagesStorage().updateUserInfo(userFull, false);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void setCustomSticker(String str, TLRPC.InputDocument inputDocument) {
+        UniversalAdapter universalAdapter;
+        this.chatAttachAlert.lambda$new$0();
+        this.inputStickerPath = str;
+        this.inputSticker = inputDocument;
+        this.stickerRandom = false;
+        AndroidUtilities.cancelRunOnUIThread(this.updateRandomStickerRunnable);
+        this.greetingsView.setSticker(this.inputStickerPath);
+        checkDone(true, false);
+        UniversalRecyclerView universalRecyclerView = this.listView;
+        if (universalRecyclerView == null || (universalAdapter = universalRecyclerView.adapter) == null) {
+            return;
+        }
+        universalAdapter.update(true);
+    }
+
+    private void setValue() {
+        TLRPC.Document document;
+        UniversalAdapter universalAdapter;
+        if (this.valueSet) {
+            return;
+        }
+        TLRPC.UserFull userFull = getMessagesController().getUserFull(getUserConfig().getClientUserId());
+        if (userFull == null) {
+            getMessagesController().loadUserInfo(getUserConfig().getCurrentUser(), true, getClassGuid());
+            return;
+        }
+        TL_account$TL_businessIntro tL_account$TL_businessIntro = userFull.business_intro;
+        if (tL_account$TL_businessIntro != null) {
+            EditTextCell editTextCell = this.titleEdit;
+            String str = tL_account$TL_businessIntro.title;
+            this.currentTitle = str;
+            editTextCell.setText(str);
+            EditTextCell editTextCell2 = this.messageEdit;
+            String str2 = userFull.business_intro.description;
+            this.currentMessage = str2;
+            editTextCell2.setText(str2);
+            document = userFull.business_intro.sticker;
+        } else {
+            EditTextCell editTextCell3 = this.titleEdit;
+            this.currentTitle = "";
+            editTextCell3.setText("");
+            EditTextCell editTextCell4 = this.messageEdit;
+            this.currentMessage = "";
+            editTextCell4.setText("");
+            document = null;
+            this.inputSticker = null;
+        }
+        this.sticker = document;
+        TLRPC.Document document2 = this.sticker;
+        this.currentSticker = document2 == null ? 0L : document2.id;
+        this.stickerRandom = document2 == null;
+        ChatGreetingsView chatGreetingsView = this.greetingsView;
+        if (chatGreetingsView != null) {
+            chatGreetingsView.setPreview(this.titleEdit.getText().toString(), this.messageEdit.getText().toString());
+            ChatGreetingsView chatGreetingsView2 = this.greetingsView;
+            TLRPC.Document greetingsSticker = this.sticker;
+            if (greetingsSticker == null || this.stickerRandom) {
+                greetingsSticker = MediaDataController.getInstance(this.currentAccount).getGreetingsSticker();
+            }
+            chatGreetingsView2.setSticker(greetingsSticker);
+        }
+        if (this.stickerRandom) {
+            AndroidUtilities.cancelRunOnUIThread(this.updateRandomStickerRunnable);
+            AndroidUtilities.runOnUIThread(this.updateRandomStickerRunnable, 5000L);
+        }
+        UniversalRecyclerView universalRecyclerView = this.listView;
+        if (universalRecyclerView != null && (universalAdapter = universalRecyclerView.adapter) != null) {
+            universalAdapter.update(true);
+        }
+        this.valueSet = true;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void updateGreetingScale() {
+        if (this.previewContainer.getParent() instanceof View) {
+            int top = ((View) this.previewContainer.getParent()).getTop();
+            float fClamp = Utilities.clamp((top + r1) / (this.previewContainer.getMeasuredHeight() - AndroidUtilities.dp(36.0f)), 1.0f, 0.65f);
+            this.greetingsView.setScaleX(fClamp);
+            this.greetingsView.setScaleY(fClamp);
+            this.greetingsView.setAlpha(Utilities.clamp(fClamp * 2.0f, 1.0f, BitmapDescriptorFactory.HUE_RED));
+            this.previewContainer.invalidate();
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void updateRandomSticker() {
+        ChatGreetingsView chatGreetingsView = this.greetingsView;
+        if (chatGreetingsView != null && chatGreetingsView.isAttachedToWindow() && this.stickerRandom) {
+            this.greetingsView.setNextSticker(MediaDataController.getInstance(this.currentAccount).getGreetingsSticker(), new Runnable() { // from class: org.telegram.ui.Business.BusinessIntroActivity$$ExternalSyntheticLambda8
+                @Override // java.lang.Runnable
+                public final void run() {
+                    this.f$0.lambda$updateRandomSticker$0();
+                }
+            });
+        }
+    }
+
+    @Override // org.telegram.ui.Components.UniversalFragment, org.telegram.ui.ActionBar.BaseFragment
+    public View createView(Context context) {
+        AndroidUtilities.requestAdjustResize(getParentActivity(), this.classGuid);
+        this.greetingsView = new ChatGreetingsView(context, getUserConfig().getCurrentUser(), this.currentAccount, this.sticker, getResourceProvider()) { // from class: org.telegram.ui.Business.BusinessIntroActivity.1
+            @Override // org.telegram.ui.Components.ChatGreetingsView, android.widget.LinearLayout, android.view.View
+            protected void onMeasure(int i, int i2) {
+                super.onMeasure(i, i2);
+                setPivotX(getMeasuredWidth() / 2.0f);
+                setPivotY(getMeasuredHeight());
+            }
+        };
+        FrameLayout frameLayout = new FrameLayout(context) { // from class: org.telegram.ui.Business.BusinessIntroActivity.2
+            int minHeight = -1;
+            private final Rect bg = new Rect();
+            private final AnimatedFloat width = new AnimatedFloat(this, 220, CubicBezierInterpolator.EASE_OUT_QUINT);
+
+            @Override // android.view.ViewGroup
+            protected boolean drawChild(Canvas canvas, View view, long j) {
+                float width = getWidth() / 2.0f;
+                float f = this.width.set(BusinessIntroActivity.this.greetingsView.getWidth()) / 2.0f;
+                this.bg.set((int) (width - (BusinessIntroActivity.this.greetingsView.getScaleX() * f)), (int) (BusinessIntroActivity.this.greetingsView.getY() + (BusinessIntroActivity.this.greetingsView.getHeight() * (1.0f - BusinessIntroActivity.this.greetingsView.getScaleY()))), (int) (width + (f * BusinessIntroActivity.this.greetingsView.getScaleX())), (int) (BusinessIntroActivity.this.greetingsView.getY() + BusinessIntroActivity.this.greetingsView.getHeight()));
+                BusinessIntroActivity.this.greetingsViewBackground.setBounds(this.bg);
+                BusinessIntroActivity.this.greetingsViewBackground.draw(canvas);
+                return super.drawChild(canvas, view, j);
+            }
+
+            @Override // android.widget.FrameLayout, android.view.View
+            protected void onMeasure(int i, int i2) {
+                BusinessIntroActivity.this.greetingsView.measure(i, i2);
+                invalidate();
+                super.onMeasure(i, View.MeasureSpec.makeMeasureSpec(Math.max(this.minHeight, BusinessIntroActivity.this.greetingsView.getMeasuredHeight() + AndroidUtilities.dp(36.0f)), 1073741824));
+                if (this.minHeight < 0) {
+                    this.minHeight = getMeasuredHeight();
+                }
+            }
+        };
+        this.previewContainer = frameLayout;
+        frameLayout.setWillNotDraw(false);
+        this.greetingsViewBackground = Theme.createServiceDrawable(AndroidUtilities.dp(16.0f), this.greetingsView, this.previewContainer, getThemedPaint("paintChatActionBackground"));
+        this.greetingsView.setBackground(new ColorDrawable(0));
+        ImageView imageView = new ImageView(context) { // from class: org.telegram.ui.Business.BusinessIntroActivity.3
+            @Override // android.widget.ImageView, android.view.View
+            protected void onMeasure(int i, int i2) {
+                float f;
+                float f2;
+                super.onMeasure(i, i2);
+                Matrix imageMatrix = getImageMatrix();
+                int measuredWidth = (getMeasuredWidth() - getPaddingLeft()) - getPaddingRight();
+                int measuredHeight = (getMeasuredHeight() - getPaddingTop()) - getPaddingBottom();
+                int intrinsicWidth = getDrawable().getIntrinsicWidth();
+                int intrinsicHeight = getDrawable().getIntrinsicHeight();
+                if (intrinsicWidth * measuredHeight > intrinsicHeight * measuredWidth) {
+                    f = measuredHeight;
+                    f2 = intrinsicHeight;
+                } else {
+                    f = measuredWidth;
+                    f2 = intrinsicWidth;
+                }
+                float f3 = f / f2;
+                imageMatrix.setScale(f3, f3);
+                setImageMatrix(imageMatrix);
+            }
+        };
+        imageView.setScaleType(ImageView.ScaleType.MATRIX);
+        imageView.setImageDrawable(PreviewView.getBackgroundDrawable((Drawable) null, this.currentAccount, getUserConfig().getClientUserId(), Theme.isCurrentThemeDark()));
+        this.previewContainer.addView(imageView, LayoutHelper.createFrame(-1, -1, R.styleable.AppCompatTheme_windowActionModeOverlay));
+        this.previewContainer.addView(this.greetingsView, LayoutHelper.createFrame(-2, -2.0f, 17, 42.0f, 18.0f, 42.0f, 18.0f));
+        boolean z = false;
+        EditTextCell editTextCell = new EditTextCell(context, LocaleController.getString(R.string.BusinessIntroTitleHint), false, z, getMessagesController().introTitleLengthLimit, this.resourceProvider) { // from class: org.telegram.ui.Business.BusinessIntroActivity.4
+            @Override // org.telegram.ui.Cells.EditTextCell
+            protected void onFocusChanged(boolean z2) {
+                UniversalRecyclerView universalRecyclerView;
+                if (!z2 || (universalRecyclerView = BusinessIntroActivity.this.listView) == null) {
+                    return;
+                }
+                universalRecyclerView.smoothScrollToPosition(2);
+            }
+
+            @Override // org.telegram.ui.Cells.EditTextCell
+            protected void onTextChanged(CharSequence charSequence) {
+                BusinessIntroActivity.this.greetingsView.setPreview(BusinessIntroActivity.this.titleEdit.getText().toString(), BusinessIntroActivity.this.messageEdit.getText().toString());
+                BusinessIntroActivity.this.checkDone(true, true);
+            }
+        };
+        this.titleEdit = editTextCell;
+        editTextCell.autofocused = true;
+        editTextCell.setShowLimitOnFocus(true);
+        EditTextCell editTextCell2 = this.titleEdit;
+        int i = Theme.key_windowBackgroundWhite;
+        editTextCell2.setBackgroundColor(getThemedColor(i));
+        this.titleEdit.setDivider(true);
+        this.titleEdit.hideKeyboardOnEnter();
+        EditTextCell editTextCell3 = new EditTextCell(context, LocaleController.getString(R.string.BusinessIntroMessageHint), true, z, getMessagesController().introDescriptionLengthLimit, this.resourceProvider) { // from class: org.telegram.ui.Business.BusinessIntroActivity.5
+            @Override // org.telegram.ui.Cells.EditTextCell
+            protected void onFocusChanged(boolean z2) {
+                UniversalRecyclerView universalRecyclerView;
+                if (!z2 || (universalRecyclerView = BusinessIntroActivity.this.listView) == null) {
+                    return;
+                }
+                universalRecyclerView.smoothScrollToPosition(3);
+            }
+
+            @Override // org.telegram.ui.Cells.EditTextCell
+            protected void onTextChanged(CharSequence charSequence) {
+                BusinessIntroActivity.this.greetingsView.setPreview(BusinessIntroActivity.this.titleEdit.getText().toString(), BusinessIntroActivity.this.messageEdit.getText().toString());
+                BusinessIntroActivity.this.checkDone(true, true);
+            }
+        };
+        this.messageEdit = editTextCell3;
+        editTextCell3.setShowLimitOnFocus(true);
+        this.messageEdit.setBackgroundColor(getThemedColor(i));
+        this.messageEdit.setDivider(true);
+        this.messageEdit.hideKeyboardOnEnter();
+        this.greetingsView.setPreview("", "");
+        super.createView(context);
+        this.actionBar.setActionBarMenuOnItemClick(new ActionBar.ActionBarMenuOnItemClick() { // from class: org.telegram.ui.Business.BusinessIntroActivity.6
+            @Override // org.telegram.ui.ActionBar.ActionBar.ActionBarMenuOnItemClick
+            public void onItemClick(int i2) {
+                if (i2 == -1) {
+                    if (BusinessIntroActivity.this.onBackPressed()) {
+                        BusinessIntroActivity.this.lambda$onBackPressed$354();
+                    }
+                } else if (i2 == 1) {
+                    BusinessIntroActivity.this.processDone();
+                }
+            }
+        });
+        Drawable drawableMutate = context.getResources().getDrawable(R.drawable.ic_ab_done).mutate();
+        int i2 = Theme.key_actionBarDefaultIcon;
+        drawableMutate.setColorFilter(new PorterDuffColorFilter(Theme.getColor(i2), PorterDuff.Mode.MULTIPLY));
+        this.doneButtonDrawable = new CrossfadeDrawable(drawableMutate, new CircularProgressDrawable(Theme.getColor(i2)));
+        this.doneButton = this.actionBar.createMenu().addItemWithWidth(1, this.doneButtonDrawable, AndroidUtilities.dp(56.0f), LocaleController.getString(R.string.Done));
+        checkDone(false, true);
+        this.listView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() { // from class: org.telegram.ui.Business.BusinessIntroActivity.7
+            @Override // android.view.View.OnLayoutChangeListener
+            public void onLayoutChange(View view, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10) {
+                BusinessIntroActivity.this.updateGreetingScale();
+            }
+        });
+        this.listView.addOnScrollListener(new RecyclerView.OnScrollListener() { // from class: org.telegram.ui.Business.BusinessIntroActivity.8
+            @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
+            public void onScrolled(RecyclerView recyclerView, int i3, int i4) {
+                BusinessIntroActivity.this.updateGreetingScale();
+            }
+        });
+        this.listView.doNotDetachViews();
+        this.listView.setClipChildren(false);
+        View view = this.fragmentView;
+        if (view instanceof ViewGroup) {
+            ((ViewGroup) view).setClipChildren(false);
+        }
+        setValue();
+        new KeyboardNotifier(this.fragmentView, new Utilities.Callback() { // from class: org.telegram.ui.Business.BusinessIntroActivity$$ExternalSyntheticLambda0
+            @Override // org.telegram.messenger.Utilities.Callback
+            public final void run(Object obj) {
+                this.f$0.lambda$createView$1((Integer) obj);
+            }
+        });
+        return this.fragmentView;
+    }
+
+    @Override // org.telegram.messenger.NotificationCenter.NotificationCenterDelegate
+    public void didReceivedNotification(int i, int i2, Object... objArr) {
+        if (i == NotificationCenter.userInfoDidLoad) {
+            setValue();
+        }
+    }
+
+    @Override // org.telegram.ui.Components.UniversalFragment
+    protected void fillItems(ArrayList arrayList, UniversalAdapter universalAdapter) {
+        arrayList.add(UItem.asCustom(this.previewContainer));
+        arrayList.add(UItem.asHeader(LocaleController.getString(R.string.BusinessIntroHeader)));
+        arrayList.add(UItem.asCustom(this.titleEdit));
+        arrayList.add(UItem.asCustom(this.messageEdit));
+        arrayList.add(this.stickerRandom ? UItem.asButton(1, LocaleController.getString(R.string.BusinessIntroSticker), LocaleController.getString(R.string.BusinessIntroStickerRandom)) : this.inputStickerPath != null ? UItem.asStickerButton(1, LocaleController.getString(R.string.BusinessIntroSticker), this.inputStickerPath) : UItem.asStickerButton(1, LocaleController.getString(R.string.BusinessIntroSticker), this.sticker));
+        arrayList.add(UItem.asShadow(LocaleController.getString(R.string.BusinessIntroInfo)));
+        boolean z = !isEmpty();
+        this.clearVisible = z;
+        if (z) {
+            arrayList.add(UItem.asShadow(null));
+            arrayList.add(UItem.asButton(2, LocaleController.getString(R.string.BusinessIntroReset)).red());
+        }
+        arrayList.add(UItem.asLargeShadow(null));
+    }
+
+    @Override // org.telegram.ui.Components.UniversalFragment
+    protected CharSequence getTitle() {
+        return LocaleController.getString(R.string.BusinessIntro);
+    }
+
+    public boolean hasChanges() {
+        TLRPC.Document document;
+        String string = this.titleEdit.getText().toString();
+        String str = this.currentTitle;
+        if (str == null) {
+            str = "";
+        }
+        if (TextUtils.equals(string, str)) {
+            String string2 = this.messageEdit.getText().toString();
+            String str2 = this.currentMessage;
+            if (TextUtils.equals(string2, str2 != null ? str2 : "")) {
+                boolean z = this.stickerRandom;
+                if (((z || (document = this.sticker) == null) ? 0L : document.id) == this.currentSticker && (z || this.inputSticker == null)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public boolean isEmpty() {
+        EditTextCell editTextCell = this.titleEdit;
+        if (editTextCell == null || this.messageEdit == null) {
+            return true;
+        }
+        return TextUtils.isEmpty(editTextCell.getText()) && TextUtils.isEmpty(this.messageEdit.getText()) && this.stickerRandom;
+    }
+
+    @Override // org.telegram.ui.ActionBar.BaseFragment
+    public boolean onBackPressed() {
+        if (!hasChanges()) {
+            return super.onBackPressed();
+        }
+        AlertDialog.Builder builder = new AlertDialog.Builder(getParentActivity());
+        builder.setTitle(LocaleController.getString(R.string.UnsavedChanges));
+        builder.setMessage(LocaleController.getString(R.string.BusinessIntroUnsavedChanges));
+        builder.setPositiveButton(LocaleController.getString(R.string.ApplyTheme), new AlertDialog.OnButtonClickListener() { // from class: org.telegram.ui.Business.BusinessIntroActivity$$ExternalSyntheticLambda3
+            @Override // org.telegram.ui.ActionBar.AlertDialog.OnButtonClickListener
+            public final void onClick(AlertDialog alertDialog, int i) {
+                this.f$0.lambda$onBackPressed$5(alertDialog, i);
+            }
+        });
+        builder.setNegativeButton(LocaleController.getString(R.string.PassportDiscard), new AlertDialog.OnButtonClickListener() { // from class: org.telegram.ui.Business.BusinessIntroActivity$$ExternalSyntheticLambda4
+            @Override // org.telegram.ui.ActionBar.AlertDialog.OnButtonClickListener
+            public final void onClick(AlertDialog alertDialog, int i) {
+                this.f$0.lambda$onBackPressed$6(alertDialog, i);
+            }
+        });
+        showDialog(builder.create());
+        return false;
+    }
+
+    @Override // org.telegram.ui.Components.UniversalFragment
+    protected void onClick(UItem uItem, final View view, int i, float f, float f2) {
+        int i2 = uItem.id;
+        if (i2 == 1) {
+            EmojiBottomSheet emojiBottomSheet = new EmojiBottomSheet(getContext(), true, getResourceProvider(), true);
+            emojiBottomSheet.whenDocumentSelected(new Utilities.Callback3Return() { // from class: org.telegram.ui.Business.BusinessIntroActivity$$ExternalSyntheticLambda1
+                @Override // org.telegram.messenger.Utilities.Callback3Return
+                public final Object run(Object obj, Object obj2, Object obj3) {
+                    return this.f$0.lambda$onClick$2(view, obj, (TLRPC.Document) obj2, (Boolean) obj3);
+                }
+            });
+            emojiBottomSheet.whenPlusSelected(new Runnable() { // from class: org.telegram.ui.Business.BusinessIntroActivity$$ExternalSyntheticLambda2
+                @Override // java.lang.Runnable
+                public final void run() {
+                    this.f$0.openCustomStickerEditor();
+                }
+            });
+            showDialog(emojiBottomSheet);
+            return;
+        }
+        if (i2 == 2) {
+            this.titleEdit.setText("");
+            this.messageEdit.setText("");
+            AndroidUtilities.hideKeyboard(this.titleEdit.editText);
+            AndroidUtilities.hideKeyboard(this.messageEdit.editText);
+            this.stickerRandom = true;
+            this.greetingsView.setPreview("", "");
+            ChatGreetingsView chatGreetingsView = this.greetingsView;
+            TLRPC.Document greetingsSticker = MediaDataController.getInstance(this.currentAccount).getGreetingsSticker();
+            this.sticker = greetingsSticker;
+            chatGreetingsView.setSticker(greetingsSticker);
+            AndroidUtilities.cancelRunOnUIThread(this.updateRandomStickerRunnable);
+            AndroidUtilities.runOnUIThread(this.updateRandomStickerRunnable, 5000L);
+            checkDone(true, false);
+        }
+    }
+
+    @Override // org.telegram.ui.ActionBar.BaseFragment
+    public boolean onFragmentCreate() {
+        getNotificationCenter().addObserver(this, NotificationCenter.userInfoDidLoad);
+        MediaDataController.getInstance(this.currentAccount).checkStickers(0);
+        MediaDataController.getInstance(this.currentAccount).loadRecents(0, false, true, false);
+        MediaDataController.getInstance(this.currentAccount).loadRecents(2, false, true, false);
+        return super.onFragmentCreate();
+    }
+
+    @Override // org.telegram.ui.ActionBar.BaseFragment
+    public void onFragmentDestroy() {
+        getNotificationCenter().removeObserver(this, NotificationCenter.userInfoDidLoad);
+        super.onFragmentDestroy();
+    }
+
+    @Override // org.telegram.ui.Components.UniversalFragment
+    protected boolean onLongClick(UItem uItem, View view, int i, float f, float f2) {
+        return false;
+    }
+}

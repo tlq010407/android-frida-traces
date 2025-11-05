@@ -1,0 +1,47 @@
+package org.telegram.ui.Components.Premium.boosts.cells.selector;
+
+import android.content.Context;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.TextView;
+import com.huawei.hms.maps.model.BitmapDescriptorFactory;
+import org.telegram.messenger.AndroidUtilities;
+import org.telegram.messenger.LocaleController;
+import org.telegram.ui.ActionBar.Theme;
+import org.telegram.ui.Components.LayoutHelper;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes5.dex */
+public class SelectorLetterCell extends FrameLayout {
+    private final Theme.ResourcesProvider resourcesProvider;
+    private final TextView textView;
+
+    public SelectorLetterCell(Context context, Theme.ResourcesProvider resourcesProvider) {
+        super(context);
+        this.resourcesProvider = resourcesProvider;
+        setBackgroundColor(getThemedColor(Theme.key_graySection));
+        TextView textView = new TextView(getContext());
+        this.textView = textView;
+        textView.setTextSize(1, 14.0f);
+        textView.setTypeface(AndroidUtilities.bold());
+        textView.setTextColor(getThemedColor(Theme.key_graySectionText));
+        textView.setGravity((LocaleController.isRTL ? 5 : 3) | 16);
+        addView(textView, LayoutHelper.createFrame(-1, -1.0f, (LocaleController.isRTL ? 5 : 3) | 48, 16.0f, BitmapDescriptorFactory.HUE_RED, 16.0f, BitmapDescriptorFactory.HUE_RED));
+    }
+
+    private int getThemedColor(int i) {
+        return Theme.getColor(i, this.resourcesProvider);
+    }
+
+    @Override // android.widget.FrameLayout, android.view.View
+    protected void onMeasure(int i, int i2) {
+        super.onMeasure(View.MeasureSpec.makeMeasureSpec(View.MeasureSpec.getSize(i), 1073741824), View.MeasureSpec.makeMeasureSpec(AndroidUtilities.dp(32.0f), 1073741824));
+    }
+
+    public void setLetter(CharSequence charSequence) {
+        this.textView.setText(charSequence);
+    }
+
+    public void setTextColor(int i) {
+        this.textView.setTextColor(getThemedColor(i));
+    }
+}

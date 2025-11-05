@@ -1,0 +1,62 @@
+package org.telegram.ui.Components;
+
+import android.net.Uri;
+import android.text.TextPaint;
+import android.text.style.URLSpan;
+import android.view.View;
+import org.telegram.messenger.browser.Browser;
+import org.telegram.tgnet.TLObject;
+import org.telegram.ui.Components.TextStyleSpan;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes5.dex */
+public class URLSpanNoUnderline extends URLSpan {
+    private boolean forceNoUnderline;
+    public String label;
+    private TLObject object;
+    private TextStyleSpan.TextStyleRun style;
+
+    public URLSpanNoUnderline(String str) {
+        this(str, (TextStyleSpan.TextStyleRun) null);
+    }
+
+    public URLSpanNoUnderline(String str, TextStyleSpan.TextStyleRun textStyleRun) {
+        super(str != null ? str.replace((char) 8238, ' ') : str);
+        this.forceNoUnderline = false;
+        this.style = textStyleRun;
+    }
+
+    public URLSpanNoUnderline(String str, boolean z) {
+        this(str, (TextStyleSpan.TextStyleRun) null);
+        this.forceNoUnderline = z;
+    }
+
+    public TLObject getObject() {
+        return this.object;
+    }
+
+    @Override // android.text.style.URLSpan, android.text.style.ClickableSpan
+    public void onClick(View view) {
+        String url = getURL();
+        if (!url.startsWith("@")) {
+            Browser.openUrl(view.getContext(), url);
+            return;
+        }
+        Browser.openUrl(view.getContext(), Uri.parse("https://t.me/" + url.substring(1)));
+    }
+
+    public void setObject(TLObject tLObject) {
+        this.object = tLObject;
+    }
+
+    @Override // android.text.style.ClickableSpan, android.text.style.CharacterStyle
+    public void updateDrawState(TextPaint textPaint) {
+        int i = textPaint.linkColor;
+        int color = textPaint.getColor();
+        super.updateDrawState(textPaint);
+        TextStyleSpan.TextStyleRun textStyleRun = this.style;
+        if (textStyleRun != null) {
+            textStyleRun.applyStyle(textPaint);
+        }
+        textPaint.setUnderlineText(i == color && !this.forceNoUnderline);
+    }
+}

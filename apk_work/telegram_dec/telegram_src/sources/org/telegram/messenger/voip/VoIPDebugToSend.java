@@ -1,0 +1,126 @@
+package org.telegram.messenger.voip;
+
+import android.text.TextUtils;
+import java.io.File;
+import java.util.HashMap;
+import org.telegram.messenger.AndroidUtilities;
+import org.telegram.messenger.BuildVars;
+import org.telegram.messenger.FileLoader;
+import org.telegram.messenger.FileLog;
+import org.telegram.messenger.Utilities;
+import org.telegram.messenger.voip.Instance;
+import org.telegram.tgnet.ConnectionsManager;
+import org.telegram.tgnet.RequestDelegate;
+import org.telegram.tgnet.TLObject;
+import org.telegram.tgnet.TLRPC;
+import org.telegram.tgnet.tl.TL_phone$saveCallDebug;
+import org.telegram.tgnet.tl.TL_phone$saveCallLog;
+import org.telegram.ui.Components.voip.VoIPHelper;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes3.dex */
+public class VoIPDebugToSend {
+    private final int currentAccount;
+    private final HashMap<Long, Data> pending = new HashMap<>();
+
+    /* JADX INFO: Access modifiers changed from: private */
+    final class Data {
+        long access_hash;
+        long callId;
+        String logPath;
+        Instance.FinalState state;
+
+        private Data() {
+        }
+    }
+
+    public VoIPDebugToSend(int i) {
+        this.currentAccount = i;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$done$0(TL_phone$saveCallDebug tL_phone$saveCallDebug, TLRPC.InputFile inputFile) {
+        if (inputFile == null) {
+            return;
+        }
+        TL_phone$saveCallLog tL_phone$saveCallLog = new TL_phone$saveCallLog();
+        tL_phone$saveCallLog.peer = tL_phone$saveCallDebug.peer;
+        tL_phone$saveCallLog.file = inputFile;
+        ConnectionsManager.getInstance(this.currentAccount).sendRequest(tL_phone$saveCallLog, null);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$done$1(File file, final TL_phone$saveCallDebug tL_phone$saveCallDebug) {
+        FileLoader.getInstance(this.currentAccount).uploadFile(file.getAbsolutePath(), new Utilities.Callback() { // from class: org.telegram.messenger.voip.VoIPDebugToSend$$ExternalSyntheticLambda0
+            @Override // org.telegram.messenger.Utilities.Callback
+            public final void run(Object obj) {
+                this.f$0.lambda$done$0(tL_phone$saveCallDebug, (TLRPC.InputFile) obj);
+            }
+        });
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$done$2(Data data, final File file, final TL_phone$saveCallDebug tL_phone$saveCallDebug) {
+        if (AndroidUtilities.gzip(new File(data.logPath), file)) {
+            AndroidUtilities.runOnUIThread(new Runnable() { // from class: org.telegram.messenger.voip.VoIPDebugToSend$$ExternalSyntheticLambda2
+                @Override // java.lang.Runnable
+                public final void run() {
+                    this.f$0.lambda$done$1(file, tL_phone$saveCallDebug);
+                }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$done$3(final Data data, final TL_phone$saveCallDebug tL_phone$saveCallDebug, TLObject tLObject, TLRPC.TL_error tL_error) {
+        if (BuildVars.LOGS_ENABLED) {
+            FileLog.d("Sent debug logs, response = " + tLObject);
+        }
+        if (!(tLObject instanceof TLRPC.TL_boolFalse) || TextUtils.isEmpty(data.logPath)) {
+            return;
+        }
+        final File file = new File(data.logPath + ".gzip");
+        Utilities.searchQueue.postRunnable(new Runnable() { // from class: org.telegram.messenger.voip.VoIPDebugToSend$$ExternalSyntheticLambda1
+            @Override // java.lang.Runnable
+            public final void run() {
+                this.f$0.lambda$done$2(data, file, tL_phone$saveCallDebug);
+            }
+        });
+    }
+
+    public void done(long j, boolean z) {
+        final Data dataRemove = this.pending.remove(Long.valueOf(j));
+        if (dataRemove == null || !z) {
+            return;
+        }
+        final TL_phone$saveCallDebug tL_phone$saveCallDebug = new TL_phone$saveCallDebug();
+        TLRPC.TL_dataJSON tL_dataJSON = new TLRPC.TL_dataJSON();
+        tL_phone$saveCallDebug.debug = tL_dataJSON;
+        tL_dataJSON.data = dataRemove.state.debugLog;
+        TLRPC.TL_inputPhoneCall tL_inputPhoneCall = new TLRPC.TL_inputPhoneCall();
+        tL_phone$saveCallDebug.peer = tL_inputPhoneCall;
+        tL_inputPhoneCall.access_hash = dataRemove.access_hash;
+        tL_inputPhoneCall.id = dataRemove.callId;
+        ConnectionsManager.getInstance(this.currentAccount).sendRequest(tL_phone$saveCallDebug, new RequestDelegate() { // from class: org.telegram.messenger.voip.VoIPDebugToSend$$ExternalSyntheticLambda3
+            @Override // org.telegram.tgnet.RequestDelegate
+            public final void run(TLObject tLObject, TLRPC.TL_error tL_error) {
+                this.f$0.lambda$done$3(dataRemove, tL_phone$saveCallDebug, tLObject, tL_error);
+            }
+        });
+    }
+
+    public void push(long j, long j2, Instance.FinalState finalState, String str) {
+        if (TextUtils.isEmpty(finalState.debugLog)) {
+            try {
+                finalState.debugLog = VoIPService.getStringFromFile(VoIPHelper.getLogFilePath("" + j, true));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        Data data = new Data();
+        data.callId = j;
+        data.access_hash = j2;
+        data.state = finalState;
+        data.logPath = str;
+        this.pending.put(Long.valueOf(j), data);
+    }
+}

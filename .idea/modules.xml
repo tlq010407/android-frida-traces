@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/android-frida-traces.iml" filepath="$PROJECT_DIR$/android-frida-traces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apk_work/telegram_dec/telegram_dec.iml" filepath="$PROJECT_DIR$/apk_work/telegram_dec/telegram_dec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apk_work/telegram_dec/telegram_src/telegram_src.iml" filepath="$PROJECT_DIR$/apk_work/telegram_dec/telegram_src/telegram_src.iml" />
+    </modules>
+  </component>
+</project>

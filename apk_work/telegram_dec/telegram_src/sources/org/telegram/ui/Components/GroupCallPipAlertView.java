@@ -1,0 +1,543 @@
+package org.telegram.ui.Components;
+
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.LinearGradient;
+import android.graphics.Paint;
+import android.graphics.RectF;
+import android.graphics.Shader;
+import android.os.Build;
+import android.os.Vibrator;
+import android.provider.Settings;
+import android.text.TextUtils;
+import android.view.View;
+import android.view.accessibility.AccessibilityNodeInfo;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.core.graphics.ColorUtils;
+import com.huawei.hms.maps.model.BitmapDescriptorFactory;
+import org.telegram.messenger.AndroidUtilities;
+import org.telegram.messenger.ChatObject;
+import org.telegram.messenger.DialogObject;
+import org.telegram.messenger.FileLog;
+import org.telegram.messenger.ImageLocation;
+import org.telegram.messenger.LocaleController;
+import org.telegram.messenger.NotificationCenter;
+import org.telegram.messenger.R;
+import org.telegram.messenger.voip.VoIPService;
+import org.telegram.tgnet.TLRPC;
+import org.telegram.ui.ActionBar.Theme;
+import org.telegram.ui.Components.voip.VoIPButtonsLayout;
+import org.telegram.ui.Components.voip.VoIPToggleButton;
+import org.telegram.ui.GroupCallActivity;
+import org.telegram.ui.LaunchActivity;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes5.dex */
+public class GroupCallPipAlertView extends LinearLayout implements VoIPService.StateListener, NotificationCenter.NotificationCenterDelegate {
+    BackupImageView avatarImageView;
+    int currentAccount;
+    float cx;
+    float cy;
+    FrameLayout groupInfoContainer;
+    private boolean invalidateGradient;
+    VoIPToggleButton leaveButton;
+    LinearGradient linearGradient;
+    VoIPToggleButton muteButton;
+    float muteProgress;
+    private boolean mutedByAdmin;
+    float mutedByAdminProgress;
+    Paint paint;
+    private int position;
+    RectF rectF;
+    VoIPToggleButton soundButton;
+    TextView subtitleView;
+    TextView titleView;
+
+    public GroupCallPipAlertView(final Context context, int i) {
+        super(context);
+        this.rectF = new RectF();
+        this.paint = new Paint(1);
+        this.invalidateGradient = true;
+        setOrientation(1);
+        this.currentAccount = i;
+        this.paint.setAlpha(234);
+        FrameLayout frameLayout = new FrameLayout(context) { // from class: org.telegram.ui.Components.GroupCallPipAlertView.1
+            @Override // android.view.View
+            public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
+                super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
+                if (Build.VERSION.SDK_INT >= 21) {
+                    VoIPService sharedInstance = VoIPService.getSharedInstance();
+                    accessibilityNodeInfo.addAction((sharedInstance == null || !ChatObject.isChannelOrGiga(sharedInstance.getChat())) ? new AccessibilityNodeInfo.AccessibilityAction(16, LocaleController.getString(R.string.VoipGroupOpenVoiceChat)) : new AccessibilityNodeInfo.AccessibilityAction(16, LocaleController.getString(R.string.VoipChannelOpenVoiceChat)));
+                }
+            }
+        };
+        this.groupInfoContainer = frameLayout;
+        frameLayout.setPadding(AndroidUtilities.dp(8.0f), AndroidUtilities.dp(8.0f), AndroidUtilities.dp(8.0f), AndroidUtilities.dp(8.0f));
+        BackupImageView backupImageView = new BackupImageView(context);
+        this.avatarImageView = backupImageView;
+        backupImageView.setRoundRadius(AndroidUtilities.dp(22.0f));
+        this.groupInfoContainer.addView(this.avatarImageView, LayoutHelper.createFrame(44, 44.0f));
+        this.groupInfoContainer.setBackground(Theme.createSimpleSelectorRoundRectDrawable(AndroidUtilities.dp(6.0f), 0, ColorUtils.setAlphaComponent(-1, 76)));
+        this.groupInfoContainer.setOnClickListener(new View.OnClickListener() { // from class: org.telegram.ui.Components.GroupCallPipAlertView$$ExternalSyntheticLambda0
+            @Override // android.view.View.OnClickListener
+            public final void onClick(View view) {
+                this.f$0.lambda$new$0(view);
+            }
+        });
+        LinearLayout linearLayout = new LinearLayout(context);
+        linearLayout.setOrientation(1);
+        TextView textView = new TextView(context);
+        this.titleView = textView;
+        textView.setTextColor(-1);
+        this.titleView.setTextSize(15.0f);
+        this.titleView.setMaxLines(2);
+        this.titleView.setEllipsize(TextUtils.TruncateAt.END);
+        this.titleView.setTypeface(AndroidUtilities.bold());
+        linearLayout.addView(this.titleView, LayoutHelper.createLinear(-1, -2));
+        TextView textView2 = new TextView(context);
+        this.subtitleView = textView2;
+        textView2.setTextSize(12.0f);
+        this.subtitleView.setTextColor(ColorUtils.setAlphaComponent(-1, 153));
+        linearLayout.addView(this.subtitleView, LayoutHelper.createLinear(-1, -2));
+        this.groupInfoContainer.addView(linearLayout, LayoutHelper.createFrame(-1, -2.0f, 16, 55.0f, BitmapDescriptorFactory.HUE_RED, BitmapDescriptorFactory.HUE_RED, BitmapDescriptorFactory.HUE_RED));
+        addView(this.groupInfoContainer, LayoutHelper.createLinear(-1, -2, 0, 10, 10, 10, 10));
+        VoIPToggleButton voIPToggleButton = new VoIPToggleButton(context, 44.0f);
+        this.soundButton = voIPToggleButton;
+        voIPToggleButton.setTextSize(12);
+        this.soundButton.setOnClickListener(new View.OnClickListener() { // from class: org.telegram.ui.Components.GroupCallPipAlertView$$ExternalSyntheticLambda1
+            @Override // android.view.View.OnClickListener
+            public final void onClick(View view) {
+                this.f$0.lambda$new$1(context, view);
+            }
+        });
+        this.soundButton.setCheckable(true);
+        this.soundButton.setBackgroundColor(ColorUtils.setAlphaComponent(-1, 38), ColorUtils.setAlphaComponent(-1, 76));
+        VoIPToggleButton voIPToggleButton2 = new VoIPToggleButton(context, 44.0f);
+        this.muteButton = voIPToggleButton2;
+        voIPToggleButton2.setTextSize(12);
+        this.muteButton.setOnClickListener(new View.OnClickListener() { // from class: org.telegram.ui.Components.GroupCallPipAlertView$$ExternalSyntheticLambda2
+            @Override // android.view.View.OnClickListener
+            public final void onClick(View view) {
+                this.f$0.lambda$new$2(context, view);
+            }
+        });
+        VoIPToggleButton voIPToggleButton3 = new VoIPToggleButton(context, 44.0f);
+        this.leaveButton = voIPToggleButton3;
+        voIPToggleButton3.setTextSize(12);
+        this.leaveButton.setData(R.drawable.calls_decline, -1, -3257782, 0.3f, false, LocaleController.getString(R.string.VoipGroupLeave), false, false);
+        this.leaveButton.setOnClickListener(new View.OnClickListener() { // from class: org.telegram.ui.Components.GroupCallPipAlertView$$ExternalSyntheticLambda3
+            @Override // android.view.View.OnClickListener
+            public final void onClick(View view) {
+                this.f$0.lambda$new$4(context, view);
+            }
+        });
+        VoIPButtonsLayout voIPButtonsLayout = new VoIPButtonsLayout(context);
+        voIPButtonsLayout.setChildSize(68);
+        voIPButtonsLayout.setUseStartPadding(false);
+        voIPButtonsLayout.addView(this.soundButton, LayoutHelper.createFrame(68, 63.0f));
+        voIPButtonsLayout.addView(this.muteButton, LayoutHelper.createFrame(68, 63.0f));
+        voIPButtonsLayout.addView(this.leaveButton, LayoutHelper.createFrame(68, 63.0f));
+        setWillNotDraw(false);
+        addView(voIPButtonsLayout, LayoutHelper.createLinear(-1, -2, 0, 6, 0, 6, 0));
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$new$0(View view) {
+        if (VoIPService.getSharedInstance() != null) {
+            Intent action = new Intent(getContext(), (Class<?>) LaunchActivity.class).setAction("voip_chat");
+            action.putExtra("currentAccount", VoIPService.getSharedInstance().getAccount());
+            getContext().startActivity(action);
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$new$1(Context context, View view) {
+        if (VoIPService.getSharedInstance() == null) {
+            return;
+        }
+        VoIPService.getSharedInstance().toggleSpeakerphoneOrShowRouteSheet(getContext(), Build.VERSION.SDK_INT < 23 || Settings.canDrawOverlays(context));
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$new$2(Context context, View view) {
+        if (VoIPService.getSharedInstance() != null) {
+            if (!VoIPService.getSharedInstance().mutedByAdmin()) {
+                VoIPService.getSharedInstance().setMicMute(!VoIPService.getSharedInstance().isMicMute(), false, true);
+                return;
+            }
+            this.muteButton.shakeView();
+            try {
+                Vibrator vibrator = (Vibrator) context.getSystemService("vibrator");
+                if (vibrator != null) {
+                    vibrator.vibrate(200L);
+                }
+            } catch (Exception e) {
+                FileLog.e(e);
+            }
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$new$4(final Context context, View view) {
+        GroupCallActivity.onLeaveClick(getContext(), new Runnable() { // from class: org.telegram.ui.Components.GroupCallPipAlertView$$ExternalSyntheticLambda4
+            @Override // java.lang.Runnable
+            public final void run() {
+                GroupCallPip.updateVisibility(context);
+            }
+        }, Build.VERSION.SDK_INT < 23 || Settings.canDrawOverlays(context));
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:29:0x0072  */
+    /* JADX WARN: Removed duplicated region for block: B:31:0x008a  */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    private void updateButtons(boolean z) {
+        VoIPService sharedInstance;
+        VoIPToggleButton voIPToggleButton;
+        int i;
+        int i2;
+        String string;
+        boolean z2;
+        boolean z3;
+        int i3;
+        int i4;
+        float f;
+        boolean zMutedByAdmin;
+        int alphaComponent;
+        String string2;
+        boolean zIsMicMute;
+        int i5;
+        float f2;
+        boolean z4;
+        if (this.soundButton == null || this.muteButton == null || (sharedInstance = VoIPService.getSharedInstance()) == null) {
+            return;
+        }
+        boolean zIsBluetoothOn = sharedInstance.isBluetoothOn();
+        boolean z5 = !zIsBluetoothOn && sharedInstance.isSpeakerphoneOn();
+        this.soundButton.setChecked(z5, z);
+        if (zIsBluetoothOn) {
+            voIPToggleButton = this.soundButton;
+            i = R.drawable.calls_bluetooth;
+            i2 = R.string.VoipAudioRoutingBluetooth;
+        } else {
+            if (z5) {
+                voIPToggleButton = this.soundButton;
+                i = R.drawable.calls_speaker;
+                string = LocaleController.getString(R.string.VoipSpeaker);
+                z2 = true;
+                z3 = false;
+                i3 = -1;
+                i4 = 0;
+                f = 0.3f;
+                voIPToggleButton.setData(i, i3, i4, f, z2, string, z3, z);
+                zMutedByAdmin = sharedInstance.mutedByAdmin();
+                VoIPToggleButton voIPToggleButton2 = this.muteButton;
+                int i6 = R.drawable.calls_unmute;
+                if (zMutedByAdmin) {
+                    alphaComponent = ColorUtils.setAlphaComponent(-1, (int) ((sharedInstance.isMicMute() ? 0.3f : 0.15f) * 255.0f));
+                    string2 = LocaleController.getString(sharedInstance.isMicMute() ? R.string.VoipUnmute : R.string.VoipMute);
+                    zIsMicMute = sharedInstance.isMicMute();
+                    i5 = -1;
+                    f2 = 0.1f;
+                    z4 = true;
+                } else {
+                    alphaComponent = ColorUtils.setAlphaComponent(-1, 76);
+                    string2 = LocaleController.getString(R.string.VoipMutedByAdminShort);
+                    z4 = true;
+                    zIsMicMute = true;
+                    i5 = -1;
+                    f2 = 0.1f;
+                }
+                voIPToggleButton2.setData(i6, i5, alphaComponent, f2, z4, string2, zIsMicMute, z);
+                invalidate();
+            }
+            boolean zIsHeadsetPlugged = sharedInstance.isHeadsetPlugged();
+            voIPToggleButton = this.soundButton;
+            if (zIsHeadsetPlugged) {
+                i = R.drawable.calls_headphones;
+                i2 = R.string.VoipAudioRoutingHeadset;
+            } else {
+                i = R.drawable.calls_speaker;
+                i2 = R.string.VoipSpeaker;
+            }
+        }
+        string = LocaleController.getString(i2);
+        z2 = true;
+        z3 = false;
+        i3 = -1;
+        i4 = 0;
+        f = 0.1f;
+        voIPToggleButton.setData(i, i3, i4, f, z2, string, z3, z);
+        zMutedByAdmin = sharedInstance.mutedByAdmin();
+        VoIPToggleButton voIPToggleButton22 = this.muteButton;
+        int i62 = R.drawable.calls_unmute;
+        if (zMutedByAdmin) {
+        }
+        voIPToggleButton22.setData(i62, i5, alphaComponent, f2, z4, string2, zIsMicMute, z);
+        invalidate();
+    }
+
+    private void updateMembersCount() {
+        VoIPService sharedInstance = VoIPService.getSharedInstance();
+        if (sharedInstance == null || sharedInstance.groupCall == null) {
+            return;
+        }
+        int callState = sharedInstance.getCallState();
+        if (!sharedInstance.isSwitchingStream() && (callState == 1 || callState == 2 || callState == 6 || callState == 5)) {
+            this.subtitleView.setText(LocaleController.getString("VoipGroupConnecting", R.string.VoipGroupConnecting));
+            return;
+        }
+        TextView textView = this.subtitleView;
+        TLRPC.GroupCall groupCall = sharedInstance.groupCall.call;
+        textView.setText(LocaleController.formatPluralString(groupCall.rtmp_stream ? "ViewersWatching" : "Participants", groupCall.participants_count, new Object[0]));
+    }
+
+    @Override // org.telegram.messenger.NotificationCenter.NotificationCenterDelegate
+    public void didReceivedNotification(int i, int i2, Object... objArr) {
+        boolean zMutedByAdmin;
+        if (i == NotificationCenter.groupCallUpdated) {
+            updateMembersCount();
+            if (VoIPService.getSharedInstance() == null || (zMutedByAdmin = VoIPService.getSharedInstance().mutedByAdmin()) == this.mutedByAdmin) {
+                return;
+            }
+            this.mutedByAdmin = zMutedByAdmin;
+            invalidate();
+        }
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    protected void onAttachedToWindow() {
+        String strTrim;
+        ChatObject.Call call;
+        super.onAttachedToWindow();
+        VoIPService sharedInstance = VoIPService.getSharedInstance();
+        if (sharedInstance != null && sharedInstance.groupCall != null) {
+            AvatarDrawable avatarDrawable = new AvatarDrawable();
+            TLRPC.Chat chat = sharedInstance.getChat();
+            avatarDrawable.setColor(Theme.getColor(Theme.keys_avatar_background[AvatarDrawable.getColorIndex(chat != null ? chat.id : 0L)]), Theme.getColor(Theme.keys_avatar_background2[AvatarDrawable.getColorIndex(chat != null ? chat.id : 0L)]));
+            avatarDrawable.setInfo(this.currentAccount, chat);
+            if (chat != null) {
+                this.avatarImageView.setImage(ImageLocation.getForLocal(chat.photo.photo_small), "50_50", avatarDrawable, (Object) null);
+            }
+            if (!sharedInstance.isConference() || (call = sharedInstance.groupCall) == null) {
+                strTrim = !TextUtils.isEmpty(sharedInstance.groupCall.call.title) ? sharedInstance.groupCall.call.title : chat != null ? chat.title : "";
+            } else if (call.sortedParticipants.size() == 1) {
+                strTrim = LocaleController.getString(R.string.ConferenceChat);
+            } else {
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < Math.min(3, sharedInstance.groupCall.sortedParticipants.size()); i++) {
+                    if (i > 0) {
+                        sb.append(", ");
+                    }
+                    sb.append(DialogObject.getShortName(DialogObject.getPeerDialogId(sharedInstance.groupCall.sortedParticipants.get(i).peer)));
+                }
+                if (sharedInstance.groupCall.sortedParticipants.size() > 3) {
+                    sb.append(" ");
+                    sb.append(LocaleController.formatPluralString("AndOther", sharedInstance.groupCall.sortedParticipants.size() - 3, new Object[0]));
+                }
+                strTrim = sb.toString();
+            }
+            if (strTrim != null) {
+                strTrim = strTrim.replace("\n", " ").replaceAll(" +", " ").trim();
+            }
+            this.titleView.setText(strTrim);
+            updateMembersCount();
+            sharedInstance.registerStateListener(this);
+            if (VoIPService.getSharedInstance() != null) {
+                this.mutedByAdmin = VoIPService.getSharedInstance().mutedByAdmin();
+            }
+            boolean z = this.mutedByAdmin;
+            float f = BitmapDescriptorFactory.HUE_RED;
+            this.mutedByAdminProgress = z ? 1.0f : BitmapDescriptorFactory.HUE_RED;
+            if (VoIPService.getSharedInstance() == null || VoIPService.getSharedInstance().isMicMute() || this.mutedByAdmin) {
+                f = 1.0f;
+            }
+            this.muteProgress = f;
+        }
+        NotificationCenter.getInstance(this.currentAccount).addObserver(this, NotificationCenter.groupCallUpdated);
+        updateButtons(false);
+    }
+
+    @Override // org.telegram.messenger.voip.VoIPService.StateListener
+    public void onAudioSettingsChanged() {
+        updateButtons(true);
+    }
+
+    @Override // org.telegram.messenger.voip.VoIPService.StateListener
+    public /* synthetic */ void onCameraFirstFrameAvailable() {
+        VoIPService.StateListener.CC.$default$onCameraFirstFrameAvailable(this);
+    }
+
+    @Override // org.telegram.messenger.voip.VoIPService.StateListener
+    public /* synthetic */ void onCameraSwitch(boolean z) {
+        VoIPService.StateListener.CC.$default$onCameraSwitch(this, z);
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        VoIPService sharedInstance = VoIPService.getSharedInstance();
+        if (sharedInstance != null) {
+            sharedInstance.unregisterStateListener(this);
+        }
+        NotificationCenter.getInstance(this.currentAccount).removeObserver(this, NotificationCenter.groupCallUpdated);
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:18:0x0036  */
+    /* JADX WARN: Removed duplicated region for block: B:32:0x0060  */
+    @Override // android.widget.LinearLayout, android.view.View
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    protected void onDraw(Canvas canvas) {
+        float translationX;
+        float measuredHeight;
+        int iDp;
+        int iDp2;
+        boolean z = VoIPService.getSharedInstance() == null || VoIPService.getSharedInstance().isMicMute() || this.mutedByAdmin;
+        if (z) {
+            float f = this.muteProgress;
+            if (f != 1.0f) {
+                float f2 = f + 0.10666667f;
+                this.muteProgress = f2;
+                if (f2 >= 1.0f) {
+                    this.muteProgress = 1.0f;
+                }
+            } else if (!z) {
+                float f3 = this.muteProgress;
+                if (f3 != BitmapDescriptorFactory.HUE_RED) {
+                    float f4 = f3 - 0.10666667f;
+                    this.muteProgress = f4;
+                    if (f4 < BitmapDescriptorFactory.HUE_RED) {
+                        this.muteProgress = BitmapDescriptorFactory.HUE_RED;
+                    }
+                }
+            }
+            this.invalidateGradient = true;
+            invalidate();
+        }
+        boolean z2 = this.mutedByAdmin;
+        if (z2) {
+            float f5 = this.mutedByAdminProgress;
+            if (f5 != 1.0f) {
+                float f6 = f5 + 0.10666667f;
+                this.mutedByAdminProgress = f6;
+                if (f6 >= 1.0f) {
+                    this.mutedByAdminProgress = 1.0f;
+                }
+            } else if (!z2) {
+                float f7 = this.mutedByAdminProgress;
+                if (f7 != BitmapDescriptorFactory.HUE_RED) {
+                    float f8 = f7 - 0.10666667f;
+                    this.mutedByAdminProgress = f8;
+                    if (f8 < BitmapDescriptorFactory.HUE_RED) {
+                        this.mutedByAdminProgress = BitmapDescriptorFactory.HUE_RED;
+                    }
+                }
+            }
+            this.invalidateGradient = true;
+            invalidate();
+        }
+        if (this.invalidateGradient) {
+            int iBlendARGB = ColorUtils.blendARGB(Theme.getColor(Theme.key_voipgroup_overlayAlertGradientMuted), Theme.getColor(Theme.key_voipgroup_overlayAlertGradientUnmuted), 1.0f - this.muteProgress);
+            int iBlendARGB2 = ColorUtils.blendARGB(Theme.getColor(Theme.key_voipgroup_overlayAlertGradientMuted2), Theme.getColor(Theme.key_voipgroup_overlayAlertGradientUnmuted2), 1.0f - this.muteProgress);
+            int iBlendARGB3 = ColorUtils.blendARGB(iBlendARGB, Theme.getColor(Theme.key_voipgroup_overlayAlertMutedByAdmin), this.mutedByAdminProgress);
+            int iBlendARGB4 = ColorUtils.blendARGB(iBlendARGB2, Theme.getColor(Theme.key_voipgroup_overlayAlertMutedByAdmin2), this.mutedByAdminProgress);
+            this.invalidateGradient = false;
+            int i = this.position;
+            this.linearGradient = i == 0 ? new LinearGradient(-AndroidUtilities.dp(60.0f), this.cy - getTranslationY(), getMeasuredWidth(), getMeasuredHeight() / 2.0f, new int[]{iBlendARGB3, iBlendARGB4}, (float[]) null, Shader.TileMode.CLAMP) : i == 1 ? new LinearGradient(BitmapDescriptorFactory.HUE_RED, getMeasuredHeight() / 2.0f, getMeasuredWidth() + AndroidUtilities.dp(60.0f), this.cy - getTranslationY(), new int[]{iBlendARGB4, iBlendARGB3}, (float[]) null, Shader.TileMode.CLAMP) : i == 2 ? new LinearGradient(this.cx - getTranslationX(), -AndroidUtilities.dp(60.0f), getMeasuredWidth() / 2.0f, getMeasuredHeight(), new int[]{iBlendARGB3, iBlendARGB4}, (float[]) null, Shader.TileMode.CLAMP) : new LinearGradient(getMeasuredWidth() / 2.0f, BitmapDescriptorFactory.HUE_RED, this.cx - getTranslationX(), getMeasuredHeight() + AndroidUtilities.dp(60.0f), new int[]{iBlendARGB4, iBlendARGB3}, (float[]) null, Shader.TileMode.CLAMP);
+        }
+        this.rectF.set(BitmapDescriptorFactory.HUE_RED, BitmapDescriptorFactory.HUE_RED, getMeasuredWidth(), getMeasuredHeight());
+        this.paint.setShader(this.linearGradient);
+        canvas.drawRoundRect(this.rectF, AndroidUtilities.dp(10.0f), AndroidUtilities.dp(10.0f), this.paint);
+        int i2 = this.position;
+        if (i2 == 0) {
+            measuredHeight = this.cy - getTranslationY();
+            translationX = BitmapDescriptorFactory.HUE_RED;
+        } else if (i2 == 1) {
+            measuredHeight = this.cy - getTranslationY();
+            translationX = getMeasuredWidth();
+        } else if (i2 == 2) {
+            translationX = this.cx - getTranslationX();
+            measuredHeight = BitmapDescriptorFactory.HUE_RED;
+        } else {
+            translationX = this.cx - getTranslationX();
+            measuredHeight = getMeasuredHeight();
+        }
+        setPivotX(translationX);
+        setPivotY(measuredHeight);
+        canvas.save();
+        int i3 = this.position;
+        if (i3 == 0) {
+            canvas.clipRect(translationX - AndroidUtilities.dp(15.0f), measuredHeight - AndroidUtilities.dp(15.0f), translationX, AndroidUtilities.dp(15.0f) + measuredHeight);
+            iDp2 = AndroidUtilities.dp(3.0f);
+        } else {
+            if (i3 != 1) {
+                float fDp = translationX - AndroidUtilities.dp(15.0f);
+                if (i3 == 2) {
+                    canvas.clipRect(fDp, measuredHeight - AndroidUtilities.dp(15.0f), AndroidUtilities.dp(15.0f) + translationX, measuredHeight);
+                    canvas.rotate(45.0f, translationX, measuredHeight);
+                    iDp = AndroidUtilities.dp(3.0f);
+                } else {
+                    canvas.clipRect(fDp, measuredHeight, AndroidUtilities.dp(15.0f) + translationX, AndroidUtilities.dp(15.0f) + measuredHeight);
+                    canvas.rotate(45.0f, translationX, measuredHeight);
+                    iDp = -AndroidUtilities.dp(3.0f);
+                }
+                canvas.translate(BitmapDescriptorFactory.HUE_RED, iDp);
+                this.rectF.set(translationX - AndroidUtilities.dp(10.0f), measuredHeight - AndroidUtilities.dp(10.0f), translationX + AndroidUtilities.dp(10.0f), measuredHeight + AndroidUtilities.dp(10.0f));
+                canvas.drawRoundRect(this.rectF, AndroidUtilities.dp(4.0f), AndroidUtilities.dp(4.0f), this.paint);
+                canvas.restore();
+                super.onDraw(canvas);
+            }
+            canvas.clipRect(translationX, measuredHeight - AndroidUtilities.dp(15.0f), AndroidUtilities.dp(15.0f) + translationX, AndroidUtilities.dp(15.0f) + measuredHeight);
+            iDp2 = -AndroidUtilities.dp(3.0f);
+        }
+        canvas.translate(iDp2, BitmapDescriptorFactory.HUE_RED);
+        canvas.rotate(45.0f, translationX, measuredHeight);
+        this.rectF.set(translationX - AndroidUtilities.dp(10.0f), measuredHeight - AndroidUtilities.dp(10.0f), translationX + AndroidUtilities.dp(10.0f), measuredHeight + AndroidUtilities.dp(10.0f));
+        canvas.drawRoundRect(this.rectF, AndroidUtilities.dp(4.0f), AndroidUtilities.dp(4.0f), this.paint);
+        canvas.restore();
+        super.onDraw(canvas);
+    }
+
+    @Override // android.widget.LinearLayout, android.view.View
+    protected void onMeasure(int i, int i2) {
+        super.onMeasure(View.MeasureSpec.makeMeasureSpec(AndroidUtilities.dp(230.0f), 1073741824), i2);
+    }
+
+    @Override // org.telegram.messenger.voip.VoIPService.StateListener
+    public /* synthetic */ void onMediaStateUpdated(int i, int i2) {
+        VoIPService.StateListener.CC.$default$onMediaStateUpdated(this, i, i2);
+    }
+
+    @Override // org.telegram.messenger.voip.VoIPService.StateListener
+    public /* synthetic */ void onScreenOnChange(boolean z) {
+        VoIPService.StateListener.CC.$default$onScreenOnChange(this, z);
+    }
+
+    @Override // org.telegram.messenger.voip.VoIPService.StateListener
+    public /* synthetic */ void onSignalBarsCountChanged(int i) {
+        VoIPService.StateListener.CC.$default$onSignalBarsCountChanged(this, i);
+    }
+
+    @Override // org.telegram.messenger.voip.VoIPService.StateListener
+    public void onStateChanged(int i) {
+        updateMembersCount();
+    }
+
+    @Override // org.telegram.messenger.voip.VoIPService.StateListener
+    public /* synthetic */ void onVideoAvailableChange(boolean z) {
+        VoIPService.StateListener.CC.$default$onVideoAvailableChange(this, z);
+    }
+
+    public void setPosition(int i, float f, float f2) {
+        this.position = i;
+        this.cx = f;
+        this.cy = f2;
+        invalidate();
+        this.invalidateGradient = true;
+    }
+}

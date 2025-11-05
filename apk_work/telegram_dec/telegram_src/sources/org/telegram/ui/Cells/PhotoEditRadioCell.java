@@ -1,0 +1,96 @@
+package org.telegram.ui.Cells;
+
+import android.content.Context;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import com.huawei.hms.maps.model.BitmapDescriptorFactory;
+import org.telegram.messenger.AndroidUtilities;
+import org.telegram.ui.Components.LayoutHelper;
+import org.telegram.ui.Components.RadioButton;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes4.dex */
+public class PhotoEditRadioCell extends FrameLayout {
+    private int currentColor;
+    private int currentType;
+    private TextView nameTextView;
+    private View.OnClickListener onClickListener;
+    private LinearLayout tintButtonsContainer;
+    private final int[] tintHighlighsColors;
+    private final int[] tintShadowColors;
+
+    public PhotoEditRadioCell(Context context) {
+        super(context);
+        this.tintShadowColors = new int[]{0, -45747, -753630, -13056, -8269183, -9321002, -16747844, -10080879};
+        this.tintHighlighsColors = new int[]{0, -1076602, -1388894, -859780, -5968466, -7742235, -13726776, -3303195};
+        TextView textView = new TextView(context);
+        this.nameTextView = textView;
+        textView.setGravity(5);
+        this.nameTextView.setTextColor(-1);
+        this.nameTextView.setTextSize(1, 12.0f);
+        this.nameTextView.setMaxLines(1);
+        this.nameTextView.setSingleLine(true);
+        this.nameTextView.setEllipsize(TextUtils.TruncateAt.END);
+        addView(this.nameTextView, LayoutHelper.createFrame(80, -2.0f, 19, BitmapDescriptorFactory.HUE_RED, BitmapDescriptorFactory.HUE_RED, BitmapDescriptorFactory.HUE_RED, BitmapDescriptorFactory.HUE_RED));
+        LinearLayout linearLayout = new LinearLayout(context);
+        this.tintButtonsContainer = linearLayout;
+        linearLayout.setOrientation(0);
+        for (int i = 0; i < this.tintShadowColors.length; i++) {
+            RadioButton radioButton = new RadioButton(context);
+            radioButton.setSize(AndroidUtilities.dp(20.0f));
+            radioButton.setTag(Integer.valueOf(i));
+            this.tintButtonsContainer.addView(radioButton, LayoutHelper.createLinear(0, -1, 1.0f / this.tintShadowColors.length));
+            radioButton.setOnClickListener(new View.OnClickListener() { // from class: org.telegram.ui.Cells.PhotoEditRadioCell$$ExternalSyntheticLambda0
+                @Override // android.view.View.OnClickListener
+                public final void onClick(View view) {
+                    this.f$0.lambda$new$0(view);
+                }
+            });
+        }
+        addView(this.tintButtonsContainer, LayoutHelper.createFrame(-1, 40.0f, 51, 96.0f, BitmapDescriptorFactory.HUE_RED, 24.0f, BitmapDescriptorFactory.HUE_RED));
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void lambda$new$0(View view) {
+        RadioButton radioButton = (RadioButton) view;
+        this.currentColor = this.currentType == 0 ? this.tintShadowColors[((Integer) radioButton.getTag()).intValue()] : this.tintHighlighsColors[((Integer) radioButton.getTag()).intValue()];
+        updateSelectedTintButton(true);
+        this.onClickListener.onClick(this);
+    }
+
+    private void updateSelectedTintButton(boolean z) {
+        int childCount = this.tintButtonsContainer.getChildCount();
+        for (int i = 0; i < childCount; i++) {
+            View childAt = this.tintButtonsContainer.getChildAt(i);
+            if (childAt instanceof RadioButton) {
+                RadioButton radioButton = (RadioButton) childAt;
+                int iIntValue = ((Integer) radioButton.getTag()).intValue();
+                radioButton.setChecked(this.currentColor == (this.currentType == 0 ? this.tintShadowColors[iIntValue] : this.tintHighlighsColors[iIntValue]), z);
+                radioButton.setColor(iIntValue == 0 ? -1 : this.currentType == 0 ? this.tintShadowColors[iIntValue] : this.tintHighlighsColors[iIntValue], iIntValue != 0 ? this.currentType == 0 ? this.tintShadowColors[iIntValue] : this.tintHighlighsColors[iIntValue] : -1);
+            }
+        }
+    }
+
+    public int getCurrentColor() {
+        return this.currentColor;
+    }
+
+    @Override // android.widget.FrameLayout, android.view.View
+    protected void onMeasure(int i, int i2) {
+        super.onMeasure(View.MeasureSpec.makeMeasureSpec(View.MeasureSpec.getSize(i), 1073741824), View.MeasureSpec.makeMeasureSpec(AndroidUtilities.dp(40.0f), 1073741824));
+    }
+
+    public void setIconAndTextAndValue(String str, int i, int i2) {
+        this.currentType = i;
+        this.currentColor = i2;
+        this.nameTextView.setText(str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase());
+        updateSelectedTintButton(false);
+    }
+
+    @Override // android.view.View
+    public void setOnClickListener(View.OnClickListener onClickListener) {
+        this.onClickListener = onClickListener;
+    }
+}

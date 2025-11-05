@@ -1,0 +1,246 @@
+package org.telegram.ui.Cells;
+
+import android.animation.ObjectAnimator;
+import android.content.Context;
+import android.os.Build;
+import android.text.TextUtils;
+import android.util.Property;
+import android.view.View;
+import android.view.accessibility.AccessibilityNodeInfo;
+import android.widget.FrameLayout;
+import android.widget.TextView;
+import androidx.core.view.ViewCompat;
+import com.huawei.hms.maps.model.BitmapDescriptorFactory;
+import java.util.ArrayList;
+import org.telegram.messenger.AndroidUtilities;
+import org.telegram.messenger.LocaleController;
+import org.telegram.ui.ActionBar.SimpleTextView;
+import org.telegram.ui.ActionBar.Theme;
+import org.telegram.ui.Components.AnimatedTextView;
+import org.telegram.ui.Components.LayoutHelper;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes4.dex */
+public class HeaderCell extends FrameLayout {
+    private boolean animated;
+    private AnimatedTextView animatedTextView;
+    protected int bottomMargin;
+    private int height;
+    public int id;
+    protected int padding;
+    private final Theme.ResourcesProvider resourcesProvider;
+    private TextView textView;
+    private SimpleTextView textView2;
+
+    public HeaderCell(Context context) {
+        this(context, Theme.key_windowBackgroundWhiteBlueHeader, 21, 15, false, null);
+    }
+
+    public HeaderCell(Context context, int i) {
+        this(context, Theme.key_windowBackgroundWhiteBlueHeader, i, 15, false, null);
+    }
+
+    public HeaderCell(Context context, int i, int i2, int i3, int i4, boolean z, Theme.ResourcesProvider resourcesProvider) {
+        this(context, i, i2, i3, i4, z, false, resourcesProvider);
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:25:0x00da A[PHI: r1 r3 r5 r6 r10
+      0x00da: PHI (r1v3 android.view.View) = (r1v2 android.view.View), (r1v12 android.view.View) binds: [B:24:0x00d8, B:13:0x007b] A[DONT_GENERATE, DONT_INLINE]
+      0x00da: PHI (r3v2 float) = (r3v1 float), (r3v14 float) binds: [B:24:0x00d8, B:13:0x007b] A[DONT_GENERATE, DONT_INLINE]
+      0x00da: PHI (r5v13 float) = (r5v11 float), (r5v24 float) binds: [B:24:0x00d8, B:13:0x007b] A[DONT_GENERATE, DONT_INLINE]
+      0x00da: PHI (r6v16 int) = (r6v14 int), (r6v30 int) binds: [B:24:0x00d8, B:13:0x007b] A[DONT_GENERATE, DONT_INLINE]
+      0x00da: PHI (r10v2 float) = (r10v1 float), (r10v6 float) binds: [B:24:0x00d8, B:13:0x007b] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX WARN: Removed duplicated region for block: B:26:0x00e2 A[PHI: r1 r3 r5 r6 r10
+      0x00e2: PHI (r1v8 android.view.View) = (r1v2 android.view.View), (r1v12 android.view.View) binds: [B:24:0x00d8, B:13:0x007b] A[DONT_GENERATE, DONT_INLINE]
+      0x00e2: PHI (r3v13 float) = (r3v1 float), (r3v14 float) binds: [B:24:0x00d8, B:13:0x007b] A[DONT_GENERATE, DONT_INLINE]
+      0x00e2: PHI (r5v15 float) = (r5v11 float), (r5v24 float) binds: [B:24:0x00d8, B:13:0x007b] A[DONT_GENERATE, DONT_INLINE]
+      0x00e2: PHI (r6v18 int) = (r6v14 int), (r6v30 int) binds: [B:24:0x00d8, B:13:0x007b] A[DONT_GENERATE, DONT_INLINE]
+      0x00e2: PHI (r10v4 float) = (r10v1 float), (r10v6 float) binds: [B:24:0x00d8, B:13:0x007b] A[DONT_GENERATE, DONT_INLINE]] */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public HeaderCell(Context context, int i, int i2, int i3, int i4, boolean z, boolean z2, Theme.ResourcesProvider resourcesProvider) {
+        View view;
+        int i5;
+        float f;
+        float f2;
+        float f3;
+        float f4;
+        float f5;
+        int i6;
+        float f6;
+        float f7;
+        super(context);
+        this.height = 40;
+        this.resourcesProvider = resourcesProvider;
+        this.padding = i2;
+        this.bottomMargin = i4;
+        this.animated = z2;
+        if (z2) {
+            AnimatedTextView animatedTextView = new AnimatedTextView(getContext());
+            this.animatedTextView = animatedTextView;
+            animatedTextView.setTextSize(AndroidUtilities.dp(15.0f));
+            this.animatedTextView.setTypeface(AndroidUtilities.bold());
+            this.animatedTextView.setGravity((LocaleController.isRTL ? 5 : 3) | 16);
+            this.animatedTextView.setTextColor(getThemedColor(i));
+            this.animatedTextView.setTag(Integer.valueOf(i));
+            this.animatedTextView.getDrawable().setHacks(true, true, false);
+            view = this.animatedTextView;
+            f3 = this.height - i3;
+            i5 = (LocaleController.isRTL ? 5 : 3) | 48;
+            f = i2;
+            f2 = i3;
+            if (z) {
+                f4 = f2;
+                f5 = f3;
+                i6 = i5;
+                f6 = f;
+                f7 = BitmapDescriptorFactory.HUE_RED;
+            } else {
+                f4 = f2;
+                i6 = i5;
+                f6 = f;
+                f7 = i4;
+                f5 = f3;
+            }
+        } else {
+            TextView textView = new TextView(getContext());
+            this.textView = textView;
+            textView.setTextSize(1, 15.0f);
+            this.textView.setTypeface(AndroidUtilities.bold());
+            this.textView.setEllipsize(TextUtils.TruncateAt.END);
+            this.textView.setGravity((LocaleController.isRTL ? 5 : 3) | 16);
+            this.textView.setMinHeight(AndroidUtilities.dp(this.height - i3));
+            this.textView.setTextColor(getThemedColor(i));
+            this.textView.setTag(Integer.valueOf(i));
+            view = this.textView;
+            i5 = (LocaleController.isRTL ? 5 : 3) | 48;
+            f = i2;
+            f2 = i3;
+            f3 = -1.0f;
+            if (z) {
+            }
+        }
+        addView(view, LayoutHelper.createFrame(-1, f5, i6, f6, f4, f6, f7));
+        if (z) {
+            SimpleTextView simpleTextView = new SimpleTextView(getContext());
+            this.textView2 = simpleTextView;
+            simpleTextView.setTextSize(13);
+            this.textView2.setGravity((LocaleController.isRTL ? 3 : 5) | 48);
+            float f8 = i2;
+            addView(this.textView2, LayoutHelper.createFrame(-1, -1.0f, (LocaleController.isRTL ? 3 : 5) | 48, f8, 21.0f, f8, i4));
+        }
+        ViewCompat.setAccessibilityHeading(this, true);
+    }
+
+    public HeaderCell(Context context, int i, int i2, int i3, boolean z) {
+        this(context, i, i2, i3, z, null);
+    }
+
+    public HeaderCell(Context context, int i, int i2, int i3, boolean z, Theme.ResourcesProvider resourcesProvider) {
+        this(context, i, i2, i3, 0, z, resourcesProvider);
+    }
+
+    public HeaderCell(Context context, int i, Theme.ResourcesProvider resourcesProvider) {
+        this(context, Theme.key_windowBackgroundWhiteBlueHeader, i, 15, false, resourcesProvider);
+    }
+
+    public HeaderCell(Context context, Theme.ResourcesProvider resourcesProvider) {
+        this(context, Theme.key_windowBackgroundWhiteBlueHeader, 21, 15, false, resourcesProvider);
+    }
+
+    private int getThemedColor(int i) {
+        return Theme.getColor(i, this.resourcesProvider);
+    }
+
+    public TextView getTextView() {
+        return this.textView;
+    }
+
+    public SimpleTextView getTextView2() {
+        return this.textView2;
+    }
+
+    @Override // android.view.View
+    public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
+        super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
+        if (Build.VERSION.SDK_INT >= 28) {
+            accessibilityNodeInfo.setHeading(true);
+        } else {
+            AccessibilityNodeInfo.CollectionItemInfo collectionItemInfo = accessibilityNodeInfo.getCollectionItemInfo();
+            if (collectionItemInfo != null) {
+                accessibilityNodeInfo.setCollectionItemInfo(AccessibilityNodeInfo.CollectionItemInfo.obtain(collectionItemInfo.getRowIndex(), collectionItemInfo.getRowSpan(), collectionItemInfo.getColumnIndex(), collectionItemInfo.getColumnSpan(), true));
+            }
+        }
+        accessibilityNodeInfo.setEnabled(true);
+    }
+
+    @Override // android.widget.FrameLayout, android.view.View
+    protected void onMeasure(int i, int i2) {
+        super.onMeasure(View.MeasureSpec.makeMeasureSpec(View.MeasureSpec.getSize(i), 1073741824), View.MeasureSpec.makeMeasureSpec(0, 0));
+    }
+
+    public void setBottomMargin(int i) {
+        float f = i;
+        ((FrameLayout.LayoutParams) this.textView.getLayoutParams()).bottomMargin = AndroidUtilities.dp(f);
+        SimpleTextView simpleTextView = this.textView2;
+        if (simpleTextView != null) {
+            ((FrameLayout.LayoutParams) simpleTextView.getLayoutParams()).bottomMargin = AndroidUtilities.dp(f);
+        }
+    }
+
+    public void setEnabled(boolean z, ArrayList arrayList) {
+        if (arrayList != null) {
+            arrayList.add(ObjectAnimator.ofFloat(this.textView, (Property<TextView, Float>) View.ALPHA, z ? 1.0f : 0.5f));
+        } else {
+            this.textView.setAlpha(z ? 1.0f : 0.5f);
+        }
+    }
+
+    public void setHeight(int i) {
+        this.height = i;
+        int iDp = AndroidUtilities.dp(i) - ((FrameLayout.LayoutParams) this.textView.getLayoutParams()).topMargin;
+        if (this.textView.getMinHeight() != iDp) {
+            this.textView.setMinHeight(iDp);
+            requestLayout();
+        }
+    }
+
+    public void setText(CharSequence charSequence) {
+        setText(charSequence, false);
+    }
+
+    public void setText(CharSequence charSequence, boolean z) {
+        if (this.animated) {
+            this.animatedTextView.setGravity((LocaleController.isRTL ? 5 : 3) | 16);
+            this.animatedTextView.setText(charSequence, z);
+        } else {
+            this.textView.setGravity((LocaleController.isRTL ? 5 : 3) | 16);
+            this.textView.setText(charSequence);
+        }
+    }
+
+    public void setText2(CharSequence charSequence) {
+        SimpleTextView simpleTextView = this.textView2;
+        if (simpleTextView == null) {
+            return;
+        }
+        simpleTextView.setText(charSequence);
+    }
+
+    public void setTextColor(int i) {
+        this.textView.setTextColor(i);
+    }
+
+    public void setTextSize(float f) {
+        if (this.animated) {
+            this.animatedTextView.setTextSize(AndroidUtilities.dp(f));
+        } else {
+            this.textView.setTextSize(1, f);
+        }
+    }
+
+    public void setTopMargin(int i) {
+        ((FrameLayout.LayoutParams) this.textView.getLayoutParams()).topMargin = AndroidUtilities.dp(i);
+        setHeight(this.height);
+    }
+}

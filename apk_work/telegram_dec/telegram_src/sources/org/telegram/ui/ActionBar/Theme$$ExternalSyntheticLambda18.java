@@ -1,0 +1,13 @@
+package org.telegram.ui.ActionBar;
+
+import java.util.concurrent.CountDownLatch;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes4.dex */
+public final /* synthetic */ class Theme$$ExternalSyntheticLambda18 implements Runnable {
+    public final /* synthetic */ CountDownLatch f$0;
+
+    @Override // java.lang.Runnable
+    public final void run() {
+        this.f$0.countDown();
+    }
+}
