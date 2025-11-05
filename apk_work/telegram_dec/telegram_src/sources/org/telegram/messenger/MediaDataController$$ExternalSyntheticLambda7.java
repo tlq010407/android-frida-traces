@@ -1,0 +1,17 @@
+package org.telegram.messenger;
+
+import org.telegram.ui.Components.Bulletin;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes3.dex */
+public final /* synthetic */ class MediaDataController$$ExternalSyntheticLambda7 implements Runnable {
+    public final /* synthetic */ Bulletin.UndoButton f$0;
+
+    public /* synthetic */ MediaDataController$$ExternalSyntheticLambda7(Bulletin.UndoButton undoButton) {
+        this.f$0 = undoButton;
+    }
+
+    @Override // java.lang.Runnable
+    public final void run() {
+        this.f$0.undo();
+    }
+}

@@ -1,0 +1,428 @@
+package org.telegram.PhoneFormat;
+
+import java.io.ByteArrayOutputStream;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Locale;
+import org.telegram.messenger.ApplicationLoader;
+import org.telegram.messenger.FileLog;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes3.dex */
+public class PhoneFormat {
+    private static volatile PhoneFormat Instance;
+    public ByteBuffer buffer;
+    public HashMap callingCodeCountries;
+    public HashMap callingCodeData;
+    public HashMap callingCodeOffsets;
+    public HashMap countryCallingCode;
+    public byte[] data;
+    public String defaultCallingCode;
+    public String defaultCountry;
+    private boolean initialzed = false;
+
+    public PhoneFormat() throws Throwable {
+        init(null);
+    }
+
+    public static PhoneFormat getInstance() {
+        PhoneFormat phoneFormat = Instance;
+        if (phoneFormat == null) {
+            synchronized (PhoneFormat.class) {
+                try {
+                    phoneFormat = Instance;
+                    if (phoneFormat == null) {
+                        phoneFormat = new PhoneFormat();
+                        Instance = phoneFormat;
+                    }
+                } finally {
+                }
+            }
+        }
+        return phoneFormat;
+    }
+
+    public static String strip(String str) {
+        StringBuilder sb = new StringBuilder(str);
+        for (int length = sb.length() - 1; length >= 0; length--) {
+            if (!"0123456789+*#".contains(sb.substring(length, length + 1))) {
+                sb.deleteCharAt(length);
+            }
+        }
+        return sb.toString();
+    }
+
+    public static String stripExceptNumbers(String str) {
+        return stripExceptNumbers(str, false);
+    }
+
+    public static String stripExceptNumbers(String str, boolean z) {
+        if (str == null) {
+            return null;
+        }
+        StringBuilder sb = new StringBuilder(str);
+        String str2 = z ? "0123456789+" : "0123456789";
+        for (int length = sb.length() - 1; length >= 0; length--) {
+            if (!str2.contains(sb.substring(length, length + 1))) {
+                sb.deleteCharAt(length);
+            }
+        }
+        return sb.toString();
+    }
+
+    /* JADX WARN: Type inference failed for: r2v10, types: [boolean, int] */
+    /* JADX WARN: Type inference failed for: r2v12 */
+    /* JADX WARN: Type inference failed for: r2v9 */
+    public CallingCodeInfo callingCodeInfo(String str) {
+        Integer num;
+        byte[] bArr;
+        ?? r2;
+        PhoneFormat phoneFormat = this;
+        CallingCodeInfo callingCodeInfo = (CallingCodeInfo) phoneFormat.callingCodeData.get(str);
+        if (callingCodeInfo != null || (num = (Integer) phoneFormat.callingCodeOffsets.get(str)) == null) {
+            return callingCodeInfo;
+        }
+        byte[] bArr2 = phoneFormat.data;
+        int iIntValue = num.intValue();
+        CallingCodeInfo callingCodeInfo2 = new CallingCodeInfo();
+        callingCodeInfo2.callingCode = str;
+        callingCodeInfo2.countries = (ArrayList) phoneFormat.callingCodeCountries.get(str);
+        phoneFormat.callingCodeData.put(str, callingCodeInfo2);
+        short sValue16 = phoneFormat.value16(iIntValue);
+        short sValue162 = phoneFormat.value16(iIntValue + 4);
+        short sValue163 = phoneFormat.value16(iIntValue + 8);
+        int length = iIntValue + 12;
+        ArrayList arrayList = new ArrayList(5);
+        while (true) {
+            String strValueString = phoneFormat.valueString(length);
+            if (strValueString.length() == 0) {
+                break;
+            }
+            arrayList.add(strValueString);
+            length += strValueString.length() + 1;
+        }
+        callingCodeInfo2.trunkPrefixes = arrayList;
+        int length2 = length + 1;
+        ArrayList arrayList2 = new ArrayList(5);
+        while (true) {
+            String strValueString2 = phoneFormat.valueString(length2);
+            if (strValueString2.length() == 0) {
+                break;
+            }
+            arrayList2.add(strValueString2);
+            length2 += strValueString2.length() + 1;
+        }
+        callingCodeInfo2.intlPrefixes = arrayList2;
+        ArrayList arrayList3 = new ArrayList(sValue163);
+        int i = iIntValue + sValue16;
+        int i2 = i;
+        int i3 = 0;
+        while (i3 < sValue163) {
+            RuleSet ruleSet = new RuleSet();
+            ruleSet.matchLen = phoneFormat.value16(i2);
+            short sValue164 = phoneFormat.value16(i2 + 2);
+            i2 += 4;
+            ArrayList arrayList4 = new ArrayList(sValue164);
+            int i4 = 0;
+            while (i4 < sValue164) {
+                PhoneRule phoneRule = new PhoneRule();
+                phoneRule.minVal = phoneFormat.value32(i2);
+                phoneRule.maxVal = phoneFormat.value32(i2 + 4);
+                phoneRule.byte8 = bArr2[i2 + 8];
+                phoneRule.maxLen = bArr2[i2 + 9];
+                phoneRule.otherFlag = bArr2[i2 + 10];
+                phoneRule.prefixLen = bArr2[i2 + 11];
+                phoneRule.flag12 = bArr2[i2 + 12];
+                phoneRule.flag13 = bArr2[i2 + 13];
+                short sValue165 = phoneFormat.value16(i2 + 14);
+                i2 += 16;
+                String strValueString3 = phoneFormat.valueString(i + sValue162 + sValue165);
+                phoneRule.format = strValueString3;
+                int iIndexOf = strValueString3.indexOf("[[");
+                if (iIndexOf != -1) {
+                    bArr = bArr2;
+                    r2 = 1;
+                    phoneRule.format = String.format("%s%s", phoneRule.format.substring(0, iIndexOf), phoneRule.format.substring(phoneRule.format.indexOf("]]") + 2));
+                } else {
+                    bArr = bArr2;
+                    r2 = 1;
+                }
+                arrayList4.add(phoneRule);
+                if (phoneRule.hasIntlPrefix) {
+                    ruleSet.hasRuleWithIntlPrefix = r2;
+                }
+                if (phoneRule.hasTrunkPrefix) {
+                    ruleSet.hasRuleWithTrunkPrefix = r2;
+                }
+                i4 += r2;
+                phoneFormat = this;
+                bArr2 = bArr;
+            }
+            ruleSet.rules = arrayList4;
+            arrayList3.add(ruleSet);
+            i3++;
+            phoneFormat = this;
+            bArr2 = bArr2;
+        }
+        callingCodeInfo2.ruleSets = arrayList3;
+        return callingCodeInfo2;
+    }
+
+    public CallingCodeInfo findCallingCodeInfo(String str) {
+        CallingCodeInfo callingCodeInfo = null;
+        int i = 0;
+        while (i < 3 && i < str.length()) {
+            i++;
+            callingCodeInfo = callingCodeInfo(str.substring(0, i));
+            if (callingCodeInfo != null) {
+                break;
+            }
+        }
+        return callingCodeInfo;
+    }
+
+    public String format(String str) {
+        if (!this.initialzed) {
+            return str;
+        }
+        try {
+            String strStrip = strip(str);
+            if (strStrip.startsWith("+")) {
+                String strSubstring = strStrip.substring(1);
+                CallingCodeInfo callingCodeInfoFindCallingCodeInfo = findCallingCodeInfo(strSubstring);
+                if (callingCodeInfoFindCallingCodeInfo == null) {
+                    return str;
+                }
+                return "+" + callingCodeInfoFindCallingCodeInfo.format(strSubstring);
+            }
+            CallingCodeInfo callingCodeInfo = callingCodeInfo(this.defaultCallingCode);
+            if (callingCodeInfo == null) {
+                return str;
+            }
+            String strMatchingAccessCode = callingCodeInfo.matchingAccessCode(strStrip);
+            if (strMatchingAccessCode == null) {
+                return callingCodeInfo.format(strStrip);
+            }
+            String strSubstring2 = strStrip.substring(strMatchingAccessCode.length());
+            CallingCodeInfo callingCodeInfoFindCallingCodeInfo2 = findCallingCodeInfo(strSubstring2);
+            if (callingCodeInfoFindCallingCodeInfo2 != null) {
+                strSubstring2 = callingCodeInfoFindCallingCodeInfo2.format(strSubstring2);
+            }
+            return strSubstring2.length() == 0 ? strMatchingAccessCode : String.format("%s %s", strMatchingAccessCode, strSubstring2);
+        } catch (Exception e) {
+            FileLog.e(e);
+            return str;
+        }
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Removed duplicated region for block: B:65:0x00bb A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX WARN: Removed duplicated region for block: B:76:0x00b1 A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX WARN: Removed duplicated region for block: B:87:? A[SYNTHETIC] */
+    /* JADX WARN: Type inference failed for: r1v1 */
+    /* JADX WARN: Type inference failed for: r1v10, types: [java.io.InputStream] */
+    /* JADX WARN: Type inference failed for: r1v11 */
+    /* JADX WARN: Type inference failed for: r1v3 */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r1v6, types: [java.io.InputStream] */
+    /* JADX WARN: Type inference failed for: r1v7, types: [java.io.InputStream] */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public void init(String str) throws Throwable {
+        ByteArrayOutputStream byteArrayOutputStream;
+        ?? Open;
+        ByteArrayOutputStream byteArrayOutputStream2;
+        ?? r1;
+        ByteArrayOutputStream byteArrayOutputStream3 = null;
+        try {
+            Open = ApplicationLoader.applicationContext.getAssets().open("PhoneFormats.dat");
+            try {
+                try {
+                    byteArrayOutputStream2 = new ByteArrayOutputStream();
+                } catch (Exception e) {
+                    e = e;
+                }
+            } catch (Throwable th) {
+                th = th;
+                ByteArrayOutputStream byteArrayOutputStream4 = Open;
+                byteArrayOutputStream = byteArrayOutputStream3;
+                byteArrayOutputStream3 = byteArrayOutputStream4;
+                byteArrayOutputStream2 = byteArrayOutputStream;
+                r1 = byteArrayOutputStream3;
+                if (byteArrayOutputStream2 != null) {
+                    try {
+                        byteArrayOutputStream2.close();
+                    } catch (Exception e2) {
+                        FileLog.e(e2);
+                    }
+                }
+                if (r1 == 0) {
+                    throw th;
+                }
+                try {
+                    r1.close();
+                    throw th;
+                } catch (Exception e3) {
+                    FileLog.e(e3);
+                    throw th;
+                }
+            }
+        } catch (Exception e4) {
+            e = e4;
+            Open = 0;
+        } catch (Throwable th2) {
+            th = th2;
+            byteArrayOutputStream = null;
+            byteArrayOutputStream2 = byteArrayOutputStream;
+            r1 = byteArrayOutputStream3;
+            if (byteArrayOutputStream2 != null) {
+            }
+            if (r1 == 0) {
+            }
+        }
+        try {
+            byte[] bArr = new byte[1024];
+            while (true) {
+                int i = Open.read(bArr, 0, 1024);
+                if (i == -1) {
+                    break;
+                } else {
+                    byteArrayOutputStream2.write(bArr, 0, i);
+                }
+            }
+            byte[] byteArray = byteArrayOutputStream2.toByteArray();
+            this.data = byteArray;
+            ByteBuffer byteBufferWrap = ByteBuffer.wrap(byteArray);
+            this.buffer = byteBufferWrap;
+            byteBufferWrap.order(ByteOrder.LITTLE_ENDIAN);
+            try {
+                byteArrayOutputStream2.close();
+            } catch (Exception e5) {
+                FileLog.e(e5);
+            }
+            try {
+                Open.close();
+            } catch (Exception e6) {
+                FileLog.e(e6);
+            }
+            if (str == null || str.length() == 0) {
+                str = Locale.getDefault().getCountry().toLowerCase();
+            }
+            this.defaultCountry = str;
+            this.callingCodeOffsets = new HashMap(255);
+            this.callingCodeCountries = new HashMap(255);
+            this.callingCodeData = new HashMap(10);
+            this.countryCallingCode = new HashMap(255);
+            parseDataHeader();
+            this.initialzed = true;
+        } catch (Exception e7) {
+            e = e7;
+            byteArrayOutputStream3 = byteArrayOutputStream2;
+            e.printStackTrace();
+            if (byteArrayOutputStream3 != null) {
+                try {
+                    byteArrayOutputStream3.close();
+                } catch (Exception e8) {
+                    FileLog.e(e8);
+                }
+            }
+            if (Open != 0) {
+                try {
+                    Open.close();
+                } catch (Exception e9) {
+                    FileLog.e(e9);
+                }
+            }
+        } catch (Throwable th3) {
+            th = th3;
+            r1 = Open;
+            if (byteArrayOutputStream2 != null) {
+            }
+            if (r1 == 0) {
+            }
+        }
+    }
+
+    public void parseDataHeader() {
+        int iValue32 = value32(0);
+        int i = 4;
+        int i2 = (iValue32 * 12) + 4;
+        for (int i3 = 0; i3 < iValue32; i3++) {
+            String strValueString = valueString(i);
+            String strValueString2 = valueString(i + 4);
+            int iValue322 = value32(i + 8) + i2;
+            i += 12;
+            if (strValueString2.equals(this.defaultCountry)) {
+                this.defaultCallingCode = strValueString;
+            }
+            this.countryCallingCode.put(strValueString2, strValueString);
+            this.callingCodeOffsets.put(strValueString, Integer.valueOf(iValue322));
+            ArrayList arrayList = (ArrayList) this.callingCodeCountries.get(strValueString);
+            if (arrayList == null) {
+                arrayList = new ArrayList();
+                this.callingCodeCountries.put(strValueString, arrayList);
+            }
+            arrayList.add(strValueString2);
+        }
+        String str = this.defaultCallingCode;
+        if (str != null) {
+            callingCodeInfo(str);
+        }
+    }
+
+    short value16(int i) {
+        if (i + 2 > this.data.length) {
+            return (short) 0;
+        }
+        this.buffer.position(i);
+        return this.buffer.getShort();
+    }
+
+    int value32(int i) {
+        if (i + 4 > this.data.length) {
+            return 0;
+        }
+        this.buffer.position(i);
+        return this.buffer.getInt();
+    }
+
+    /* JADX WARN: Code restructure failed: missing block: B:11:0x0015, code lost:
+    
+        return new java.lang.String(r2, r5, r1);
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:7:0x000c, code lost:
+    
+        r1 = r1 - r5;
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:8:0x000d, code lost:
+    
+        if (r5 != r1) goto L10;
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:9:0x000f, code lost:
+    
+        return "";
+     */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public String valueString(int i) {
+        int i2 = i;
+        while (true) {
+            try {
+                byte[] bArr = this.data;
+                if (i2 >= bArr.length) {
+                    return "";
+                }
+                if (bArr[i2] == 0) {
+                    break;
+                }
+                i2++;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return "";
+            }
+        }
+    }
+}

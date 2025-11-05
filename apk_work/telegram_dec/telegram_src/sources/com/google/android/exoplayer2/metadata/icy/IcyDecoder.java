@@ -1,0 +1,77 @@
+package com.google.android.exoplayer2.metadata.icy;
+
+import com.google.android.exoplayer2.metadata.Metadata;
+import com.google.android.exoplayer2.metadata.MetadataInputBuffer;
+import com.google.android.exoplayer2.metadata.SimpleMetadataDecoder;
+import com.google.common.base.Ascii;
+import com.google.common.base.Charsets;
+import java.nio.ByteBuffer;
+import java.nio.charset.CharacterCodingException;
+import java.nio.charset.CharsetDecoder;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes.dex */
+public final class IcyDecoder extends SimpleMetadataDecoder {
+    private static final Pattern METADATA_ELEMENT = Pattern.compile("(.+?)='(.*?)';", 32);
+    private final CharsetDecoder utf8Decoder = Charsets.UTF_8.newDecoder();
+    private final CharsetDecoder iso88591Decoder = Charsets.ISO_8859_1.newDecoder();
+
+    private String decodeToString(ByteBuffer byteBuffer) {
+        String string;
+        CharsetDecoder charsetDecoder;
+        try {
+            string = this.utf8Decoder.decode(byteBuffer).toString();
+            charsetDecoder = this.utf8Decoder;
+        } catch (CharacterCodingException unused) {
+            this.utf8Decoder.reset();
+            byteBuffer.rewind();
+            try {
+                string = this.iso88591Decoder.decode(byteBuffer).toString();
+                charsetDecoder = this.iso88591Decoder;
+            } catch (CharacterCodingException unused2) {
+                this.iso88591Decoder.reset();
+                byteBuffer.rewind();
+                return null;
+            } catch (Throwable th) {
+                this.iso88591Decoder.reset();
+                byteBuffer.rewind();
+                throw th;
+            }
+        } catch (Throwable th2) {
+            this.utf8Decoder.reset();
+            byteBuffer.rewind();
+            throw th2;
+        }
+        charsetDecoder.reset();
+        byteBuffer.rewind();
+        return string;
+    }
+
+    @Override // com.google.android.exoplayer2.metadata.SimpleMetadataDecoder
+    protected Metadata decode(MetadataInputBuffer metadataInputBuffer, ByteBuffer byteBuffer) {
+        String strDecodeToString = decodeToString(byteBuffer);
+        byte[] bArr = new byte[byteBuffer.limit()];
+        byteBuffer.get(bArr);
+        String str = null;
+        if (strDecodeToString == null) {
+            return new Metadata(new IcyInfo(bArr, null, null));
+        }
+        Matcher matcher = METADATA_ELEMENT.matcher(strDecodeToString);
+        String str2 = null;
+        for (int iEnd = 0; matcher.find(iEnd); iEnd = matcher.end()) {
+            String strGroup = matcher.group(1);
+            String strGroup2 = matcher.group(2);
+            if (strGroup != null) {
+                String lowerCase = Ascii.toLowerCase(strGroup);
+                lowerCase.hashCode();
+                if (lowerCase.equals("streamurl")) {
+                    str2 = strGroup2;
+                } else if (lowerCase.equals("streamtitle")) {
+                    str = strGroup2;
+                }
+            }
+        }
+        return new Metadata(new IcyInfo(bArr, str, str2));
+    }
+}

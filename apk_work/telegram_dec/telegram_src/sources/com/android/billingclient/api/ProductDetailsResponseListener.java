@@ -1,0 +1,8 @@
+package com.android.billingclient.api;
+
+import java.util.List;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes.dex */
+public interface ProductDetailsResponseListener {
+    void onProductDetailsResponse(BillingResult billingResult, List list);
+}

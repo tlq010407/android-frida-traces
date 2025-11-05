@@ -1,0 +1,19 @@
+package androidx.core.text;
+
+import android.text.TextUtils;
+import java.util.Locale;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes.dex */
+public abstract class TextUtilsCompat {
+    private static final Locale ROOT = new Locale("", "");
+
+    static class Api17Impl {
+        static int getLayoutDirectionFromLocale(Locale locale) {
+            return TextUtils.getLayoutDirectionFromLocale(locale);
+        }
+    }
+
+    public static int getLayoutDirectionFromLocale(Locale locale) {
+        return Api17Impl.getLayoutDirectionFromLocale(locale);
+    }
+}

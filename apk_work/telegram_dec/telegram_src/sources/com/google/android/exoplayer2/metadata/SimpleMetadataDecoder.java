@@ -1,0 +1,19 @@
+package com.google.android.exoplayer2.metadata;
+
+import com.google.android.exoplayer2.util.Assertions;
+import java.nio.ByteBuffer;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes.dex */
+public abstract class SimpleMetadataDecoder implements MetadataDecoder {
+    @Override // com.google.android.exoplayer2.metadata.MetadataDecoder
+    public final Metadata decode(MetadataInputBuffer metadataInputBuffer) {
+        ByteBuffer byteBuffer = (ByteBuffer) Assertions.checkNotNull(metadataInputBuffer.data);
+        Assertions.checkArgument(byteBuffer.position() == 0 && byteBuffer.hasArray() && byteBuffer.arrayOffset() == 0);
+        if (metadataInputBuffer.isDecodeOnly()) {
+            return null;
+        }
+        return decode(metadataInputBuffer, byteBuffer);
+    }
+
+    protected abstract Metadata decode(MetadataInputBuffer metadataInputBuffer, ByteBuffer byteBuffer);
+}

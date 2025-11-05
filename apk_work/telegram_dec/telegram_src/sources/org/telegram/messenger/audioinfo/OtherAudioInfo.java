@@ -1,0 +1,85 @@
+package org.telegram.messenger.audioinfo;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.MediaMetadataRetriever;
+import com.huawei.hms.maps.model.BitmapDescriptorFactory;
+import java.io.File;
+import java.io.IOException;
+import org.telegram.messenger.FileLog;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes3.dex */
+public class OtherAudioInfo extends AudioInfo {
+    public boolean failed;
+    private final MediaMetadataRetriever r;
+
+    public OtherAudioInfo(File file) throws IOException, IllegalArgumentException {
+        Bitmap bitmapCreateScaledBitmap;
+        MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
+        this.r = mediaMetadataRetriever;
+        try {
+            mediaMetadataRetriever.setDataSource(file.getAbsolutePath());
+            this.brand = "OTHER";
+            this.version = "0";
+            this.duration = getLong(9);
+            this.title = getString(7);
+            this.artist = getString(2);
+            this.albumArtist = getString(13);
+            this.album = getString(1);
+            this.year = getShort(8);
+            this.genre = getString(6);
+            this.track = getShort(0);
+            this.tracks = getShort(10);
+            this.disc = getShort(14);
+            this.composer = getString(4);
+            byte[] embeddedPicture = mediaMetadataRetriever.getEmbeddedPicture();
+            if (embeddedPicture != null) {
+                this.cover = BitmapFactory.decodeByteArray(embeddedPicture, 0, embeddedPicture.length);
+            }
+            if (this.cover != null) {
+                float fMax = Math.max(r5.getWidth(), this.cover.getHeight()) / 120.0f;
+                if (fMax > BitmapDescriptorFactory.HUE_RED) {
+                    bitmapCreateScaledBitmap = Bitmap.createScaledBitmap(this.cover, (int) (r0.getWidth() / fMax), (int) (this.cover.getHeight() / fMax), true);
+                } else {
+                    bitmapCreateScaledBitmap = this.cover;
+                }
+                this.smallCover = bitmapCreateScaledBitmap;
+            }
+        } catch (Exception e) {
+            this.failed = true;
+            FileLog.e(e);
+        }
+        try {
+            MediaMetadataRetriever mediaMetadataRetriever2 = this.r;
+            if (mediaMetadataRetriever2 != null) {
+                mediaMetadataRetriever2.release();
+            }
+        } catch (Exception e2) {
+            FileLog.e(e2);
+        }
+    }
+
+    private long getLong(int i) {
+        try {
+            return Long.parseLong(this.r.extractMetadata(i));
+        } catch (Exception unused) {
+            return 0L;
+        }
+    }
+
+    private short getShort(int i) {
+        try {
+            return Short.parseShort(this.r.extractMetadata(i));
+        } catch (Exception unused) {
+            return (short) 0;
+        }
+    }
+
+    private String getString(int i) {
+        try {
+            return this.r.extractMetadata(i);
+        } catch (Exception unused) {
+            return null;
+        }
+    }
+}

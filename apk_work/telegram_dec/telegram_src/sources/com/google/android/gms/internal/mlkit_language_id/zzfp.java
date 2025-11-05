@@ -1,0 +1,17 @@
+package com.google.android.gms.internal.mlkit_language_id;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes.dex */
+final class zzfp implements zzfw {
+    zzfp() {
+    }
+
+    @Override // com.google.android.gms.internal.mlkit_language_id.zzfw
+    public final boolean zza(Class cls) {
+        return false;
+    }
+
+    @Override // com.google.android.gms.internal.mlkit_language_id.zzfw
+    public final zzfx zzb(Class cls) {
+        throw new IllegalStateException("This should never be called.");
+    }
+}

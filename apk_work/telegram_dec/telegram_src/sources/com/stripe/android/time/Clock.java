@@ -1,0 +1,25 @@
+package com.stripe.android.time;
+
+import java.util.Calendar;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes3.dex */
+public class Clock {
+    private static Clock instance;
+    protected Calendar calendarInstance;
+
+    private Calendar _calendarInstance() {
+        Calendar calendar = this.calendarInstance;
+        return calendar != null ? (Calendar) calendar.clone() : Calendar.getInstance();
+    }
+
+    public static Calendar getCalendarInstance() {
+        return getInstance()._calendarInstance();
+    }
+
+    protected static Clock getInstance() {
+        if (instance == null) {
+            instance = new Clock();
+        }
+        return instance;
+    }
+}

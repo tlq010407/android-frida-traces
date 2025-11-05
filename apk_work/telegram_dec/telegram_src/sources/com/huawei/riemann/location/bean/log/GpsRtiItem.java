@@ -1,0 +1,10 @@
+package com.huawei.riemann.location.bean.log;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes3.dex */
+public class GpsRtiItem {
+    public int ageOfDate;
+    public int numberOfRsStation;
+    public int prn;
+    public int status;
+    public int ure;
+}

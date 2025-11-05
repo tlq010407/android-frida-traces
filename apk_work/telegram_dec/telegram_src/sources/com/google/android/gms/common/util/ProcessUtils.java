@@ -1,0 +1,58 @@
+package com.google.android.gms.common.util;
+
+import android.os.Process;
+import android.os.StrictMode;
+import com.google.android.gms.common.internal.Preconditions;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes.dex */
+public abstract class ProcessUtils {
+    private static String zza;
+    private static int zzb;
+
+    public static String getMyProcessName() throws Throwable {
+        BufferedReader bufferedReader;
+        if (zza == null) {
+            int iMyPid = zzb;
+            if (iMyPid == 0) {
+                iMyPid = Process.myPid();
+                zzb = iMyPid;
+            }
+            String strTrim = null;
+            strTrim = null;
+            strTrim = null;
+            BufferedReader bufferedReader2 = null;
+            if (iMyPid > 0) {
+                try {
+                    String str = "/proc/" + iMyPid + "/cmdline";
+                    StrictMode.ThreadPolicy threadPolicyAllowThreadDiskReads = StrictMode.allowThreadDiskReads();
+                    try {
+                        bufferedReader = new BufferedReader(new FileReader(str));
+                    } finally {
+                        StrictMode.setThreadPolicy(threadPolicyAllowThreadDiskReads);
+                    }
+                } catch (IOException unused) {
+                    bufferedReader = null;
+                } catch (Throwable th) {
+                    th = th;
+                }
+                try {
+                    String line = bufferedReader.readLine();
+                    Preconditions.checkNotNull(line);
+                    strTrim = line.trim();
+                } catch (IOException unused2) {
+                } catch (Throwable th2) {
+                    th = th2;
+                    bufferedReader2 = bufferedReader;
+                    IOUtils.closeQuietly(bufferedReader2);
+                    throw th;
+                }
+                IOUtils.closeQuietly(bufferedReader);
+            }
+            zza = strTrim;
+        }
+        return zza;
+    }
+}

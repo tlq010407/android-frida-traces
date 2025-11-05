@@ -1,0 +1,133 @@
+package org.telegram.messenger;
+
+import java.util.ArrayList;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes3.dex */
+public class Timer {
+    final String name;
+    int pad = 0;
+    public ArrayList<Task> tasks = new ArrayList<>();
+    final long startTime = System.currentTimeMillis();
+
+    public class Log extends Task {
+        public Log(String str) {
+            super(str);
+        }
+
+        @Override // org.telegram.messenger.Timer.Task
+        public String toString() {
+            return this.task;
+        }
+    }
+
+    public class Task {
+        int pad;
+        final String task;
+        long endTime = -1;
+        final long startTime = System.currentTimeMillis();
+
+        public Task(String str) {
+            this.task = str;
+            Timer.this.pad++;
+        }
+
+        /* JADX INFO: Access modifiers changed from: private */
+        public void done() {
+            if (this.endTime < 0) {
+                Timer timer = Timer.this;
+                int i = timer.pad;
+                timer.pad = i - 1;
+                this.pad = i;
+            }
+            this.endTime = System.currentTimeMillis();
+        }
+
+        public String toString() {
+            String str;
+            StringBuilder sb = new StringBuilder();
+            sb.append(this.task);
+            sb.append(": ");
+            if (this.endTime < 0) {
+                str = "not done";
+            } else {
+                str = (this.endTime - this.startTime) + "ms";
+            }
+            sb.append(str);
+            return sb.toString();
+        }
+    }
+
+    public Timer(String str) {
+        this.name = str;
+    }
+
+    public static Timer create(String str) {
+        if (BuildVars.LOGS_ENABLED) {
+            return new Timer(str);
+        }
+        return null;
+    }
+
+    public static void done(Task task) {
+        if (task != null) {
+            task.done();
+        }
+    }
+
+    private void finish() {
+        long jCurrentTimeMillis = System.currentTimeMillis() - this.startTime;
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.name);
+        sb.append(" total=");
+        sb.append(jCurrentTimeMillis);
+        sb.append("ms\n");
+        for (int i = 0; i < this.tasks.size(); i++) {
+            if (this.tasks.get(i) != null) {
+                sb.append("#");
+                sb.append(i);
+                int i2 = this.tasks.get(i).pad;
+                int i3 = 0;
+                while (true) {
+                    sb.append(" ");
+                    if (i3 >= i2) {
+                        break;
+                    } else {
+                        i3++;
+                    }
+                }
+                sb.append(this.tasks.get(i));
+                sb.append("\n");
+            }
+        }
+        FileLog.d(sb.toString());
+    }
+
+    public static void finish(Timer timer) {
+        if (timer != null) {
+            timer.finish();
+        }
+    }
+
+    private void log(String str) {
+        this.tasks.add(new Log(str));
+    }
+
+    public static void log(Timer timer, String str) {
+        if (timer != null) {
+            timer.log(str);
+        }
+    }
+
+    private Task start(String str) {
+        Task task = new Task(str);
+        this.tasks.add(task);
+        return task;
+    }
+
+    public static Task start(Timer timer, String str) {
+        if (timer != null) {
+            return timer.start(str);
+        }
+        return null;
+    }
+}

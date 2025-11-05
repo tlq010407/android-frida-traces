@@ -1,0 +1,22 @@
+package androidx.core.os;
+
+import android.content.Context;
+import android.os.Build;
+import android.os.UserManager;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes.dex */
+public abstract class UserManagerCompat {
+
+    static class Api24Impl {
+        static boolean isUserUnlocked(Context context) {
+            return ((UserManager) context.getSystemService(UserManager.class)).isUserUnlocked();
+        }
+    }
+
+    public static boolean isUserUnlocked(Context context) {
+        if (Build.VERSION.SDK_INT >= 24) {
+            return Api24Impl.isUserUnlocked(context);
+        }
+        return true;
+    }
+}

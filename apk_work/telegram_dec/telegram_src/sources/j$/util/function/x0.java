@@ -1,0 +1,47 @@
+package j$.util.function;
+
+import j$.util.function.Function;
+import j$.util.function.UnaryOperator;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes2.dex */
+public final /* synthetic */ class x0 implements java.util.function.UnaryOperator {
+    public final /* synthetic */ UnaryOperator a;
+
+    private /* synthetic */ x0(UnaryOperator unaryOperator) {
+        this.a = unaryOperator;
+    }
+
+    public static /* synthetic */ java.util.function.UnaryOperator a(UnaryOperator unaryOperator) {
+        if (unaryOperator == null) {
+            return null;
+        }
+        return unaryOperator instanceof UnaryOperator.VivifiedWrapper ? ((UnaryOperator.VivifiedWrapper) unaryOperator).a : new x0(unaryOperator);
+    }
+
+    @Override // java.util.function.Function
+    public final /* synthetic */ java.util.function.Function andThen(java.util.function.Function function) {
+        return C0108x.a(this.a.andThen(Function.VivifiedWrapper.convert(function)));
+    }
+
+    @Override // java.util.function.Function
+    public final /* synthetic */ Object apply(Object obj) {
+        return this.a.apply(obj);
+    }
+
+    @Override // java.util.function.Function
+    public final /* synthetic */ java.util.function.Function compose(java.util.function.Function function) {
+        return C0108x.a(this.a.compose(Function.VivifiedWrapper.convert(function)));
+    }
+
+    public final /* synthetic */ boolean equals(Object obj) {
+        UnaryOperator unaryOperator = this.a;
+        if (obj instanceof x0) {
+            obj = ((x0) obj).a;
+        }
+        return unaryOperator.equals(obj);
+    }
+
+    public final /* synthetic */ int hashCode() {
+        return this.a.hashCode();
+    }
+}

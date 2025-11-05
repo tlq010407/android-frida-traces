@@ -1,0 +1,45 @@
+package kotlin.text;
+
+import java.io.Serializable;
+import java.util.regex.Pattern;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+
+/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes3.dex */
+public final class Regex implements Serializable {
+    public static final Companion Companion = new Companion(null);
+    private final Pattern nativePattern;
+
+    public static final class Companion {
+        private Companion() {
+        }
+
+        public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
+            this();
+        }
+    }
+
+    /* JADX WARN: Illegal instructions before constructor call */
+    public Regex(String pattern) {
+        Intrinsics.checkNotNullParameter(pattern, "pattern");
+        Pattern patternCompile = Pattern.compile(pattern);
+        Intrinsics.checkNotNullExpressionValue(patternCompile, "compile(pattern)");
+        this(patternCompile);
+    }
+
+    public Regex(Pattern nativePattern) {
+        Intrinsics.checkNotNullParameter(nativePattern, "nativePattern");
+        this.nativePattern = nativePattern;
+    }
+
+    public final boolean matches(CharSequence input) {
+        Intrinsics.checkNotNullParameter(input, "input");
+        return this.nativePattern.matcher(input).matches();
+    }
+
+    public String toString() {
+        String string = this.nativePattern.toString();
+        Intrinsics.checkNotNullExpressionValue(string, "nativePattern.toString()");
+        return string;
+    }
+}
