@@ -1,5 +1,0 @@
-package org.telegram.ui.Components.Paint;
-
-/* loaded from: /Users/liqi/android-frida-traces/apk_test/dex_files/classes5.dex */
-public abstract /* synthetic */ class PaintTypeface$$ExternalSyntheticApiModelOutline2 {
-}
