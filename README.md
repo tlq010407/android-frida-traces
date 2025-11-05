@@ -171,7 +171,7 @@ frida-ps -D emulator-5554      # list processes on that device
 # find pid
 adb shell pidof org.telegram.messenger
 # attach and log output to file
-frida -D emulator-5554 -p <PID> -l scripts/hook_java_generic.js -o logs/telegram_java_hook.log
+frida -D emulator-5554 -p <PID> -l scripts/frida_java_hooks.js -o logs/telegram_java_hook.log
 ```
 
 2. Run Frida in background and collect logs
