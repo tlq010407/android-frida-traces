@@ -56,34 +56,46 @@ public class UiAutomatorTelegramTestJava {
         snap("smoke_visible");
     }
 
-    /** 1) Open Saved Messages via deep link and send a text (skips flaky search). */
+    /** 1) Open Saved Messages via drawer and send a text. */
     @Test
-    public void savedMessages_DeepLink_Send() throws Exception {
-        launchApp(TARGET_PKG);
-        dismissOnboardingAndPerms();
-        openSavedMessagesDeepLink();
-        // try to focus composer & send
-        sendTextInComposer("UIAutomator says hi \uD83D\uDC4B");
-        snap("deep_link_sent");
-        assertStillInApp();
-    }
-
-    /** 2) Search for “Saved Messages”, open result by clickable ancestor, then send. */
-    @Test
-    public void savedMessages_Search_Open_Send() throws Exception {
+    public void savedMessages_FromDrawer_Send() throws Exception {
         launchApp(TARGET_PKG);
         dismissOnboardingAndPerms();
 
-        openSearch();
-        typeSearchAndSubmit("Saved Messages");
-        openSearchResultByText("Saved Messages");
-        sendTextInComposer("UIAutomator says hi \uD83D\uDC4B");
+        // --- open left drawer (☰) ---
+        UiObject2 drawer = device.wait(
+                Until.findObject(By.descContains("Open navigation drawer").pkg(TARGET_PKG)), 3000);
+        if (drawer != null) {
+            safeClick(drawer);
+        } else {
+            // last resort: tap near top-left
+            device.click(100, 200);
+        }
+        snap("drawer_opened");
 
-        snap("search_sent");
+        // --- tap "Saved Messages" inside the drawer ---
+        UiObject2 saved = device.wait(Until.findObject(By.text("Saved Messages")), 3000);
+        if (saved == null) saved = device.findObject(By.textContains("Saved"));
+        if (saved != null) {
+            // prefer clicking the clickable row container
+            if (!clickClickableAncestor(saved)) safeClick(saved);
+        } else {
+            // generic fallback: first clickable row in drawer
+            UiObject2 row = device.wait(Until.findObject(By.clickable(true)), 4000);
+            if (row == null) {
+                throw new AssertionError("Drawer item not found: Saved Messages");
+            }
+            if (!clickClickableAncestor(row)) safeClick(row);
+        }
+        snap("drawer_saved_messages_opened");
+
+        // --- compose & send ---
+        sendTextInComposer("UIAutomator says hi \uD83D\uDC4B");
+        snap("drawer_saved_messages_sent");
         assertStillInApp();
     }
 
-    /** 3) Scroll a chat list and open the N-th conversation (generic pattern). */
+    /** 2) Scroll a chat list and open the N-th conversation (generic pattern). */
     @Test
     public void chatList_ScrollAndOpenNth() throws Exception {
         launchApp(TARGET_PKG);
@@ -106,29 +118,46 @@ public class UiAutomatorTelegramTestJava {
         assertStillInApp();
     }
 
-    /** 4) Open Settings via overflow menu (generic menu traversal example). */
+    /** 3) Open Settings via overflow menu (generic menu traversal example). */
     @Test
     public void openSettings_FromOverflow() throws Exception {
         launchApp(TARGET_PKG);
         dismissOnboardingAndPerms();
 
-        // open overflow (three-dots); try common variants
-        UiObject2 more = device.wait(Until.findObject(By.descContains("More").pkg(TARGET_PKG)), 3000);
-        if (more == null) more = device.findObject(By.descContains("More options"));
-        if (more == null) more = device.findObject(By.desc("More"));
-        if (more == null) more = device.findObject(By.clazz("android.widget.ImageView").descContains("More"));
-        if (more != null) safeClick(more);
+        // --- open the left drawer (☰) ---
+        UiObject2 drawer = device.wait(
+                Until.findObject(By.descContains("Open navigation drawer").pkg(TARGET_PKG)), 3000);
+        if (drawer != null) {
+            safeClick(drawer);
+        } else {
+            // last resort: tap near top-left
+            device.click(100, 200);
+        }
+        snap("drawer_opened");
 
-        // click "Settings" item (fallback to text contains)
-        UiObject2 settings = device.wait(Until.findObject(By.text("Settings").pkg(TARGET_PKG)), 3000);
+        // --- tap "Settings" inside the drawer ---
+        UiObject2 settings = device.wait(Until.findObject(By.text("Settings")), 3000);
         if (settings == null) settings = device.findObject(By.textContains("Settings"));
-        if (settings != null) safeClick(settings);
+        if (settings != null) {
+            // prefer clicking the clickable row container
+            if (!clickClickableAncestor(settings)) {
+                safeClick(settings);
+            }
+        } else {
+            // generic fallback: first clickable row in drawer
+            UiObject2 row = device.wait(Until.findObject(By.clickable(true)), 4000);
+            if (row != null) {
+                if (!clickClickableAncestor(row)) safeClick(row);
+            } else {
+                throw new AssertionError("Drawer item not found: Settings");
+            }
+        }
 
         snap("settings_opened");
         assertStillInApp();
     }
 
-    /** 5) Compose box robustness demo: focus bottom, input via shell, send by Enter. */
+    /** 4) Compose box robustness demo: focus bottom, input via shell, send by Enter. */
     @Test
     public void composer_BottomTap_ShellInput() throws Exception {
         launchApp(TARGET_PKG);
@@ -206,47 +235,58 @@ public class UiAutomatorTelegramTestJava {
         Thread.sleep(600);
     }
 
-    private void openSearchResultByText(String text) {
-        UiObject2 match = device.wait(Until.findObject(By.text(text).pkg(TARGET_PKG)), 6_000);
-        if (match == null) match = device.wait(Until.findObject(By.textContains(text).pkg(TARGET_PKG)), 6_000);
-        if (match != null) {
-            if (!clickClickableAncestor(match)) {
-                safeClick(match);
-            }
-            snap("search_result_opened");
-            return;
-        }
-        // fallback: first clickable row
-        UiObject2 anyRow = device.wait(Until.findObject(By.clickable(true).pkg(TARGET_PKG)), 3_000);
-        if (anyRow != null) {
-            if (!clickClickableAncestor(anyRow)) safeClick(anyRow);
-            snap("search_result_fallback_opened");
-        } else {
-            throw new AssertionError("No search result rows found for: " + text);
-        }
-    }
-
-    /** Robust composer typing (prefers EditText; falls back to bottom tap + shell input). */
+    /** Type into composer and force a real send by tapping next to the input. */
     private void sendTextInComposer(String message) throws Exception {
-        UiObject2 msgBox = device.wait(
-                Until.findObject(By.clazz("android.widget.EditText").pkg(TARGET_PKG).clickable(true)),
-                8_000
+        // 1) type message (use shell as fallback if EditText not exposed)
+        UiObject2 input = device.wait(
+                Until.findObject(By.clazz("android.widget.EditText").pkg(TARGET_PKG)),
+                6_000
         );
-        if (msgBox != null) {
-            msgBox.setText(message);
+        if (input != null) {
+            input.setText(message);
         } else {
             tapBottomInputFallback();
             device.executeShellCommand("input text '" + message
                     .replace(" ", "\\ ")
                     .replace("👋", "%F0%9F%91%8B") + "'");
+            // try to re-query the input after focus
+            input = device.findObject(By.clazz("android.widget.EditText").pkg(TARGET_PKG));
         }
-        UiObject2 sendBtn = device.findObject(By.descContains("Send"));
-        if (sendBtn == null) sendBtn = device.findObject(By.clazz("android.widget.ImageButton").clickable(true));
-        if (sendBtn != null) {
-            safeClick(sendBtn);
-        } else {
-            device.executeShellCommand("input keyevent 66"); // Enter
+
+        // 2) try semantic send controls first
+        UiObject2 send = device.wait(Until.findObject(By.descContains("Send")), 800);
+        if (send == null) send = device.findObject(By.text("Send"));
+        if (send != null) { safeClick(send); Thread.sleep(250); return; }
+
+        // 3) force tap near the right edge of the composer row (paper-plane area)
+        if (input != null) {
+            android.graphics.Rect r = input.getVisibleBounds();
+
+            // try to locate the row that contains the EditText (clickable ancestor)
+            UiObject2 row = input;
+            for (int i = 0; i < 6 && row != null && !row.isClickable(); i++) row = row.getParent();
+            if (row == null) row = input.getParent();
+
+            android.graphics.Rect rowRect = (row != null) ? row.getVisibleBounds() : r;
+
+            // X: a bit left from row right edge; Y: vertically centered on the row
+            int x = (int) (rowRect.right - Math.max(48, rowRect.height() * 0.9));
+            int y = rowRect.centerY();
+
+            // keep inside screen
+            int W = device.getDisplayWidth(), H = device.getDisplayHeight();
+            x = Math.min(Math.max(10, x), W - 10);
+            y = Math.min(Math.max(10, y), H - 10);
+
+            device.click(x, y);
+            Thread.sleep(300);
+            return;
         }
+
+        // 4) last ditch: bottom-right generic plane position
+        int W = device.getDisplayWidth(), H = device.getDisplayHeight();
+        device.click((int)(W * 0.92), (int)(H * 0.90));
+        Thread.sleep(300);
     }
 
     // ---------------------- Helpers (utilities) ----------------------

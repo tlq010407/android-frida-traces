@@ -360,3 +360,44 @@ all output logs Frida, Monkey, logcat, and dumpsys are automatically collected a
 ```bash
 ~/android-frida-traces/runs/org.telegram.messenger_<timestamp>/
 ```
+
+## 6. UI Automator + Frida for Telegram
+### Environment & prerequisites
+- Use an Android emulator
+- Java 17 and Gradle compatible with AGP
+
+### Project / Gradle prep
+- Ensure uiauto-harness module exists and has:
+  - uiauto-harness/src/main/AndroidManifest.xml minimal (no package= if namespace set in build.gradle).
+  - uiauto-harness/src/androidTest/java/com/example/uiauto/UiAutomatorTelegramTestJava.java (your tests).
+- If wrapper missing: run ./gradlew wrapper --gradle-version <version> (but repo already has wrapper).
+- If AGP/Gradle version mismatch, update gradle-wrapper.properties to compatible Gradle.
+
+### Key test design patterns
+- **Start cold / press home / force-stop target** in @Before to have a clean state.
+- **Launch**: use getLaunchIntentForPackage() with monkey fallback.
+- **Drawer menu**: open using By.descContains("Open navigation drawer") or ImageButton fallback (tap coords if necessary).
+- **Saved Messages**: prefer drawer item; if search must be used:
+  - typeSearchAndSubmit("Saved Messages"), wait, then open result.
+  - If label node non-clickable → click clickable ancestor, icon sibling, or click label’s visible bounds center.
+- **Composer & send**:
+  - Prefer By.res(...) (resource IDs) if you can extract them from decompiled APK.
+  - Otherwise: set text to EditText or input text shell fallback, then click send button:
+    - look for By.descContains("Send") or rightmost clickable sibling of composer row, or compute coords from EditText/row bounds and tap.
+- **Screenshots**: device.takeScreenshot(new File("/sdcard/Download/uiauto_name.png")) after each step — useful for debugging.
+- **Log & UI dump**:
+  - adb logcat -d > artifacts/logcat.txt
+  - adb shell uiautomator dump /sdcard/view.xml && adb pull /sdcard/view.xml .
+
+### Run the whole suite
+```bash
+# run all UI tests in the class
+./gradlew :uiauto-harness:connectedAndroidTest \
+  -Pandroid.testInstrumentationRunnerArguments.class=com.example.uiauto.UiAutomatorTelegramTestJava
+
+# collect artifacts
+mkdir -p artifacts
+adb pull /sdcard/Download/uiauto_*.png artifacts/ || true
+adb logcat -d > artifacts/logcat.txt || true
+open uiauto-harness/build/reports/androidTests/connected/debug/index.html
+```
